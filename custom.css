@@ -1,0 +1,39 @@
+/* Custom styles for Pointblank: The Complete Guide */
+
+/* Code blocks */
+pre {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 1em;
+}
+
+/* Inline code */
+code {
+  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Tables */
+table {
+  margin: 1em 0;
+}
+
+/* Callout boxes */
+.callout {
+  margin: 1em 0;
+}
+
+/* Chapter navigation */
+.chapter-navigation {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Figure captions */
+figcaption {
+  font-style: italic;
+  color: #6c757d;
+  margin-top: 0.5em;
+}

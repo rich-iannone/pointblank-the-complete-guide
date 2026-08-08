@@ -1,0 +1,79 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  twitter-card: true
+  title: "Data Validation with **Pointblank** for Python"
+  author: "Richard Iannone"
+  search: true
+  repo-url: https://github.com/rich-iannone/pointblank-the-complete-guide
+  chapters:
+    - index.qmd
+    - part: "Foundations"
+      chapters:
+        - 01-intro.qmd
+        - 02-getting-started.qmd
+        - 03-inspecting-data.qmd
+        - 04-validation-workflow.qmd
+    - part: "Building Validation Plans"
+      chapters:
+        - 05-column-validations.qmd
+        - 06-aggregate-validations.qmd
+        - 07-row-validations.qmd
+        - 08-table-validations.qmd
+        - 09-missing-data.qmd
+        - 10-segmented-validation.qmd
+        - 11-advanced-validation.qmd
+    - part: "Responding to Results"
+      chapters:
+        - 12-thresholds-actions.qmd
+        - 13-reports-extracts.qmd
+        - 14-quality-scoring.qmd
+        - 15-notifications-observability.qmd
+    - part: "AI-Assisted Validation"
+      chapters:
+        - 16-semantic-validation.qmd
+        - 17-ai-authoring.qmd
+    - part: "Data Sources, Interfaces & Automation"
+      chapters:
+        - 18-data-sources.qmd
+        - 19-yaml-workflows.qmd
+        - 20-command-line.qmd
+        - 21-mcp-server.qmd
+    - part: "Data Contracts & Pipelines"
+      chapters:
+        - 22-data-contracts.qmd
+        - 23-pipelines.qmd
+    - part: "Test Data Generation"
+      chapters:
+        - 24-test-data-generation.qmd
+    - part: "Clinical & Regulated Data"
+      chapters:
+        - 25-clinical-cdisc.qmd
+        - 26-cdisc-conformance.qmd
+    - part: "Industry Playbooks"
+      chapters:
+        - 27-playbook-financial.qmd
+        - 28-playbook-ecommerce.qmd
+        - 29-playbook-data-engineering.qmd
+        - 30-playbook-healthcare.qmd
+  appendices:
+    - appendix-reference.qmd
+    - appendix-roadmap.qmd
+
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-link: true
+    code-line-numbers: false
+    code-annotations: below
+    css: custom.css
+
+execute:
+  collapse: true
+
+# Pointblank validation reports are Great Tables HTML tables; disable Quarto's
+# default HTML table post-processing so they render intact.
+html-table-processing: none
