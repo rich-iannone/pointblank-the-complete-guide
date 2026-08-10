@@ -38,3 +38,9 @@ pip install "pointblank[duckdb]"    # DuckDB via Ibis
 pip install "pointblank[postgres]"  # PostgreSQL via Ibis
 ```
 
+After installing, a quick import confirms the setup, printing the version without error.
+
+```{python}
+print(pb.__version__)
+```
+
