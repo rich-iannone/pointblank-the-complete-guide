@@ -28,10 +28,10 @@ book:
         - 12-advanced-validation.qmd
     - part: "Responding to Results"
       chapters:
-        - 12-thresholds-actions.qmd
-        - 13-reports-extracts.qmd
-        - 14-quality-scoring.qmd
-        - 15-notifications-observability.qmd
+        - 13-thresholds-actions.qmd
+        - 14-reports-extracts.qmd
+        - 15-quality-scoring.qmd
+        - 16-notifications-observability.qmd
     - part: "AI-Assisted Validation"
       chapters:
         - 16-semantic-validation.qmd
