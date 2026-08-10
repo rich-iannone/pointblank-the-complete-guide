@@ -19,13 +19,13 @@ book:
         - 05-analysis-loop.qmd
     - part: "Building Validation Plans"
       chapters:
-        - 05-column-validations.qmd
-        - 06-aggregate-validations.qmd
-        - 07-row-validations.qmd
-        - 08-table-validations.qmd
-        - 09-missing-data.qmd
-        - 10-segmented-validation.qmd
-        - 11-advanced-validation.qmd
+        - 06-column-validations.qmd
+        - 07-aggregate-validations.qmd
+        - 08-row-validations.qmd
+        - 09-table-validations.qmd
+        - 10-missing-data.qmd
+        - 11-segmented-validation.qmd
+        - 12-advanced-validation.qmd
     - part: "Responding to Results"
       chapters:
         - 12-thresholds-actions.qmd
