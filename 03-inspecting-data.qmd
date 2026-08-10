@@ -26,3 +26,16 @@ The goal throughout is not to validate anything yet, but to learn enough that th
 almost writes itself. Building and running that plan is the subject of @sec-validation-workflow, and
 letting Pointblank draft one for you from a profile is covered in @sec-ai-authoring.
 
+## The example data
+
+Every example in this chapter uses one of the datasets bundled with Pointblank, so you can run the
+code exactly as written without hunting for a file. The `load_dataset()` function returns a
+ready-to-use table, and its `tbl_type=` argument controls whether you get a Polars DataFrame, a
+Pandas DataFrame, or a DuckDB-backed table. We begin with `small_table`, which is deliberately tiny
+at thirteen rows and eight columns, because it is easy to reason about while still containing the
+kinds of imperfections that matter.
+
+```{python}
+small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
+```
+
