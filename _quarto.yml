@@ -16,6 +16,7 @@ book:
         - 02-getting-started.qmd
         - 03-inspecting-data.qmd
         - 04-validation-workflow.qmd
+        - 05-analysis-loop.qmd
     - part: "Building Validation Plans"
       chapters:
         - 05-column-validations.qmd
