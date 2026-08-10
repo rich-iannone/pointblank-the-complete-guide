@@ -1,0 +1,8 @@
+## Welcome {.unnumbered}
+
+Welcome to "Data Validation with **Pointblank** for Python", a comprehensive guide to assessing,
+monitoring, and assuring data quality in your Python workflows. This book takes you from the
+fundamental ideas of data validation through to production-scale quality assurance, using
+**Pointblank**, an expressive framework for defining validation rules, running them across many
+kinds of data source, and communicating the results through clear, interactive reports.
+
