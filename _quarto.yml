@@ -74,6 +74,6 @@ format:
 execute:
   collapse: true
 
-# Pointblank validation reports are Great Tables HTML tables; disable Quarto's
+# Pointblank validation reports are Great Tables HTML tables, so, disable Quarto's
 # default HTML table post-processing so they render intact.
 html-table-processing: none
