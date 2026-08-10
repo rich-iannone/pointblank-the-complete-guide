@@ -11,3 +11,8 @@ concepts that underlie everything the library does, and works a complete example
 results, so that by the end you have a working setup, a clear mental model, and the ability to write
 and run your own validation plans.
 
+We begin with installation and its optional extras, move through the core ideas of test units,
+validation steps, and interrogation, and then build and interrogate a first plan against a built-in
+dataset. Along the way we preview the data sources and configuration options that later chapters
+develop in full.
+
