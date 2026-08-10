@@ -10,3 +10,5 @@ You cannot validate what you do not understand. A validation rule is a statement
 
 This chapter is about the looking part. **Pointblank** ships a small set of inspection tools that answer the first questions you ask of any table: What columns are here, and what types do they hold? How many rows are there? Where are the values missing, and how are they distributed? Each tool turns a vague sense of "let me get to know this data" into a repeatable step you can run on any table, whether it lives in a local DataFrame or a remote warehouse.
 
+We will move from the broadest view to the most detailed. First we preview a handful of rows to orient ourselves, then we profile every column at once, then we focus specifically on missing values, and finally we look at how the same tools work against data that never leaves the database. The goal throughout is not to validate anything yet, but to learn enough that the validation plan almost writes itself. Building and running that plan is the subject of @sec-validation-workflow, and letting Pointblank draft one for you from a profile is covered in @sec-ai-authoring.
+
