@@ -1,0 +1,9 @@
+# Getting Started {#sec-getting-started}
+
+```{python}
+#| include: false
+import pointblank as pb
+```
+
+Before you can validate data you need to install **Pointblank** and understand how a basic validation is structured. This chapter walks through installation, introduces the handful of concepts that underlie everything the library does, and works a complete example from data to results, so that by the end you have a working setup, a clear mental model, and the ability to write and run your own validation plans.
+
