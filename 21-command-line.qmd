@@ -1,0 +1,7 @@
+# The Command-Line Interface {#sec-command-line}
+
+```{python}
+#| include: false
+import pointblank as pb
+```
+
