@@ -56,3 +56,12 @@ print(pb.__version__)
 The alias `pb` is used throughout this book and the official documentation, and keeping it makes
 examples easier to follow and validation code concise when many methods are chained together.
 
+## Core concepts
+
+It is worth a moment on the conceptual model before writing code, because **Pointblank** is more
+granular than a tool that returns a single pass-or-fail verdict. It tells you how much of your data
+passed or failed and which specific rows had problems, which turns validation from a gate that
+blocks bad data into a diagnostic that helps you understand and improve quality over time. Three
+ideas, the test unit, the validation step, and interrogation, form the vocabulary the rest of the
+book uses.
+
