@@ -30,3 +30,11 @@ pip install pointblank
 Most users want a DataFrame library alongside it, and support for Polars, Pandas, or both installs
 through an extra, as does the Ibis backend for whichever database you connect to.
 
+```{python}
+#| eval: false
+pip install "pointblank[pl]"        # Polars
+pip install "pointblank[pd]"        # Pandas
+pip install "pointblank[duckdb]"    # DuckDB via Ibis
+pip install "pointblank[postgres]"  # PostgreSQL via Ibis
+```
+
