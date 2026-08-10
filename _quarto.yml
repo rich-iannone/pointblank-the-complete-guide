@@ -55,10 +55,16 @@ book:
         - 27-cdisc-conformance.qmd
     - part: "Industry Playbooks"
       chapters:
-        - 27-playbook-financial.qmd
-        - 28-playbook-ecommerce.qmd
-        - 29-playbook-data-engineering.qmd
-        - 30-playbook-healthcare.qmd
+        - 28-playbook-financial.qmd
+        - 29-playbook-ecommerce.qmd
+        - 30-playbook-data-engineering.qmd
+        - 31-playbook-healthcare.qmd
+        - 32-playbook-rwe.qmd
+        - 33-playbook-ml-monitoring.qmd
+        - 34-playbook-iot-sensors.qmd
+        - 35-playbook-insurance.qmd
+        - 36-playbook-public-sector.qmd
+        - 37-playbook-marketing.qmd
   appendices:
     - appendix-reference.qmd
     - appendix-roadmap.qmd
