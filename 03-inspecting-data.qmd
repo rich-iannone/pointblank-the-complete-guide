@@ -39,3 +39,12 @@ kinds of imperfections that matter.
 small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
 ```
 
+Before looking at any values, it is worth confirming the two most basic facts about a table: how
+many rows and columns it has. The `get_row_count()` and `get_column_count()` functions answer
+exactly those questions, and they work identically across every backend Pointblank supports.
+
+```{python}
+print(pb.get_row_count(small_table), "rows")
+print(pb.get_column_count(small_table), "columns")
+```
+
