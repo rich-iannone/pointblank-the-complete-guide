@@ -1,0 +1,2 @@
+# The MCP Server {#sec-mcp-server}
+
