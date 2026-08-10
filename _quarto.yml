@@ -51,8 +51,8 @@ book:
         - 25-test-data-generation.qmd
     - part: "Clinical & Regulated Data"
       chapters:
-        - 25-clinical-cdisc.qmd
-        - 26-cdisc-conformance.qmd
+        - 26-clinical-cdisc.qmd
+        - 27-cdisc-conformance.qmd
     - part: "Industry Playbooks"
       chapters:
         - 27-playbook-financial.qmd
