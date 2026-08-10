@@ -38,10 +38,10 @@ book:
         - 18-ai-authoring.qmd
     - part: "Data Sources, Interfaces & Automation"
       chapters:
-        - 18-data-sources.qmd
-        - 19-yaml-workflows.qmd
-        - 20-command-line.qmd
-        - 21-mcp-server.qmd
+        - 19-data-sources.qmd
+        - 20-yaml-workflows.qmd
+        - 21-command-line.qmd
+        - 22-mcp-server.qmd
     - part: "Data Contracts & Pipelines"
       chapters:
         - 22-data-contracts.qmd
