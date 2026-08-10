@@ -1,0 +1,9 @@
+# Validating Clinical Trial Data (CDISC SDTM & ADaM) {#sec-clinical-cdisc}
+
+```{python}
+#| include: false
+import pointblank as pb
+import polars as pl
+pb.config(report_incl_header=False, report_incl_footer=False)
+```
+
