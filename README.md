@@ -8,6 +8,10 @@ The **Pointblank** library provides a fluent, expressive framework for defining 
 
 **Read the book online:** https://rich-iannone.github.io/pointblank-the-complete-guide/
 
+## What you'll learn
+
+The early chapters build a working vocabulary of validation. You will learn the core workflow of building a plan and interrogating data, see how to reach for validation lightly and often during interactive work such as guarding a join, and then express expectations about individual column values, whole rows, table structure and freshness, and column-level aggregates, handling the coded missing values and per-segment breakdowns that real data brings. From there the book turns to acting on results, grading failures by severity with thresholds, responding automatically with actions, rolling results up into quality scores, and presenting them as reports, extracts, and alerts.
+
 ## Contributing
 
 Found a typo or an error? Have a suggestion for improvement? Please [open an issue](https://github.com/rich-iannone/pointblank-the-complete-guide/issues) or submit a pull request.
