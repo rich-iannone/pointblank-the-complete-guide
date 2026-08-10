@@ -1,0 +1,10 @@
+# Inspecting & Profiling Your Data {#sec-inspecting-data}
+
+```{python}
+#| include: false
+import pointblank as pb
+pb.config(report_incl_footer=False)
+```
+
+You cannot validate what you do not understand. A validation rule is a statement of expectation, and an expectation has to come from somewhere. For data you know well, that knowledge lives in your head: you already know which columns should never be empty, which values are categorical, and what a plausible range looks like. For data you are meeting for the first time, you have none of that, and writing rules before you have looked is how validation plans end up either too loose to catch anything or too strict to ever pass.
+
