@@ -1,0 +1,4 @@
+# Appendix: Method & API Reference {#sec-appendix-reference}
+
+This appendix is a lookup resource for **Pointblank**'s methods, classes, and functions. The chapters explain when and why to use each feature, while this reference shows the signatures and the essentials, for the moments when you know what you want but need the parameter name or the exact form. Signatures show the key parameters with their defaults. Most validation methods share a common set of trailing parameters, `thresholds`, `actions`, `brief`, `active`, and `dimension`, which behave identically across methods, and the per-row checks additionally take `pre` for preprocessing and `segments` for per-group evaluation. These shared parameters are described once below and omitted from the individual entries to keep them readable.
+
