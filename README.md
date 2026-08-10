@@ -4,7 +4,7 @@ This is the repository for the book "Data Validation with **Pointblank** for Pyt
 
 ## About this book
 
-The **Pointblank** package provides a fluent, expressive framework for defining validation rules, running them across many kinds of data sources, and communicating the results through clear, interactive reports. This book teaches you how to use **Pointblank** effectively, from your first validation step through production-scale data quality workflows.
+The **Pointblank** library provides a fluent, expressive framework for defining validation rules, running them across many kinds of data source, and communicating the results through clear, interactive reports. This book teaches you how to use **Pointblank** well, beginning with a first validation step and building toward the production-scale, automated, and domain-specific workflows that data quality demands in practice. The emphasis throughout is on judgment, not just how to call a method but when and why to reach for it.
 
 **Read the book online:** https://rich-iannone.github.io/pointblank-the-complete-guide/
 
