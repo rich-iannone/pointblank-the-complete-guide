@@ -1,0 +1,9 @@
+# Playbook: Public Sector & Official Statistics {#sec-playbook-public-sector}
+
+```{python}
+#| include: false
+import pointblank as pb
+import polars as pl
+pb.config(report_incl_header=True, report_incl_footer=False)
+```
+
