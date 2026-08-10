@@ -30,13 +30,12 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          # Quarto renders the .qmd Python chunks via the Jupyter engine.
-          # Expand this list as chapters begin executing more of the library.
           pip install \
             jupyter \
-            pointblank \
+            "pointblank @ git+https://github.com/posit-dev/pointblank.git@main" \
             polars \
             pandas \
+            numpy \
             "ibis-framework[duckdb]" \
             duckdb
 
