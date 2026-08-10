@@ -1,0 +1,8 @@
+# Generating Synthetic and Test Data {#sec-test-data-generation}
+
+```{python}
+#| include: false
+import pointblank as pb
+pb.config(report_incl_header=False, report_incl_footer=False)
+```
+
