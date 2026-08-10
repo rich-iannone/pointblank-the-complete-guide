@@ -1,0 +1,9 @@
+# Validation Pipelines {#sec-pipelines}
+
+```{python}
+#| include: false
+import pointblank as pb
+import polars as pl
+pb.config(report_incl_footer=False)
+```
+
