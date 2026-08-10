@@ -34,8 +34,8 @@ book:
         - 16-notifications-observability.qmd
     - part: "AI-Assisted Validation"
       chapters:
-        - 16-semantic-validation.qmd
-        - 17-ai-authoring.qmd
+        - 17-semantic-validation.qmd
+        - 18-ai-authoring.qmd
     - part: "Data Sources, Interfaces & Automation"
       chapters:
         - 18-data-sources.qmd
