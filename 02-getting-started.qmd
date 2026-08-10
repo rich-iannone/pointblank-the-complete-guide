@@ -53,3 +53,6 @@ After installing, a quick import confirms the setup, printing the version withou
 print(pb.__version__)
 ```
 
+The alias `pb` is used throughout this book and the official documentation, and keeping it makes
+examples easier to follow and validation code concise when many methods are chained together.
+
