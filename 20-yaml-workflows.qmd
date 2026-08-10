@@ -1,0 +1,8 @@
+# YAML-Based Workflows {#sec-yaml-workflows}
+
+```{python}
+#| include: false
+import pointblank as pb
+pb.config(report_incl_footer=False)
+```
+
