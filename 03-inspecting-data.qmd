@@ -6,9 +6,18 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
-You cannot validate what you do not understand. A validation rule is a statement of expectation, and an expectation has to come from somewhere. For data you know well, that knowledge lives in your head: you already know which columns should never be empty, which values are categorical, and what a plausible range looks like. For data you are meeting for the first time, you have none of that, and writing rules before you have looked is how validation plans end up either too loose to catch anything or too strict to ever pass.
+You cannot validate what you do not understand. A validation rule is a statement of expectation, and
+an expectation has to come from somewhere. For data you know well, that knowledge lives in your
+head: you already know which columns should never be empty, which values are categorical, and what a
+plausible range looks like. For data you are meeting for the first time, you have none of that, and
+writing rules before you have looked is how validation plans end up either too loose to catch
+anything or too strict to ever pass.
 
-This chapter is about the looking part. **Pointblank** ships a small set of inspection tools that answer the first questions you ask of any table: What columns are here, and what types do they hold? How many rows are there? Where are the values missing, and how are they distributed? Each tool turns a vague sense of "let me get to know this data" into a repeatable step you can run on any table, whether it lives in a local DataFrame or a remote warehouse.
+This chapter is about the looking part. **Pointblank** ships a small set of inspection tools that
+answer the first questions you ask of any table: What columns are here, and what types do they hold?
+How many rows are there? Where are the values missing, and how are they distributed? Each tool turns
+a vague sense of "let me get to know this data" into a repeatable step you can run on any table,
+whether it lives in a local DataFrame or a remote warehouse.
 
 We will move from the broadest view to the most detailed. First we preview a handful of rows to orient ourselves, then we profile every column at once, then we focus specifically on missing values, and finally we look at how the same tools work against data that never leaves the database. The goal throughout is not to validate anything yet, but to learn enough that the validation plan almost writes itself. Building and running that plan is the subject of @sec-validation-workflow, and letting Pointblank draft one for you from a profile is covered in @sec-ai-authoring.
 
