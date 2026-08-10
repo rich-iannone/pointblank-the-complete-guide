@@ -27,3 +27,6 @@ core validation functionality.
 pip install pointblank
 ```
 
+Most users want a DataFrame library alongside it, and support for Polars, Pandas, or both installs
+through an extra, as does the Ibis backend for whichever database you connect to.
+
