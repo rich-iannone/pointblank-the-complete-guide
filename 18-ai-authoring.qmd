@@ -1,0 +1,8 @@
+# AI-Assisted Authoring {#sec-ai-authoring}
+
+```{python}
+#| include: false
+import pointblank as pb
+pb.config(report_incl_header=False, report_incl_footer=False)
+```
+
