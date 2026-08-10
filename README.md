@@ -2,6 +2,7 @@
 
 This is the repository for the book "**Pointblank**: The Complete Guide to Data Validation in Python", which covers assessing, monitoring, and assuring data quality in Python using the [**Pointblank**](https://github.com/posit-dev/pointblank) library.
 
+> **Work in progress.** This book is under active development, so its structure, chapters, and examples may still change.
 
 ## About this book
 
