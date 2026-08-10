@@ -1,0 +1,8 @@
+# Data Quality Scoring {#sec-quality-scoring}
+
+```{python}
+#| include: false
+import pointblank as pb
+pb.config(report_incl_header=False, report_incl_footer=False)
+```
+
