@@ -1,0 +1,9 @@
+# Missing Data and Coded Missingness {#sec-missing-data}
+
+```{python}
+#| include: false
+import pointblank as pb
+import polars as pl
+pb.config(report_incl_header=False, report_incl_footer=False)
+```
+
