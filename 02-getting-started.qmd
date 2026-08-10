@@ -16,3 +16,14 @@ validation steps, and interrogation, and then build and interrogate a first plan
 dataset. Along the way we preview the data sources and configuration options that later chapters
 develop in full.
 
+## Installing Pointblank
+
+**Pointblank** installs with only the dependencies you ask for, which keeps an environment lean and
+avoids the conflicts that come from pulling in more than you need. The base install provides the
+core validation functionality.
+
+```{python}
+#| eval: false
+pip install pointblank
+```
+
