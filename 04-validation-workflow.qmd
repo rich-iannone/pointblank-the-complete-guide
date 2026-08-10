@@ -1,0 +1,10 @@
+# The Validation Workflow {#sec-validation-workflow}
+
+```{python}
+#| include: false
+import pointblank as pb
+pb.config(report_incl_footer=False)
+```
+
+@sec-getting-started gave you the tools to run a basic validation. Effective data validation, though, requires more than knowing which methods to call. It requires understanding how those methods fit together, when each component comes into play, and how to design plans that are both thorough and maintainable.
+
