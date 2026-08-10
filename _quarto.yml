@@ -67,7 +67,6 @@ book:
         - 37-playbook-marketing.qmd
   appendices:
     - appendix-reference.qmd
-    - appendix-roadmap.qmd
 
 format:
   html:
