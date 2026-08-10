@@ -1,0 +1,9 @@
+# Data Contracts {#sec-data-contracts}
+
+```{python}
+#| include: false
+import pointblank as pb
+import polars as pl
+pb.config(report_incl_header=False, report_incl_footer=False)
+```
+
