@@ -44,8 +44,8 @@ book:
         - 22-mcp-server.qmd
     - part: "Data Contracts & Pipelines"
       chapters:
-        - 22-data-contracts.qmd
-        - 23-pipelines.qmd
+        - 23-data-contracts.qmd
+        - 24-pipelines.qmd
     - part: "Test Data Generation"
       chapters:
         - 24-test-data-generation.qmd
