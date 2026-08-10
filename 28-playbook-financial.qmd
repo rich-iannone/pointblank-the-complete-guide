@@ -1,0 +1,10 @@
+# Playbook: Financial Services & Fintech {#sec-playbook-financial}
+
+```{python}
+#| include: false
+import pointblank as pb
+import polars as pl
+import numpy as np
+pb.config(report_incl_header=True, report_incl_footer=False)
+```
+
