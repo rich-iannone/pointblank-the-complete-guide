@@ -38,6 +38,15 @@ pip install "pointblank[duckdb]"    # DuckDB via Ibis
 pip install "pointblank[postgres]"  # PostgreSQL via Ibis
 ```
 
+The AI-assisted features of @sec-ai-authoring and @sec-semantic-validation need the generation
+extra, and the MCP server of @sec-mcp-server needs its own.
+
+```{python}
+#| eval: false
+pip install "pointblank[generate]"  # language-model features
+pip install "pointblank[mcp]"       # the MCP server
+```
+
 After installing, a quick import confirms the setup, printing the version without error.
 
 ```{python}
