@@ -65,3 +65,14 @@ blocks bad data into a diagnostic that helps you understand and improve quality 
 ideas, the test unit, the validation step, and interrogation, form the vocabulary the rest of the
 book uses.
 
+### Test units
+
+A test unit is the atomic element that a check evaluates, and what counts as one depends on the
+check. For a column-value check such as `col_vals_gt()`, each row of the target column is a test
+unit, so a check over a thousand-row column has a thousand test units that each pass or fail
+independently. For a row check such as `rows_distinct()`, each row of the table is a test unit. For
+a table check such as `col_exists()`, there is usually a single test unit standing for the table as
+a whole.
+
+![How test units relate to validation results. Each row in a column validation becomes a test unitthat either passes or fails independently.](assets/validation-test-units.png){#fig-test-units}
+
