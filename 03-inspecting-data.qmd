@@ -8,3 +8,5 @@ pb.config(report_incl_footer=False)
 
 You cannot validate what you do not understand. A validation rule is a statement of expectation, and an expectation has to come from somewhere. For data you know well, that knowledge lives in your head: you already know which columns should never be empty, which values are categorical, and what a plausible range looks like. For data you are meeting for the first time, you have none of that, and writing rules before you have looked is how validation plans end up either too loose to catch anything or too strict to ever pass.
 
+This chapter is about the looking part. **Pointblank** ships a small set of inspection tools that answer the first questions you ask of any table: What columns are here, and what types do they hold? How many rows are there? Where are the values missing, and how are they distributed? Each tool turns a vague sense of "let me get to know this data" into a repeatable step you can run on any table, whether it lives in a local DataFrame or a remote warehouse.
+
