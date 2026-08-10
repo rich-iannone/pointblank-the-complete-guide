@@ -5,5 +5,12 @@
 import pointblank as pb
 ```
 
-Data flows through modern organizations like water through a city. It feeds reports that guide strategic decisions, powers algorithms that automate critical processes, and populates dashboards that monitor business health. When that data is accurate, complete, and consistent, the systems it supports function smoothly. When it is not, the consequences range from minor inconveniences to catastrophic failures. A single misplaced decimal point in a financial database can trigger regulatory investigations. Inconsistent customer identifiers can fragment marketing campaigns into ineffective fragments. Missing sensor readings can cause manufacturing equipment to operate outside safe parameters. The quality of data determines the quality of everything that depends upon it.
+Data flows through modern organizations like water through a city. It feeds reports that guide
+strategic decisions, powers algorithms that automate critical processes, and populates dashboards
+that monitor business health. When that data is accurate, complete, and consistent, the systems it
+supports function smoothly. When it is not, the consequences range from minor inconveniences to
+catastrophic failures. A single misplaced decimal point in a financial database can trigger
+regulatory investigations. Inconsistent customer identifiers can fragment marketing campaigns into
+ineffective fragments. Missing sensor readings can cause manufacturing equipment to operate outside
+safe parameters. The quality of data determines the quality of everything that depends upon it.
 
