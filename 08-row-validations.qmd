@@ -1,0 +1,8 @@
+# Row and Completeness Validations {#sec-row-validations}
+
+```{python}
+#| include: false
+import pointblank as pb
+pb.config(report_incl_header=False, report_incl_footer=False)
+```
+
