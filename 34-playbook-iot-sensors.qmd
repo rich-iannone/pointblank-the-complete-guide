@@ -1,0 +1,11 @@
+# Playbook: Manufacturing & IoT Sensors {#sec-playbook-iot-sensors}
+
+```{python}
+#| include: false
+import pointblank as pb
+import polars as pl
+import numpy as np
+from datetime import datetime, timedelta
+pb.config(report_incl_header=True, report_incl_footer=False)
+```
+
