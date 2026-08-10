@@ -1,6 +1,6 @@
-# Data Validation with **Pointblank** for Python
+# **Pointblank**: The Complete Guide to Data Validation in Python
 
-This is the repository for the book "Data Validation with **Pointblank** for Python", a comprehensive guide to assessing, monitoring, and assuring data quality in Python using the **Pointblank** library.
+This is the repository for the book "**Pointblank**: The Complete Guide to Data Validation in Python", which covers assessing, monitoring, and assuring data quality in Python using the **Pointblank** library.
 
 ## About this book
 
