@@ -4,7 +4,7 @@ project:
 
 book:
   twitter-card: true
-  title: "Data Validation with **Pointblank** for Python"
+  title: "**Pointblank**: The Complete Guide to Data Validation in Python"
   author: "Richard Iannone"
   search: true
   repo-url: https://github.com/rich-iannone/pointblank-the-complete-guide
