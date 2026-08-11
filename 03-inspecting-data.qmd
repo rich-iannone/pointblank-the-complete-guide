@@ -181,3 +181,5 @@ pb.missing_vals_tbl(small_table)
 
 ## From inspection to a validation plan
 
+## Profiling and drift detection
+
