@@ -139,6 +139,20 @@ the database rather than your local machine.
 
 ## Your first validation
 
+With the concepts in place, a complete example ties them together, using a built-in dataset so you
+can run it with nothing more than the base install.
+
+### Loading and previewing the data
+
+The `load_dataset()` function returns one of the bundled datasets, and `preview()` shows it
+compactly.
+
+```{python}
+small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
+
+pb.preview(small_table)
+```
+
 ### Building and running a plan
 
 ### Reading results in code
