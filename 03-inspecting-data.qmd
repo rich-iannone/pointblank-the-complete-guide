@@ -175,3 +175,5 @@ pb.missing_vals_tbl(small_table)
 
 ### Heatmaps and coded missingness
 
+## Inspecting data where it lives
+
