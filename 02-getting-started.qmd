@@ -164,6 +164,19 @@ showing how validation handles real data.
 A plan gathers several expectations, each the kind of rule that might come from a business
 requirement or a data contract.
 
+```{python}
+validation = (
+    pb.Validate(data=small_table, tbl_name="small_table", label="First validation example")
+    .col_vals_gt(columns="d", value=100)
+    .col_vals_le(columns="c", value=10)
+    .col_vals_not_null(columns="a")
+    .col_exists(columns=["date", "date_time"])
+    .interrogate()
+)
+
+validation
+```
+
 ### Reading results in code
 
 ## Where your data can live
