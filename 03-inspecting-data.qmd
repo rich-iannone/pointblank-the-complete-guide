@@ -135,3 +135,12 @@ display, for example to store it, compare it against a later run, or drive logic
 `DataScan` class is the engine behind the summary, and it exposes the profile in several forms. You
 construct it with a table, then ask it for whichever representation you need.
 
+```{.python filename="Class signature"}
+scan = DataScan(data, tbl_name=None)
+
+scan.get_tabular_report(show_sample_data=False)  # the visual summary table
+scan.summary_data()                              # the profile as a data frame
+scan.to_json()                                   # the profile as a JSON string
+scan.save_to_json(output_file)                   # write the JSON to a file
+```
+
