@@ -120,3 +120,11 @@ Running it on `small_table` produces a column-by-column summary of the entire ta
 pb.col_summary_tbl(small_table)
 ```
 
+Each row of this summary describes one column of the data. You can read off the storage type, the
+count of missing values, and the number of unique values, and for the numeric columns you also get
+statistics such as the mean, the minimum, and the maximum. This is the view that turns hunches into
+facts. The `f` column reveals itself as low-cardinality text, a strong hint that it is categorical
+and a candidate for a set-membership check, while the numeric columns expose the ranges you would
+use to set sensible boundaries. Reading a profile like this is usually the moment a validation plan
+starts to take shape in your mind.
+
