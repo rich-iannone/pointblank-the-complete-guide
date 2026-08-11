@@ -177,6 +177,13 @@ Running it on `small_table` makes the pattern in the `c` column visible.
 pb.missing_vals_tbl(small_table)
 ```
 
+The table breaks the rows into sections and shades each cell according to how much of that column is
+missing within that section. Because `small_table` is short, the effect is modest, but the structure
+is exactly what scales up: on a large table this view immediately distinguishes a column with
+scattered gaps from one whose missingness is concentrated in a particular stretch of rows. Reading
+the layout of missingness, rather than a single summary number, is what lets you tell an expected
+empty field from a genuine failure.
+
 ### Reading missing-value patterns
 
 ### Heatmaps and coded missingness
