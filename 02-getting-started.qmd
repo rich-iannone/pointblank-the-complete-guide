@@ -94,3 +94,5 @@ diagnostic.
 
 ### The Validate class
 
+### Interrogation
+
