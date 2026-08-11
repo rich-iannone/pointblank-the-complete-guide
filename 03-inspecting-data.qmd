@@ -161,3 +161,13 @@ of data. The `missing_vals_tbl()` function shows not just how much is missing bu
 the table into row sections and reporting the missing proportion for each column within each
 section.
 
+```{.python filename="Function signature"}
+missing_vals_tbl(data, missing=None, as_heatmap=False)
+```
+
+Running it on `small_table` makes the pattern in the `c` column visible.
+
+```{python}
+pb.missing_vals_tbl(small_table)
+```
+
