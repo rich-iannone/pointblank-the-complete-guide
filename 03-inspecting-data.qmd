@@ -177,3 +177,5 @@ pb.missing_vals_tbl(small_table)
 
 ## Inspecting data where it lives
 
+### Connecting to a database
+
