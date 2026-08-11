@@ -128,3 +128,10 @@ and a candidate for a set-membership check, while the numeric columns expose the
 use to set sensible boundaries. Reading a profile like this is usually the moment a validation plan
 starts to take shape in your mind.
 
+### Programmatic profiles with `DataScan`
+
+The summary table is ideal for a human, but sometimes you want the profile as data rather than as a
+display, for example to store it, compare it against a later run, or drive logic in a script. The
+`DataScan` class is the engine behind the summary, and it exposes the profile in several forms. You
+construct it with a table, then ask it for whichever representation you need.
+
