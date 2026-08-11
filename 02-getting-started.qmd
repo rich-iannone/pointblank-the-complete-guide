@@ -108,6 +108,9 @@ sample = pl.DataFrame({
 })
 ```
 
+Because the methods return the same object, checks chain fluently, and optional metadata like a
+table name and label can be supplied to the constructor to appear in reports.
+
 ### Interrogation
 
 ### Building and running a plan
