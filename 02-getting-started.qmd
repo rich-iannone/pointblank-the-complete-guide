@@ -137,6 +137,8 @@ the same `Validate` object, now populated with results, so you can continue the 
 for inspection. For database-backed data the work happens on the server, so validation scales with
 the database rather than your local machine.
 
+## Your first validation
+
 ### Building and running a plan
 
 ### Reading results in code
