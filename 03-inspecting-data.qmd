@@ -183,3 +183,5 @@ pb.missing_vals_tbl(small_table)
 
 ## Profiling and drift detection
 
+## Summary
+
