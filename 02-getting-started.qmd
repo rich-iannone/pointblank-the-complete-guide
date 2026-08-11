@@ -129,6 +129,14 @@ it is what lets a plan be built programmatically, stored, inspected, or serializ
 
 ### Interrogation
 
+Interrogation is the step that executes the plan against the data. Until you call `interrogate()`,
+the plan is only a specification, and after you call it, you have results. The name is deliberate,
+since you are questioning the data systematically and recording the answers, which reflects the view
+that validation is an investigation rather than a simple gate. The `interrogate()` method returns
+the same `Validate` object, now populated with results, so you can continue the chain or assign it
+for inspection. For database-backed data the work happens on the server, so validation scales with
+the database rather than your local machine.
+
 ### Building and running a plan
 
 ### Reading results in code
