@@ -97,3 +97,9 @@ question rather than dumping the entire table.
 pb.preview(small_table, columns_subset=["a", "c", "f"], n_head=3, n_tail=3)
 ```
 
+Here we have asked for just three columns and three rows at each end, which is enough to check that
+`a` looks like a small integer, `c` holds counts with the occasional gap, and `f` takes a limited
+set of text values. Narrowing the view this way is especially useful on tables with dozens of
+columns, where the signal you want is easily lost among columns you do not. A quick, focused preview
+is usually all it takes to decide which columns deserve closer profiling.
+
