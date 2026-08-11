@@ -171,3 +171,5 @@ Running it on `small_table` makes the pattern in the `c` column visible.
 pb.missing_vals_tbl(small_table)
 ```
 
+### Reading missing-value patterns
+
