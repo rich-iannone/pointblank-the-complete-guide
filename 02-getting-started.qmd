@@ -92,3 +92,5 @@ deliberate choice: a fail-fast approach would make you run validation repeatedly
 problems, whereas this design surfaces them all at once, which is what makes it useful as a
 diagnostic.
 
+### The Validate class
+
