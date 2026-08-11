@@ -144,3 +144,11 @@ scan.to_json()                                   # the profile as a JSON string
 scan.save_to_json(output_file)                   # write the JSON to a file
 ```
 
+The `get_tabular_report()` method returns the same kind of summary we just saw, which confirms that
+`col_summary_tbl()` is really a convenient shortcut over `DataScan`.
+
+```{python}
+scan = pb.DataScan(data=small_table)
+scan.get_tabular_report()
+```
+
