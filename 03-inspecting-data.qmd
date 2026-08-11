@@ -48,3 +48,7 @@ print(pb.get_row_count(small_table), "rows")
 print(pb.get_column_count(small_table), "columns")
 ```
 
+Those two numbers are often the first sign that something is wrong. A table you expected to hold a
+million rows that reports a few hundred usually means a load failed or a filter ran too
+aggressively. With the dimensions confirmed, we are ready to look at the data itself.
+
