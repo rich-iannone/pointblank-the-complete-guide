@@ -179,3 +179,5 @@ pb.missing_vals_tbl(small_table)
 
 ### Connecting to a database
 
+## From inspection to a validation plan
+
