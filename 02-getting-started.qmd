@@ -155,6 +155,9 @@ pb.preview(small_table)
 
 ### Building and running a plan
 
+A plan gathers several expectations, each the kind of rule that might come from a business
+requirement or a data contract.
+
 ### Reading results in code
 
 ## Where your data can live
