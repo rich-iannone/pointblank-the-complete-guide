@@ -110,3 +110,13 @@ its values. For that you need a profile: the type of each column, how many value
 many are distinct, and the range and central tendency of the numbers. The `col_summary_tbl()`
 function computes all of this in one call and presents it as a single readable table.
 
+```{.python filename="Function signature"}
+col_summary_tbl(data, tbl_name=None)
+```
+
+Running it on `small_table` produces a column-by-column summary of the entire table.
+
+```{python}
+pb.col_summary_tbl(small_table)
+```
+
