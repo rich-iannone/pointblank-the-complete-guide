@@ -152,6 +152,12 @@ scan = pb.DataScan(data=small_table)
 scan.get_tabular_report()
 ```
 
+The difference is what else the scan can give you. Calling `to_json()` returns the entire profile as
+a JSON string, and `summary_data()` returns it as a data frame, either of which can be persisted and
+diffed over time to detect when a column's shape has changed. That comparison-over-time use is the
+seed of drift detection, which we return to at the end of the chapter. For now, the important point
+is that the same profile is available both as something to read and as something to compute with.
+
 ## Finding missing values with `missing_vals_tbl()`
 
 Missing values are often the earliest and clearest signal of a data quality problem, but a single
