@@ -80,3 +80,9 @@ Calling it on `small_table` shows the whole idea at a glance.
 pb.preview(small_table)
 ```
 
+The preview shows the first five and last five rows with a divider between them, so you see how the
+data looks at both ends of the table without scrolling through the middle. Each column header
+carries its data type, which is often where the first surprise appears: a date read as a string, or
+an integer column that arrived as a float. The `c` column here is worth noting, because a couple of
+its cells are empty, and that is the missing data we will return to later in the chapter.
+
