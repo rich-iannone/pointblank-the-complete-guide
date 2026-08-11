@@ -52,3 +52,31 @@ Those two numbers are often the first sign that something is wrong. A table you 
 million rows that reports a few hundred usually means a load failed or a filter ran too
 aggressively. With the dimensions confirmed, we are ready to look at the data itself.
 
+## A first look with `preview()`
+
+The simplest inspection is to look at some rows, but a raw DataFrame print is a poor way to do it.
+Wide tables wrap awkwardly, long tables scroll past the screen, and neither the column types nor the
+overall shape are easy to pick out. The `preview()` function solves this by rendering a compact,
+formatted view that shows a few rows from the top and a few from the bottom of the table, along with
+each column's type.
+
+```{.python filename="Function signature"}
+preview(
+    data,
+    columns_subset=None,
+    n_head=5,
+    n_tail=5,
+    limit=50,
+    show_row_numbers=True,
+    max_col_width=250,
+    min_tbl_width=500,
+    incl_header=None
+)
+```
+
+Calling it on `small_table` shows the whole idea at a glance.
+
+```{python}
+pb.preview(small_table)
+```
+
