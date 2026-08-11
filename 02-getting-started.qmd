@@ -153,6 +153,12 @@ small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
 pb.preview(small_table)
 ```
 
+The preview shows the data's shape and a mix of column types: `a` and `c` are integers, `b` and `f`
+are strings, `d` is a float, `e` is a boolean, and there are `date` and `date_time` columns. The
+`small_table` dataset is deliberately small, thirteen rows and eight columns, so you can trace
+results by hand, and it carries a few imperfections such as null values that make it useful for
+showing how validation handles real data.
+
 ### Building and running a plan
 
 A plan gathers several expectations, each the kind of rule that might come from a business
