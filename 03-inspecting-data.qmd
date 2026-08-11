@@ -173,3 +173,5 @@ pb.missing_vals_tbl(small_table)
 
 ### Reading missing-value patterns
 
+### Heatmaps and coded missingness
+
