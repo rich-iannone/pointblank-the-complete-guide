@@ -14,3 +14,10 @@ regulatory investigations. Inconsistent customer identifiers can fragment market
 ineffective fragments. Missing sensor readings can cause manufacturing equipment to operate outside
 safe parameters. The quality of data determines the quality of everything that depends upon it.
 
+This book is about taking data quality seriously. It introduces **Pointblank**, a Python library
+designed to make data validation a first-class activity in your analytical workflows. **Pointblank**
+provides a structured, expressive way to define what good data looks like, check whether your actual
+data meets those expectations, and communicate the results to everyone who needs to know. The
+library transforms validation from an ad-hoc defensive measure into a systematic practice that
+builds confidence in your data and the decisions that flow from it.
+
