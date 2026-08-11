@@ -111,6 +111,22 @@ sample = pl.DataFrame({
 Because the methods return the same object, checks chain fluently, and optional metadata like a
 table name and label can be supplied to the constructor to appear in reports.
 
+```{python}
+plan = (
+    pb.Validate(data=sample, tbl_name="sample", label="Getting-started example")
+    .col_vals_gt(columns="amount", value=0)
+    .col_vals_not_null(columns="customer_id")
+)
+
+plan
+```
+
+At this point no validation has run, and displaying the plan shows its structure with the results
+columns empty and a "No Interrogation Performed" note, which is a useful way to confirm a plan is
+built correctly before committing to execution. The separation between defining a plan and running
+it is what lets a plan be built programmatically, stored, inspected, or serialized to YAML as in
+@sec-yaml-workflows. The plan is a first-class object, not a side effect of running code.
+
 ### Interrogation
 
 ### Building and running a plan
