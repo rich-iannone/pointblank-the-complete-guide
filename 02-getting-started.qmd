@@ -179,6 +179,9 @@ validation
 
 ### Reading results in code
 
+The visual report suits human review, but automation needs the results as plain values, and several
+methods provide them. The `n_failed()` method returns the failing count per step as a dictionary.
+
 ## Where your data can live
 
 ## A first look at configuration
