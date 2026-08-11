@@ -94,6 +94,20 @@ diagnostic.
 
 ### The Validate class
 
+The `Validate` class is the central object. It holds the target data, accumulates the steps, and
+runs the interrogation, so it works as a plan builder: you start from data, describe your
+expectations through chained method calls, and then execute the plan. Creating one requires at least
+a data source, and a small sample makes this concrete.
+
+```{python}
+import polars as pl
+
+sample = pl.DataFrame({
+    "customer_id": ["C001", "C002", None, "C004", "C005"],
+    "amount": [150.00, -25.50, 89.99, 200.00, 45.00],
+})
+```
+
 ### Interrogation
 
 ### Building and running a plan
