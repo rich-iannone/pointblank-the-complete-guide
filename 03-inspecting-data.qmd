@@ -86,3 +86,14 @@ carries its data type, which is often where the first surprise appears: a date r
 an integer column that arrived as a float. The `c` column here is worth noting, because a couple of
 its cells are empty, and that is the missing data we will return to later in the chapter.
 
+### Focusing the preview
+
+On a wide table, showing every column defeats the purpose of a compact view. The `columns_subset=`
+argument narrows the preview to the columns you actually care about, and `n_head=` and `n_tail=`
+control how many rows appear at each end. Together they let you frame a preview around a specific
+question rather than dumping the entire table.
+
+```{python}
+pb.preview(small_table, columns_subset=["a", "c", "f"], n_head=3, n_tail=3)
+```
+
