@@ -76,3 +76,8 @@ a whole.
 
 ![How test units relate to validation results. Each row in a column validation becomes a test unitthat either passes or fails independently.](assets/validation-test-units.png){#fig-test-units}
 
+This accounting is what makes results precise. The difference between "your data failed validation"
+and "five percent of transactions have negative amounts" is the difference between knowing there is
+a problem and knowing its scope, its likely cause, and how to prioritize it, and test-unit counting
+is what provides the second.
+
