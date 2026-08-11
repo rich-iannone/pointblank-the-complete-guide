@@ -81,3 +81,14 @@ and "five percent of transactions have negative amounts" is the difference betwe
 a problem and knowing its scope, its likely cause, and how to prioritize it, and test-unit counting
 is what provides the second.
 
+### Validation steps
+
+A validation step is a single check within a plan, created by one call to a validation method, and a
+plan usually holds several. Steps are numbered from one in the order they are added, and those
+numbers appear in reports and in the methods that retrieve results. Crucially, steps are
+independent, so the failure of one never prevents the others from running, and a single
+interrogation gives you the complete picture rather than stopping at the first problem. That is a
+deliberate choice: a fail-fast approach would make you run validation repeatedly to discover several
+problems, whereas this design surfaces them all at once, which is what makes it useful as a
+diagnostic.
+
