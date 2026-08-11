@@ -152,3 +152,12 @@ scan = pb.DataScan(data=small_table)
 scan.get_tabular_report()
 ```
 
+## Finding missing values with `missing_vals_tbl()`
+
+Missing values are often the earliest and clearest signal of a data quality problem, but a single
+count of nulls hides more than it reveals. A column that is missing five percent of its values at
+random is a very different situation from a column that is completely empty for the most recent week
+of data. The `missing_vals_tbl()` function shows not just how much is missing but where, by dividing
+the table into row sections and reporting the missing proportion for each column within each
+section.
+
