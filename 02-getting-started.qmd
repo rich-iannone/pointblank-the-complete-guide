@@ -177,6 +177,15 @@ validation = (
 validation
 ```
 
+Each step states one expectation. The first requires column `d` to exceed 100, the second requires
+column `c` to be at most 10, the third requires the identifier column `a` to have no nulls, and the
+fourth confirms the table has the `date` and `date_time` columns, expanding into two steps because
+it names two columns. Reading the plan almost like documentation of the data's requirements is
+intentional, since validation plans often double as executable specifications. The report shows the
+outcome: most steps pass, but the check on column `c` fails on two rows, because that column holds
+two nulls and a null cannot be shown to satisfy the at-most-ten condition. That mix of passing and
+failing steps is exactly the diagnostic picture that helps you prioritize.
+
 ### Reading results in code
 
 The visual report suits human review, but automation needs the results as plain values, and several
