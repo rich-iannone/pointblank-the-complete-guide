@@ -244,5 +244,18 @@ Thresholds grade a failure by how much of the data fails rather than treating an
 so a plan can tolerate minor issues while escalating serious ones, and they are set on the
 `Validate` object.
 
+```{python}
+#| eval: false
+pb.Validate(
+    data=small_table,
+    thresholds=pb.Thresholds(warning=0.05, error=0.10, critical=0.20),
+).col_vals_gt(columns="d", value=100).interrogate()
+```
+
+Under these levels a failure rate up to five percent passes, then a warning, an error, and finally a
+critical result as the rate climbs, which @sec-thresholds-actions develops. Reports can also be
+localized, since the people who read them do not all work in English, and the `lang` parameter
+renders labels and messages in another language while the validation logic stays the same.
+
 ## Summary
 
