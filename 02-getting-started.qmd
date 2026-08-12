@@ -257,5 +257,6 @@ critical result as the rate climbs, which @sec-thresholds-actions develops. Repo
 localized, since the people who read them do not all work in English, and the `lang` parameter
 renders labels and messages in another language while the validation logic stays the same.
 
+![Validation reports can be localized to different languages, making data quality accessible to international teams.](assets/pointblank-localized.png){#fig-localized}
 ## Summary
 
