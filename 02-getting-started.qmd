@@ -206,6 +206,19 @@ It is `False` here, because that second step had failures, and this is the boole
 branches on to decide whether to proceed. To see the rows behind a failure, `get_data_extracts()`
 returns them, and asking for the second step yields the two rows whose `c` value is null.
 
+```{python}
+validation.get_data_extracts(i=2, frame=True)
+```
+
+Instead of guessing why rows failed, you examine the actual data, which is what makes extracts
+invaluable for debugging. These accessors let validation feed larger workflows, and
+@sec-reports-extracts covers reporting and extraction in depth. To keep later output compact, we
+hide the report footer from here on.
+
+```{python}
+pb.config(report_incl_footer=False)
+```
+
 ## Where your data can live
 
 ## A first look at configuration
