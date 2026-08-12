@@ -202,6 +202,10 @@ none. For an overall verdict, `all_passed()` returns a single boolean.
 validation.all_passed()
 ```
 
+It is `False` here, because that second step had failures, and this is the boolean a pipeline
+branches on to decide whether to proceed. To see the rows behind a failure, `get_data_extracts()`
+returns them, and asking for the second step yields the two rows whose `c` value is null.
+
 ## Where your data can live
 
 ## A first look at configuration
