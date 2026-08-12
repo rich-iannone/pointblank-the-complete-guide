@@ -233,5 +233,10 @@ you learn transfers unchanged across them.
 
 ## A first look at configuration
 
+The examples so far use sensible defaults, but two options are worth previewing because they recur.
+Thresholds grade a failure by how much of the data fails rather than treating any failure as fatal,
+so a plan can tolerate minor issues while escalating serious ones, and they are set on the
+`Validate` object.
+
 ## Summary
 
