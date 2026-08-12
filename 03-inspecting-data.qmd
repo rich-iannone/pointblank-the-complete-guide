@@ -201,6 +201,18 @@ representation helps. Setting `as_heatmap=True` collapses the display into a hea
 missingness per column across the whole table at once, trading row-level detail for a view that fits
 many columns on screen.
 
+```{python}
+pb.missing_vals_tbl(small_table, as_heatmap=True)
+```
+
+The heatmap answers the question "which columns have gaps, and how bad are they" without any
+scrolling, which is the right first question on an unfamiliar wide table. There is also a subtler
+kind of absence that a null-based view cannot catch on its own, where a value is present but stands
+in for missingness, such as a `-99` that means "not asked". The `missing` argument accepts a
+specification of those coded values so they are counted as missing too, and that whole topic has its
+own treatment in @sec-missing-data. For plain nulls, though, this function is the fastest way to see
+where your data thins out.
+
 ## Inspecting data where it lives
 
 ### Connecting to a database
