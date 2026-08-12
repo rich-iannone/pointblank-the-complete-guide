@@ -8,3 +8,5 @@ pb.config(report_incl_footer=False)
 
 @sec-getting-started gave you the tools to run a basic validation. Effective data validation, though, requires more than knowing which methods to call. It requires understanding how those methods fit together, when each component comes into play, and how to design plans that are both thorough and maintainable.
 
+This chapter steps back from individual methods to examine the validation workflow as a whole. Once you understand the complete lifecycle, from plan construction through interrogation to result analysis, you can make better decisions about how to structure validations, troubleshoot surprising results, and get the most out of the process.
+
