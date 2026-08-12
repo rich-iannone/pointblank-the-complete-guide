@@ -258,5 +258,10 @@ localized, since the people who read them do not all work in English, and the `l
 renders labels and messages in another language while the validation logic stays the same.
 
 ![Validation reports can be localized to different languages, making data quality accessible to international teams.](assets/pointblank-localized.png){#fig-localized}
+
+Settings that should apply across a whole project, such as report appearance, are set once with
+`pb.config()`, which we used above to hide the footer, and per-validation settings override those
+defaults where needed.
+
 ## Summary
 
