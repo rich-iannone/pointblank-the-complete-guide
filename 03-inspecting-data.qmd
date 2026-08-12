@@ -186,6 +186,14 @@ empty field from a genuine failure.
 
 ### Reading missing-value patterns
 
+The shape of missingness usually points at its cause. Values missing at random across the whole
+table tend to come from incidental collection failures, such as an occasional dropped sensor
+reading, and they rarely bias the data in any systematic way. Values that go missing together across
+several columns for the same rows point at a related cause, such as an optional section of a form
+that some respondents skip. Values missing in a clear block, for instance an entire recent period or
+every row from one region, almost always indicate a structural problem in a pipeline or source
+system that deserves immediate investigation.
+
 ### Heatmaps and coded missingness
 
 ## Inspecting data where it lives
