@@ -196,6 +196,11 @@ system that deserves immediate investigation.
 
 ### Heatmaps and coded missingness
 
+For a very wide table, the sectioned view can itself become unwieldy, and a more compact
+representation helps. Setting `as_heatmap=True` collapses the display into a heatmap that shows
+missingness per column across the whole table at once, trading row-level detail for a view that fits
+many columns on screen.
+
 ## Inspecting data where it lives
 
 ### Connecting to a database
