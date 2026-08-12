@@ -221,6 +221,16 @@ pb.config(report_incl_footer=False)
 
 ## Where your data can live
 
+Real data lives in many places, and **Pointblank** meets it where it is, with the same API across
+all of them, so a `col_vals_gt()` check works identically on a Polars DataFrame, a Pandas DataFrame,
+or a database table. A DataFrame is passed directly to `Validate`, whether Polars for speed or
+Pandas for its ubiquity. A database table is reached through Ibis, either as a table object or
+through a connection string like `"duckdb:///path/to/db.ddb::table_name"`, in which case the checks
+run as SQL on the server and scale to tables too large for memory. A CSV or Parquet file can be
+passed as a path, and the file type is detected from the extension. These options are the subject of
+@sec-data-sources, which develops them in full, and here it is enough to know that the validation
+you learn transfers unchanged across them.
+
 ## A first look at configuration
 
 ## Summary
