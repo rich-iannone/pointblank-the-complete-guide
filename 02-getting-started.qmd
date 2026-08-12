@@ -265,3 +265,12 @@ defaults where needed.
 
 ## Summary
 
+This chapter established the foundation for working with **Pointblank**. You installed the library
+with the extras your work needs, met the three core ideas, and ran a complete validation from data
+to results, seeing how the tool provides granular, diagnostic information rather than a bare
+verdict. The test unit is the atomic element being checked, a row for a column validation and the
+table for a schema check, and its counting is what makes results precise. A validation step is one
+independent check, and because steps do not stop each other, a single interrogation gives the whole 
+icture. Interrogation is the moment a plan becomes results, and until then the plan is a first-class
+object you can build, inspect, and store.
+
