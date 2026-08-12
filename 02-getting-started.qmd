@@ -191,6 +191,17 @@ failing steps is exactly the diagnostic picture that helps you prioritize.
 The visual report suits human review, but automation needs the results as plain values, and several
 methods provide them. The `n_failed()` method returns the failing count per step as a dictionary.
 
+```{python}
+validation.n_failed()
+```
+
+The result confirms that only the second step failed, on two test units, while the others reported
+none. For an overall verdict, `all_passed()` returns a single boolean.
+
+```{python}
+validation.all_passed()
+```
+
 ## Where your data can live
 
 ## A first look at configuration
