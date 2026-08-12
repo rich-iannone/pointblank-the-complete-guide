@@ -14,6 +14,14 @@ regulatory investigations. Inconsistent customer identifiers can fragment market
 ineffective fragments. Missing sensor readings can cause manufacturing equipment to operate outside
 safe parameters. The quality of data determines the quality of everything that depends upon it.
 
+Yet despite this fundamental importance, data quality has historically occupied an uncomfortable
+position in the data ecosystem. It lacks the glamour of machine learning, the intellectual appeal of
+statistical modeling, and the visible impact of data visualization. Validation code is often an
+afterthought, hastily inserted after problems have already occurred, or omitted entirely in the rush
+to deliver results. The consequences of this neglect accumulate gradually, manifesting as
+unexplained anomalies in reports, failed analytical pipelines, and a pervasive distrust of data that
+undermines the entire enterprise of data-driven decision making.
+
 This book is about taking data quality seriously. It introduces **Pointblank**, a Python library
 designed to make data validation a first-class activity in your analytical workflows. **Pointblank**
 provides a structured, expressive way to define what good data looks like, check whether your actual
