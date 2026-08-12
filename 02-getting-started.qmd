@@ -231,6 +231,12 @@ passed as a path, and the file type is detected from the extension. These option
 @sec-data-sources, which develops them in full, and here it is enough to know that the validation
 you learn transfers unchanged across them.
 
+```{python}
+#| eval: false
+pb.Validate(data="data/sales.csv").col_vals_gt(columns="revenue", value=0).interrogate()
+pb.Validate(data="duckdb:///warehouse.ddb::orders").col_vals_not_null(columns="id").interrogate()
+```
+
 ## A first look at configuration
 
 The examples so far use sensible defaults, but two options are worth previewing because they recur.
