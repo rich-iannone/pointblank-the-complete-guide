@@ -241,6 +241,14 @@ print_database_tables(connection_string)
 
 ## From inspection to a validation plan
 
+Inspection is only worthwhile if it changes what you do next, and what it should change is the
+validation plan you write. The findings from this chapter map onto specific kinds of checks in a
+fairly direct way. A column with missing values, like `c` in `small_table`, suggests a completeness
+check that either forbids nulls or holds their rate below a threshold. A low-cardinality text
+column, like `f`, suggests a set-membership check against its known values. The observed range of a
+numeric column gives you defensible boundaries for a between check, grounded in what the data
+actually contains rather than a guess.
+
 ## Profiling and drift detection
 
 ## Summary
