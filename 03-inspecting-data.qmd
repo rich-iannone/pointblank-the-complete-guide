@@ -215,6 +215,13 @@ where your data thins out.
 
 ## Inspecting data where it lives
 
+Everything so far has run against an in-memory DataFrame, but the same tools work without change on
+data that stays in a database or warehouse. This matters because the point of inspecting data early
+is to catch problems where they originate, and copying a large table out of its source just to look
+at it defeats that purpose. When you load a dataset with `tbl_type="duckdb"`, Pointblank returns a
+table backed by the database rather than by memory, and the inspection functions treat it exactly
+like any other table.
+
 ### Connecting to a database
 
 ## From inspection to a validation plan
