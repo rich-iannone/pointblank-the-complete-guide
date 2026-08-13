@@ -245,3 +245,7 @@ print_database_tables(connection_string)
 
 ## Summary
 
+Inspection is the step that makes every later step possible, because a validation plan is only as
+good as the understanding behind it. This chapter walked through the tools Pointblank provides for
+building that understanding, moving from the broadest view to the most detailed.
+
