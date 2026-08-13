@@ -142,6 +142,8 @@ scan.get_tabular_report(show_sample_data=False)  # the visual summary table
 scan.summary_data()                              # the profile as a data frame
 scan.to_json()                                   # the profile as a JSON string
 scan.save_to_json(output_file)                   # write the JSON to a file
+scan.compare(baseline)                           # drift vs a baseline -> DataScanDiff
+DataScan.load_from_json(input_file)              # read a saved profile back
 ```
 
 The `get_tabular_report()` method returns the same kind of summary we just saw, which confirms that
