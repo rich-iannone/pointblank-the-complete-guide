@@ -229,6 +229,11 @@ like any other table.
 
 ### Connecting to a database
 
+When the data is in a real database rather than a bundled DuckDB file, you reach it through a
+connection string. The `connect_to_table()` function opens a connection string and returns a table
+you can inspect, and `print_database_tables()` lists what is available when you are not sure of the
+exact table name.
+
 ## From inspection to a validation plan
 
 ## Profiling and drift detection
