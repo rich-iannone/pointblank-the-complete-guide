@@ -221,6 +221,12 @@ game_revenue_db = pb.load_dataset(dataset="game_revenue", tbl_type="duckdb")
 pb.preview(game_revenue_db)
 ```
 
+The preview looks and behaves the same as it did for the Polars table, even though the rows are
+being read from DuckDB rather than held in memory. The same is true of `col_summary_tbl()`,
+`DataScan`, and `missing_vals_tbl()`, so the profiling workflow you have learned transfers directly
+to backends you cannot fit in RAM. Writing the inspection once and running it wherever the data
+happens to live is a recurring theme, and it is covered in full in @sec-data-sources.
+
 ### Connecting to a database
 
 When the data is in a real database rather than a bundled DuckDB file, you reach it through a
