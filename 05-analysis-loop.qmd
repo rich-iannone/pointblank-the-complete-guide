@@ -11,3 +11,5 @@ The previous chapter built a formal validation plan, a named object that accumul
 
 ## A check as a single line
 
+## Guarding a join
+
