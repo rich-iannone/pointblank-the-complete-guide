@@ -18,3 +18,5 @@ We begin with the anatomy of a validation plan, looking at what components it co
 
 ### Metadata
 
+### Global thresholds
+
