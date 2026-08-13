@@ -274,3 +274,9 @@ independent check, and because steps do not stop each other, a single interrogat
 icture. Interrogation is the moment a plan becomes results, and until then the plan is a first-class
 object you can build, inspect, and store.
 
+The `all_passed()` method returns one boolean for the plan while `n_failed()` and
+`get_data_extracts()` give per-step detail and the failing rows, so results drive both human review
+and automated logic. The same API validates DataFrames, database tables, and files alike, and
+thresholds and localization preview the configuration that later chapters cover. With this
+foundation in place, the next chapter, @sec-inspecting-data, turns to inspecting and profiling data,
+the discovery step that precedes writing good validation rules.
