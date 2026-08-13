@@ -16,6 +16,10 @@ We begin with the anatomy of a validation plan, looking at what components it co
 
 A validation plan is more than a list of checks. It is a complete specification that bundles together the data to validate, metadata for reporting, thresholds that define severity, actions that respond to problems, and the validation steps themselves. Understanding these components helps you design plans that are not just correct but also maintainable and useful in an operational setting.
 
+```{python}
+small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
+```
+
 ### The target data
 
 ### Metadata
