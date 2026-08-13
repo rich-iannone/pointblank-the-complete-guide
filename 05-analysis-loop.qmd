@@ -15,3 +15,5 @@ The previous chapter built a formal validation plan, a named object that accumul
 
 ## Confirming a join preserved its rows
 
+## Sanity-checking a transform
+
