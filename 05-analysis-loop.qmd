@@ -9,3 +9,5 @@ pb.config(report_incl_header=False, report_incl_footer=False)
 
 The previous chapter built a formal validation plan, a named object that accumulates steps and produces a report you save, schedule, and share. That is one way to use Pointblank, and much of this book develops it, but it is not the only way and often not the first. In the middle of an analysis, working through a notebook cell by cell, you reach for validation in a lighter register: a quick check dropped between two steps to confirm that what you think just happened actually happened. These checks are cheap, they are frequently thrown away, and they catch mistakes the moment they occur rather than letting a bad assumption propagate through the rest of the analysis.
 
+## A check as a single line
+
