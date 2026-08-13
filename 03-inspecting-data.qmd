@@ -194,6 +194,11 @@ that some respondents skip. Values missing in a clear block, for instance an ent
 every row from one region, almost always indicate a structural problem in a pipeline or source
 system that deserves immediate investigation.
 
+Recognizing which of these you are looking at changes what you do next. Random, low-rate missingness
+might be tolerable and handled with a permissive threshold, whereas a systematic block of missing
+values is the kind of thing you want a validation to fail loudly on. The point of visualizing the
+pattern is to make that judgment on evidence rather than assumption.
+
 ### Heatmaps and coded missingness
 
 For a very wide table, the sectioned view can itself become unwieldy, and a more compact
