@@ -52,3 +52,7 @@ We begin with the anatomy of a validation plan, looking at what components it co
 
 Where extracts isolate the failing rows of a single step, sundering splits the whole table into the rows that passed and the rows that failed. This supports a common quarantine pattern, where clean rows continue downstream while problematic rows divert to a review queue.
 
+```{python}
+validation.get_sundered_data(type="fail")
+```
+
