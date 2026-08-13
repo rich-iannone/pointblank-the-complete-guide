@@ -234,6 +234,11 @@ connection string. The `connect_to_table()` function opens a connection string a
 you can inspect, and `print_database_tables()` lists what is available when you are not sure of the
 exact table name.
 
+```{.python filename="Function signatures"}
+connect_to_table(connection_string)
+print_database_tables(connection_string)
+```
+
 ## From inspection to a validation plan
 
 ## Profiling and drift detection
