@@ -227,6 +227,11 @@ at it defeats that purpose. When you load a dataset with `tbl_type="duckdb"`, Po
 table backed by the database rather than by memory, and the inspection functions treat it exactly
 like any other table.
 
+```{python}
+game_revenue_db = pb.load_dataset(dataset="game_revenue", tbl_type="duckdb")
+pb.preview(game_revenue_db)
+```
+
 ### Connecting to a database
 
 When the data is in a real database rather than a bundled DuckDB file, you reach it through a
