@@ -53,6 +53,27 @@ to every step unless a step overrides them.
 
 ### Validation steps
 
+The validation steps are the core of the plan. Each one states what to check and how to check it,
+and steps are added by chaining method calls. Here we assemble the plan that the rest of the chapter
+uses, combining the metadata and thresholds from above with four checks.
+
+```{python}
+plan = (
+    pb.Validate(
+        data=small_table,
+        tbl_name="small_table",
+        label="Daily quality check",
+        thresholds=pb.Thresholds(warning=0.1, error=0.25, critical=0.35),
+    )
+    .col_vals_lt(columns="a", value=7)
+    .col_vals_not_null(columns="c")
+    .rows_distinct()
+    .col_vals_in_set(columns="f", set=["low", "mid", "high"])
+)
+
+plan
+```
+
 ### Final actions
 
 ## The interrogation process
