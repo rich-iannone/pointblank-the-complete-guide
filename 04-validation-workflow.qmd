@@ -44,6 +44,11 @@ small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
 
 ### Global thresholds
 
+Not every failure is equally serious. A small rate of invalid formatting might be acceptable noise,
+while the same rate of missing identifiers might be a genuine problem. Thresholds let you say, in
+advance, what levels of failure should raise concern. Thresholds set on the `Validate` object apply
+to every step unless a step overrides them.
+
 ### Global actions
 
 ### Validation steps
