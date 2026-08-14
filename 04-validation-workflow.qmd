@@ -6,11 +6,21 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
-@sec-getting-started gave you the tools to run a basic validation. Effective data validation, though, requires more than knowing which methods to call. It requires understanding how those methods fit together, when each component comes into play, and how to design plans that are both thorough and maintainable.
+@sec-getting-started gave you the tools to run a basic validation. Effective data validation,
+though, requires more than knowing which methods to call. It requires understanding how those
+methods fit together, when each component comes into play, and how to design plans that are both
+thorough and maintainable.
 
-This chapter steps back from individual methods to examine the validation workflow as a whole. Once you understand the complete lifecycle, from plan construction through interrogation to result analysis, you can make better decisions about how to structure validations, troubleshoot surprising results, and get the most out of the process.
+This chapter steps back from individual methods to examine the validation workflow as a whole. Once
+you understand the complete lifecycle, from plan construction through interrogation to result
+analysis, you can make better decisions about how to structure validations, troubleshoot surprising
+results, and get the most out of the process.
 
-We begin with the anatomy of a validation plan, looking at what components it contains and how they interact. We then trace what happens during interrogation, the step that turns a plan into results. Next we work with a real interrogated plan and survey the many ways to extract information from it. Finally, we discuss how to organize plans so they stay readable as they grow. Throughout, we use the built-in `small_table` dataset so that every example runs and every reported number is real.
+We begin with the anatomy of a validation plan, looking at what components it contains and how they
+interact. We then trace what happens during interrogation, the step that turns a plan into results.
+Next we work with a real interrogated plan and survey the many ways to extract information from it.
+Finally, we discuss how to organize plans so they stay readable as they grow. Throughout, we use the
+built-in `small_table` dataset so that every example runs and every reported number is real.
 
 ## Anatomy of a validation plan
 
