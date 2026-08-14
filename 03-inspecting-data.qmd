@@ -271,6 +271,12 @@ actually contains rather than a guess.
 
 ## Profiling and drift detection
 
+A profile becomes far more useful once you can keep it and compare against it later, because the
+most revealing question about a table is often not what it looks like today but how it has changed
+since a previous run. `DataScan` supports this directly. The `save_to_json()` method writes a
+profile to a file, and the `load_from_json()` class method reads one back, so a profile captured
+from one slice of data can be stored and set beside a later one.
+
 ## Summary
 
 Inspection is the step that makes every later step possible, because a validation plan is only as
