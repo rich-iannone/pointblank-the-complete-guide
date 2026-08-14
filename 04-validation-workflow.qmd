@@ -42,6 +42,16 @@ small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
 
 ### Metadata
 
+```{python}
+meta_example = pb.Validate(
+    data=small_table,
+    tbl_name="small_table",          # identifies the table under test
+    label="Daily quality check",     # a human-readable description of the run
+    lang="en",                       # report language
+    locale="en-US",                  # locale for number and date formatting
+)
+```
+
 ### Global thresholds
 
 Not every failure is equally serious. A small rate of invalid formatting might be acceptable noise,
