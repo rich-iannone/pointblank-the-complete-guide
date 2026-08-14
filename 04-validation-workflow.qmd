@@ -24,7 +24,15 @@ built-in `small_table` dataset so that every example runs and every reported num
 
 ## Anatomy of a validation plan
 
-A validation plan is more than a list of checks. It is a complete specification that bundles together the data to validate, metadata for reporting, thresholds that define severity, actions that respond to problems, and the validation steps themselves. Understanding these components helps you design plans that are not just correct but also maintainable and useful in an operational setting.
+A validation plan is more than a list of checks. It is a complete specification that bundles
+together the data to validate, metadata for reporting, thresholds that define severity, actions that
+respond to problems, and the validation steps themselves. Understanding these components helps you
+design plans that are not just correct but also maintainable and useful in an operational setting.
+
+It helps to think of a validation plan as a contract between your data and your expectations. The
+more precisely you state that contract, the more useful the results become. Everything in this
+section builds toward one concrete plan that we carry through the rest of the chapter, so we start
+by loading the data it will run against.
 
 ```{python}
 small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
