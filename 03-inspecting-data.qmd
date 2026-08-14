@@ -241,6 +241,24 @@ connect_to_table(connection_string)
 print_database_tables(connection_string)
 ```
 
+A typical session against a warehouse looks like the following, where you first list the tables and
+then connect to the one you want.
+
+```{python}
+#| eval: false
+# See what tables exist
+pb.print_database_tables("duckdb:///warehouse.ddb")
+
+# Connect to a specific table and inspect it
+sales = pb.connect_to_table("duckdb:///warehouse.ddb::sales")
+pb.col_summary_tbl(sales)
+```
+
+This example does not execute here because it needs a live database, but the shape of it is the
+whole point: once you have a connected table, every inspection tool in this chapter applies to it
+unchanged. Meeting data where it lives, rather than exporting it first, keeps your inspection honest
+about the data your pipeline will actually see.
+
 ## From inspection to a validation plan
 
 Inspection is only worthwhile if it changes what you do next, and what it should change is the
