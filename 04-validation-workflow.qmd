@@ -88,6 +88,16 @@ plan
 
 ### Result accumulation
 
+As each step completes, its results accumulate inside the validation object, and after interrogation
+finishes they are all available for inspection. Calling `interrogate()` on our plan gives us the
+interrogated object we will use for the rest of the chapter.
+
+```{python}
+validation = plan.interrogate()
+
+validation
+```
+
 ## Working with results
 
 ### The tabular report
