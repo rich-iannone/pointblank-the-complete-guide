@@ -38,6 +38,8 @@ by loading the data it will run against.
 small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
 ```
 
+With the data in hand, we can look at each part of a plan in turn.
+
 ### The target data
 
 ### Metadata
