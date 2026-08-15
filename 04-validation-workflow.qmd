@@ -117,6 +117,10 @@ plan
 
 ### Final actions
 
+Step actions respond to individual steps as they happen. Final actions, by contrast, run once after
+the entire interrogation completes, and they run regardless of whether anything failed. That makes
+them the right place for summary reporting, cleanup, or an aggregate go/no-go decision.
+
 ## The interrogation process
 
 ### Step-by-step execution
