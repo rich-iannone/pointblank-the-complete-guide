@@ -87,6 +87,11 @@ threshold_example = pb.Validate(
 
 ### Global actions
 
+Thresholds classify problems, and actions respond to them. Without actions, validation is passive,
+producing reports that someone has to remember to read. With actions, validation becomes active,
+able to send alerts, write to logs, or pause a pipeline the moment a threshold is crossed. Actions
+can be attached globally, and each one is a function that runs when its severity level is reached.
+
 ### Validation steps
 
 The validation steps are the core of the plan. Each one states what to check and how to check it,
