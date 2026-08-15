@@ -134,6 +134,11 @@ runs slowly, produces a surprising number, or needs to react to problems through
 
 ### Threshold evaluation
 
+Once a step's test units are counted, its failure rate is compared against the thresholds. Two
+failing test units out of thirteen is a failure rate of about fifteen percent, which crosses our
+warning threshold of ten percent but stays below the error threshold of twenty-five percent. That
+step is therefore at the warning level.
+
 ### Action execution
 
 ### Result accumulation
