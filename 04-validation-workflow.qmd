@@ -42,6 +42,23 @@ With the data in hand, we can look at each part of a plan in turn.
 
 ### The target data
 
+Every validation plan operates on a specific dataset, and once a `Validate` object is created, that
+data is bound to it. The target data is what gives the plan its raw material, and it determines how
+many test units each step will have. For a table of thirteen rows like `small_table`, a column-value
+check produces thirteen test units, one for each row it examines.
+
+::: {.callout-note}
+## What exactly is a test unit?
+
+A test unit is the smallest thing a step can pass or fail on, and what counts as one depends on the
+kind of check. A column-value check such as `col_vals_gt()` produces one test unit per row, so a
+thirteen-row table yields thirteen of them. An aggregate check such as `col_sum_eq()` reduces the
+whole column to a single number and therefore has exactly one test unit, and a table-level check
+such as `col_schema_match()` also has one, judging the table as a whole. This matters throughout the
+book, because thresholds and quality scores are computed from the fraction of test units that pass,
+so knowing what a step's test units are is what lets you read its result correctly.
+:::
+
 ### Metadata
 
 ```{python}
