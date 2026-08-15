@@ -123,6 +123,11 @@ them the right place for summary reporting, cleanup, or an aggregate go/no-go de
 
 ## The interrogation process
 
+Until you call `interrogate()`, a validation plan is only a description of what to check.
+Interrogation is the step that turns that description into results. You rarely need to think about
+its internals for a simple validation, but understanding the execution model pays off when a plan
+runs slowly, produces a surprising number, or needs to react to problems through actions.
+
 ### Step-by-step execution
 
 ### Test unit evaluation
