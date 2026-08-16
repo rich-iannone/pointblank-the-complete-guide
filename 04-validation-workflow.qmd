@@ -259,3 +259,12 @@ rows continue downstream while problematic rows divert to a review queue.
 validation.get_sundered_data(type="fail")
 ```
 
+The failing portion has four rows. That number deserves a close look, because our plan had two
+failing rows in each of its first three steps, which might suggest six failing rows rather than
+four. The reason is that sundering considers only column-value checks, the `col_vals_*` family. Our
+first two steps are such checks, and their failing rows are the two with an out-of-range value in
+`a` and the two with a missing value in `c`, four distinct rows in total. The `rows_distinct()`
+step, although it did flag two duplicated rows, is a row-based check rather than a column-value one,
+so it does not contribute to the split. Keeping this rule in mind avoids surprise when the sundered
+counts differ from the per-step failure counts.
+
