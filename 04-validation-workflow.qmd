@@ -66,6 +66,10 @@ is what makes results reproducible and reports self-describing.
 
 ### Metadata
 
+In quick exploratory work, metadata can feel like optional decoration. In a production setting where
+many validations run across many tables, it becomes essential for understanding what you are looking
+at. A plan can carry several pieces of identifying metadata that flow through to its reports.
+
 ```{python}
 meta_example = pb.Validate(
     data=small_table,
