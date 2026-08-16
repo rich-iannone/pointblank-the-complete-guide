@@ -207,6 +207,13 @@ pass the object to another function without losing anything.
 
 ## Working with results
 
+A validation whose results you cannot reach is not much use. Pointblank offers several ways to get
+at results because different situations call for different formats. Interactive exploration wants a
+visual report, automation wants plain numbers, debugging wants the actual failing rows, and
+integration with other systems wants structured data. This section works through those options using
+the interrogated `validation` object from above, so every number shown is the real result of that
+plan.
+
 ### The tabular report
 
 ### Aggregate metrics
