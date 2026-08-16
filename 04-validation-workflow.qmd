@@ -274,3 +274,10 @@ For integration with monitoring dashboards, data catalogs, or custom tooling, th
 available as JSON. The `get_json_report()` method returns a JSON string, which parses into a list
 with one record per step.
 
+```{python}
+import json
+
+report = json.loads(validation.get_json_report())
+len(report)
+```
+
