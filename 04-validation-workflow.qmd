@@ -281,3 +281,11 @@ report = json.loads(validation.get_json_report())
 len(report)
 ```
 
+## Organizing validation plans
+
+A plan with a handful of steps is easy to follow. A plan with fifty steps can become hard to read
+unless it is organized deliberately. As plans grow, the way you structure them decides whether they
+stay maintainable or turn into something no one wants to touch. Good organization also improves the
+report, because related checks sitting together tell a coherent story rather than presenting a
+jumble.
+
