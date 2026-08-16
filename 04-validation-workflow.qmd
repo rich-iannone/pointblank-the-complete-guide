@@ -218,6 +218,9 @@ plan.
 
 ### Aggregate metrics
 
+The methods in this group return the counts and fractions behind the report. Most of them return a
+dictionary keyed by step number, so a single call describes the whole plan at once.
+
 ### Threshold status
 
 ### Data extracts
