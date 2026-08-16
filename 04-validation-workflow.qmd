@@ -157,6 +157,12 @@ sequence.
 
 ### Step-by-step execution
 
+When you call `interrogate()`, Pointblank processes the steps one at a time and in the order they
+were added. For each step it runs the step's logic against the target data, counts the test units
+that pass and fail, stores the outcome, and then checks the result against any thresholds, running
+an associated action if one is defined and its level is reached. Only then does it move on to the
+next step.
+
 ### Test unit evaluation
 
 ### Threshold evaluation
