@@ -230,6 +230,14 @@ validation.n_failed()
 When you care about severity rather than raw pass and fail, the threshold accessors report whether
 each step reached a given level. Like the count methods, they return a dictionary keyed by step.
 
+```{python}
+validation.warning()
+```
+
+Steps one through three reached the warning level, and step four did not, which matches the roughly
+fifteen percent failure rate of the first three steps against our ten percent warning threshold.
+Checking the error level shows that none of the steps went that far.
+
 ### Data extracts
 
 ### Sundered data
