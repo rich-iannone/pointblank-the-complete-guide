@@ -165,6 +165,12 @@ next step.
 
 ### Test unit evaluation
 
+The test unit is the atom of validation. For a column-value check, each row's value in the target
+column is a single test unit, evaluated independently as a pass or a fail. Consider the first step
+of our plan, `col_vals_lt(columns="a", value=7)`. Each of the thirteen values in column `a` is one
+test unit, and the check asks whether that value is below seven. Two of the values, an eight and a
+seven, are not, so those two test units fail and the other eleven pass.
+
 ### Threshold evaluation
 
 Once a step's test units are counted, its failure rate is compared against the thresholds. Two
