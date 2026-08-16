@@ -198,6 +198,13 @@ validation = plan.interrogate()
 validation
 ```
 
+The interrogated report now fills in the columns that were empty before. Each step shows its total
+test units, how many passed and failed, and the threshold status it reached. The object stores all
+of this, including the assertion type, the parameters, timing information, and extracts of the
+failing rows, and that single accumulation is what feeds every view of the results we look at next.
+Crucially, the results persist after interrogation ends, so you can inspect them now, save them, or
+pass the object to another function without losing anything.
+
 ## Working with results
 
 ### The tabular report
