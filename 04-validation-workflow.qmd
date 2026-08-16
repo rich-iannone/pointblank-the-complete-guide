@@ -59,6 +59,11 @@ book, because thresholds and quality scores are computed from the fraction of te
 so knowing what a step's test units are is what lets you read its result correctly.
 :::
 
+The data also determines which columns are available to validate and what types they hold. A plan
+cannot check a column that does not exist, and a check only makes sense when it matches the column's
+type. Because the data is fixed at construction time, the plan and its data travel together, which
+is what makes results reproducible and reports self-describing.
+
 ### Metadata
 
 ```{python}
