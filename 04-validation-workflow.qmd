@@ -130,6 +130,14 @@ plan = (
 plan
 ```
 
+Displaying the plan before interrogation shows its structure without any results. The report header
+carries the `tbl_name` and `label` we supplied, and the body lists the four steps in the order they
+were added, numbered one through four. The note that no interrogation has been performed is a
+reminder that this is still only a specification. That numbering is stable and is used throughout
+reports and result access, so a report that mentions step three always refers to the third method
+call, which here is the `rows_distinct()` check. Because the numbers are meaningful, the order in
+which you add steps is worth some thought, a point we return to at the end of the chapter.
+
 ### Final actions
 
 Step actions respond to individual steps as they happen. Final actions, by contrast, run once after
