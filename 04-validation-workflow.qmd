@@ -221,6 +221,10 @@ plan.
 The methods in this group return the counts and fractions behind the report. Most of them return a
 dictionary keyed by step number, so a single call describes the whole plan at once.
 
+```{python}
+validation.n_failed()
+```
+
 ### Threshold status
 
 ### Data extracts
