@@ -180,6 +180,12 @@ step is therefore at the warning level.
 
 ### Action execution
 
+When a step crosses a threshold that has an action attached, that action runs right then, in the
+middle of interrogation rather than after it. We saw this earlier when the warning action printed
+its message as soon as the `a` check failed. The timing is deliberate. If a critical check fails
+early in a long plan, an alert can fire immediately instead of waiting for dozens of later steps to
+finish, which matters in time-sensitive pipelines.
+
 ### Result accumulation
 
 As each step completes, its results accumulate inside the validation object, and after interrogation
