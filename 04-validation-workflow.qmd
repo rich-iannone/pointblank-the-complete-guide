@@ -238,6 +238,10 @@ Steps one through three reached the warning level, and step four did not, which 
 fifteen percent failure rate of the first three steps against our ten percent warning threshold.
 Checking the error level shows that none of the steps went that far.
 
+```{python}
+validation.error()
+```
+
 ### Data extracts
 
 Knowing that two rows failed a step is useful, and seeing those two rows is better. Data extracts
