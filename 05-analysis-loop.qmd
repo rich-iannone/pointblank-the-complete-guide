@@ -38,5 +38,10 @@ pb.Validate(customers).rows_distinct(columns_subset=["customer_id"]).interrogate
 
 ## Confirming a join preserved its rows
 
+The complement to checking the key beforehand is checking the row count afterward. A left join
+should leave the number of rows on the left unchanged, so asserting that the joined result still has
+as many rows as the original is a direct test that no fan-out occurred and no rows were dropped.
+The `row_count_match()` check states it exactly.
+
 ## Sanity-checking a transform
 
