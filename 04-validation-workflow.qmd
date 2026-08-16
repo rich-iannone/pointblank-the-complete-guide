@@ -268,3 +268,9 @@ step, although it did flag two duplicated rows, is a row-based check rather than
 so it does not contribute to the split. Keeping this rule in mind avoids surprise when the sundered
 counts differ from the per-step failure counts.
 
+### JSON export
+
+For integration with monitoring dashboards, data catalogs, or custom tooling, the results are
+available as JSON. The `get_json_report()` method returns a JSON string, which parses into a list
+with one record per step.
+
