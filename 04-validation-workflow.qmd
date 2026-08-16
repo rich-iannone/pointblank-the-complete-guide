@@ -251,7 +251,9 @@ validation.get_data_extracts(i=1, frame=True)
 
 ### Sundered data
 
-Where extracts isolate the failing rows of a single step, sundering splits the whole table into the rows that passed and the rows that failed. This supports a common quarantine pattern, where clean rows continue downstream while problematic rows divert to a review queue.
+Where extracts isolate the failing rows of a single step, sundering splits the whole table into the
+rows that passed and the rows that failed. This supports a common quarantine pattern, where clean
+rows continue downstream while problematic rows divert to a review queue.
 
 ```{python}
 validation.get_sundered_data(type="fail")
