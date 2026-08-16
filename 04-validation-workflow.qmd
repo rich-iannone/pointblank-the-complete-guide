@@ -94,6 +94,12 @@ threshold_example = pb.Validate(
 )
 ```
 
+These global thresholds establish a baseline where a ten percent failure rate raises a warning,
+twenty-five percent raises an error, and thirty-five percent is treated as critical. Different
+checks often warrant different tolerances, and individual steps can set their own thresholds when
+they need to, a topic covered in depth in @sec-thresholds-actions. For now, the important idea is
+that thresholds turn a raw failure count into a graded judgment about severity.
+
 ### Global actions
 
 Thresholds classify problems, and actions respond to them. Without actions, validation is passive,
