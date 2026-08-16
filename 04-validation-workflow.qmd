@@ -227,6 +227,9 @@ validation.n_failed()
 
 ### Threshold status
 
+When you care about severity rather than raw pass and fail, the threshold accessors report whether
+each step reached a given level. Like the count methods, they return a dictionary keyed by step.
+
 ### Data extracts
 
 ### Sundered data
