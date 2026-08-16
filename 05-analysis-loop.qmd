@@ -20,6 +20,22 @@ occur rather than letting a bad assumption propagate through the rest of the ana
 
 ## Guarding a join
 
+The single most valuable inline check guards a join, because a join is where silent, hard-to-spot
+corruption most often enters an analysis. The classic failure is a join key that is not unique on
+the table you join to. When a dimension table has a duplicate key, a join against it does not error,
+it quietly multiplies rows, and the inflated result flows into every count and sum downstream. The
+defense is to check the key for uniqueness before joining, not after. Consider a customer dimension
+that, through some upstream mistake, lists one customer twice.
+
+```{python}
+customers = pl.DataFrame({
+    "customer_id": ["C1", "C2", "C2", "C3"],
+    "segment":     ["retail", "smb", "smb", "enterprise"],
+})
+
+pb.Validate(customers).rows_distinct(columns_subset=["customer_id"]).interrogate()
+```
+
 ## Confirming a join preserved its rows
 
 ## Sanity-checking a transform
