@@ -151,6 +151,10 @@ Interrogation is the step that turns that description into results. You rarely n
 its internals for a simple validation, but understanding the execution model pays off when a plan
 runs slowly, produces a surprising number, or needs to react to problems through actions.
 
+The key idea is that interrogation walks the steps in order, evaluates each one against the data,
+records what happened, and reacts when thresholds are crossed. The subsections below trace that
+sequence.
+
 ### Step-by-step execution
 
 ### Test unit evaluation
