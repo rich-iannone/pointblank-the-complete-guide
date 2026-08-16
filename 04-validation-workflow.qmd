@@ -245,6 +245,10 @@ hand you the actual failing rows so you can understand why a check failed rather
 did. Asking for the extract of the first step, with `frame=True` to get the data frame directly,
 returns the offending rows.
 
+```{python}
+validation.get_data_extracts(i=1, frame=True)
+```
+
 ### Sundered data
 
 Where extracts isolate the failing rows of a single step, sundering splits the whole table into the rows that passed and the rows that failed. This supports a common quarantine pattern, where clean rows continue downstream while problematic rows divert to a review queue.
