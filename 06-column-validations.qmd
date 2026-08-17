@@ -6,3 +6,45 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+## Comparison validations
+
+### Inclusive versus strict bounds
+
+### Equality and inequality
+
+### Comparing against another column
+
+### Handling nulls in comparisons
+
+## Range validations
+
+### Between
+
+### Outside
+
+## Set membership validations
+
+### In set
+
+### Not in set
+
+## Null validations
+
+### Requiring values to be absent
+
+## Pattern matching
+
+## Validating against known formats
+
+## Sequence validations
+
+### Increasing and decreasing values
+
+## Selecting columns
+
+### Explicit lists and selector functions
+
+## Tagging checks with a quality dimension
+
+## Beyond single-column checks
+
