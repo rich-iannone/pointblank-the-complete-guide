@@ -6,3 +6,20 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+Every method in the previous chapter asked a question of each row in turn. Aggregate validations ask
+a question of a column as a whole. Instead of checking that each value is positive, they check that
+the column's total, its average, or its spread is where you expect. The column is reduced to a
+single summary number, and that one number becomes the single test unit for the step.
+
+This shift from many test units to one changes what a check can tell you and how you read its
+result. A per-row check reports how many values were wrong, while an aggregate check reports only
+whether the summary value passed or failed (because there is nothing to count beyond the single
+statistic value). That makes aggregate validations a great tool for a different class of question:
+the kind that concerns the shape of a column rather than the correctness of its individual entries.
+This chapter works through the three families, the tolerance that makes reconciliation practical,
+and the behavior that follows from a step having exactly one test unit.
+
+We use the `game_revenue` dataset throughout, drawing on its numeric `item_revenue` and
+`session_duration` columns, where the total revenue is around 8,687, the mean session runs about
+25.6 seconds, and the revenue spread has a standard deviation of approximately 13.2.
+
