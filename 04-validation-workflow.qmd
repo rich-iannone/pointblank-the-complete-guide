@@ -208,6 +208,11 @@ of our plan, `col_vals_lt(columns="a", value=7)`. Each of the thirteen values in
 test unit, and the check asks whether that value is below seven. Two of the values, an eight and a
 seven, are not, so those two test units fail and the other eleven pass.
 
+This row-by-row evaluation is why Pointblank can report not just that a check failed but exactly how
+much of the data failed it. That precision is what turns validation from a very simplified check
+into more of a detailed diagnostic, and it's also what makes the failing rows available for
+inspection later (these are known as data extracts).
+
 ### Threshold evaluation
 
 Once a step's test units are counted, its failure rate is compared against the thresholds. Two
