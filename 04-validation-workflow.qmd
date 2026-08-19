@@ -220,6 +220,17 @@ failing test units out of thirteen is a failure rate of about fifteen percent, w
 warning threshold of ten percent but stays below the error threshold of twenty-five percent. That
 step is therefore at the warning level.
 
+Each severity level is its own threshold, and the failure rate is compared against each one
+independently. When the thresholds are set in the conventional order of increasing stringency, with
+warning no higher than error and error no higher than critical, they cascade upward, so a step that
+reaches the critical level has necessarily crossed the error and warning levels too (and reports
+show the highest level reached). That cascade is what lets you simplify your own logic, since asking
+whether a step reached the warning level is then enough to know whether it crossed any threshold at
+all. Pointblank does not enforce this ordering, so a non-standard arrangement such as a warning set
+higher than a critical is allowed and would break the cascade. So a pattern of increasing stringency
+is the sensible and near-universal choice. The comparison happens immediately after each step, not
+at the end of the run, and this is what allows actions to respond in real time.
+
 ### Action execution
 
 When a step crosses a threshold that has an action attached, that action runs right then, in the
