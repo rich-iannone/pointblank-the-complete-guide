@@ -80,6 +80,13 @@ meta_example = pb.Validate(
 )
 ```
 
+The `tbl_name=` parameter records which table the validation examined, which is useful when we're
+using a pipeline that validates several tables. The `label=` parameter captures the purpose of the
+run (e.g., distinguishing a scheduled check from an ad-hoc investigation). The `lang=` and `locale=`
+settings help to make reports readable for the audience that will consume them (say, a team based in
+Germany) since the reporting elements that Pointblank provides will be translated to fit a specified
+locale. We will see some of these values appear in the report header once we display the full plan.
+
 ### Global thresholds
 
 Not every failure is equally serious. A small rate of invalid formatting might be acceptable noise,
