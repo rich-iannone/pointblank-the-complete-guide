@@ -196,6 +196,10 @@ that pass and fail, stores the outcome, and then checks the result against any t
 an associated action if one is defined and its level is reached. Only then does it move on to the
 next step.
 
+This sequential model has one consequence that's worth stating. The failure of one step never
+prevents later steps from running, so you always get results for every step in the plan. A plan is a
+set of independent observations about the data, not a chain that breaks at the first problem.
+
 ### Test unit evaluation
 
 The test unit is the atom of validation. For a column-value check, each row's value in the target
