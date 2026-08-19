@@ -304,6 +304,13 @@ units, and step four has none. The companion methods `n()`, `n_passed()`, `f_pas
 fractions per step. When you want a single step's value as a plain number rather than a dictionary
 entry, pass its one-based index and use `scalar=True`.
 
+```{python}
+validation.n_failed(i=1, scalar=True)
+```
+
+For an overall verdict rather than per-step detail, `all_passed()` returns a single boolean that is
+true only when every test unit in every step passed.
+
 ### Threshold status
 
 When you care about severity rather than raw pass and fail, the threshold accessors report whether
