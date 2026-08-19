@@ -290,7 +290,9 @@ it can compute with, which is where the programmatic accessors come in.
 ### Aggregate metrics
 
 The methods in this group return the counts and fractions behind the report. Most of them return a
-dictionary keyed by step number, so a single call describes the whole plan at once.
+dictionary keyed by step number, so a single call describes the whole plan at once. Those keys start
+at one and match the step numbers in the leftmost column of the tabular report, so each dictionary
+entry lines up with the row you would read there.
 
 ```{python}
 validation.n_failed()
