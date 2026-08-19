@@ -239,6 +239,11 @@ its message as soon as the `a` check failed. The timing is deliberate. If a crit
 early in a long plan, an alert can fire immediately instead of waiting for dozens of later steps to
 finish, which matters in time-sensitive pipelines.
 
+An action function receives no arguments directly. Everything it needs comes from
+`get_action_metadata()`, which reports which step triggered, what kind of check it was, which column
+was involved, and what level was reached. That keeps action functions simple while still giving them
+full context about why they were called.
+
 ### Result accumulation
 
 As each step completes, its results accumulate inside the validation object, and after interrogation
