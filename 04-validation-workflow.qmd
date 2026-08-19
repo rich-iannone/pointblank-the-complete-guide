@@ -298,6 +298,12 @@ entry lines up with the row you would read there.
 validation.n_failed()
 ```
 
+The result confirms what the report showed: steps one through three each have two failing test
+units, and step four has none. The companion methods `n()`, `n_passed()`, `f_passed()`, and
+`f_failed()` follow the same pattern, returning totals, passing counts, and passing or failing
+fractions per step. When you want a single step's value as a plain number rather than a dictionary
+entry, pass its one-based index and use `scalar=True`.
+
 ### Threshold status
 
 When you care about severity rather than raw pass and fail, the threshold accessors report whether
