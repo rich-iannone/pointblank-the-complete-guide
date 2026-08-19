@@ -274,6 +274,19 @@ plan.
 
 ### The tabular report
 
+The visual report is the view we just saw, and it is produced by displaying the validation object.
+For finer control over what the report includes, `get_tabular_report()` accepts arguments to toggle
+the header, footer, and other elements.
+
+```{python}
+validation.get_tabular_report(incl_header=True, incl_footer=False)
+```
+
+The report is designed to be easily scannable. A glance can tell you whether the plan passed, and
+the per-step rows let you get into exactly what was checked and how it fared. This is the right
+output when a person is going to read the results. However, an automation scenario needs something
+it can compute with, which is where the programmatic accessors come in.
+
 ### Aggregate metrics
 
 The methods in this group return the counts and fractions behind the report. Most of them return a
