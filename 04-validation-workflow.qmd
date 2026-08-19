@@ -130,6 +130,16 @@ action_example = (
 )
 ```
 
+The single step here checks that values in column `a` are below `7`, and because two of the thirteen
+values are not, the failure rate crosses the 10% warning threshold and the action (defined in the
+`actions=` parameter) runs. Note that the action itself (`warn_action`) takes no arguments. Instead
+it calls `get_action_metadata()` internally to learn about the step that triggered it, and that
+metadata carries the step number, the assertion type, the column involved, the comparison value,
+the severity level reached, and a ready-made `failure_text` message (we used only select pieces of
+information in the `print()` call). Actions are the mechanism that lets a validation plan
+participate in your operational infrastructure, and @sec-thresholds-actions goes quite a bit further
+on this topic.
+
 ### Validation steps
 
 The validation steps are the core of the plan. Each one states what to check and how to check it,
