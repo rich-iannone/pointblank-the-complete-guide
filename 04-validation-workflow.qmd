@@ -311,6 +311,10 @@ validation.n_failed(i=1, scalar=True)
 For an overall verdict rather than per-step detail, `all_passed()` returns a single boolean that is
 true only when every test unit in every step passed.
 
+```{python}
+validation.all_passed()
+```
+
 ### Threshold status
 
 When you care about severity rather than raw pass and fail, the threshold accessors report whether
