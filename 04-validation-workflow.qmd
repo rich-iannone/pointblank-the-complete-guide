@@ -315,6 +315,9 @@ true only when every test unit in every step passed.
 validation.all_passed()
 ```
 
+The result is `False` here because three of the four steps had failures. You might use this boolean
+as a means to branch in a pipeline (i.e., decision to proceed or stop entirely).
+
 ### Threshold status
 
 When you care about severity rather than raw pass and fail, the threshold accessors report whether
