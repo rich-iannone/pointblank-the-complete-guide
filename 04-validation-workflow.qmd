@@ -193,6 +193,13 @@ final_example = (
 )
 ```
 
+The final action here reports that two steps ran and both had failing test units. It draws that
+information from `get_validation_summary()`, which is available only inside a final action and
+returns a dictionary describing the whole run, including step counts, per-step results, the highest
+severity reached, and an overall health score. Because a final action always fires, it is the
+dependable hook for work that must happen at the end of every validation, whether or not the data
+was clean.
+
 ## The interrogation process
 
 Until you call `interrogate()`, a validation plan is only a description of what to check.
