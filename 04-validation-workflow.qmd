@@ -177,6 +177,22 @@ Step actions respond to individual steps as they happen. Final actions, by contr
 the entire interrogation completes, and they run regardless of whether anything failed. That makes
 them the right place for summary reporting, cleanup, or an aggregate go/no-go decision.
 
+```{python}
+def summary_action():
+    s = pb.get_validation_summary()
+    print(f"{s['n_steps']} steps ran, {s['n_failing_steps']} had failing test units")
+
+final_example = (
+    pb.Validate(
+        data=small_table,
+        final_actions=pb.FinalActions(summary_action),
+    )
+    .col_vals_lt(columns="a", value=7)
+    .col_vals_not_null(columns="c")
+    .interrogate()
+)
+```
+
 ## The interrogation process
 
 Until you call `interrogate()`, a validation plan is only a description of what to check.
