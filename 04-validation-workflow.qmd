@@ -328,9 +328,9 @@ dictionary that is keyed by step.
 validation.warning()
 ```
 
-Steps one through three reached the warning level, and step four did not, which matches the roughly
-fifteen percent failure rate of the first three steps against our ten percent warning threshold.
-Checking the error level shows that none of the steps went that far.
+Steps 1–3 reached the warning level, and step 4 did not. This matches the roughly 15% failure rate
+of the first three steps against our ten percent warning threshold. Checking the error level shows
+that none of the steps went that far.
 
 ```{python}
 validation.error()
