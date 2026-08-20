@@ -325,6 +325,12 @@ else:
     print("Some checks failed. Please review.")
 ```
 
+Where the report speaks to a person, these accessors return the same results as plain numbers and
+booleans. This can help address common scenerios like a monitoring job recording the `n_failed()`
+counts or a test that can assert on `all_passed()`. You might imagine a pipeline that can branch on
+either condition. An interrogation can thus directly serve as inputs for automation directly rather
+than only documenting an outcome.
+
 ### Threshold status
 
 When you care about degrees of severity rather than raw pass and fail metrics, the threshold
