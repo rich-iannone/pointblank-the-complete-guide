@@ -318,6 +318,13 @@ validation.all_passed()
 The result is `False` here because three of the four steps had failures. You might use this boolean
 as a means to branch in a pipeline (i.e., decision to proceed or stop entirely).
 
+```{python}
+if validation.all_passed():
+    print("All checks passed so it is safe to proceed.")
+else:
+    print("Some checks failed. Please review.")
+```
+
 ### Threshold status
 
 When you care about degrees of severity rather than raw pass and fail metrics, the threshold
