@@ -15,6 +15,19 @@ check dropped between two steps to confirm that what you think just happened act
 These checks are cheap, they are frequently thrown away, and they catch mistakes the moment they
 occur rather than letting a bad assumption propagate through the rest of the analysis.
 
+This chapter is about that sort of habit. The tools are the same ones the rest of the book covers,
+but the code is more minimal and straight-to-the-point, with the goal of making validation a
+commonplace activity during interactive work (rather than a separate and more involved phase that
+happens later). We'll use the following `orders` table for the upcoming examples.
+
+```{python}
+orders = pl.DataFrame({
+    "order_id":    [1, 2, 3, 4, 5],
+    "customer_id": ["C1", "C2", "C1", "C3", "C2"],
+    "amount":      [50.0, 30.0, 20.0, 75.0, 40.0],
+    "status":      ["paid", "paid", "refunded", "paid", "paid"],
+})
+```
 
 ## A check as a single line
 
