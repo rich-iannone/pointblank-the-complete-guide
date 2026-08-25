@@ -147,3 +147,10 @@ pb.Validate(paid).row_count_match(count=4).interrogate().assert_passing()
 paid.height
 ```
 
+The assertion confirms the filter kept exactly the four paid orders, so a typo in the predicate or
+an unexpected status value would have stopped you here. The same idea covers a derived column that
+should fall in a known range, an aggregation that should produce one row per group, or a type
+conversion that should not introduce nulls. Each is a quick check that pins down what a transform
+was supposed to do, and each is most useful written immediately after the transform while the
+expectation is fresh.
+
