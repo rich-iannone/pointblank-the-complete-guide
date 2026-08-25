@@ -45,6 +45,21 @@ Every order has a customer identifier, so the check passes quietly. The reason t
 instead of looking at a report, is that it stops your work the moment something is wrong. You find
 out now, not three steps later when a result looks odd.
 
+The same pattern catches other wrong assumptions. Say you thought every amount was at least
+twenty-five, but the refunded order is actually twenty.
+
+```{python}
+try:
+    pb.Validate(orders).col_vals_ge(columns="amount", value=25).interrogate().assert_passing()
+    print("all amounts are at least 25")
+except AssertionError:
+    print("stopped: an amount below 25 slipped through")
+```
+
+The error happens right here and it stops you before you build on something that isn't true. These
+checks are fairly easy to compose, and inserting them wherever you make an assumption is a simple
+and great way to catch mistakes early.
+
 ## Guarding a join
 
 The single most valuable inline check guards a join, because a join is where silent, hard-to-spot
