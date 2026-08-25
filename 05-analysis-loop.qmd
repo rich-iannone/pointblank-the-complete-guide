@@ -78,6 +78,35 @@ customers = pl.DataFrame({
 pb.Validate(customers).rows_distinct(columns_subset=["customer_id"]).interrogate()
 ```
 
+The check flags two rows, the duplicated `C2` pair. This is exactly the warning you want *before*
+the join, because if you joined without checking, the duplicate would silently create extra rows in
+your result.
+
+```{python}
+joined = orders.join(customers, on="customer_id", how="left")
+```
+
+```{python}
+orders.height, joined.height
+```
+
+Five orders have become seven, because each of the two `C2` orders matched both copies of the
+duplicated customer, inventing revenue that does not exist. Deduplicating the dimension first
+restores the expected behavior.
+
+```{python}
+customers_clean = customers.unique(subset=["customer_id"])
+joined_clean = orders.join(customers_clean, on="customer_id", how="left")
+```
+
+```{python}
+joined_clean.height
+```
+
+The join now preserves the five orders, because the key is unique on the dimension. Checking
+`rows_distinct()` on a join key is a habit worth forming, since it turns a whole class of silent
+row-multiplication bugs into an explicit, up-front check.
+
 ## Confirming a join preserved its rows
 
 The complement to checking the key beforehand is checking the row count afterward. A left join
