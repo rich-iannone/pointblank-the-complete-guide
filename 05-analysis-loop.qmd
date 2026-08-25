@@ -125,6 +125,12 @@ duplicated = pb.Validate(joined).row_count_match(count=orders.height).interrogat
 duplicated.all_passed()
 ```
 
+The clean join passes and the duplicated one fails. We used `orders.height` (the original row count)
+as the expected value for `count=`, so the check is asking: did the join produce exactly as many
+rows as we started with? If you run this after every join, it catches both duplication that inflates
+a result and unexpected inner-join behavior that silently drops unmatched rows. Between checking the
+key for uniqueness before the join and checking the row count after it, you know exactly what
+happened.
 
 ## Sanity-checking a transform
 
