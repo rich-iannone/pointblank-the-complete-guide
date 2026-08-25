@@ -109,10 +109,12 @@ row-multiplication bugs into an explicit, up-front check.
 
 ## Confirming a join preserved its rows
 
-The complement to checking the key beforehand is checking the row count afterward. A left join
-should leave the number of rows on the left unchanged, so asserting that the joined result still has
-as many rows as the original is a direct test that no fan-out occurred and no rows were dropped.
-The `row_count_match()` check states it exactly.
+The other side of checking the key beforehand is checking the row count afterward. A left join
+should not change the number of rows on the left side, so if the joined result has more rows than
+the original, something duplicated. But if it has fewer, then something was dropped. The
+`row_count_match()` check tests this directly. Here we run it on `joined_clean` (the join against
+the deduplicated customers) and on `joined` (the join that hit the duplicate key):
+
 
 ## Sanity-checking a transform
 
