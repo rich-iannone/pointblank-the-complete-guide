@@ -138,3 +138,12 @@ The same reflex applies to any step that reshapes the data. After a filter, you 
 expectation about how many rows should survive, and stating it catches a predicate that did not mean
 what you thought. Filtering the orders to the paid ones should leave four.
 
+```{python}
+paid = orders.filter(pl.col("status") == "paid")
+pb.Validate(paid).row_count_match(count=4).interrogate().assert_passing()
+```
+
+```{python}
+paid.height
+```
+
