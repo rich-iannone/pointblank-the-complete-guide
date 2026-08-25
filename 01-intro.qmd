@@ -56,3 +56,10 @@ data in microseconds. In these contexts, data quality problems must be detected 
 immediately, not discovered days later in reconciliation reports. Validation must keep pace with the
 data it validates.
 
+The variety of data sources has proliferated. A typical enterprise now ingests data from hundreds or
+thousands of distinct sources: internal applications, third-party services, public APIs, partner
+data feeds, IoT devices, social media platforms, and more. Each source will have its own format, its
+own quality characteristics, and its own failure modes. Integrating this heterogeneous data requires
+validation at every boundary: when data enters the organization, when it moves between systems, and
+when it is transformed for analytical use.
+
