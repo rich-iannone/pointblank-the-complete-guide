@@ -115,6 +115,16 @@ the original, something duplicated. But if it has fewer, then something was drop
 `row_count_match()` check tests this directly. Here we run it on `joined_clean` (the join against
 the deduplicated customers) and on `joined` (the join that hit the duplicate key):
 
+```{python}
+preserved = pb.Validate(joined_clean).row_count_match(count=orders.height).interrogate()
+preserved.all_passed()
+```
+
+```{python}
+duplicated = pb.Validate(joined).row_count_match(count=orders.height).interrogate()
+duplicated.all_passed()
+```
+
 
 ## Sanity-checking a transform
 
