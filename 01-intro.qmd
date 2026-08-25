@@ -50,3 +50,9 @@ quality problems. A error rate that was tolerable when it affected hundreds of r
 catastrophic when it affects billions. Manual data quality processes that once sufficed have become
 impractical. Automated validation is no longer a luxury but a necessity.
 
+The velocity of data has increased correspondingly. Batch processing cycles that once ran overnight
+now execute continuously. Real-time dashboards update every second. Trading systems react to market
+data in microseconds. In these contexts, data quality problems must be detected and addressed
+immediately, not discovered days later in reconciliation reports. Validation must keep pace with the
+data it validates.
+
