@@ -38,3 +38,9 @@ complexity of modern data pipelines, and the increasing stakes attached to data-
 Finally, we introduce **Pointblank** itself, explaining its design philosophy and previewing the
 capabilities you will learn throughout this book.
 
+## Why data validation matters now
+
+Several trends have converged to make data validation more important today than at any previous
+point in history. Understanding these trends helps motivate the investment required to implement
+systematic validation practices.
+
