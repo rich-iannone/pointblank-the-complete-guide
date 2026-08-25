@@ -154,3 +154,24 @@ conversion that should not introduce nulls. Each is a quick check that pins down
 was supposed to do, and each is most useful written immediately after the transform while the
 expectation is fresh.
 
+::: {.callout-tip}
+## Checking row count within a range
+
+Sometimes you don't know the exact number of rows to expect but you know roughly how many there
+should be. The `tol=` parameter in `row_count_match()` lets you allow some wiggle room. A single
+integer gives you a plus-or-minus range, a float between 0 and 1 gives a percentage, and a tuple
+lets you set different lower and upper bounds:
+
+```{python}
+#| eval: false
+# Pass if the row count is within 2 of the expected (i.e., 3 to 7)
+pb.Validate(data).row_count_match(count=5, tol=2).interrogate()
+
+# Pass if the row count is within 10% of the expected
+pb.Validate(data).row_count_match(count=100, tol=0.1).interrogate()
+
+# Pass if the row count is between 95 and 110 (count=100, lower=-5, upper=+10)
+pb.Validate(data).row_count_match(count=100, tol=(5, 10)).interrogate()
+```
+:::
+
