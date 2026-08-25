@@ -175,3 +175,14 @@ pb.Validate(data).row_count_match(count=100, tol=(5, 10)).interrogate()
 ```
 :::
 
+## When to use a formal plan
+
+The inline checks in this chapter and the formal plans in the rest of the book use the same tools,
+just with different levels of effort. An inline check is for catching your own mistakes as you work,
+and it is written, run, and often deleted within a single session. A formal plan is for data you
+receive repeatedly, for a pipeline that needs to pass before moving forward, or for expectations you
+want to document and share (written once and run many times). The two work well together, and often
+a quick check that keeps proving useful is a good candidate for a saved plan. Starting with the
+simple version first and promoting the checks that keep being useful, that's how validation can
+become a commonplace part of an analysis rather than an extra step added on later.
+
