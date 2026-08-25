@@ -31,6 +31,20 @@ orders = pl.DataFrame({
 
 ## A check as a single line
 
+A really light use of Pointblank is through a one-line assertion that confirms an assumption. It
+should do nothing nothing visible when the assumption holds. Using a single check and then the
+sequence of `interrogate()` and then `assert_passing()` turns a interrogation plan into a quick
+check that'll remain silent on success and raise an error on failure (ideal as it's own notebook
+cell, for example).
+
+```{python}
+pb.Validate(orders).col_vals_not_null(columns="customer_id").interrogate().assert_passing()
+```
+
+Every order has a customer identifier, so the check passes quietly. The reason to write it this way,
+instead of looking at a report, is that it stops your work the moment something is wrong. You find
+out now, not three steps later when a result looks odd.
+
 ## Guarding a join
 
 The single most valuable inline check guards a join, because a join is where silent, hard-to-spot
