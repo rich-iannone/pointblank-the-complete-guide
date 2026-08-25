@@ -269,6 +269,16 @@ column, like `f`, suggests a set-membership check against its known values. The 
 numeric column gives you defensible boundaries for a between check, grounded in what the data
 actually contains rather than a guess.
 
+It's worth keeping in mind that a profile shows what the data *currently* looks like, while a
+validation says what it *should* look like, and those aren't always the same thing. If
+`col_summary_tbl()` shows a column ranging from one to one hundred, that's just what's there today,
+not a rule. The actual requirement might be "values must be positive", which means the right check
+is a lower bound of zero, not the observed maximum. A profile helps you figure out what checks make
+sense and what values to use, but deciding which checks actually matter is still up to you.
+Pointblank can also look at a profile and suggest a starting plan for you to edit, which is covered
+in @sec-ai-authoring. The steps for turning any of these observations into runnable checks are in
+@sec-validation-workflow.
+
 ## Profiling and drift detection
 
 A profile becomes far more useful once you can keep it and compare against it later, because the
