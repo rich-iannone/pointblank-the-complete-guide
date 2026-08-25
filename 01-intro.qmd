@@ -44,3 +44,9 @@ Several trends have converged to make data validation more important today than 
 point in history. Understanding these trends helps motivate the investment required to implement
 systematic validation practices.
 
+The sheer volume of data has grown exponentially. Organizations that once measured their data
+holdings in gigabytes may now measure them in petabytes. This scale amplifies the impact of data
+quality problems. A error rate that was tolerable when it affected hundreds of records becomes
+catastrophic when it affects billions. Manual data quality processes that once sufficed have become
+impractical. Automated validation is no longer a luxury but a necessity.
+
