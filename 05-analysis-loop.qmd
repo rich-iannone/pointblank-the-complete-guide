@@ -186,3 +186,13 @@ a quick check that keeps proving useful is a good candidate for a saved plan. St
 simple version first and promoting the checks that keep being useful, that's how validation can
 become a commonplace part of an analysis rather than an extra step added on later.
 
+::: {.callout-tip}
+## Promoting an inline check
+
+When you find yourself repeating the same inline check, it's worth turning it into a formal plan.
+Gather those checks into a single `Validate` plan, give each step a label and a brief so the report
+is easy to read, add thresholds to define how much failure is acceptable, and save the plan to YAML
+with `to_yaml()` so it can be version-controlled. The full details of this are covered in
+@sec-yaml-workflows.
+:::
+
