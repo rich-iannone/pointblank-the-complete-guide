@@ -193,3 +193,12 @@ brings the techniques together in end-to-end workflows for financial, e-commerce
 and healthcare settings. Two appendices close the book: a full method reference and a look at what
 is still to come.
 
+Throughout, the emphasis is on not just how to use a feature but when and why it is the right
+choice, so that you develop judgment about validation design rather than a catalog of syntax.
+
+Data validation may lack the excitement of cutting-edge machine learning techniques or the visual
+appeal of sophisticated visualizations. But it provides something equally valuable: confidence.
+Confidence that your data is what you think it is. Confidence that your analyses rest on a solid
+foundation. Confidence that the decisions informed by your data will not be undermined by undetected
+quality problems. This sort of confidence-building is where **Pointblank** shines, and it is what
+this book will help you to achieve.
