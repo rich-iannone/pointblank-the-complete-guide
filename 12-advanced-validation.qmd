@@ -7,3 +7,21 @@ import polars as pl
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+## Native expressions with `col_vals_expr`
+
+
+## Multi-condition rules with `conjointly`
+
+
+## Arbitrary logic with `specially`
+
+
+## Preprocessing with `pre`
+
+
+## Referential integrity
+
+
+## Summary
+
