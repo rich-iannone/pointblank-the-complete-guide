@@ -150,3 +150,19 @@ validation = (
 validation
 ```
 
+This code creates a validation object, adds four validation steps (checking that session duration is
+positive, that item revenue is non-negative, that item type is one of two expected values, and that
+player ID is never null). After that, it interrogates the data to produce results. The final line
+displays an interactive report summarizing the validation outcomes.
+
+Though this is a simple example, it illustrates a few important characteristics of **Pointblank**.
+The API is chainable and this makes it easy to compose multiple validation steps. The method names 
+clearly express the validation intent. And the report provides immediate feedback on data quality
+status.
+
+As you make your way through this book, you will learn to build far more sophisticated validations:
+plans with dozens of steps, thresholds that trigger different responses at different severity
+levels, actions that notify stakeholders when problems are detected, validations that run against 
+databases and cloud data warehouses, configurations stored in version-controlled YAML files, and
+command-line interfaces that integrate with CI/CD pipelines.
+
