@@ -6,3 +6,27 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+## Row distinctness
+
+
+### Checking whole-row uniqueness
+
+
+### Choosing the key
+
+
+## Row completeness
+
+
+### Completeness on required fields
+
+
+## Combining distinctness and completeness
+
+
+## Beyond distinctness and completeness
+
+
+## Summary
+
