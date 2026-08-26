@@ -123,3 +123,8 @@ Pandas for its ubiquitous ecosystem, and Ibis for database connectivity. It can 
 pipelines, triggered from command lines, configured through YAML files, and integrated with
 notification systems. It should fit in well wherever you need it to run.
 
+Validation should be accessible to non-technical stakeholders. Data quality is ultimately a business
+concern, not just a technical one. The people who need to understand validation results can often
+lack programming skills. **Pointblank**'s reports are designed to be comprehensible to anyone who
+needs to make decisions based on data quality, regardless of their technical background.
+
