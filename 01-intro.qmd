@@ -94,3 +94,13 @@ Organizations that fail to implement systematic validation practices will likely
 reliability problems, compliance challenges, and eroded trust. Those that invest in validation 
 infrastructure position themselves to capitalize on their data assets with confidence.
 
+## Introducing Pointblank
+
+**Pointblank** is a data validation framework for Python designed to make data quality assessment
+and monitoring powerful, accessible, and even beautiful. The library provides a comprehensive
+toolkit for defining validation rules, executing them against data sources, and communicating
+results to stakeholders at all levels of technical expertise.
+
+There is a design philosophy behind what **Pointblank** does and it rests on several key principles
+that distinguish it from ad-hoc validation approaches.
+
