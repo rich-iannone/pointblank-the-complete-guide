@@ -7,3 +7,36 @@ import polars as pl
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+## When missing values carry meaning
+
+
+## Describing missingness with `MissingSpec`
+
+
+## Measuring how much is missing
+
+
+### The null rate with `col_pct_null`
+
+
+### The structured missing rate with `col_pct_missing`
+
+
+## Validating the coding
+
+
+### Requiring coded absence with `col_missing_coded`
+
+
+### Catching undocumented codes with `col_missing_only_coded`
+
+
+### Enforcing skip patterns with `col_missing_consistent`
+
+
+## Bringing it together
+
+
+## Summary
+
