@@ -184,3 +184,12 @@ validation plans. Part V, "Data Sources, Interfaces, and Automation", explains h
 wherever it lives and how to drive validation from YAML, the command line, an MCP server, or Python
 directly.
 
+The final parts of the book extend the learned techniques into specialized domains and applied
+workflows. Part VI, "Data Contracts and Pipelines", shows how we can turn a validation plan into a
+shareable contract (and how it's enforced at pipeline boundaries). Part VII, "Test Data Generation",
+covers synthesizing realistic data for tests and fixtures. Part VIII, "Clinical and Regulated Data",
+applies validation to clinical-trial data under CDISC standards. Part IX, "Industry Playbooks",
+brings the techniques together in end-to-end workflows for financial, e-commerce, data-engineering,
+and healthcare settings. Two appendices close the book: a full method reference and a look at what
+is still to come.
+
