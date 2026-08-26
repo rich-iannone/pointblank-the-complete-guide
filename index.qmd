@@ -13,3 +13,7 @@ in code, check whether your actual data meets those expectations, and surface th
 that both technical and non-technical people can act on. Problems get caught where they originate,
 before they propagate through a pipeline and corrupt everything downstream.
 
+This book is both a linear tutorial you can read start to finish and a reference you can return to
+when facing a specific validation challenge. Every example runs against datasets built into the
+library, so you can follow along, experiment, and adapt the techniques to your own data.
+
