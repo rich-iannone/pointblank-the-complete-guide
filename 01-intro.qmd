@@ -76,3 +76,10 @@ be immediate and, left unchecked, there may be irreversible harm to the organiza
 detection system trained on incomplete data may miss genuine fraud, and a recommendation engine that
 is filled with inconsistent product data may suggest items that cannot be delivered.
 
+Regulatory requirements around data quality have intensified. Financial regulations need
+institutions to demonstrate the accuracy and integrity of the data underlying their risk
+calculations. In healthcare, regulations mandate protections for patient data (and that includes
+quality requirements). Privacy regulations like GDPR give individuals rights to correct inaccurate
+data, and this presupposes the ability to identify inaccuracies in the first place. Being in
+compliance with such regulations requires documented, auditable validation processes.
+
