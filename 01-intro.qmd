@@ -69,3 +69,10 @@ the provenance of data quality issues, identifying which stage is responsible fo
 requires validation that is stationed throughout the pipeline rather than applied only at the
 endpoints.
 
+It would seem that the stakes attached to data-driven decisions have risen. Organizations are now increasingly relying on data not just to inform human judgment but to drive automated decisions.
+For example, algorithmic systems need to approve loans, route shipments, detect fraud, and
+personalize customer/user experiences. When these systems act on flawed data, the consequences can
+be immediate and, left unchecked, there may be irreversible harm to the organization. A fraud
+detection system trained on incomplete data may miss genuine fraud, and a recommendation engine that
+is filled with inconsistent product data may suggest items that cannot be delivered.
+
