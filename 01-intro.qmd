@@ -110,3 +110,10 @@ should have. This has the effect of making the validation rules easier to read, 
 and easier to reason about. The validation plan should read almost like a specification of data
 requirements.
 
+Validation should produce detailed and actionable output. On the flipside is a validation system
+that just prints something along the lines of "validation failed": this provides little value.
+**Pointblank** generates interactive reports that show not just which validations failed but how
+severely they failed, which specific rows were affected, and how the results compare to defined
+thresholds. This information enables the appropriate responses, which can run the gamut from
+ignoring minor deviations to halting pipelines when critical problems are detected.
+
