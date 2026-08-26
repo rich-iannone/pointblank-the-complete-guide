@@ -128,3 +128,25 @@ concern, not just a technical one. The people who need to understand validation 
 lack programming skills. **Pointblank**'s reports are designed to be comprehensible to anyone who
 needs to make decisions based on data quality, regardless of their technical background.
 
+Let's preview what working with **Pointblank** looks like in practice. The following example defines
+a simple validation plan for a dataset of game revenue transactions:
+
+```{python}
+import pointblank as pb
+
+validation = (
+    pb.Validate(
+        data=pb.load_dataset(dataset="game_revenue"),
+        tbl_name="game_revenue",
+        label="Game revenue validation example"
+    )
+    .col_vals_gt(columns="session_duration", value=0)
+    .col_vals_ge(columns="item_revenue", value=0)
+    .col_vals_in_set(columns="item_type", set=["iap", "ad"])
+    .col_vals_not_null(columns="player_id")
+    .interrogate()
+)
+
+validation
+```
+
