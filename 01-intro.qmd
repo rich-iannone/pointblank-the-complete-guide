@@ -175,3 +175,12 @@ library, how to inspect and profile data, and the anatomy of the validation work
 aggregates, whole rows, table structure and freshness, coded missing data, per-segment
 validation, and custom checks for rules that no built-in method captures.
 
+Part III, "Responding to Results", shifts focus from expressing checks to acting on them:
+thresholds grade failures by severity, actions respond automatically to those grades, quality
+scoring summarizes results across the six dimensions, and reports, extracts, and notifications
+carry findings to the people and systems that need them. Part IV, "AI-Assisted Validation",
+covers how a large language model can evaluate data semantically and also help with authoring
+validation plans. Part V, "Data Sources, Interfaces, and Automation", explains how to reach data
+wherever it lives and how to drive validation from YAML, the command line, an MCP server, or Python
+directly.
+
