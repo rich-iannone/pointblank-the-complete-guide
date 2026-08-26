@@ -6,3 +6,39 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+## Schema validation
+
+
+### Checking that columns exist
+
+
+### Matching names and types
+
+
+### Tightening or relaxing the match
+
+
+## Dimensional validation
+
+
+### Row counts
+
+
+### Column counts
+
+
+## Data freshness
+
+
+## Table comparison
+
+
+## Structure first
+
+
+## Beyond structure
+
+
+## Summary
+
