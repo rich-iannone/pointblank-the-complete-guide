@@ -104,3 +104,9 @@ results to stakeholders at all levels of technical expertise.
 There is a design philosophy behind what **Pointblank** does and it rests on several key principles
 that distinguish it from ad-hoc validation approaches.
 
+Validation should be declarative rather than imperative. Instead of writing procedural code that
+checks conditions and handles failures, you ought to instead declare what properties your data
+should have. This has the effect of making the validation rules easier to read, easier to maintain,
+and easier to reason about. The validation plan should read almost like a specification of data
+requirements.
+
