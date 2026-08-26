@@ -6,3 +6,27 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+## Segmenting by a column
+
+
+## Choosing which segments to create
+
+
+## Combining values into one segment with `seg_group`
+
+
+## Segmenting across several columns
+
+
+## How segments interact with thresholds
+
+
+## Where segmentation applies
+
+
+## Bringing it together
+
+
+## Summary
+
