@@ -63,3 +63,9 @@ own quality characteristics, and its own failure modes. Integrating this heterog
 validation at every boundary: when data enters the organization, when it moves between systems, and
 when it is transformed for analytical use.
 
+Data pipelines have become increasingly complex. A single analytical dataset may pass through dozens
+of processing stages, with each potentially introducing (or masking) quality problems. Understanding
+the provenance of data quality issues, identifying which stage is responsible for a problem,
+requires validation that is stationed throughout the pipeline rather than applied only at the
+endpoints.
+
