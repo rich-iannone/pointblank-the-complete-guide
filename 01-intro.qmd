@@ -117,3 +117,9 @@ severely they failed, which specific rows were affected, and how the results com
 thresholds. This information enables the appropriate responses, which can run the gamut from
 ignoring minor deviations to halting pipelines when critical problems are detected.
 
+Validation should integrate naturally with modern data workflows. **Pointblank** supports all the
+big dataframe libraries commonly used in Python data work: Polars for high-performance computation,
+Pandas for its ubiquitous ecosystem, and Ibis for database connectivity. It can be embedded in data
+pipelines, triggered from command lines, configured through YAML files, and integrated with
+notification systems. It should fit in well wherever you need it to run.
+
