@@ -6,3 +6,10 @@ the fundamental ideas of data validation through to production-scale quality ass
 **Pointblank**, an expressive framework for defining validation rules, running them across many
 kinds of data source, and communicating the results through clear, interactive reports.
 
+Data quality is the foundation that reliable analysis, reporting, and decision-making rest upon, and
+yet it has long received less attention than the techniques that depend on it. **Pointblank**
+addresses that gap by making validation a first-class activity: you state what good data looks like
+in code, check whether your actual data meets those expectations, and surface the results in a form
+that both technical and non-technical people can act on. Problems get caught where they originate,
+before they propagate through a pipeline and corrupt everything downstream.
+
