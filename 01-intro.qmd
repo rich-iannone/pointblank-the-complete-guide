@@ -166,3 +166,12 @@ levels, actions that notify stakeholders when problems are detected, validations
 databases and cloud data warehouses, configurations stored in version-controlled YAML files, and
 command-line interfaces that integrate with CI/CD pipelines.
 
+## The road ahead
+
+The book is organized into nine parts that build your expertise progressively. Part I,
+"Foundations", establishes the groundwork: covering these core concepts, how to install the
+library, how to inspect and profile data, and the anatomy of the validation workflow. Part II,
+"Building Validation Plans", surveys the validation methods themselves: column values, column
+aggregates, whole rows, table structure and freshness, coded missing data, per-segment
+validation, and custom checks for rules that no built-in method captures.
+

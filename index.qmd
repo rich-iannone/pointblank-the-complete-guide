@@ -17,3 +17,4 @@ This book is both a linear tutorial you can read start to finish and a reference
 when facing a specific validation challenge. Every example runs against datasets built into the
 library, so you can follow along, experiment, and adapt the techniques to your own data.
 
+## What you will learn
