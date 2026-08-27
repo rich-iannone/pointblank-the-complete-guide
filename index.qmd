@@ -19,6 +19,29 @@ library, so you can follow along, experiment, and adapt the techniques to your o
 
 ## What you will learn
 
+The early chapters help build a working vocabulary of validation. You will start with the core
+workflow and learn to apply validation often (as a light touch in everyday interactive work). You'll
+then express expectations about individual column values, about whole rows, about a table's
+structure and freshness, and about column-level aggregates, and you will handle the coded missing
+values and per-segment breakdowns that real data demands. From there you will grade failures by
+severity with thresholds, respond to them automatically with actions, roll results up into quality
+scores, and present them as reports, extracts, and alerts.
+
+The later parts broaden the scope. You will see how a language model can judge data semantically and
+help write validation plans, how the same plans run from YAML, the command line, and an MCP server
+as well as from Python, and how validation can run on data wherever it lives, from in-memory
+DataFrames to cloud warehouses. You will learn to turn a plan into a shareable data contract and
+enforce it at the boundaries of a pipeline, to generate realistic synthetic data for tests, and to
+validate clinical-trial data against the CDISC standards (useful to those in the Pharma space). The
+book closes with a set of industry playbooks that assemble these techniques into end-to-end
+workflows, spanning financial services, e-commerce, data-engineering platforms, clinical trials,
+real-world evidence, machine-learning pipelines, manufacturing and IoT sensors, insurance, the
+public sector, and digital marketing analytics.
+
+Throughout, the emphasis is on not just how to call a method but when and why to use it. This is all
+so that you develop judgment about validation design rather than simply drawing from a catalog of
+methods.
+
 ## About this resource
 
 This website is free to use and will remain freely available. All code is provided in full, and the
