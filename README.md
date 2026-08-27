@@ -14,6 +14,8 @@ The **Pointblank** library provides a fluent, expressive framework for defining 
 
 The early chapters build a working vocabulary of validation. You will learn the core workflow of building a plan and interrogating data, see how to reach for validation lightly and often during interactive work such as guarding a join, and then express expectations about individual column values, whole rows, table structure and freshness, and column-level aggregates, handling the coded missing values and per-segment breakdowns that real data brings. From there the book turns to acting on results, grading failures by severity with thresholds, responding automatically with actions, rolling results up into quality scores, and presenting them as reports, extracts, and alerts.
 
+The later parts of the book will broaden the scope of what can be done. You will see how a language model can judge data semantically and help write validation plans. You'll see how the same plans run from YAML, the command line, and an MCP server. We'll explore how validation can run on data from in-memory Polars and Pandas dataframes, from DuckDB tables, and from remote databases. The book closes with ten industry playbooks that assemble many techniques into end-to-end workflows, spanning financial services, e-commerce, data-engineering platforms, clinical trials, real-world evidence, machine-learning pipelines, manufacturing and IoT sensors, insurance, the public sector, and digital marketing analytics.
+
 ## Contributing
 
 Found a typo or an error? Have a suggestion for improvement? Please [open an issue](https://github.com/rich-iannone/pointblank-the-complete-guide/issues) or submit a pull request.
