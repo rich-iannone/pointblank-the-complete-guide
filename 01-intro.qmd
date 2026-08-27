@@ -66,6 +66,13 @@ contradicting one another across tables. It can be timely yet invalid, recent bu
 Because the dimensions pull in different directions, it helps to understand each one on its own, so
 that you can design a strategy that answers the concerns a given dataset actually raises.
 
+There is one more concern, accuracy, which asks whether a value truly matches the real-world thing
+it describes. This is what most people mean by "quality" in everyday speech, and it is also the
+hardest thing to check with a machine, because confirming that an address is really correct usually
+needs a source of truth outside the data. For that reason, automated validation concentrates on the
+six dimensions above, which can be checked against the data itself. Pointblank makes each one
+concrete by computing a score for it, a capability covered in @sec-quality-scoring.
+
 ## A brief history of data validation
 
 The practice of checking records for errors is as old as record-keeping itself, and it stretches
