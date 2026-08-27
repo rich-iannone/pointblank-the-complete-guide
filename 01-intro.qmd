@@ -120,7 +120,7 @@ systematic validation practices.
 
 The sheer volume of data has grown exponentially. Organizations that once measured their data
 holdings in gigabytes may now measure them in petabytes. This scale amplifies the impact of data
-quality problems. A error rate that was tolerable when it affected hundreds of records becomes
+quality problems. An error rate that was tolerable when it affected hundreds of records becomes
 catastrophic when it affects billions. Manual data quality processes that once sufficed have become
 impractical. Automated validation is no longer a luxury but a necessity.
 
