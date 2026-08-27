@@ -79,6 +79,13 @@ complex business rules, checks that depended on values in other tables, or rules
 statistical shape of a dataset. Validation at the application level was still needed, and the tools
 for it remained basic.
 
+In the 1990s, the data warehousing movement made data quality a strategic concern. As organizations
+combined data from many operational systems into a single warehouse for analysis, they found that
+the data was far less consistent than they had assumed. A customer identifier that was unique in one
+source collided with another in a different one. Date formats differed by system, and the same
+concept bore a different name in each source. While data lived in isolated silos, quality was still
+manageable. Once the data had to be combined, it then became a major obstacle.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
