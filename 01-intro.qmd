@@ -92,6 +92,12 @@ tried to set a single authoritative "golden record" for key entities such as cus
 Over time, data quality was recognized as a discipline of its own, with its own roles, tools, and
 best practices.
 
+The big data era of the 2010s brought new challenges and new tools. The volume, speed, and variety
+of the data overwhelmed traditional validation. Data streamed in continuously and could not wait for
+the slow batch checks that were the norm. Unstructured data resisted the rules that worked well on
+relational tables. And machine learning models demanded not only clean data but data with specific
+statistical properties, a requirement that traditional validation never anticipated.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
