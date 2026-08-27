@@ -74,6 +74,11 @@ tested values against a fixed set of rules. This was a major step forward. Valid
 out of application code and into the database itself, where it applied to every piece of data no
 matter how it arrived.
 
+Database constraints, however, covered only part of the problem. They could not easily express
+complex business rules, checks that depended on values in other tables, or rules about the
+statistical shape of a dataset. Validation at the application level was still needed, and the tools
+for it remained basic.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
