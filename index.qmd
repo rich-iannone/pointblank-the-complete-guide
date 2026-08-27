@@ -42,6 +42,15 @@ Throughout, the emphasis is on not just how to call a method but when and why to
 so that you develop judgment about validation design rather than simply drawing from a catalog of
 methods.
 
+## Who this book is for
+
+This book is written for people who work with data in Python and care about its quality, whether you
+are an analyst building pipelines, a data engineer running production systems, a scientist ensuring
+reproducible research, or a data steward monitoring data feeds. Some familiarity with Python and
+basic data manipulation in Polars or Pandas helps, but the book includes enough background to get
+started, and it focuses on the thinking behind good validation, which can serve you well regardless
+of your particular set of tools.
+
 ## About this resource
 
 This website is free to use and will remain freely available. All code is provided in full, and the
