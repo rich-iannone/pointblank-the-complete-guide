@@ -18,3 +18,12 @@ when facing a specific validation challenge. Every example runs against datasets
 library, so you can follow along, experiment, and adapt the techniques to your own data.
 
 ## What you will learn
+
+## About this resource
+
+This website is free to use and will remain freely available. All code is provided in full, and the
+datasets are either built into **Pointblank** or clearly constructed in the text, so nothing stands
+between you and reproducing what you read. Whether you are writing your first validation step or
+designing quality monitoring for an entire organization, this book aims to help you build validation
+that not only catches problems but communicates their significance and enables an effective
+response.
