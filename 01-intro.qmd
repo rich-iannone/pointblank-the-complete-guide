@@ -86,6 +86,12 @@ source collided with another in a different one. Date formats differed by system
 concept bore a different name in each source. While data lived in isolated silos, quality was still
 manageable. Once the data had to be combined, it then became a major obstacle.
 
+This era produced dedicated tools and methods for data quality. Extract-Transform-Load (ETL)
+processes began to include quality checks as a routine step. Master Data Management (MDM) efforts
+tried to set a single authoritative "golden record" for key entities such as customers and products.
+Over time, data quality was recognized as a discipline of its own, with its own roles, tools, and
+best practices.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
