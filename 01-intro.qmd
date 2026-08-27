@@ -46,6 +46,20 @@ inventory count showing negative quantities, the timestamp that predates the fou
 company. But articulating what makes data good (in a way that can be measured and verified) proves
 to be a bit more challenging.
 
+Pointblank divides data quality into six dimensions. They recur throughout the book as the basis for
+the score it computes, so let's explore them all right now. Each one checks a different aspect of
+the data, and the example that follows each one shows what a failure looks like. Completeness
+concerns whether the values that should be present actually are, so a required field left empty or a
+time series with gaps is a completeness problem. Validity concerns whether values conform to their
+expected form, range, or set, so an email address without an at-sign or a percentage above one
+hundred fails validity. Uniqueness concerns whether entities appear exactly as often as intended, so
+a duplicated customer record is a uniqueness problem. Consistency concerns whether the data agrees
+with itself, so a shipping date that precedes its order date, or two tables that disagree about a
+customer's city, violates consistency. Timeliness concerns whether the data is recent enough to be
+useful, since yesterday's prices may be accurate yet useless for today's decisions. Volume concerns
+whether there is the right amount of data, so a load that captured half its expected rows is a
+volume problem even when every row it did capture is perfect.
+
 ## A brief history of data validation
 
 The practice of checking records for errors is as old as record-keeping itself, and it stretches
