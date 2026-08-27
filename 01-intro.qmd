@@ -98,6 +98,13 @@ the slow batch checks that were the norm. Unstructured data resisted the rules t
 relational tables. And machine learning models demanded not only clean data but data with specific
 statistical properties, a requirement that traditional validation never anticipated.
 
+The rise of modern data engineering frameworks opened new places where validation was needed. Tools
+such as Apache Spark, dbt, and Airflow made it possible to build complex pipelines that transformed
+raw data through many stages before it reached the people who used it. Each stage was a chance for
+new problems to appear or for old ones to spread. The result was a need for validation that could
+sit inside a pipeline, be written as a plain set of rules, and run at scale, and that need drove the
+next generation of tools.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
