@@ -67,6 +67,13 @@ code, which made them hard to maintain and left them incomplete. When a new requ
 the check had to be added wherever the relevant data was processed, so the same rule was
 reimplemented in many places and the versions drifted apart.
 
+The rise of relational databases in the 1970s and 1980s brought more systematic checks for data
+quality. Databases could enforce rules at the point where data was stored. A primary key enforced
+uniqueness, a foreign key kept the relationships between tables intact, and a check constraint
+tested values against a fixed set of rules. This was a major step forward. Validation logic moved
+out of application code and into the database itself, where it applied to every piece of data no
+matter how it arrived.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
