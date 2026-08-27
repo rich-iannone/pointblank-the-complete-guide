@@ -38,6 +38,15 @@ complexity of modern data pipelines, and the increasing stakes attached to data-
 Finally, we introduce **Pointblank** itself, explaining its design philosophy and previewing the
 capabilities you will learn throughout this book.
 
+## A brief history of data validation
+
+The practice of checking records for errors is as old as record-keeping itself, and it stretches
+back throughout history. In antiquity, Babylonian scribes who compiled mathematical tables almost
+certainly reviewed their work for mistakes. Later, medieval monks copying manuscripts by hand
+developed careful proofreading procedures. By the Renaissance, double-entry bookkeeping had built
+error detection into its own structure: because every transaction was recorded as matching debits
+and credits, an imbalance anywhere was a sure signal that a mistake had slipped in.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
