@@ -60,6 +60,12 @@ useful, since yesterday's prices may be accurate yet useless for today's decisio
 whether there is the right amount of data, so a load that captured half its expected rows is a
 volume problem even when every row it did capture is perfect.
 
+These six dimensions interact, so quality is a judgment on many sides rather than a single pass or
+fail verdict. A dataset can be complete yet inconsistent, with every field filled in but the values
+contradicting one another across tables. It can be timely yet invalid, recent but wrong in format.
+Because the dimensions pull in different directions, it helps to understand each one on its own, so
+that you can design a strategy that answers the concerns a given dataset actually raises.
+
 ## A brief history of data validation
 
 The practice of checking records for errors is as old as record-keeping itself, and it stretches
