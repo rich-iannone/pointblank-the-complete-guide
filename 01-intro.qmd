@@ -38,6 +38,14 @@ complexity of modern data pipelines, and the increasing stakes attached to data-
 Finally, we introduce **Pointblank** itself, explaining its design philosophy and previewing the
 capabilities you will learn throughout this book.
 
+## What is data quality?
+
+The concept of data quality seems straightforward until you attempt to define it precisely. We all
+recognize bad data when we encounter it: the customer record with a birth year of 1822, the
+inventory count showing negative quantities, the timestamp that predates the founding of the
+company. But articulating what makes data good (in a way that can be measured and verified) proves
+to be a bit more challenging.
+
 ## A brief history of data validation
 
 The practice of checking records for errors is as old as record-keeping itself, and it stretches
