@@ -105,6 +105,13 @@ new problems to appear or for old ones to spread. The result was a need for vali
 sit inside a pipeline, be written as a plain set of rules, and run at scale, and that need drove the
 next generation of tools.
 
+Today's data validation tools, including **Pointblank**, mark the present state of this evolution.
+They give you a clear, code-based way to write validation rules. They can reach data in many places,
+from traditional databases to modern dataframe libraries. They produce detailed reports that make
+results legible to non-technical readers. And they fit into the wider set of data engineering and
+data science tools. In doing so, they carry forward what decades of experience with data quality
+have taught us, while staying flexible enough to meet the problems that are still coming our way.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
