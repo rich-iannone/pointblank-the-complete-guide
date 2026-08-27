@@ -47,6 +47,13 @@ developed careful proofreading procedures. By the Renaissance, double-entry book
 error detection into its own structure: because every transaction was recorded as matching debits
 and credits, an imbalance anywhere was a sure signal that a mistake had slipped in.
 
+The shift to mechanical and then electronic data processing brought new kinds of errors, but it
+also brought new tools for finding them. In the late nineteenth century, census data was tabulated
+with punch cards, and the punching had to be checked carefully. A single misplaced hole could turn
+a physician into a plumber, or a thirty-year-old into a centenarian. Operators learned to run each
+card through a verification machine that compared the holes against the original source data,
+catching mistakes before they reached the statistical results.
+
 ## Why data validation matters now
 
 Several trends have converged to make data validation more important today than at any previous
