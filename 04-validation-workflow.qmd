@@ -451,8 +451,6 @@ stay maintainable or turn into something no one wants to touch. Good organizatio
 report, because related checks sitting together tell a coherent story rather than presenting a
 jumble.
 
-### Logical grouping
-
 ### Brief descriptions
 
 ### Modularity
