@@ -383,6 +383,13 @@ if any(validation.critical().values()):
     raise RuntimeError("Critical data quality failures detected")
 ```
 
+With our data, no step reached the critical threshold, so the exception is not raised. For test
+suites specifically, `assert_passing()` and `assert_below_threshold()` are more idiomatic than a
+manual check: `assert_passing()` raises an `AssertionError` if any test unit failed anywhere, while
+`assert_below_threshold(level="error")` raises only if a step reached the error level given in
+`error=` (or an error state above that), letting bounded low-severity failures through. Both are
+covered in detail in @sec-thresholds-actions.
+
 ### Data extracts
 
 Knowing that two rows failed a step is useful, and seeing those two rows is better. Data extracts
