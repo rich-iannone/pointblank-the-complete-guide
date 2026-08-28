@@ -5,3 +5,27 @@
 import pointblank as pb
 ```
 
+
+## The command set
+
+
+## Exploring data from the terminal
+
+
+## Inline checks with `pb validate`
+
+
+## Running a plan with `pb run`
+
+
+## Exit codes for automation
+
+
+## Polars expressions with `pb pl`
+
+
+## In pipelines and on a schedule
+
+
+## Summary
+
