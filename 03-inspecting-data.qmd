@@ -361,3 +361,19 @@ Inspection is what makes every later step possible, because a validation plan is
 the understanding behind it. This chapter walked through the tools Pointblank provides for building
 that understanding, moving from the broadest view to the most detailed.
 
+We started with `get_row_count()` and `get_column_count()` for the two most basic facts about a
+table, then used `preview()` to look at representative rows with their types (and only looking at a
+subset of columns via `columns_subset=` when a table is wide). From there we profiled entire tables
+with `col_summary_tbl()`, and saw that `DataScan` is the engine underneath it (exposing the same
+profile as a data frame or as JSON that can be saved and compared across runs). That comparison
+capability is what the drift detection workflow builds on: `DataScan.compare()` returns a
+`DataScanDiff` that identifies schema changes and quantifies distributional shift with PSI and KS
+scores. We used `missing_vals_tbl()` to locate missing values and read their patterns. And we saw
+that all of these tools work unchanged on database-backed tables reached through
+`connect_to_table()`.
+
+The thread running through the chapter is a progression from broad to specific: confirm the
+dimensions, look at a few rows, profile every column, focus on the trouble spots, and then track how
+those profiles change over time. Following that progression turns what was once an unfamiliar table
+into a set of concrete observations. And it is these types of observations that are so very useful
+in the next chapter, where we turn them into a validation plan.
