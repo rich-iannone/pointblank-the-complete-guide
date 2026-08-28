@@ -287,6 +287,20 @@ The `DataScan` class supports this directly. The `save_to_json()` method writes 
 and the `load_from_json()` class method reads one back, so a baseline captured from one time period
 can be stored and compared against a later scan.
 
+```{python}
+#| include: false
+import numpy as np
+import polars as pl
+
+# generate and persist the dataset used in this section's examples
+_rng = np.random.default_rng(23)
+pl.DataFrame({
+    "region": _rng.choice(["North", "South", "East", "West"], 800).tolist(),
+    "amount": _rng.normal(100, 15, 800).round(2).tolist(),
+    "legacy_code": _rng.integers(0, 4, 800).tolist(),
+}).write_csv("assets/january_sales.csv")
+```
+
 
 ## Summary
 
