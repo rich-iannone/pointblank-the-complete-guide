@@ -6,3 +6,36 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
+
+## Classifying failures with thresholds
+
+
+### Global thresholds
+
+
+### Step-level thresholds
+
+
+### Counts versus proportions
+
+
+## Reading threshold results
+
+
+## Responding with actions
+
+
+### Choosing which actions fire
+
+
+## Final actions
+
+
+## Asserting quality in tests
+
+
+## Automatic notifications
+
+
+## Summary
+
