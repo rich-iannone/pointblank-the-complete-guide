@@ -318,6 +318,27 @@ distribution. The following example profiles two monthly slices of a sales table
 slice has gained a `channel` column, lost a `legacy_code` column, and seen its `amount`
 distribution move upward.
 
+```{python}
+import numpy as np
+import polars as pl
+
+rng = np.random.default_rng(23)
+
+january = pl.DataFrame({
+    "region": rng.choice(["North", "South", "East", "West"], 800).tolist(),
+    "amount": rng.normal(100, 15, 800).round(2),
+    "legacy_code": rng.integers(0, 4, 800),
+})
+
+february = pl.DataFrame({
+    "region": rng.choice(["North", "South", "East", "West"], 800).tolist(),
+    "amount": rng.normal(118, 15, 800).round(2),
+    "channel": rng.choice(["web", "app"], 800).tolist(),
+})
+
+pb.DataScan(february).compare(pb.DataScan(january)).get_tabular_report()
+```
+
 
 ## Summary
 
