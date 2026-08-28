@@ -348,6 +348,12 @@ PSI near zero. By a common rule of thumb, a PSI below 0.1 signals no meaningful 
 0.25 a moderate shift worth watching, and above 0.25 a significant one, which places `amount`
 firmly in alarm territory.
 
+The same results are available programmatically for a monitoring job to act on. A `DataScanDiff`
+exposes `has_changes` as a quick test and `to_dict()` for the full structured result. The result's
+`columns_added`, `columns_removed`, and per-column `drift_scores` give a scheduled comparison the
+information it needs to alert when a PSI crosses a threshold or a column disappears. This
+profiling-and-comparison foundation is what the observability discussions of
+@sec-playbook-data-engineering and @sec-playbook-ml-monitoring build on.
 
 ## Summary
 
