@@ -301,6 +301,16 @@ pl.DataFrame({
 }).write_csv("assets/january_sales.csv")
 ```
 
+```{python}
+january_data = pl.read_csv("assets/january_sales.csv")
+
+baseline = pb.DataScan(january_data)
+baseline.save_to_json("january.json")
+
+# on a later run, load the stored profile to compare against
+baseline = pb.DataScan.load_from_json("january.json")
+```
+
 
 ## Summary
 
