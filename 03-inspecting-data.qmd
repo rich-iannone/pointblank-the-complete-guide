@@ -357,7 +357,7 @@ profiling-and-comparison foundation is what the observability discussions of
 
 ## Summary
 
-Inspection is the step that makes every later step possible, because a validation plan is only as
-good as the understanding behind it. This chapter walked through the tools Pointblank provides for
-building that understanding, moving from the broadest view to the most detailed.
+Inspection is what makes every later step possible, because a validation plan is only as good as
+the understanding behind it. This chapter walked through the tools Pointblank provides for building
+that understanding, moving from the broadest view to the most detailed.
 
