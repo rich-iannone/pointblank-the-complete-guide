@@ -390,6 +390,16 @@ manual check: `assert_passing()` raises an `AssertionError` if any test unit fai
 `error=` (or an error state above that), letting bounded low-severity failures through. Both are
 covered in detail in @sec-thresholds-actions.
 
+The choice between responding inside the plan (via actions) and responding outside it (via
+post-interrogation Python) comes down to timing and coupling. Actions fire during interrogation, so
+a critical action that raises will stop the run immediately, before later steps execute. This
+matters when a failure early in a long plan should halt everything rather than waste time on
+subsequent checks. Post-interrogation code always sees the complete results, which makes it better
+suited to decisions that depend on the overall picture, to contexts where you want to inspect before
+acting, and to situations where the same plan runs under different response requirements (strict in
+CI, lenient in development). Actions are also part of the plan definition itself, so they travel
+with it. Post-interrogation code is external and easier to vary without touching the plan.
+
 ### Data extracts
 
 Knowing that two rows failed a step is useful, and seeing those two rows is better. Data extracts
