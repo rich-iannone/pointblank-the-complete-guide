@@ -311,6 +311,13 @@ baseline.save_to_json("january.json")
 baseline = pb.DataScan.load_from_json("january.json")
 ```
 
+With two scans in hand, the `compare()` method measures the difference between them and returns a
+`DataScanDiff`. It reports two kinds of change: schema drift, where columns are added, removed, or
+change type, and statistical drift, where a column present in both scans has shifted its
+distribution. The following example profiles two monthly slices of a sales table. The February
+slice has gained a `channel` column, lost a `legacy_code` column, and seen its `amount`
+distribution move upward.
+
 
 ## Summary
 
