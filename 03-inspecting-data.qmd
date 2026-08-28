@@ -281,11 +281,12 @@ in @sec-ai-authoring. The steps for turning any of these observations into runna
 
 ## Profiling and drift detection
 
-A profile becomes far more useful once you can keep it and compare against it later, because the
-most revealing question about a table is often not what it looks like today but how it has changed
-since a previous run. `DataScan` supports this directly. The `save_to_json()` method writes a
-profile to a file, and the `load_from_json()` class method reads one back, so a profile captured
-from one slice of data can be stored and set beside a later one.
+Profiles become most valuable when you can save them and compare across runs, because the most
+revealing question about a table is often not what it looks like today but how it has changed.
+The `DataScan` class supports this directly. The `save_to_json()` method writes a profile to a file,
+and the `load_from_json()` class method reads one back, so a baseline captured from one time period
+can be stored and compared against a later scan.
+
 
 ## Summary
 
