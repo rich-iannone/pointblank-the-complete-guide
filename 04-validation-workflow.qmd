@@ -471,6 +471,11 @@ brief_demo = (
 brief_demo.n_failed()
 ```
 
+The check behaves exactly as before (flagging the same two failing rows) but now the report provides
+a sentence that a non-technical stakeholder could read to better understand the check. Put another
+way, a brief is documentation that resides with the validation. It can also serve to remind the
+author what the check is meant to accomplish.
+
 ### Modularity
 
 ## Summary
