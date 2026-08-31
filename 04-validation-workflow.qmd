@@ -453,6 +453,10 @@ jumble.
 
 ### Brief descriptions
 
+Step method calls describe the implementation of check but not the intent for those checks. The
+`brief=` parameter helps you attach a human-readable description that appears in the report, which
+closes the gap between what a check does mechanically and why it exists.
+
 ### Modularity
 
 ## Summary
