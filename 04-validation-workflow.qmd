@@ -523,6 +523,12 @@ These tokens work in both per-step `brief=` strings and in the global `brief=` s
 not override it with its own `brief=` argument, and setting `brief=False` on an individual step
 cancels the global brief for that step.
 
+In practice, `brief=True` is the easiest and lowest-friction option to take and really works well
+for exploratory plans or rapid iteration. A hand-written string is better when the automatic text is
+too technical for the intended audience, or you want to provide rationale for the check (among other
+reasons). The token-based form splits the difference as you can add context around the automatically
+generated portion.
+
 ### Modularity
 
 ## Summary
