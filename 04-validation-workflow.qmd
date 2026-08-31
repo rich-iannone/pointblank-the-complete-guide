@@ -476,6 +476,21 @@ a sentence that a non-technical stakeholder could read to better understand the 
 way, a brief is documentation that resides with the validation. It can also serve to remind the
 author what the check is meant to accomplish.
 
+When you do not want to write a description yourself (and this could be tedious when there are many
+checks in a validation plan), the `Validate(brief=True)` option generates briefs automatically from
+each step's parameters. The same option works at the step level (`brief=True` on an individual
+method call), which overrides whatever global setting is in effect for that step.
+
+```{python}
+auto_brief_demo = (
+    pb.Validate(data=small_table, brief=True)
+    .col_vals_lt(columns="a", value=7)
+    .interrogate()
+)
+
+auto_brief_demo.n_failed()
+```
+
 ### Modularity
 
 ## Summary
