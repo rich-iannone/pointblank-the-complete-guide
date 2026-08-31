@@ -491,6 +491,10 @@ auto_brief_demo = (
 auto_brief_demo.n_failed()
 ```
 
+You can also mix the two approaches by using `"{auto}"` as a token inside a custom string. The
+generated text replaces the token, letting you prefix it with context that the auto-generation
+would not know.
+
 ### Modularity
 
 ## Summary
