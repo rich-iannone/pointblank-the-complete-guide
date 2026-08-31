@@ -495,6 +495,16 @@ You can also mix the two approaches by using `"{auto}"` as a token inside a cust
 generated text replaces the token, letting you prefix it with context that the auto-generation
 would not know.
 
+```{python}
+mixed_brief_demo = (
+    pb.Validate(data=small_table)
+    .col_vals_lt(columns="a", value=7, brief="Range check: {auto}")
+    .interrogate()
+)
+
+mixed_brief_demo.n_failed()
+```
+
 ### Modularity
 
 ## Summary
