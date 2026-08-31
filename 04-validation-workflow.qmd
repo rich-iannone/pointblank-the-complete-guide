@@ -505,6 +505,19 @@ mixed_brief_demo = (
 mixed_brief_demo.n_failed()
 ```
 
+The `"{auto}"` token is one of several available for composing briefs. The full set consists of:
+
+| Token | Resolves to |
+|---|---|
+| `{auto}` | Auto-generated description of the step's expectation |
+| `{step}` or `{i}` | Step number |
+| `{col}` or `{column}` | Column name (or comma-separated names, if multiple) |
+| `{value}` | The comparison value |
+| `{thresholds}` | Formatted threshold levels (e.g., `W: 0.1 / E: 0.25 / C: 0.35`) |
+| `{segment}` | Segment column and value together |
+| `{segment_column}` | Segment column name alone |
+| `{segment_value}` | Segment value alone |
+
 ### Modularity
 
 ## Summary
