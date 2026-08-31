@@ -457,6 +457,20 @@ Step method calls describe the implementation of check but not the intent for th
 `brief=` parameter helps you attach a human-readable description that appears in the report, which
 closes the gap between what a check does mechanically and why it exists.
 
+```{python}
+brief_demo = (
+    pb.Validate(data=small_table)
+    .col_vals_lt(
+        columns="a",
+        value=7,
+        brief="Values in 'a' should be all less than 7",
+    )
+    .interrogate()
+)
+
+brief_demo.n_failed()
+```
+
 ### Modularity
 
 ## Summary
