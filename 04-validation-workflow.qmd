@@ -518,6 +518,11 @@ The `"{auto}"` token is one of several available for composing briefs. The full 
 | `{segment_column}` | Segment column name alone |
 | `{segment_value}` | Segment value alone |
 
+These tokens work in both per-step `brief=` strings and in the global `brief=` setting on the
+`Validate` constructor. A global brief like `"Step {step}: {auto}"` applies to every step that does
+not override it with its own `brief=` argument, and setting `brief=False` on an individual step
+cancels the global brief for that step.
+
 ### Modularity
 
 ## Summary
