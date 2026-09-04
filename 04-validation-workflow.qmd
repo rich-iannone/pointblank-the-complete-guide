@@ -544,5 +544,32 @@ of a block of code that runs only when you execute the file. Each function owns 
 returns its own interrogated result, so it can be run, scheduled, inspected, and reused on its own,
 while staying small enough to read at a glance.
 
+```{python}
+def validate_completeness(data):
+    return (
+        pb.Validate(data=data, label="Completeness checks")
+        .col_vals_not_null(columns="c")
+        .interrogate()
+    )
+
+def validate_ranges(data):
+    return (
+        pb.Validate(data=data, label="Range checks")
+        .col_vals_lt(columns="a", value=7)
+        .interrogate()
+    )
+
+def validate_duplicates(data, columns=None):
+    return (
+        pb.Validate(data=data, label="Duplicate checks")
+        .rows_distinct(columns_subset=columns)
+        .interrogate()
+    )
+
+completeness = validate_completeness(small_table)
+ranges = validate_ranges(small_table)
+duplicates = validate_duplicates(small_table)
+```
+
 ## Summary
 
