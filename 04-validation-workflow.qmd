@@ -571,5 +571,19 @@ ranges = validate_ranges(small_table)
 duplicates = validate_duplicates(small_table)
 ```
 
+Each function returns its own interrogated result, which can be queried independently.
+
+```{python}
+completeness.all_passed()
+```
+
+```{python}
+ranges.all_passed()
+```
+
+```{python}
+duplicates.all_passed()
+```
+
 ## Summary
 
