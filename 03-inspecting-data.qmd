@@ -343,7 +343,7 @@ The report lays out both kinds of change. It names `channel` as added and `legac
 and for the columns present in both slices it reports drift scores: the population stability index
 (PSI) and, for numeric columns, the Kolmogorov-Smirnov statistic. The `amount` column, whose mean
 shifted from roughly 100 to 118, shows a PSI near 1.5 and a KS statistic of about 0.5 with a
-p-value of zero—an unmistakable shift. The `region` column, whose categories held steady, shows a
+p-value of zero, an unmistakable shift. The `region` column, whose categories held steady, shows a
 PSI near zero. By a common rule of thumb, a PSI below 0.1 signals no meaningful change, 0.1 to
 0.25 a moderate shift worth watching, and above 0.25 a significant one, which places `amount`
 firmly in alarm territory.
