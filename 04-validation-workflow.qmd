@@ -585,5 +585,12 @@ ranges.all_passed()
 duplicates.all_passed()
 ```
 
+All three modules report failures here, but the point is that they are independent. You could run
+completeness checks hourly while running range checks only on each new load, or apply different
+thresholds to each without one overriding the other. Because each function accepts a table as its
+argument, the same module also works across sources: calling `validate_completeness()` on tables
+from different pipelines holds all of them to one consistent standard without duplicating the plan
+definition.
+
 ## Summary
 
