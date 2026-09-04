@@ -531,5 +531,18 @@ generated portion.
 
 ### Modularity
 
+A single validation plan that tries to check everything about a table becomes hard to read and hard
+to reuse, because it behaves as one indivisible unit: interrogating it runs every step and returns a
+single combined result. There is no way to run one group of checks on a different schedule from
+another, to get a separate verdict for each concern, or to lift a few checks out for use elsewhere.
+The remedy is to split the plan into focused pieces, and to write each piece as a function rather
+than as a stretch of a one-off script. A function takes the table as an argument, so the same rules
+run against any table you hand it, and it can be called wherever you need it, from a test, a
+pipeline step, or a scheduled job, whereas a script hardcodes one table and runs top to bottom once.
+That difference is vital as a function can turn a validation into reusable, callable logic instead
+of a block of code that runs only when you execute the file. Each function owns a single concern and
+returns its own interrogated result, so it can be run, scheduled, inspected, and reused on its own,
+while staying small enough to read at a glance.
+
 ## Summary
 
