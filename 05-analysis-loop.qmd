@@ -204,7 +204,7 @@ stays quiet when things are fine and raises an error when they're not, which mak
 way to confirm the assumptions your analysis depends on. The most useful place for these checks is
 around joins: use `rows_distinct()` on the key before the join and `row_count_match()` on the result
 after it to catch duplicate or dropped rows. The same idea works for filters, derived columns, and
-aggregations—state what you expect right after the step that produces it.
+aggregations, where you state what you expect right after the step that produces it.
 
 These quick checks use the same methods as the formal plans covered in the rest of the book. When
 one keeps proving useful, it's a good candidate for promotion into a saved plan. With this habit in
