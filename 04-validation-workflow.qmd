@@ -594,3 +594,8 @@ definition.
 
 ## Summary
 
+This chapter looked inside the validation workflow, following a single plan from construction
+through interrogation to the many ways of reading its results. Understanding this machinery makes
+you a more effective user of Pointblank, because you can anticipate how a plan will behave, explain
+a surprising number, and design plans that fit the way your systems actually work.
+
