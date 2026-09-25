@@ -430,6 +430,16 @@ often, but it is useful when null is the correct value, such as an activation da
 unset for archived records, or a derived field that should not be filled in yet at a certain stage
 of a pipeline. Here is a small table where the column is all nulls.
 
+```{python}
+archived = pl.DataFrame({"active_date": [None, None, None]}, schema={"active_date": pl.Datetime})
+
+(
+    pb.Validate(data=archived)
+    .col_vals_null(columns="active_date")
+    .interrogate()
+)
+```
+
 ## Pattern matching
 
 ## Validating against known formats
