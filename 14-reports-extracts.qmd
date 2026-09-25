@@ -6,3 +6,33 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
+
+## The tabular report
+
+
+## The report as a data frame
+
+
+## Saving a report to share
+
+
+## Step reports
+
+
+## Data extracts
+
+
+## Sundered data
+
+
+## JSON export and programmatic access
+
+
+## Step notes
+
+
+## Customizing reports for readers
+
+
+## Summary
+
