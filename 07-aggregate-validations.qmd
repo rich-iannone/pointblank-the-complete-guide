@@ -135,3 +135,8 @@ see right away which side was crossed. To see a failure, we can require the aver
 )
 ```
 
+The single test unit fails, since the mean of about 25.6 is just above 25. In a monitoring setup,
+this is the signal you want: the average has crossed a line you chose on purpose. Every individual
+session duration could still look reasonable, which is why a per-row check would not catch this kind
+of shift.
+
