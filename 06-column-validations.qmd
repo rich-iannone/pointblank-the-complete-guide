@@ -575,6 +575,16 @@ More often a length has a range rather than a single allowed value. A username t
 3 and 15 characters is a typical example, and a small frame with two out-of-range values shows how
 the check behaves.
 
+```{python}
+usernames = pl.DataFrame({"username": ["ann", "robert", "maximilian_alexander", "xy"]})
+
+(
+    pb.Validate(data=usernames)
+    .col_vals_str_len(columns="username", min_val=3, max_val=15)
+    .interrogate()
+)
+```
+
 ## Sequence validations
 
 ### Increasing and decreasing values
