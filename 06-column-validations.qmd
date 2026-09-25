@@ -148,6 +148,12 @@ given value. The `item_type` column holds only `"ad"` and `"iap"`, so checking t
 )
 ```
 
+There are 447 passing rows and 1,553 failing ones, the failures being the ad rows. In practice,
+equality is most useful when a column should hold a single constant, like a currency code that
+should always be `"USD"` in a domestic feed. The `col_vals_ne()` method forbids one specific value.
+Because `item_type` has only two values, checking that it is never `"ad"` gives exactly the same
+result as the check above: 447 passing and 1,553 failing.
+
 ### Comparing against another column
 
 ### Handling nulls in comparisons
