@@ -26,3 +26,11 @@ is about 25.6, and the standard deviation of `item_revenue` is about 13.2.
 game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
 ```
 
+## When an aggregate is the right check
+
+An aggregate check fits when the property you care about belongs to the column rather than to any
+one row. The clearest case is reconciliation, where a total has to match a figure from somewhere
+else, such as a revenue sum that must agree with an accounting ledger. No per-row check can express
+this, because no single value is right or wrong on its own. Only the sum can be compared to the
+expected figure.
+
