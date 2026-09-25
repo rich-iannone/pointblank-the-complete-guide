@@ -353,6 +353,10 @@ is exact, so a value like `"IAP"` or `"iap "` (with a trailing space) would fail
 )
 ```
 
+There are 1,594 passing rows and 406 failing ones, the failures being rows from the three channels
+we left out (`other_campaign`, `crosspromo`, and `apple`). It is worth knowing how this check treats
+a null, since a null is not one of the listed values. A small frame shows what happens.
+
 ### Not in set
 
 ## Null validations
