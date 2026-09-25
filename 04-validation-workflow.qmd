@@ -411,6 +411,14 @@ returns the offending rows.
 validation.get_data_extracts(i=1, frame=True)
 ```
 
+We get back two rows, one where `a` is `8` and one where it is `7`. The second is worth noticing:
+the check was `a < 7`, so a value of exactly `7` fails. The extract also adds a `_row_num_` column
+giving each row's position in the original table (rows 5 and 7 here), so you can go straight back
+to the source. If you call `get_data_extracts()` with no arguments, you get a dictionary with one
+entry per step. Steps with no failures still get an entry, just an empty frame, and step 4 is one of
+those. Looking at the actual failing rows is usually the quickest way to tell whether the data is
+wrong or the rule is.
+
 ### Sundered data
 
 Where extracts isolate the failing rows of a single step, sundering splits the whole table into the
