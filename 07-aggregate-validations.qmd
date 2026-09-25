@@ -181,3 +181,11 @@ fraction of a one-unit step can only be 0 or 1, so any threshold between those v
 on/off switch rather than a graded level of severity. Here is the failing average check from
 earlier, run with a warning threshold of 0.1.
 
+```{python}
+(
+    pb.Validate(data=game_revenue, thresholds=pb.Thresholds(warning=0.1))
+    .col_avg_lt(columns="session_duration", value=25)
+    .interrogate()
+)
+```
+
