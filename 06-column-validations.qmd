@@ -367,6 +367,11 @@ with_null = pl.DataFrame({"s": ["a", "b", None]})
 )
 ```
 
+Two rows pass and the null row fails, because the null is not in the set. If nulls are acceptable in
+the column, add `None` to the set itself (`set=["a", "b", None]` passes all three rows here). You can also
+pass a Python `Enum` as the `set=`, which lets you keep the list of allowed values in one place in
+your code.
+
 ### Not in set
 
 ## Null validations
