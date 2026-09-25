@@ -164,6 +164,20 @@ types, you can list all of them, and the match passes if the actual type is any 
 )
 ```
 
+This passes because `item_revenue` is `Float64`, which is one of the listed types. If you only care
+that a column exists and not what type it has, you can list it without a type.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_schema_match(
+        schema=pb.Schema(columns=[("player_id",), ("item_type",)]),
+        complete=False, in_order=False,
+    )
+    .interrogate()
+)
+```
+
 
 ## Dimensional validation
 
