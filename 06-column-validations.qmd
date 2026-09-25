@@ -450,6 +450,12 @@ Numeric bounds and set membership do not help much with structured text. Many te
 product codes, follow a fixed format, and the usual way to check a format is with a regular
 expression.
 
+### Regular expressions
+
+The `col_vals_regex()` method checks that text values match a regular expression, written in
+standard Python syntax. Column `b` in `small_table` holds values like `"1-bcd-345"`: a digit, three
+lowercase letters, and three digits, separated by hyphens. We can require exactly that format.
+
 ## Validating against known formats
 
 ## Sequence validations
