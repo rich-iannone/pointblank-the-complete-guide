@@ -140,3 +140,17 @@ this is the signal you want: the average has crossed a line you chose on purpose
 session duration could still look reasonable, which is why a per-row check would not catch this kind
 of shift.
 
+## Checking the spread
+
+The `col_sd_*` methods compare a column's standard deviation against a value, which lets you put
+limits on how spread out the data is. The usual form is an upper limit. The standard deviation of
+`item_revenue` is about 13.2, so it should stay under 20.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_sd_lt(columns="item_revenue", value=20)
+    .interrogate()
+)
+```
+
