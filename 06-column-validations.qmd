@@ -387,6 +387,8 @@ Let's forbid the value `other_campaign` in the `acquisition` column.
 )
 ```
 
+There are 1,733 passing rows and 267 failing ones, which is every row tagged with `other_campaign`.
+
 ## Null validations
 
 ### Requiring values to be absent
