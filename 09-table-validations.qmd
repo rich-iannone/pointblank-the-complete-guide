@@ -30,6 +30,10 @@ We start with the most basic structural question: are the columns you expect act
 
 ## Schema validation
 
+Pipeline code makes assumptions about a table's structure. It expects certain columns to exist,
+with certain names and certain types. When one of those assumptions breaks, the pipeline usually
+breaks too. Schema validation writes those assumptions down so that a violation is caught as soon
+as the data arrives.
 
 ### Checking that columns exist
 
