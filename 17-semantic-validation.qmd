@@ -7,3 +7,24 @@ import polars as pl
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+## How `prompt()` works
+
+
+## Writing prompts that yield verdicts
+
+
+## Multimodal attachments
+
+
+## Cost, throughput, and reliability
+
+
+## Privacy and provider choice
+
+
+## Semantic results in the plan
+
+
+## Summary
+
