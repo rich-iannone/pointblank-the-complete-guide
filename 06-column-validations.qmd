@@ -603,6 +603,22 @@ row down a column.
 The `col_vals_increasing()` method checks that values go up from one row to the next, and
 `col_vals_decreasing()` checks that they go down. A small table of made-up measurements shows both.
 
+```{python}
+trend = pl.DataFrame({
+    "id": [1, 2, 3, 4, 5],
+    "temperature": [20, 22, 25, 28, 30],
+    "countdown": [100, 80, 60, 40, 20],
+})
+
+(
+    pb.Validate(data=trend)
+    .col_vals_increasing(columns="id")
+    .col_vals_increasing(columns="temperature")
+    .col_vals_decreasing(columns="countdown")
+    .interrogate()
+)
+```
+
 ## Selecting columns
 
 ### Explicit lists and selector functions
