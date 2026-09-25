@@ -48,6 +48,12 @@ asserting something you believe is always true, such as every session having a p
 )
 ```
 
+All 2,000 test units pass (the shortest session in the table is 3.2). A check that passes may not
+seem to tell you much, but it will fail on the day an upstream change lets a zero or negative
+duration through. Often, though, you choose a comparison value to pick out a
+particular set of rows rather than to confirm something universal. Here we raise the bar to a
+revenue greater than 1.
+
 ### Inclusive versus strict bounds
 
 ### Equality and inequality
