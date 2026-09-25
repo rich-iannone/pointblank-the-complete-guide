@@ -623,6 +623,16 @@ All three steps pass: `id` and `temperature` go up and `countdown` goes down. By
 checks are strict, so a value that is the same as the one before it fails. The `allow_stationary=`
 argument relaxes that. A column with the values 1, 2, 2, 3 shows the difference.
 
+```{python}
+ties = pl.DataFrame({"x": [1, 2, 2, 3]})
+
+(
+    pb.Validate(data=ties)
+    .col_vals_increasing(columns="x")
+    .interrogate()
+)
+```
+
 ## Selecting columns
 
 ### Explicit lists and selector functions
