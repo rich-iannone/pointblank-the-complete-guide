@@ -127,3 +127,11 @@ Both steps pass, so the mean falls between 20 and 30. There is no "between" meth
 so a range always takes two checks. One small benefit is that when the range is breached, you can
 see right away which side was crossed. To see a failure, we can require the average to be below 25.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_avg_lt(columns="session_duration", value=25)
+    .interrogate()
+)
+```
+
