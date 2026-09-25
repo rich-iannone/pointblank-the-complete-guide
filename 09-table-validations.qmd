@@ -128,6 +128,11 @@ Now it passes. Type matching can be relaxed as well. With `case_sensitive_dtypes
 )
 ```
 
+This passes. Without those two arguments, the same schema fails, because `"string"` and `"String"`
+are not an exact match. The relaxed settings help when different systems spell the same type
+differently, such as `int64` and `Int64`. If a column can legitimately arrive as one of several
+types, you can list all of them, and the match passes if the actual type is any one of those.
+
 
 ## Dimensional validation
 
