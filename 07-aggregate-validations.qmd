@@ -67,3 +67,8 @@ require the total to be under 5,000, it fails.
 )
 ```
 
+The most common use of a sum check, though, is reconciling against a known figure, and for that
+you use `col_sum_eq()` with its `tol=` argument. Suppose an accounting system reports total revenue
+of 8,687.12, rounded to the cent. The actual sum of the column is 8,687.11791, so an exact
+comparison fails even though the two figures agree for all practical purposes.
+
