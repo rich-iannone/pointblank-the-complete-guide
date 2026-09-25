@@ -97,3 +97,20 @@ explains. With a large total like this one, `tol=1` is the tightest tolerance yo
 absorbing rounding, the tolerance also sets how much real difference you will accept before treating
 the two totals as different.
 
+
+## Checking an average
+
+The `col_avg_*` methods work the same way for a column's mean, again with one method per operator.
+A common pattern is to keep the average within a plausible range using two checks, one for the
+lower bound and one for the upper. The mean of `session_duration` is about 25.6, so a range of 20
+to 30 should pass.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_avg_ge(columns="session_duration", value=20)
+    .col_avg_le(columns="session_duration", value=30)
+    .interrogate()
+)
+```
+
