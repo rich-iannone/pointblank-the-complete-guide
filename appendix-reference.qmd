@@ -7,3 +7,5 @@ docstrings in your installed version of Pointblank or the online API reference a
 <https://posit-dev.github.io/pointblank/reference/>, both of which stay current as the library
 changes.
 
+## Arguments shared by most methods
+
