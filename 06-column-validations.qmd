@@ -6,6 +6,12 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+Most data quality problems show up in column values. You might find a negative number in a revenue
+column, for example, or an empty cell in a field that is supposed to be required. Column value
+validations catch problems like these by stating what you expect in a column and checking every row
+against it.
+
 This chapter covers Pointblank's column value methods in detail. It is the longest chapter in the
 book because these are the methods you will use most. For each family we look at more than one
 example, cover the edge cases that tend to trip people up, and talk about when to pick one method
