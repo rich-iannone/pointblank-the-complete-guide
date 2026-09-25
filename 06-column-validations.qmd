@@ -19,6 +19,17 @@ categorical, and identifier columns across 2,000 rows. The smaller `small_table`
 want a result short enough to count by hand. A few tiny hand-built frames also appear, for cases
 where it is easier to construct an edge case than to go looking for one in real data.
 
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
+
+pb.preview(game_revenue)
+```
+
+The columns we will come back to most are the numeric `session_duration` and `item_revenue`, the
+categorical `item_type` and `acquisition`, and the identifiers `player_id` and `session_id`. Let's
+start checking them.
+
 ## Comparison validations
 
 ### Inclusive versus strict bounds
