@@ -693,5 +693,10 @@ match either rule, a `-` between two selectors picks the first group minus the s
 
 ## Tagging checks with a quality dimension
 
+Every method in this chapter has a `dimension=` argument that labels the check with the aspect of
+data quality it measures, such as completeness, validity, or uniqueness. If you leave it unset,
+Pointblank picks a dimension based on the kind of check. Setting it yourself makes your intent
+explicit, and it feeds into the quality scores described in @sec-quality-scoring.
+
 ## Beyond single-column checks
 
