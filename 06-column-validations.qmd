@@ -420,6 +420,9 @@ Both steps pass for all 2,000 rows, so no identifiers are missing. Running the s
 )
 ```
 
+Eleven rows pass and two fail. This is probably the most common validation of all, since a missing
+value in a required column tends to cause trouble in everything downstream of it.
+
 ### Requiring values to be absent
 
 ## Pattern matching
