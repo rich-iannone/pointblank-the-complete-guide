@@ -51,6 +51,12 @@ conventions for special missing values, and clinical data standards define a det
 "null flavors".
 
 
+The trouble is that these codes are usually stored as ordinary numbers. A `-99` in an age column
+will pull an average down, and a range check that expects ages from 0 to 120 will flag it as an
+error rather than recognizing it as a documented non-response. To validate coded missing values
+properly, you first tell Pointblank which values are codes, so it can treat them separately from the
+real data.
+
 ## Describing missingness with `MissingSpec`
 
 A `MissingSpec` describes a column's missing-value codes. The main part is the `reasons=` mapping,
