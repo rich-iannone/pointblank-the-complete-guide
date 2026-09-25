@@ -175,6 +175,17 @@ or by writing an expression that compares with a tolerance (an approach covered 
 @sec-advanced-validation). Keep `col_vals_eq()` for exact values like integers, strings, and
 category codes.
 
+::: {.callout-note}
+## Why `0.1 + 0.2` is not `0.3`
+
+Computers store most decimals in binary floating point. Just as one third has no exact finite
+decimal form, numbers like 0.1 and 0.2 have no exact binary form, so each is stored as the nearest
+value the format can represent. Those tiny rounding errors carry through arithmetic, and `0.1 + 0.2`
+ends up slightly away from the stored value of `0.3`. Nearly every programming language uses this
+format for decimals, so comparing computed decimals for exact equality is a mistake everywhere, not
+just in Python or Pointblank.
+:::
+
 ### Comparing against another column
 
 ### Handling nulls in comparisons
