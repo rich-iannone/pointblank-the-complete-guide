@@ -72,3 +72,11 @@ you use `col_sum_eq()` with its `tol=` argument. Suppose an accounting system re
 of 8,687.12, rounded to the cent. The actual sum of the column is 8,687.11791, so an exact
 comparison fails even though the two figures agree for all practical purposes.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_sum_eq(columns="item_revenue", value=8687.12, tol=0)
+    .interrogate()
+)
+```
+
