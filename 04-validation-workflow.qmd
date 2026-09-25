@@ -647,6 +647,14 @@ def validate_amounts(data):
 validate_amounts(orders).all_passed()
 ```
 
+The result is `True`. We wrote a single `col_vals_ge()` call, but the selector expanded it into
+three steps, one each for `amt_subtotal`, `amt_tax`, and `amt_total`, and all four rows passed in
+every one. The zero amounts in order 103 pass because `col_vals_ge()` includes the boundary value.
+The `pct_margin` column was never checked, missing value and all, since its name does not match the
+pattern. If someone later adds an `amt_shipping` column, the function picks it up with no edits.
+`ends_with()` works the same way (you could use `ends_with("_id")` to run a not-null check on every
+ID column), and `matches()` takes a regular expression for cases a prefix or suffix cannot express.
+
 ## Summary
 
 This chapter looked inside the validation workflow, following a single plan from construction
