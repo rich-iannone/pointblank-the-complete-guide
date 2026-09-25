@@ -524,6 +524,10 @@ cards = pl.DataFrame({"card": ["4111111111111111", "5500005555555559", "41111111
 )
 ```
 
+Two rows pass and the third fails. It has 16 digits like the others, but its Luhn checksum is wrong,
+which no digit-count pattern could detect. Some specifications depend on the country, and postal
+codes are one of them, so you include the country in the spec name.
+
 ## Sequence validations
 
 ### Increasing and decreasing values
