@@ -98,6 +98,19 @@ exactly the same moment, then the session and the timestamp together form the ke
 )
 ```
 
+Now 1,978 rows pass and 22 fail. These 22 rows are 11 pairs, where each pair shares a session and
+a timestamp. Whether they are real duplicates depends on the data, and we can narrow it down by
+adding more columns to the key. Adding `item_name` separates two different items logged in the same
+session at the same second.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .rows_distinct(columns_subset=["session_id", "time", "item_name"])
+    .interrogate()
+)
+```
+
 
 ::: {.callout-note}
 ## Choosing the right key comes up again and again
