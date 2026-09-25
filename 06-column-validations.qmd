@@ -140,6 +140,14 @@ The `col_vals_eq()` and `col_vals_ne()` methods check that values are equal, or 
 given value. The `item_type` column holds only `"ad"` and `"iap"`, so checking that every row equals
 `"iap"` splits the table in two.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_eq(columns="item_type", value="iap")
+    .interrogate()
+)
+```
+
 ### Comparing against another column
 
 ### Handling nulls in comparisons
