@@ -172,3 +172,12 @@ This passes as well, since the standard deviation is about 13.2. If an upstream 
 the column with a constant, this check would fail, even though the total and the average might still
 look plausible.
 
+## How aggregate checks behave
+
+Aggregate checks behave differently from the per-row checks of the previous chapter in a couple of
+ways that affect how you read their results. Each aggregate step has exactly one test unit, so it
+either passes completely or fails completely. That also changes how thresholds work. The failure
+fraction of a one-unit step can only be 0 or 1, so any threshold between those values acts like an
+on/off switch rather than a graded level of severity. Here is the failing average check from
+earlier, run with a warning threshold of 0.1.
+
