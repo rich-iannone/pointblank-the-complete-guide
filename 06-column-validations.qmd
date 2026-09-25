@@ -219,6 +219,11 @@ topic of the next section.
 
 ### Handling nulls in comparisons
 
+Every comparison method has an `na_pass=` argument that decides what happens when a value is null.
+The default is `False`, which means a null counts as a failure: a missing value cannot be shown to
+meet the condition. Column `c` of `small_table` has two nulls, so we can see this with a check that
+values are at most 10.
+
 ## Range validations
 
 ### Between
