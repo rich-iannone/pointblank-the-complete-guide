@@ -678,6 +678,13 @@ a given substring, so we can check both identifier columns in `game_revenue` wit
 )
 ```
 
+The one step expands into two, one for `player_id` and one for `session_id`, and both pass. The
+other selectors match in different ways. `starts_with("item")` would pick `item_type`, `item_name`,
+and `item_revenue`. `ends_with()` matches a suffix. `matches()` takes a regular expression, so
+`matches("^s")` would pick every column starting with "s", which here means `session_id`,
+`session_start`, `session_duration`, and `start_day`. You might not have expected `start_day` in
+that group, so it pays to check which columns a selector picks up.
+
 ## Tagging checks with a quality dimension
 
 ## Beyond single-column checks
