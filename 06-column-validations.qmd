@@ -508,6 +508,12 @@ contacts = pl.DataFrame({
 )
 ```
 
+Three of the five rows pass. The two failures are `"not-an-email"`, which has no `@` or domain at
+all, and `"bob@bad"`, which has no top-level domain. The real advantage of a specification is that
+it can check things a pattern cannot. The credit card specification, for example, applies the Luhn
+checksum, so it can tell a number that only has the right number of digits from one whose digits
+actually check out.
+
 ## Sequence validations
 
 ### Increasing and decreasing values
