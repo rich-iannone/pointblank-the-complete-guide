@@ -296,6 +296,12 @@ recent = pl.DataFrame({
 )
 ```
 
+The single test unit passes, because the newest row is only two hours older than the reference
+time, well within 24 hours. Only the newest timestamp matters here, so the nine-hour-old row makes
+no difference. The `max_age=` argument accepts a string like `"24 hours"` or `"2 weeks"`, or a
+`timedelta`. If you leave out `reference_time=`, it defaults to the current time, which is what you
+want in a live pipeline. Now a table whose newest row is too old:
+
 
 ## Table comparison
 
