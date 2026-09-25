@@ -614,6 +614,12 @@ argument, the same module also works across sources: calling `validate_completen
 from different pipelines holds all of them to one consistent standard without duplicating the plan
 definition.
 
+Functions can take more arguments than just the table. `validate_duplicates()` has a `columns`
+argument that defaults to `None`, and with `None` the `rows_distinct()` step compares entire rows.
+That is how we called it on `small_table` above. If you pass a list of key columns instead, such as
+`columns=["order_id"]`, only those columns are compared, so the step flags any key that appears more
+than once. The same function handles both whole-row duplicates and duplicate keys.
+
 ## Summary
 
 This chapter looked inside the validation workflow, following a single plan from construction
