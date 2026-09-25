@@ -243,6 +243,14 @@ we set `na_pass=True`, nulls count as passing instead.
 )
 ```
 
+Now all 13 rows pass, since the 11 non-null values are all at most 10 and the two nulls are let
+through. Which setting is right depends on what a null means in your data. If a null means "not
+applicable", such as a sale price that is null because the item is not on sale, then
+`na_pass=True` is correct because the check does not apply to that row. If a null means a value
+that should be there but is missing, keep the default, because then one step catches both
+out-of-range values and unexpected gaps. If missingness is the thing you want
+to measure, the methods in @sec-missing-data are a better fit than toggling `na_pass=`.
+
 ## Range validations
 
 ### Between
