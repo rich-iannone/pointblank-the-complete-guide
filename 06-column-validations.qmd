@@ -324,6 +324,10 @@ controls whether the endpoints count as inside the range.
 
 ## Set membership validations
 
+Ranges suit numeric data, but categorical columns need a different kind of check. When a column's
+values come from a fixed list, such as a set of status codes, the right question is whether each
+value is on that list.
+
 ### In set
 
 ### Not in set
