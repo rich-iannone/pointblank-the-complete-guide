@@ -174,6 +174,12 @@ given.
 
 ## Table comparison
 
+Sometimes the question is whether a table matches another table exactly. The `tbl_match()` method
+compares a table against a reference in stages, each stricter than the last. It checks the column
+count, then the row count, then the schema, and finally the values cell by cell, and it fails at the
+first stage where the tables differ. The whole comparison produces a single test unit. Two identical
+tables pass.
+
 
 ## Structure first
 
