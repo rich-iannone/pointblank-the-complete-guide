@@ -153,6 +153,21 @@ types, you can list all of them, and the match passes if the actual type is any 
 
 ### Column counts
 
+The `col_count_match()` method does the same thing for the number of columns. The `game_revenue`
+table has 11.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_count_match(count=11)
+    .interrogate()
+)
+```
+
+The check passes. A column count is an easy way to notice that a table gained or lost columns
+between runs, which could otherwise go unnoticed as long as the columns your code reads are still
+there. Like `row_count_match()`, it accepts `inverse=True` to require any count other than the one
+given.
 
 ## Data freshness
 
