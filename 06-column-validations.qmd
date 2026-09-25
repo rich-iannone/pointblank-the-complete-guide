@@ -202,6 +202,14 @@ Using `small_table`, we can check whether each value in column `a` is less than 
 )
 ```
 
+Eight of the 13 rows pass and five fail, those being the rows where `a` is not less than `c`. Every
+comparison method accepts `pb.col()` in place of a literal value, so "the sale price is greater than
+the cost" becomes `col_vals_gt(columns="sale_price", value=pb.col("cost"))` and "the ship date is on
+or after the order date" becomes `col_vals_ge(columns="ship_date", value=pb.col("order_date"))`. We
+set `na_pass=True` here because column `c` has two nulls. Without it, those two rows would also
+fail and the result would be 6 passing and 7 failing. How nulls are treated in comparisons is the
+topic of the next section.
+
 ### Handling nulls in comparisons
 
 ## Range validations
