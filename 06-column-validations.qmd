@@ -446,6 +446,10 @@ opposites. A column that is partly filled in and partly empty fails both of them
 
 ## Pattern matching
 
+Numeric bounds and set membership do not help much with structured text. Many text columns, like
+product codes, follow a fixed format, and the usual way to check a format is with a regular
+expression.
+
 ## Validating against known formats
 
 ## Sequence validations
