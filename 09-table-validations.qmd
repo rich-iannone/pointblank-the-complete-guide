@@ -302,6 +302,22 @@ no difference. The `max_age=` argument accepts a string like `"24 hours"` or `"2
 `timedelta`. If you leave out `reference_time=`, it defaults to the current time, which is what you
 want in a live pipeline. Now a table whose newest row is too old:
 
+```{python}
+stale = pl.DataFrame({
+    "updated_at": [reference - dt.timedelta(days=3), reference - dt.timedelta(days=5)],
+})
+
+(
+    pb.Validate(data=stale)
+    .data_freshness(column="updated_at", max_age="24 hours", reference_time=reference)
+    .interrogate()
+)
+```
+
+The check fails because the most recent timestamp is three days old, well past the 24-hour limit.
+If you have an agreement about how current a dataset should be, a freshness check lets you enforce
+it and get alerted when it is not met. This comes up often in the pipeline scenarios of
+@sec-playbook-data-engineering.
 
 ## Table comparison
 
