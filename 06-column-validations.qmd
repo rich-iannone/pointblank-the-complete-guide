@@ -136,6 +136,10 @@ free item shows up later.
 
 ### Equality and inequality
 
+The `col_vals_eq()` and `col_vals_ne()` methods check that values are equal, or not equal, to a
+given value. The `item_type` column holds only `"ad"` and `"iap"`, so checking that every row equals
+`"iap"` splits the table in two.
+
 ### Comparing against another column
 
 ### Handling nulls in comparisons
