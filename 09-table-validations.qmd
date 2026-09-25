@@ -133,6 +133,17 @@ are not an exact match. The relaxed settings help when different systems spell t
 differently, such as `int64` and `Int64`. If a column can legitimately arrive as one of several
 types, you can list all of them, and the match passes if the actual type is any one of those.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_schema_match(
+        schema=pb.Schema(columns=[("item_revenue", ["Float64", "Float32"])]),
+        complete=False, in_order=False,
+    )
+    .interrogate()
+)
+```
+
 
 ## Dimensional validation
 
