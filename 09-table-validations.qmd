@@ -373,6 +373,24 @@ first. If a column is missing, a value check on that column does not fail in the
 an evaluation error instead, and the failed `col_exists()` or `col_schema_match()` step above it
 explains why.
 
+```{python}
+schema = pb.Schema(columns=[
+    ("player_id", "String"),
+    ("session_id", "String"),
+    ("item_revenue", "Float64"),
+])
+
+(
+    pb.Validate(data=game_revenue, tbl_name="game_revenue")
+    .col_schema_match(schema=schema, complete=False, in_order=False)
+    .row_count_match(count=0, inverse=True)
+    .col_vals_not_null(columns="player_id")
+    .rows_distinct(columns_subset=["session_id", "time"])
+    .col_vals_gt(columns="item_revenue", value=0)
+    .interrogate()
+)
+```
+
 
 ## Beyond structure
 
