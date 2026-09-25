@@ -279,6 +279,23 @@ column is within a maximum age of a reference time. Because "recent" depends on 
 we fix the reference time here so the example gives the same result every time, and build a small
 table whose latest timestamp is two hours before it.
 
+```{python}
+import polars as pl
+import datetime as dt
+
+reference = dt.datetime(2025, 6, 1, 12, 0, tzinfo=dt.timezone.utc)
+
+recent = pl.DataFrame({
+    "updated_at": [reference - dt.timedelta(hours=2), reference - dt.timedelta(hours=9)],
+})
+
+(
+    pb.Validate(data=recent)
+    .data_freshness(column="updated_at", max_age="24 hours", reference_time=reference)
+    .interrogate()
+)
+```
+
 
 ## Table comparison
 
