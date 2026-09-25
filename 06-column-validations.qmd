@@ -594,6 +594,10 @@ it does not.
 
 ## Sequence validations
 
+Ordered data comes with its own expectations. Timestamps in a log should move forward, for
+instance, and a running total should never go down. Pointblank can check these properties row by
+row down a column.
+
 ### Increasing and decreasing values
 
 ## Selecting columns
