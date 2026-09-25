@@ -425,6 +425,11 @@ value in a required column tends to cause trouble in everything downstream of it
 
 ### Requiring values to be absent
 
+The `col_vals_null()` method checks the opposite, that a column is empty. You will need this less
+often, but it is useful when null is the correct value, such as an activation date that should stay
+unset for archived records, or a derived field that should not be filled in yet at a certain stage
+of a pipeline. Here is a small table where the column is all nulls.
+
 ## Pattern matching
 
 ## Validating against known formats
