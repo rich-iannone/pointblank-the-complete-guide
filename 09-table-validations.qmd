@@ -81,6 +81,26 @@ schema = pb.Schema(columns=[("player_id", "String"), ("item_revenue", "Float64")
 )
 ```
 
+The single test unit passes, because both columns exist with the stated types. Setting
+`complete=False` allows the table to have columns that are not in the schema, and `in_order=False`
+allows the columns to appear in any order. Together they say "these columns must exist with these
+types" without requiring them to be the only columns or to appear in this order. Next, let's claim
+that `player_id` is an integer when it is actually a string.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_schema_match(
+        schema=pb.Schema(columns=[("player_id", "Int64")]),
+        complete=False,
+        in_order=False,
+    )
+    .interrogate()
+)
+```
+
+The check fails because the declared type does not match the actual one. It is much easier to find
+out about a type change here than through a confusing error later in your analysis.
 
 ### Tightening or relaxing the match
 
