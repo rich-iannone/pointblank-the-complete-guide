@@ -374,6 +374,11 @@ your code.
 
 ### Not in set
 
+The `col_vals_not_in_set()` method works the other way, failing any value that appears in a
+forbidden set. This is useful when the list of valid values is too long or open-ended to write out,
+but you know a few specific values that indicate a problem, such as codes for discontinued products.
+Let's forbid the value `other_campaign` in the `acquisition` column.
+
 ## Null validations
 
 ### Requiring values to be absent
