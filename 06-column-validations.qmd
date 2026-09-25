@@ -456,6 +456,14 @@ The `col_vals_regex()` method checks that text values match a regular expression
 standard Python syntax. Column `b` in `small_table` holds values like `"1-bcd-345"`: a digit, three
 lowercase letters, and three digits, separated by hyphens. We can require exactly that format.
 
+```{python}
+(
+    pb.Validate(data=small_table)
+    .col_vals_regex(columns="b", pattern=r"^\d-[a-z]{3}-\d{3}$")
+    .interrogate()
+)
+```
+
 ## Validating against known formats
 
 ## Sequence validations
