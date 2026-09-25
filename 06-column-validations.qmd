@@ -93,6 +93,18 @@ The `col_vals_ge()` and `col_vals_le()` methods are the inclusive versions, mean
 value passes. You only see a difference when a value sits exactly on the boundary, so let's make a
 tiny frame that contains a zero.
 
+```{python}
+import polars as pl
+
+boundary = pl.DataFrame({"x": [0, 1, 2]})
+
+(
+    pb.Validate(data=boundary)
+    .col_vals_gt(columns="x", value=0)
+    .interrogate()
+)
+```
+
 ### Equality and inequality
 
 ### Comparing against another column
