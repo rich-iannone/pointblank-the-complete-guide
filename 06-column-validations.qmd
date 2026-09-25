@@ -67,6 +67,14 @@ impressions, which typically earn a small fraction of a unit, while in-app purch
 more. The split is not perfectly clean, though: 172 ad rows earn more than 1, and 15 in-app
 purchases earn 1 or less. The counterpart, `col_vals_lt()`, checks an upper bound in the same way.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_lt(columns="session_duration", value=40)
+    .interrogate()
+)
+```
+
 ### Inclusive versus strict bounds
 
 ### Equality and inequality
