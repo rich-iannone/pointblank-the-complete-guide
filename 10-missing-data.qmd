@@ -42,6 +42,14 @@ codes mean.
 
 ## When missing values carry meaning
 
+A null only tells you that a value is absent. A missing-value code tells you why it is absent, and
+in many fields that difference matters. An income left blank because the question was never asked
+is not the same as an income left blank because the respondent refused to answer, and an analysis
+that treats them the same throws away information that someone deliberately recorded. Statistical
+software has supported this idea for a long time. SAS, SPSS, and Stata each have their own
+conventions for special missing values, and clinical data standards define a detailed set of
+"null flavors".
+
 
 ## Describing missingness with `MissingSpec`
 
