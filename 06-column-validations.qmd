@@ -345,6 +345,14 @@ Every row passes, so there are no unexpected values in the column. Keep in mind 
 is exact, so a value like `"IAP"` or `"iap "` (with a trailing space) would fail. The
 `acquisition` column has six channels, and if we list only three of them we can see failures.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_in_set(columns="acquisition", set=["organic", "facebook", "google"])
+    .interrogate()
+)
+```
+
 ### Not in set
 
 ## Null validations
