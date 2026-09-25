@@ -84,6 +84,13 @@ schema = pb.Schema(columns=[("player_id", "String"), ("item_revenue", "Float64")
 
 ### Tightening or relaxing the match
 
+By default the match is strict. The schema has to list every column, in order, with exactly matching
+names and types. (Our two-column schema from above would fail with the defaults, because
+`game_revenue` has eleven columns.) Several arguments relax these requirements one at a time. It is
+worth seeing each of them, because the right setting can decide whether a plan survives a harmless
+change in how the data is produced. First, column order. Here is a schema that lists two columns in
+the opposite order from the table, with order enforced.
+
 
 ## Dimensional validation
 
