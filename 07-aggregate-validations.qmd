@@ -11,3 +11,10 @@ as a whole. Instead of checking that each value is positive, they check that the
 average, or standard deviation is where you expect it to be. The column is reduced to a single
 number, and that number is the one and only test unit for the step.
 
+Going from many test units to one changes how you read the result. A per-row check tells you how
+many values failed, while an aggregate check can only tell you whether the summary value passed or
+failed. That makes aggregate checks suited to a different kind of question, one about the column
+overall rather than about individual entries. This chapter covers the three families (sums,
+averages, and standard deviations), the `tol=` argument used for reconciliation, and what it means
+in practice for a step to have exactly one test unit.
+
