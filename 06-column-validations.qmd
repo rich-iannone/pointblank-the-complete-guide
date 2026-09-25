@@ -470,6 +470,14 @@ and `$` marks the end, so any value that strays from this format fails. The meth
 matching the pattern fail. That turns a pattern into a blocklist. Here we reject the value `"high"`
 in column `f`.
 
+```{python}
+(
+    pb.Validate(data=small_table)
+    .col_vals_regex(columns="f", pattern="high", inverse=True)
+    .interrogate()
+)
+```
+
 ## Validating against known formats
 
 ## Sequence validations
