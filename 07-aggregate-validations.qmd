@@ -54,3 +54,8 @@ that total revenue is above a minimum of 5,000.
 )
 ```
 
+The report shows a single test unit, and it passes because total revenue across the 2,000 rows is
+about 8,687. A per-row check on the same column would have produced 2,000 test units, but the sum
+reduces the column to one number, so the step passes or fails as a whole. If we flip the check and
+require the total to be under 5,000, it fails.
+
