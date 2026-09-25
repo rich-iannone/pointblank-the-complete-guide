@@ -75,6 +75,12 @@ purchases earn 1 or less. The counterpart, `col_vals_lt()`, checks an upper boun
 )
 ```
 
+Here 74 of the 2,000 sessions have a duration of 40 or more and fail. Note that `col_vals_gt()` and
+`col_vals_lt()` are strict, so a value exactly equal to the comparison value fails. A session with
+a duration of exactly 40 would fail `col_vals_lt(value=40)`, because 40 is not less than 40. When
+the boundary value should count as acceptable, you need the inclusive versions, which are covered
+next.
+
 ### Inclusive versus strict bounds
 
 ### Equality and inequality
