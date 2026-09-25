@@ -184,6 +184,9 @@ still catches the changes you are worried about.
 
 ## Dimensional validation
 
+A table can have exactly the right schema and still hold the wrong amount of data. A load that only
+captured half the records is one example, and a schema check will not notice it. Checking the
+table's dimensions can.
 
 ### Row counts
 
