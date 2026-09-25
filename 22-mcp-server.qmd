@@ -1,2 +1,23 @@
 # The MCP Server {#sec-mcp-server}
 
+
+## What MCP provides
+
+
+## Connecting a client
+
+
+## The tools it exposes
+
+
+## A worked session
+
+
+## Prompts and templates
+
+
+## Security and data handling
+
+
+## Summary
+
