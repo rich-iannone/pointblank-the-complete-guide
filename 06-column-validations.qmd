@@ -188,6 +188,12 @@ just in Python or Pointblank.
 
 ### Comparing against another column
 
+The comparison value does not have to be a constant. If you wrap a column name in `pb.col()`, each
+row is compared against the value in that other column. This is how you check relationships between
+columns, such as a sale price being higher than its cost or an end date coming after a start date.
+Using `small_table`, we can check whether each value in column `a` is less than the value in column
+`c`.
+
 ### Handling nulls in comparisons
 
 ## Range validations
