@@ -65,6 +65,16 @@ but not useful. Using `session_id` alone as the key shows what that looks like.
 ```
 
 
+::: {.callout-note}
+## Choosing the right key comes up again and again
+
+Deciding which columns identify a record is something you will do repeatedly in this book. The
+`columns_subset=` of `rows_complete()` names the fields a record cannot do without, and a
+segmentation key names the groups you want results split by. In each case the question is the same:
+which columns does this rule apply to? Getting that right is often more of the work than choosing
+the method.
+:::
+
 ## Row completeness
 
 
