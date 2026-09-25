@@ -91,3 +91,9 @@ fixes that.
 )
 ```
 
+Now the check passes, because `tol=1` accepts any sum within 1 of the target. You might expect to
+write `tol=0.01` for "within one cent" here, but that is not how `tol=` works, as the callout below
+explains. With a large total like this one, `tol=1` is the tightest tolerance you can set. Beyond
+absorbing rounding, the tolerance also sets how much real difference you will accept before treating
+the two totals as different.
+
