@@ -600,6 +600,9 @@ row down a column.
 
 ### Increasing and decreasing values
 
+The `col_vals_increasing()` method checks that values go up from one row to the next, and
+`col_vals_decreasing()` checks that they go down. A small table of made-up measurements shows both.
+
 ## Selecting columns
 
 ### Explicit lists and selector functions
