@@ -160,3 +160,15 @@ while leaving the mean about where it was. A lower limit is useful too. If the s
 drops toward zero, the column has probably become stuck on a single repeated value. Here we check
 that revenue still varies by more than 5.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_sd_gt(columns="item_revenue", value=5)
+    .interrogate()
+)
+```
+
+This passes as well, since the standard deviation is about 13.2. If an upstream bug ever replaced
+the column with a constant, this check would fail, even though the total and the average might still
+look plausible.
+
