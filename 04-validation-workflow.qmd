@@ -696,3 +696,9 @@ failing test units, compares the failure rate against the thresholds, and fires 
 levels that were reached. All of this ends up in the validation object that `interrogate()`
 returns.
 
+You can read that object in several ways. The report is meant for people. The count and threshold
+accessors return plain values that code can act on. Extracts and sundered data give you the failing
+rows themselves, and the JSON export hands the full result to other tools. When plans get large,
+briefs explain what each step is for, and splitting the plan into small functions keeps each part
+readable and reusable.
+
