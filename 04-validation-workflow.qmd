@@ -690,3 +690,9 @@ through interrogation to the many ways of reading its results. Understanding thi
 you a more effective user of Pointblank, because you can anticipate how a plan will behave, explain
 a surprising number, and design plans that fit the way your systems actually work.
 
+A plan brings together the data, some metadata to identify it, thresholds, actions, and the
+validation steps. Interrogation works through the steps in order. For each one it counts passing and
+failing test units, compares the failure rate against the thresholds, and fires any actions for the
+levels that were reached. All of this ends up in the validation object that `interrogate()`
+returns.
+
