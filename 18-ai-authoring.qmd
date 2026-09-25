@@ -6,3 +6,27 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+## Drafting a plan with `DraftValidation`
+
+
+## Editing a plan with `EditValidation`
+
+
+## Authoring from a prompt with `from_prompt`
+
+
+## Suggesting improvements
+
+
+## The interactive assistant
+
+
+## Choosing and combining the tools
+
+
+## What the model sees, and what it cannot write back
+
+
+## Summary
+
