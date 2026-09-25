@@ -205,3 +205,14 @@ per-row checks.
 A few aggregate checks together make a quick summary of a table's overall condition. The plan below
 combines a reconciliation, an average range, and a limit on the standard deviation.
 
+```{python}
+(
+    pb.Validate(data=game_revenue, tbl_name="game_revenue", label="Aggregate controls")
+    .col_sum_eq(columns="item_revenue", value=8687.12, tol=1)
+    .col_avg_ge(columns="session_duration", value=20)
+    .col_avg_le(columns="session_duration", value=30)
+    .col_sd_lt(columns="item_revenue", value=20)
+    .interrogate()
+)
+```
+
