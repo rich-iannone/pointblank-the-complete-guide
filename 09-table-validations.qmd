@@ -91,6 +91,27 @@ worth seeing each of them, because the right setting can decide whether a plan s
 change in how the data is produced. First, column order. Here is a schema that lists two columns in
 the opposite order from the table, with order enforced.
 
+```{python}
+schema = pb.Schema(columns=[("item_revenue", "Float64"), ("player_id", "String")])
+
+(
+    pb.Validate(data=game_revenue)
+    .col_schema_match(schema=schema, complete=False, in_order=True)
+    .interrogate()
+)
+```
+
+The check fails, because `item_revenue` comes after `player_id` in the table. Setting
+`in_order=False` accepts the columns in any position.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_schema_match(schema=schema, complete=False, in_order=False)
+    .interrogate()
+)
+```
+
 
 ## Dimensional validation
 
