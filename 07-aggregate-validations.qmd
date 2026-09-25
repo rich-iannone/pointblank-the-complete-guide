@@ -200,3 +200,8 @@ for each group in a column rather than one total for the whole table, you need t
 as its own table. Segmentation, covered in @sec-segmented-validation, is only available for the
 per-row checks.
 
+## Bringing it together
+
+A few aggregate checks together make a quick summary of a table's overall condition. The plan below
+combines a reconciliation, an average range, and a limit on the standard deviation.
+
