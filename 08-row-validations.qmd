@@ -48,6 +48,22 @@ across every column. The `small_table` dataset has one exact duplicate, which th
 )
 ```
 
+Eleven of the 13 rows pass and two fail. The two failures are the identical pair (both dated
+2016-01-20 04:30:00). Notice that both copies fail, not just the second one. Pointblank has no way
+of knowing which copy is the original, and counting every copy gives you the full size of the
+problem. A larger table can easily pass this whole-row check, as `game_revenue` does.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .rows_distinct()
+    .interrogate()
+)
+```
+
+All 2,000 rows are distinct across the full set of columns, so the check passes. That does not mean
+the table has no duplicates, though. Exact whole-row duplicates are the less common problem, and the
+more useful check is on a key.
 
 ### Choosing the key
 
