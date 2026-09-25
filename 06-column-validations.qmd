@@ -665,6 +665,11 @@ selectors let one step cover a group of columns.
 
 ### Explicit lists and selector functions
 
+The simplest option is a list of column names, which creates one separate step per column so each
+column's result is reported on its own. To select columns by name pattern instead, Pointblank has
+selector functions. The `contains()` selector, for example, picks every column whose name includes
+a given substring, so we can check both identifier columns in `game_revenue` without naming them.
+
 ## Tagging checks with a quality dimension
 
 ## Beyond single-column checks
