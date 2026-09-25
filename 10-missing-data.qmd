@@ -7,6 +7,22 @@ import polars as pl
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+Not every missing value is a null. In survey, clinical, and administrative data, a missing value is
+often recorded as a code, such as `-99` for "not asked" or `-98` for "the respondent refused". If
+you treat these codes as ordinary numbers, they will distort any average or sum you compute. If you
+recognize them for what they are, they tell you something useful, because the reason a value is
+missing can matter as much as the fact that it is missing.
+
+This chapter shows how to validate coded missing values. In Pointblank, you describe a column's
+missing-value codes once, in a `MissingSpec`, and then you can ask two kinds of questions. The
+first is how much of the column is missing, counting plain nulls, codes, or both. The
+`col_pct_null()` and `col_pct_missing()` methods handle that. The second is whether the codes
+themselves are used correctly, which is what `col_missing_coded()`, `col_missing_only_coded()`, and
+`col_missing_consistent()` check.
+
+We use a small survey table throughout. It has ten respondents and a mix of real values, documented
+missing codes, one plain null, and one undocumented code, so each check has something to find.
+
 
 ## When missing values carry meaning
 
