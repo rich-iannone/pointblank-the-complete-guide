@@ -633,6 +633,15 @@ ties = pl.DataFrame({"x": [1, 2, 2, 3]})
 )
 ```
 
+With the strict default, the repeated `2` fails, giving three passes and one failure. The same check
+with `allow_stationary=True` passes all four rows. Use the strict form when a repeat means
+something has gone wrong, such as a duplicated sequence number, and allow repeats when equal
+neighbors are normal, such as events that share a timestamp. Measured data is also often noisy, so
+a series that is decreasing overall might tick up slightly now and then, and a strict check would
+fail those rows. The tolerance arguments handle this. For example, `col_vals_decreasing()` takes an
+`increasing_tol=` value that allows upward steps up to a given size (and `col_vals_increasing()`
+has a matching `decreasing_tol=`).
+
 ## Selecting columns
 
 ### Explicit lists and selector functions
