@@ -685,6 +685,12 @@ and `item_revenue`. `ends_with()` matches a suffix. `matches()` takes a regular 
 `session_start`, `session_duration`, and `start_day`. You might not have expected `start_day` in
 that group, so it pays to check which columns a selector picks up.
 
+Because selectors are resolved against the data when the plan runs, a new column that fits the
+pattern is picked up automatically without changing the plan. You can also combine selectors inside
+`pb.col()`. For example, `pb.col(pb.starts_with("player") | pb.ends_with("_id"))` picks columns that
+match either rule, a `-` between two selectors picks the first group minus the second, and
+`everything()` picks every column when a check should apply to the whole table.
+
 ## Tagging checks with a quality dimension
 
 ## Beyond single-column checks
