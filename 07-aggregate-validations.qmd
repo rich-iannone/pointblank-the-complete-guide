@@ -18,3 +18,11 @@ overall rather than about individual entries. This chapter covers the three fami
 averages, and standard deviations), the `tol=` argument used for reconciliation, and what it means
 in practice for a step to have exactly one test unit.
 
+We use the `game_revenue` dataset throughout, mainly its `item_revenue` and `session_duration`
+columns. For reference, the total of `item_revenue` is about 8,687, the mean of `session_duration`
+is about 25.6, and the standard deviation of `item_revenue` is about 13.2.
+
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+```
+
