@@ -259,6 +259,9 @@ because both bounds appear together instead of being spread across two steps.
 
 ### Between
 
+The `col_vals_between()` method checks that values fall within a range, and both ends are inclusive
+by default. Column `a` in `small_table` runs from 1 to 8, so a check with those bounds passes.
+
 ### Outside
 
 ## Set membership validations
