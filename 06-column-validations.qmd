@@ -316,6 +316,12 @@ inside it. Let's check that column `a` lies outside the range 3 to 6.
 )
 ```
 
+Six rows pass because their values are below 3 or above 6, and seven fail because they fall between
+3 and 6. Checking that values lie outside a range can seem backward, but it is a natural way to flag
+anomalies. If a range of numeric codes is reserved for errors, for example, any value inside that
+range deserves attention. Like `col_vals_between()`, this method takes an `inclusive=` pair that
+controls whether the endpoints count as inside the range.
+
 ## Set membership validations
 
 ### In set
