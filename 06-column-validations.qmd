@@ -6,6 +6,14 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+This chapter covers Pointblank's column value methods in detail. It is the longest chapter in the
+book because these are the methods you will use most. For each family we look at more than one
+example, cover the edge cases that tend to trip people up, and talk about when to pick one method
+over another. We start with comparisons and then move through ranges, set membership, null checks,
+pattern matching, format specifications, string lengths, and ordered sequences. We finish with
+column selectors, which let one step cover many columns, and the `dimension` argument, which ties a
+check to the quality scoring of @sec-quality-scoring.
+
 ## Comparison validations
 
 ### Inclusive versus strict bounds
