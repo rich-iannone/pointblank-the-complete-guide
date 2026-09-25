@@ -152,6 +152,11 @@ fail.
 )
 ```
 
+Eleven rows pass and two fail, and the failures are the rows where `c` is null. This whole-row form
+is right for tables that really must have complete records, such as a dimension table, where any
+gap is a defect. Note that it looks for actual nulls, not placeholder codes like `-99` (those are
+covered in @sec-missing-data). In most tables, though, some columns are optional, and requiring all
+of them to be filled in would flag rows that are fine.
 
 ### Completeness on required fields
 
