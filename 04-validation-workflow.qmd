@@ -169,7 +169,7 @@ were added, numbered one through four. The note that no interrogation has been p
 reminder that this is still only a specification. That numbering is stable and is used throughout
 reports and result access, so a report that mentions step three always refers to the third method
 call, which here is the `rows_distinct()` check. Because the numbers are meaningful, the order in
-which you add steps is worth some thought, a point we return to at the end of the chapter.
+which you add steps is worth some thought.
 
 ### Final actions
 
