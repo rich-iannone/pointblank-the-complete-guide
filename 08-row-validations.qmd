@@ -111,6 +111,14 @@ session at the same second.
 )
 ```
 
+With `item_name` in the key, only four rows fail. So 9 of the 11 pairs were two different items at
+the same second, which is plausible. The remaining two pairs are more interesting. Each one has the
+same session, time, and item (an `ad_5sec` impression), and the rows differ only in
+`item_revenue` (0.08 versus 0.11 in one pair, and 0.006 versus 0.024 in the other). That is why
+the whole-row check passed. These look like the same ad event recorded twice with different revenue
+values, which is worth asking the data provider about. Adding columns to the key one at a time and
+watching the failure count drop is a good way to find the key that matches what your data model
+treats as a single record.
 
 ::: {.callout-note}
 ## Choosing the right key comes up again and again
