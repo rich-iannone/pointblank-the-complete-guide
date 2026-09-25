@@ -702,3 +702,6 @@ rows themselves, and the JSON export hands the full result to other tools. When 
 briefs explain what each step is for, and splitting the plan into small functions keeps each part
 readable and reusable.
 
+The next chapter, @sec-analysis-loop, shows how the same tools fit into everyday interactive work,
+where checks tend to be quick and informal. After that, @sec-column-validations starts the tour of
+the individual validation methods.
