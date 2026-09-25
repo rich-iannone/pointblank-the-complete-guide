@@ -167,6 +167,14 @@ computed = pl.DataFrame({"x": [0.1 + 0.2]})
 )
 ```
 
+The single row fails, because `0.1 + 0.2` comes out very slightly different from `0.3`. This is not
+something Pointblank is doing. It is how floating-point arithmetic works, and it means
+`col_vals_eq()` is the wrong tool for computed decimals. To confirm that a computed value matches an
+expected one, allow a small tolerance, either by checking that the value falls within a narrow range
+or by writing an expression that compares with a tolerance (an approach covered in
+@sec-advanced-validation). Keep `col_vals_eq()` for exact values like integers, strings, and
+category codes.
+
 ### Comparing against another column
 
 ### Handling nulls in comparisons
