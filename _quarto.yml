@@ -67,6 +67,7 @@ book:
         - 37-playbook-marketing.qmd
   appendices:
     - appendix-reference.qmd
+    - appendix-glossary.qmd
 
 format:
   html:
@@ -76,6 +77,13 @@ format:
     code-line-numbers: false
     code-annotations: below
     css: custom.css
+    include-after-body: fit-reports.html
+    # Pointblank validation reports are 904px wide, wider than Quarto's default 800px
+    # body column, so widen the body so reports fit without horizontal scrolling.
+    grid:
+      sidebar-width: 200px
+      body-width: 980px
+      margin-width: 200px
 
 execute:
   collapse: true

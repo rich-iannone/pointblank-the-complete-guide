@@ -1,0 +1,34 @@
+<script>
+// Shrink Pointblank validation reports and scorecards so they fit the content column on
+// narrower screens. Reports are about 904px wide. When the column is narrower, the report is
+// zoomed down to fit, but never below MIN_ZOOM, so on very small screens it scrolls instead.
+(function () {
+  var MIN_ZOOM = 0.7;
+  var SELECTOR = "div#pb_tbl, div#pb_scorecard";
+
+  function fitOne(box) {
+    var table = box.querySelector("table");
+    if (!table) return;
+    table.style.zoom = "";
+    var available = box.clientWidth;
+    var needed = table.scrollWidth;
+    if (needed > available && available > 0) {
+      table.style.zoom = Math.max(MIN_ZOOM, available / needed);
+    }
+  }
+
+  function setup() {
+    var boxes = document.querySelectorAll(SELECTOR);
+    boxes.forEach(fitOne);
+    if ("ResizeObserver" in window) {
+      // Refit whenever the content column changes width (window resize, sidebar toggle).
+      var main = document.querySelector("main") || document.body;
+      new ResizeObserver(function () { boxes.forEach(fitOne); }).observe(main);
+    } else {
+      window.addEventListener("resize", function () { boxes.forEach(fitOne); });
+    }
+  }
+
+  window.addEventListener("load", setup);
+})();
+</script>
