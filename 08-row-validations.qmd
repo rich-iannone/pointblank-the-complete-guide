@@ -77,6 +77,12 @@ the method.
 
 ## Row completeness
 
+A null in a required field can break a calculation, drop rows from a join, or skew an aggregate.
+The `rows_complete()` method checks completeness row by row, asking whether each row has everything
+it needs. That is different from `col_vals_not_null()` in @sec-column-validations, which checks one
+column at a time. Use `rows_complete()` when what matters is whether the record as a whole is
+usable.
+
 
 ### Completeness on required fields
 
