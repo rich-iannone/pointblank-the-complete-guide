@@ -105,6 +105,9 @@ boundary = pl.DataFrame({"x": [0, 1, 2]})
 )
 ```
 
+The strict `col_vals_gt(value=0)` fails the row with `0` and passes the rows with `1` and `2`. Now
+the inclusive version:
+
 ### Equality and inequality
 
 ### Comparing against another column
