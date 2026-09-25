@@ -108,6 +108,14 @@ boundary = pl.DataFrame({"x": [0, 1, 2]})
 The strict `col_vals_gt(value=0)` fails the row with `0` and passes the rows with `1` and `2`. Now
 the inclusive version:
 
+```{python}
+(
+    pb.Validate(data=boundary)
+    .col_vals_ge(columns="x", value=0)
+    .interrogate()
+)
+```
+
 ### Equality and inequality
 
 ### Comparing against another column
