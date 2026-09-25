@@ -29,6 +29,11 @@ small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
 
 ## Row distinctness
 
+Duplicate rows cause trouble that is easy to miss. They inflate counts and averages, and they can
+make later steps process the same record twice. They also usually point to a problem earlier in the
+pipeline, such as a deduplication step that failed or a join that matched more rows than expected.
+The `rows_distinct()` method finds duplicates, and most of the work in using it is deciding what
+"duplicate" should mean.
 
 ### Checking whole-row uniqueness
 
