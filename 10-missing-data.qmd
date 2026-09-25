@@ -13,6 +13,18 @@ pb.config(report_incl_header=False, report_incl_footer=False)
 
 ## Describing missingness with `MissingSpec`
 
+A `MissingSpec` describes a column's missing-value codes. The main part is the `reasons=` mapping,
+which pairs each code with the reason it stands for. You can also group reasons into `categories=`,
+and the `null_is_missing=` flag controls whether a plain null counts as missing along with the codes
+(it does by default). The spec for our survey lists three codes and groups two of them.
+
+```{python}
+spec = pb.MissingSpec(
+    reasons={-99: "not_asked", -98: "refused", -97: "dont_know"},
+    categories={"item_nonresponse": ["refused", "dont_know"]},
+)
+```
+
 
 ## Measuring how much is missing
 
