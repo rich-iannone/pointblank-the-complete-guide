@@ -409,6 +409,9 @@ identifier columns in `game_revenue` should always be filled in.
 )
 ```
 
+Both steps pass for all 2,000 rows, so no identifiers are missing. Running the same check on column
+`c` of `small_table` finds its two nulls.
+
 ### Requiring values to be absent
 
 ## Pattern matching
