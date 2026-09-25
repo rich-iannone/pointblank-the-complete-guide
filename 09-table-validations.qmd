@@ -116,6 +116,18 @@ Now it passes. Type matching can be relaxed as well. With `case_sensitive_dtypes
 `full_match_dtypes=False`, a type name can differ in case and can be a partial match. So declaring
 `player_id` as `"string"` matches its actual `String` type.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_schema_match(
+        schema=pb.Schema(columns=[("player_id", "string")]),
+        complete=False, in_order=False,
+        case_sensitive_dtypes=False, full_match_dtypes=False,
+    )
+    .interrogate()
+)
+```
+
 
 ## Dimensional validation
 
