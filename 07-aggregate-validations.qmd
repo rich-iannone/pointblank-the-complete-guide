@@ -97,6 +97,15 @@ explains. With a large total like this one, `tol=1` is the tightest tolerance yo
 absorbing rounding, the tolerance also sets how much real difference you will accept before treating
 the two totals as different.
 
+::: {.callout-warning}
+## How `tol` is actually interpreted
+
+A `tol` value below 1 is treated as a proportion of the target, so `tol=0.01` means 1 percent of
+8,687.12, an allowance of about 86. A value of 1 or more is an absolute allowance in the column's
+own units, so `tol=20` accepts any sum within 20 of the target. In both cases the allowance is then
+truncated to a whole number. This means you cannot ask for "within one cent" of a large total. A
+tolerance is always either a percentage of the target or a whole number of units.
+:::
 
 ## Checking an average
 
