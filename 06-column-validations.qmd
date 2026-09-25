@@ -232,6 +232,9 @@ values are at most 10.
 )
 ```
 
+Eleven rows pass and two fail. The two failures are not values above 10. They are the two nulls. If
+we set `na_pass=True`, nulls count as passing instead.
+
 ## Range validations
 
 ### Between
