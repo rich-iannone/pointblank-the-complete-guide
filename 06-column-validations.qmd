@@ -14,6 +14,11 @@ pattern matching, format specifications, string lengths, and ordered sequences. 
 column selectors, which let one step cover many columns, and the `dimension` argument, which ties a
 check to the quality scoring of @sec-quality-scoring.
 
+Two built-in datasets carry us through. The `game_revenue` table has a realistic mix of numeric,
+categorical, and identifier columns across 2,000 rows. The smaller `small_table` is useful when we
+want a result short enough to count by hand. A few tiny hand-built frames also appear, for cases
+where it is easier to construct an edge case than to go looking for one in real data.
+
 ## Comparison validations
 
 ### Inclusive versus strict bounds
