@@ -698,5 +698,14 @@ data quality it measures, such as completeness, validity, or uniqueness. If you 
 Pointblank picks a dimension based on the kind of check. Setting it yourself makes your intent
 explicit, and it feeds into the quality scores described in @sec-quality-scoring.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_in_set(columns="item_type", set=["iap", "ad"], dimension="validity")
+    .col_vals_not_null(columns="player_id", dimension="completeness")
+    .interrogate()
+)
+```
+
 ## Beyond single-column checks
 
