@@ -568,6 +568,13 @@ To require an exact length, set `min_val=` and `max_val=` to the same number. Ev
 )
 ```
 
+All 13 rows pass. If a truncated or overlong code shows up later, this step will fail even though
+the bad value might otherwise look like a perfectly ordinary string.
+
+More often a length has a range rather than a single allowed value. A username that must be between
+3 and 15 characters is a typical example, and a small frame with two out-of-range values shows how
+the check behaves.
+
 ## Sequence validations
 
 ### Increasing and decreasing values
