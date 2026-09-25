@@ -6,6 +6,13 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+::: {.callout-note}
+## Compact validation reports
+This chapter shows a validation report for almost every example, because seeing the result is the
+point. To keep those reports compact we hide the header and footer with
+`pb.config(report_incl_header=False, report_incl_footer=False)`, which leaves just the step rows. In
+your own work you will usually want the header and footer visible for the context they add.
+:::
 
 Most data quality problems show up in column values. You might find a negative number in a revenue
 column, for example, or an empty cell in a field that is supposed to be required. Column value
