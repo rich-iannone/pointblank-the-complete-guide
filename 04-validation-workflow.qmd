@@ -620,6 +620,12 @@ That is how we called it on `small_table` above. If you pass a list of key colum
 `columns=["order_id"]`, only those columns are compared, so the step flags any key that appears more
 than once. The same function handles both whole-row duplicates and duplicate keys.
 
+Column selectors take this a step further. Rather than listing columns by name, you can pick them by
+a naming pattern with `starts_with()`, `ends_with()`, or `matches()`. A function written this way
+works on any table that follows the naming convention, however many matching columns it has. Here
+is a small orders table where every monetary column starts with `amt_`, along with a function that
+checks that all of them are non-negative.
+
 ## Summary
 
 This chapter looked inside the validation workflow, following a single plan from construction
