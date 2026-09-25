@@ -338,6 +338,9 @@ actual = pl.DataFrame({"id": [1, 2, 3], "value": [10, 20, 30]})
 )
 ```
 
+The check passes because every column, row, and value agrees. Changing a single value is enough to
+make it fail.
+
 
 ## Structure first
 
