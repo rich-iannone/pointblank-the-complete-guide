@@ -123,3 +123,7 @@ to 30 should pass.
 )
 ```
 
+Both steps pass, so the mean falls between 20 and 30. There is no "between" method for aggregates,
+so a range always takes two checks. One small benefit is that when the range is breached, you can
+see right away which side was crossed. To see a failure, we can require the average to be below 25.
+
