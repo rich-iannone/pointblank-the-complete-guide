@@ -670,6 +670,14 @@ column's result is reported on its own. To select columns by name pattern instea
 selector functions. The `contains()` selector, for example, picks every column whose name includes
 a given substring, so we can check both identifier columns in `game_revenue` without naming them.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_not_null(columns=pb.contains("id"))
+    .interrogate()
+)
+```
+
 ## Tagging checks with a quality dimension
 
 ## Beyond single-column checks
