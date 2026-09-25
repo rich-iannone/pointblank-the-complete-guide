@@ -190,6 +190,17 @@ table's dimensions can.
 
 ### Row counts
 
+The `row_count_match()` method checks the number of rows and produces a single test unit. The
+`game_revenue` table has exactly 2,000 rows.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .row_count_match(count=2000)
+    .interrogate()
+)
+```
+
 
 ### Column counts
 
