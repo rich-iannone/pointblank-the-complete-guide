@@ -218,6 +218,19 @@ extract = game_revenue.head(1500)
 )
 ```
 
+The check fails because 2,000 does not equal 1,500. Comparing against another table like this is how
+you catch an unexpected drop in volume, even when the number on its own would look reasonable. The
+simplest version of the check just makes sure the table is not empty, by combining a count of zero
+with `inverse=True`.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .row_count_match(count=0, inverse=True)
+    .interrogate()
+)
+```
+
 
 ### Column counts
 
