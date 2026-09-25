@@ -178,6 +178,9 @@ that a column exists and not what type it has, you can list it without a type.
 )
 ```
 
+That passes because both columns are present. When choosing among these options, think about which
+parts of the structure your code actually depends on. A good rule is to use the loosest setting that
+still catches the changes you are worried about.
 
 ## Dimensional validation
 
