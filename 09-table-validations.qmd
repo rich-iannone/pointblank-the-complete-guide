@@ -273,6 +273,12 @@ given.
 
 ## Data freshness
 
+A table can have the right structure and still be out of date, with every value valid but none of
+them recent. The `data_freshness()` method checks that the most recent timestamp in a datetime
+column is within a maximum age of a reference time. Because "recent" depends on when the check runs,
+we fix the reference time here so the example gives the same result every time, and build a small
+table whose latest timestamp is two hours before it.
+
 
 ## Table comparison
 
