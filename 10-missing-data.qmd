@@ -35,6 +35,10 @@ survey = pl.DataFrame({
 pb.preview(survey, n_head=10, n_tail=0)
 ```
 
+The `age` column has real ages alongside the codes `-98`, `-99`, and `-97`, plus one plain null
+for respondent 4. The `score` column has a `-95` that is not a documented code. We will use the two
+income columns to check a skip pattern later on. First, though, we need to tell Pointblank what the
+codes mean.
 
 ## When missing values carry meaning
 
