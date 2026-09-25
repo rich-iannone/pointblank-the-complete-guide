@@ -32,6 +32,11 @@ start checking them.
 
 ## Comparison validations
 
+The most basic column checks compare each value against a fixed value or against another column.
+There are six of them, one for each of the usual comparison operators, and they all take the same
+arguments: `columns=` for what to check, `value=` for what to compare against, and `na_pass=` for
+how to treat nulls.
+
 ### Inclusive versus strict bounds
 
 ### Equality and inequality
