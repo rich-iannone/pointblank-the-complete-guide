@@ -7,3 +7,21 @@ import polars as pl
 pb.config(report_incl_footer=False)
 ```
 
+
+## Binding contracts into a pipeline
+
+
+## Running the pipeline
+
+
+## Stopping at a bad boundary
+
+
+## Catching a bad output
+
+
+## Reading a pipeline result
+
+
+## Summary
+
