@@ -89,6 +89,10 @@ next.
 
 ### Inclusive versus strict bounds
 
+The `col_vals_ge()` and `col_vals_le()` methods are the inclusive versions, meaning the boundary
+value passes. You only see a difference when a value sits exactly on the boundary, so let's make a
+tiny frame that contains a zero.
+
 ### Equality and inequality
 
 ### Comparing against another column
