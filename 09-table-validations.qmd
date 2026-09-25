@@ -208,6 +208,16 @@ checks in @sec-aggregate-validations, a `tol=` below 1 is a proportion, so `tol=
 percent either way. If you expect the count to match another table rather than a fixed number, you
 can pass that table as `count=`. Here we compare the full table against its first 1,500 rows.
 
+```{python}
+extract = game_revenue.head(1500)
+
+(
+    pb.Validate(data=game_revenue)
+    .row_count_match(count=extract)
+    .interrogate()
+)
+```
+
 
 ### Column counts
 
