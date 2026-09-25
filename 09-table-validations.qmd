@@ -327,6 +327,17 @@ count, then the row count, then the schema, and finally the values cell by cell,
 first stage where the tables differ. The whole comparison produces a single test unit. Two identical
 tables pass.
 
+```{python}
+expected = pl.DataFrame({"id": [1, 2, 3], "value": [10, 20, 30]})
+actual = pl.DataFrame({"id": [1, 2, 3], "value": [10, 20, 30]})
+
+(
+    pb.Validate(data=actual)
+    .tbl_match(tbl_compare=expected)
+    .interrogate()
+)
+```
+
 
 ## Structure first
 
