@@ -538,6 +538,18 @@ zips = pl.DataFrame({"zip": ["90210", "12345", "9021", "ABCDE"]})
 )
 ```
 
+Two rows pass and two fail: the four-digit `"9021"` and the non-numeric `"ABCDE"` do not fit the
+United States format. The country code is required, and either the two-letter or three-letter ISO
+code works (`"postal_code[US]"` or `"postal_code[USA]"`). The currently supported specifications
+are these:
+
+- `"email"`, `"url"`, `"phone"`, `"ipv4"`, `"ipv6"`, and `"mac"` for contact and network values
+- `"isbn"` for book numbers and `"vin"` for vehicle identification numbers
+- `"credit_card"`, which applies the Luhn checksum, and `"swift"` for bank identifier codes
+- `"postal_code[<country>]"` and `"iban[<country>]"`, which take an ISO country code
+
+If the format you need is not on this list, `col_vals_regex()` is the fallback.
+
 ## Sequence validations
 
 ### Increasing and decreasing values
