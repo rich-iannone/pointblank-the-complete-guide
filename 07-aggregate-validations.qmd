@@ -222,3 +222,17 @@ future run, the matching step will fail, which tells you something upstream has 
 start looking at individual rows. Because the checks are cheap and the report is short, this kind of
 section works well at the start of a larger plan.
 
+## Summary
+
+Aggregate validations check a property of a whole column by reducing it to a single number, which
+becomes the step's only test unit. The `col_sum_*` methods compare a column's total against a value
+and are the natural choice for reconciliation, usually through `col_sum_eq()` with a `tol=`
+allowance. Keep in mind that a `tol=` below 1 is a proportion of the target, not a small absolute
+amount. The `col_avg_*` methods check the mean, most often as a range built from two checks, and the
+`col_sd_*` methods check the standard deviation, where an upper limit catches unusual spread and a
+lower limit catches a column that has become constant.
+
+Because each aggregate step has one test unit, it passes or fails as a whole, and thresholds act as
+a simple switch. The aggregate methods do not take `na_pass=`, `pre=`, or `segments=`. The next
+chapter, @sec-row-validations, moves from column summaries to whole rows, with checks such as
+uniqueness and completeness that apply to an entire record.
