@@ -330,6 +330,9 @@ value is on that list.
 
 ### In set
 
+The `col_vals_in_set()` method checks that each value belongs to a set of allowed values. The
+`item_type` column should only ever contain `"iap"` or `"ad"`.
+
 ### Not in set
 
 ## Null validations
