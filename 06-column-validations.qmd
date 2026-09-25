@@ -725,3 +725,20 @@ see whether failures are concentrated in a particular region or cohort, which is
 argument, the `col_vals_expr()` method, and the `conjointly()` and `specially()` methods give you
 more flexibility, and @sec-advanced-validation covers them.
 
+## Bringing it together
+
+A real validation plan combines several of these checks into one report. The plan below runs a few
+column checks from different families against `game_revenue`.
+
+```{python}
+(
+    pb.Validate(data=game_revenue, tbl_name="game_revenue", label="Column checks")
+    .col_vals_gt(columns="session_duration", value=0)
+    .col_vals_lt(columns="session_duration", value=40)
+    .col_vals_ge(columns="item_revenue", value=0)
+    .col_vals_in_set(columns="item_type", set=["iap", "ad"])
+    .col_vals_not_null(columns="player_id")
+    .interrogate()
+)
+```
+
