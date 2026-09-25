@@ -6,6 +6,11 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+Column checks ask whether a value is acceptable. Row checks ask whether a whole row is acceptable,
+and some problems only show up when you look at rows. A row can have a valid value in every column
+and still be wrong, either because it duplicates another row or because a field it needs is empty.
+To catch those problems, the row has to be the unit of validation rather than the individual cell.
+
 
 ## Row distinctness
 
