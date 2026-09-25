@@ -6,6 +6,12 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+::: {.callout-note}
+## Compact validation reports
+As in @sec-column-validations, we hide the report header and footer with
+`pb.config(report_incl_header=False, report_incl_footer=False)` so that each report shows just the
+step rows. In your own work, keep the header and footer visible when the extra context helps.
+:::
 
 Column checks look at values and row checks look at records, but both assume you have the right
 table in front of you. Table-level checks test that assumption. They ask whether the table has the
