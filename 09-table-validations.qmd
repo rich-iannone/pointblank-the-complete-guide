@@ -13,6 +13,20 @@ columns you expect, whether it holds a plausible amount of data, whether it is r
 trust, and whether it matches another table you are comparing it against. If any of these is off,
 the results of the other checks in a plan may not mean much.
 
+The problems these checks catch tend to cause confusing failures further down the line. For
+example, a column that gets renamed upstream can make downstream queries fail or quietly return
+nulls, and a feed that stops updating keeps serving old numbers that still look perfectly valid.
+These are problems with the table itself rather than with individual values, so it helps to check
+for them directly instead of trying to work backward from a pile of value-level failures.
+
+We use the `game_revenue` dataset for the structural checks and small hand-built tables where a
+self-contained example is clearer.
+
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+```
+
+We start with the most basic structural question: are the columns you expect actually there?
 
 ## Schema validation
 
