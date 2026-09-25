@@ -716,3 +716,12 @@ tracking quality scores across the six dimensions.
 
 ## Beyond single-column checks
 
+Every method in this chapter judges one value at a time, but they all accept extra arguments that
+go further, and related features have their own chapters. The `missing=` argument lets a check
+recognize coded missing values, such as a `-99` that means "not asked", which @sec-missing-data
+covers. The `segments=` argument splits one check into a separate result for each group, so you can
+see whether failures are concentrated in a particular region or cohort, which is the topic of
+@sec-segmented-validation. When a rule involves several columns or needs custom logic, the `pre=`
+argument, the `col_vals_expr()` method, and the `conjointly()` and `specially()` methods give you
+more flexibility, and @sec-advanced-validation covers them.
+
