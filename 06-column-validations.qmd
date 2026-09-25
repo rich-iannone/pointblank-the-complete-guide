@@ -585,6 +585,13 @@ usernames = pl.DataFrame({"username": ["ann", "robert", "maximilian_alexander", 
 )
 ```
 
+Two rows pass and two fail. `"xy"` has two characters, which is below the minimum, and
+`"maximilian_alexander"` has 20, which is above the maximum. You can use either bound on its own.
+Passing only `min_val=` sets a minimum with no maximum, which is handy for catching empty or
+truncated entries. Passing only `max_val=` sets a maximum with no minimum, for values that must fit
+a length limit. As with the other methods, `na_pass=` decides whether a null passes, and by default
+it does not.
+
 ## Sequence validations
 
 ### Increasing and decreasing values
