@@ -35,6 +35,19 @@ There are six of them, one for each of the usual comparison operators, and they 
 arguments: `columns=` for what to check, `value=` for what to compare against, and `na_pass=` for
 how to treat nulls.
 
+### Greater than and less than
+
+The `col_vals_gt()` method checks that values are greater than a given value. A good first use is
+asserting something you believe is always true, such as every session having a positive duration.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_gt(columns="session_duration", value=0)
+    .interrogate()
+)
+```
+
 ### Inclusive versus strict bounds
 
 ### Equality and inequality
