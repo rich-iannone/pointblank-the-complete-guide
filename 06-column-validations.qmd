@@ -514,6 +514,16 @@ it can check things a pattern cannot. The credit card specification, for example
 checksum, so it can tell a number that only has the right number of digits from one whose digits
 actually check out.
 
+```{python}
+cards = pl.DataFrame({"card": ["4111111111111111", "5500005555555559", "4111111111111112"]})
+
+(
+    pb.Validate(data=cards)
+    .col_vals_within_spec(columns="card", spec="credit_card")
+    .interrogate()
+)
+```
+
 ## Sequence validations
 
 ### Increasing and decreasing values
