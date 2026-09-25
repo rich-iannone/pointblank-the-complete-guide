@@ -707,5 +707,12 @@ explicit, and it feeds into the quality scores described in @sec-quality-scoring
 )
 ```
 
+The checks give the same results as before, but each now carries a dimension label that is used when
+scores are calculated per dimension. In this case the labels match what Pointblank would have
+assigned anyway (`col_vals_in_set()` defaults to validity and `col_vals_not_null()` to
+completeness), so setting `dimension=` matters most when you want to override the default. You can
+validate a table perfectly well without ever setting a dimension. It becomes useful once you start
+tracking quality scores across the six dimensions.
+
 ## Beyond single-column checks
 
