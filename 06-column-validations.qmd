@@ -116,6 +116,11 @@ the inclusive version:
 )
 ```
 
+All three rows pass, because `col_vals_ge()` accepts `0` as meeting the bound. To choose between
+the two forms, ask whether the boundary value itself is valid. A stock count of zero for a sold-out
+product is a perfectly valid value, for instance, and the strict form would wrongly flag it. Revenue
+works the same way, so a non-negativity check on revenue should be inclusive.
+
 ### Equality and inequality
 
 ### Comparing against another column
