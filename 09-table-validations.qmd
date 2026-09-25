@@ -341,6 +341,16 @@ actual = pl.DataFrame({"id": [1, 2, 3], "value": [10, 20, 30]})
 The check passes because every column, row, and value agrees. Changing a single value is enough to
 make it fail.
 
+```{python}
+actual_changed = pl.DataFrame({"id": [1, 2, 3], "value": [10, 20, 99]})
+
+(
+    pb.Validate(data=actual_changed)
+    .tbl_match(tbl_compare=expected)
+    .interrogate()
+)
+```
+
 
 ## Structure first
 
