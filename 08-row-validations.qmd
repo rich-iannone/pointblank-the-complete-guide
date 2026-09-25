@@ -11,6 +11,21 @@ and some problems only show up when you look at rows. A row can have a valid val
 and still be wrong, either because it duplicates another row or because a field it needs is empty.
 To catch those problems, the row has to be the unit of validation rather than the individual cell.
 
+This chapter covers the two row-level checks that come up most often: distinctness and
+completeness. Most of the chapter is about the decisions each one involves. For distinctness, that
+means choosing which columns make up the key. For completeness, it means deciding which fields are
+required and which are optional. Both checks produce one test unit per row, so their reports read
+like the per-row column checks of @sec-column-validations and tell you how many rows are affected.
+Some other row-level checks, like rules that tie several columns together or judgments made by an
+AI model, have their own chapters, and we point to those at the end.
+
+We use `game_revenue` for realistic scale and the smaller `small_table` when a short result makes
+the behavior easier to see.
+
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
+```
 
 ## Row distinctness
 
