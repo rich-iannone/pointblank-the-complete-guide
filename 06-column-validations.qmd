@@ -305,6 +305,17 @@ comparison rejected. These very short and very long sessions are the ones worth 
 
 ### Outside
 
+The `col_vals_outside()` method is the reverse. It passes values outside a range and fails values
+inside it. Let's check that column `a` lies outside the range 3 to 6.
+
+```{python}
+(
+    pb.Validate(data=small_table)
+    .col_vals_outside(columns="a", left=3, right=6)
+    .interrogate()
+)
+```
+
 ## Set membership validations
 
 ### In set
