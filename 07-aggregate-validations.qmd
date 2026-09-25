@@ -40,3 +40,17 @@ value suddenly halves, that often points to an upstream problem, even when no in
 broken and every per-row check on the column still passes. Summary statistics are also cheap to
 compute, so a few aggregate checks add very little to the cost of running a plan.
 
+## Checking a column total
+
+The `col_sum_gt()`, `col_sum_lt()`, `col_sum_ge()`, `col_sum_le()`, and `col_sum_eq()` methods
+compare a column's sum against a value, with one method for each comparison operator. Here we check
+that total revenue is above a minimum of 5,000.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_sum_gt(columns="item_revenue", value=5000)
+    .interrogate()
+)
+```
+
