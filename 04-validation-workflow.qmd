@@ -655,6 +655,34 @@ pattern. If someone later adds an `amt_shipping` column, the function picks it u
 `ends_with()` works the same way (you could use `ends_with("_id")` to run a not-null check on every
 ID column), and `matches()` takes a regular expression for cases a prefix or suffix cannot express.
 
+::: {.callout-tip}
+## Wrap setup in a function too
+
+The same reasoning applies to the code that gets the data, not just the code that checks it. If a
+plan runs against a database table, put the connection code in its own function. It is then written
+once, and your validation functions stay free of connection details. Here is one that opens an Ibis
+connection to Postgres and returns the `orders` table.
+
+```{python}
+#| eval: false
+import os
+import ibis
+
+def orders_table(environment):
+    conn = ibis.postgres.connect(
+        host=f"{environment}.db.internal",
+        database="sales",
+        user="analyst",
+        password=os.environ["DB_PASSWORD"],
+    )
+    return conn.table("orders")
+```
+
+Checking production data is then just `validate_amounts(orders_table("prod"))`. For common
+databases, Pointblank's `connect_to_table()` does this connect-and-return step for you from a single
+connection string, and @sec-data-sources covers it in detail.
+:::
+
 ## Summary
 
 This chapter looked inside the validation workflow, following a single plan from construction
