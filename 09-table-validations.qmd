@@ -231,6 +231,9 @@ with `inverse=True`.
 )
 ```
 
+With `inverse=True`, the check passes because the row count is not zero. This is an easy way to
+catch a situation where loading the data produced no rows.
+
 
 ### Column counts
 
