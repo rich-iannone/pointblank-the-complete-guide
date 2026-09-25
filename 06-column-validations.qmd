@@ -395,6 +395,20 @@ Missing values are one of the most common data quality problems, and whether a n
 depends on the column. Pointblank has a method for each case: one that requires values to be
 present and one that requires them to be absent.
 
+### Requiring values to be present
+
+The `col_vals_not_null()` method checks that a required column has a value in every row. Both
+identifier columns in `game_revenue` should always be filled in.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_not_null(columns="player_id")
+    .col_vals_not_null(columns="session_id")
+    .interrogate()
+)
+```
+
 ### Requiring values to be absent
 
 ## Pattern matching
