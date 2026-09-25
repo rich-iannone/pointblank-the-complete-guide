@@ -290,6 +290,14 @@ least 0 and less than 100 percent". As with the comparison methods, either bound
 `pb.col()` reference, so you can check that a value sits between a per-row minimum and maximum. On
 `game_revenue`, a plausibility range for session duration gives a more typical mixed result.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_between(columns="session_duration", left=5, right=40)
+    .interrogate()
+)
+```
+
 ### Outside
 
 ## Set membership validations
