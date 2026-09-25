@@ -137,3 +137,15 @@ on the required fields is also the basis of the data contracts in @sec-data-cont
 
 ## Summary
 
+Row validations catch problems that column checks cannot, because they look at the whole record.
+The `rows_distinct()` method checks uniqueness, either across entire rows or, more usefully, across
+a `columns_subset=` that defines the key. Every copy of a duplicated row counts as a failure, so the
+failure count shows the full extent of the problem. Choosing the key is the main decision. Adding
+columns one at a time and watching the failure count fall helps separate expected repetition from
+real duplicates.
+
+The `rows_complete()` method checks that values are present, either in every column or in a
+`columns_subset=` that lists the required fields. Used together, the two checks state that records
+are both complete and unique. The next chapter, @sec-table-validations, moves from rows to the table
+as a whole, with checks on structure such as the schema, the table's dimensions, and how recent the
+data is.
