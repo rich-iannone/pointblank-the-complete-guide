@@ -652,6 +652,11 @@ readings = pl.DataFrame({"v": [100, 90, 92, 80]})
 )
 ```
 
+The series goes from 90 up to 92 before continuing down, an increase of 2. Without a tolerance, that
+row would fail (three passes and one failure), but `increasing_tol=5` allows increases of up to 5,
+so all four rows pass. A good starting point is a tolerance slightly larger than the normal noise
+in your measurements.
+
 ## Selecting columns
 
 ### Explicit lists and selector functions
