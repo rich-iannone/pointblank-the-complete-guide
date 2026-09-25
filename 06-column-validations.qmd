@@ -478,6 +478,11 @@ in column `f`.
 )
 ```
 
+Seven rows pass and six fail, and the six failures are exactly the rows where `f` is `"high"`. Like
+the comparison methods, `col_vals_regex()` accepts `na_pass=` to control how nulls are handled.
+Regular expressions are powerful but can be hard to read, and for common formats there is an easier
+option, which the next section covers.
+
 ## Validating against known formats
 
 ## Sequence validations
