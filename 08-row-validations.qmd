@@ -83,6 +83,20 @@ it needs. That is different from `col_vals_not_null()` in @sec-column-validation
 column at a time. Use `rows_complete()` when what matters is whether the record as a whole is
 usable.
 
+### Checking whole-row completeness
+
+With no arguments, `rows_complete()` requires every column in a row to have a value and fails any
+row with a null anywhere. Column `c` of `small_table` has two missing values, so those two rows
+fail.
+
+```{python}
+(
+    pb.Validate(data=small_table)
+    .rows_complete()
+    .interrogate()
+)
+```
+
 
 ### Completeness on required fields
 
