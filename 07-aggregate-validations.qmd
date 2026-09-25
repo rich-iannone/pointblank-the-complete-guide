@@ -216,3 +216,9 @@ combines a reconciliation, an average range, and a limit on the standard deviati
 )
 ```
 
+All four steps pass. The revenue total matches the ledger figure, the average session duration is
+between 20 and 30, and the standard deviation of revenue is under 20. If any of these changes on a
+future run, the matching step will fail, which tells you something upstream has changed before you
+start looking at individual rows. Because the checks are cheap and the report is short, this kind of
+section works well at the start of a larger plan.
+
