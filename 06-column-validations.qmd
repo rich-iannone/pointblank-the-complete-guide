@@ -490,6 +490,24 @@ checksum or vary by country. The `col_vals_within_spec()` method checks a column
 specification and handles those details for you. Here is a short list of email addresses, some
 valid and some not.
 
+```{python}
+contacts = pl.DataFrame({
+    "email": [
+        "grace@example.org",
+        "silly-sarah@example.com",
+        "not-an-email",
+        "bob@bad",
+        "carol@example.io",
+    ]
+})
+
+(
+    pb.Validate(data=contacts)
+    .col_vals_within_spec(columns="email", spec="email")
+    .interrogate()
+)
+```
+
 ## Sequence validations
 
 ### Increasing and decreasing values
