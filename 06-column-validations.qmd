@@ -270,6 +270,11 @@ by default. Column `a` in `small_table` runs from 1 to 8, so a check with those 
 )
 ```
 
+All 13 rows pass. Because both ends are inclusive, the rows with exactly 1 and exactly 8 are
+accepted, which is usually what a rule like "ages between 18 and 65" means. The `inclusive=`
+argument controls this with a pair of booleans for the left and right ends. Setting both to `False`
+excludes the endpoints.
+
 ### Outside
 
 ## Set membership validations
