@@ -86,6 +86,18 @@ the 96 passing rows are the sessions that happen to have only one event. The che
 exactly the question we asked. We just asked the wrong question, because `session_id` identifies a
 session, not a row.
 
+A better key describes what should actually be unique. If a session should not log two events at
+exactly the same moment, then the session and the timestamp together form the key, so we add
+`time`.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .rows_distinct(columns_subset=["session_id", "time"])
+    .interrogate()
+)
+```
+
 
 ::: {.callout-note}
 ## Choosing the right key comes up again and again
