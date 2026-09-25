@@ -54,6 +54,19 @@ duration through. Often, though, you choose a comparison value to pick out a
 particular set of rows rather than to confirm something universal. Here we raise the bar to a
 revenue greater than 1.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_gt(columns="item_revenue", value=1)
+    .interrogate()
+)
+```
+
+Now 604 rows pass and 1,396 fail. That is not a sign of bad data. Most rows in this table are ad
+impressions, which typically earn a small fraction of a unit, while in-app purchases usually earn
+more. The split is not perfectly clean, though: 172 ad rows earn more than 1, and 15 in-app
+purchases earn 1 or less. The counterpart, `col_vals_lt()`, checks an upper bound in the same way.
+
 ### Inclusive versus strict bounds
 
 ### Equality and inequality
