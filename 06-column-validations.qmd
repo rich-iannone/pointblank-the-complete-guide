@@ -154,6 +154,9 @@ should always be `"USD"` in a domestic feed. The `col_vals_ne()` method forbids 
 Because `item_type` has only two values, checking that it is never `"ad"` gives exactly the same
 result as the check above: 447 passing and 1,553 failing.
 
+Be careful using `col_vals_eq()` with floating-point numbers. The comparison is exact, and a value
+computed with arithmetic often does not exactly equal the number you would write for it.
+
 ### Comparing against another column
 
 ### Handling nulls in comparisons
