@@ -254,10 +254,10 @@ sales = pb.connect_to_table("duckdb:///warehouse.ddb::sales")
 pb.col_summary_tbl(sales)
 ```
 
-This example does not execute here because it needs a live database, but the shape of it is the
-whole point: once you have a connected table, every inspection tool in this chapter applies to it
-unchanged. Meeting data where it lives, rather than exporting it first, keeps your inspection honest
-about the data your pipeline will actually see.
+This example does not run here because it needs a live database. What matters is that once you
+have a connected table, every inspection tool in this chapter works on it unchanged. Inspecting the
+data where it lives, rather than exporting it first, means you are looking at the same data your
+pipeline will use.
 
 ## From inspection to a validation plan
 
