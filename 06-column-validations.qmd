@@ -357,6 +357,16 @@ There are 1,594 passing rows and 406 failing ones, the failures being rows from 
 we left out (`other_campaign`, `crosspromo`, and `apple`). It is worth knowing how this check treats
 a null, since a null is not one of the listed values. A small frame shows what happens.
 
+```{python}
+with_null = pl.DataFrame({"s": ["a", "b", None]})
+
+(
+    pb.Validate(data=with_null)
+    .col_vals_in_set(columns="s", set=["a", "b"])
+    .interrogate()
+)
+```
+
 ### Not in set
 
 ## Null validations
