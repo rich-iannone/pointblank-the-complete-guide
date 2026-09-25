@@ -451,6 +451,20 @@ report = json.loads(validation.get_json_report())
 len(report)
 ```
 
+There are four records, one per step. Let's look at the first one.
+
+```{python}
+report[0]
+```
+
+This is a plain dictionary holding everything the report shows for step 1. The `assertion_type`,
+`column`, and `values` fields describe the check (`col_vals_lt` on `a` with a value of `7`). The
+`n`, `n_failed`, and `f_failed` fields give 2 failures out of 13 test units, a failure fraction of
+about 0.154, and the `warning`, `error`, and `critical` fields show that only the warning level was
+reached. These are the same numbers the accessors returned earlier. There are also a few fields the
+report does not display, such as `time_processed` and `proc_duration_s`, which are useful if you are
+logging runs over time. Anything that can read JSON can consume this output.
+
 ## Organizing validation plans
 
 A plan with a handful of steps is easy to follow. A plan with fifty steps can become hard to read
