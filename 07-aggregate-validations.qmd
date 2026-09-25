@@ -154,3 +154,9 @@ limits on how spread out the data is. The usual form is an upper limit. The stan
 )
 ```
 
+The check passes. A standard deviation check can catch problems that a sum or average check would
+miss. For instance, a batch of corrupted values in both directions can increase the spread a lot
+while leaving the mean about where it was. A lower limit is useful too. If the standard deviation
+drops toward zero, the column has probably become stuck on a single repeated value. Here we check
+that revenue still varies by more than 5.
+
