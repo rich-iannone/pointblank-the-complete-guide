@@ -134,6 +134,19 @@ on the required fields is also the basis of the data contracts in @sec-data-cont
 
 ## Beyond distinctness and completeness
 
+Distinctness and completeness are the row checks you will use most, but other checks also look at
+whole rows. When a rule involves several columns at once, such as a ship date that must come after
+the order date unless the order was cancelled, the `conjointly()` method can express it. The
+`specially()` method and the expression-based `col_vals_expr()` handle anything that does not fit
+a built-in method. All three are covered in @sec-advanced-validation. When the judgment is about
+meaning, such as whether a free-text review expresses a clear sentiment, the `prompt()` method
+sends each row to a language model, as described in @sec-semantic-validation.
+
+Both methods in this chapter also accept the same `segments=` and `pre=` arguments as the column
+checks. The `segments=` argument gives a separate result for each group, as described in
+@sec-segmented-validation. The `pre=` argument transforms or filters the data before the check
+runs, which is handy for limiting a rule to the rows it applies to, such as requiring unique email
+addresses only among active customers. @sec-advanced-validation covers `pre=` in full.
 
 ## Summary
 
