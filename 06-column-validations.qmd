@@ -528,6 +528,16 @@ Two rows pass and the third fails. It has 16 digits like the others, but its Luh
 which no digit-count pattern could detect. Some specifications depend on the country, and postal
 codes are one of them, so you include the country in the spec name.
 
+```{python}
+zips = pl.DataFrame({"zip": ["90210", "12345", "9021", "ABCDE"]})
+
+(
+    pb.Validate(data=zips)
+    .col_vals_within_spec(columns="zip", spec="postal_code[USA]")
+    .interrogate()
+)
+```
+
 ## Sequence validations
 
 ### Increasing and decreasing values
