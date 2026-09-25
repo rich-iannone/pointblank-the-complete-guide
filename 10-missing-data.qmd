@@ -76,6 +76,19 @@ that "refused" and "dont_know" together form a category called `item_nonresponse
 researchers often care about this grouping, because both reasons mean the respondent was asked but
 chose not to answer, which is different from never being asked.
 
+With a spec in hand, we can go back to the range check problem from the previous section. Most of
+the `col_vals_*` methods from @sec-column-validations accept a `missing=` argument, and passing the
+spec tells the check to set the codes aside. Here is an age range check on the survey, first without the spec and then with it.
+
+```{python}
+(
+    pb.Validate(data=survey)
+    .col_vals_between(columns="age", left=0, right=120)
+    .col_vals_between(columns="age", left=0, right=120, missing=spec)
+    .interrogate()
+)
+```
+
 
 ## Measuring how much is missing
 
