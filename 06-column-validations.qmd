@@ -275,6 +275,21 @@ accepted, which is usually what a rule like "ages between 18 and 65" means. The 
 argument controls this with a pair of booleans for the left and right ends. Setting both to `False`
 excludes the endpoints.
 
+```{python}
+(
+    pb.Validate(data=small_table)
+    .col_vals_between(columns="a", left=1, right=8, inclusive=(False, False))
+    .interrogate()
+)
+```
+
+Now 11 rows pass and two fail. The failures are the row where `a` is 1 and the row where it is 8,
+since the endpoints are no longer part of the range. The two ends are set independently, so
+`inclusive=(True, False)` accepts the lower bound but not the upper, which suits a rule like "at
+least 0 and less than 100 percent". As with the comparison methods, either bound can be a
+`pb.col()` reference, so you can check that a value sits between a per-row minimum and maximum. On
+`game_revenue`, a plausibility range for session duration gives a more typical mixed result.
+
 ### Outside
 
 ## Set membership validations
