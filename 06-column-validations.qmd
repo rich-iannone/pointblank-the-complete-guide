@@ -642,6 +642,16 @@ fail those rows. The tolerance arguments handle this. For example, `col_vals_dec
 `increasing_tol=` value that allows upward steps up to a given size (and `col_vals_increasing()`
 has a matching `decreasing_tol=`).
 
+```{python}
+readings = pl.DataFrame({"v": [100, 90, 92, 80]})
+
+(
+    pb.Validate(data=readings)
+    .col_vals_decreasing(columns="v", increasing_tol=5)
+    .interrogate()
+)
+```
+
 ## Selecting columns
 
 ### Explicit lists and selector functions
