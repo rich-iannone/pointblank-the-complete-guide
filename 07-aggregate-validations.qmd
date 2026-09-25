@@ -189,3 +189,14 @@ earlier, run with a warning threshold of 0.1.
 )
 ```
 
+The step fails with a failure fraction of 1, which is above the 0.1 warning threshold, so the
+report marks it at the warning level. Had the step passed, its failure fraction would be 0 and it
+would not reach any threshold. @sec-thresholds-actions covers thresholds in more detail.
+
+The aggregate methods also take fewer arguments than the per-row methods. They accept `columns=`,
+`value=`, and `tol=`, along with the usual `thresholds=`, `brief=`, `actions=`, `active=`, and
+`dimension=`. They do not accept `na_pass=`, `pre=`, or `segments=`. So if you want a separate total
+for each group in a column rather than one total for the whole table, you need to validate each group
+as its own table. Segmentation, covered in @sec-segmented-validation, is only available for the
+per-row checks.
+
