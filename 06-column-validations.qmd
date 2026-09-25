@@ -224,6 +224,14 @@ The default is `False`, which means a null counts as a failure: a missing value 
 meet the condition. Column `c` of `small_table` has two nulls, so we can see this with a check that
 values are at most 10.
 
+```{python}
+(
+    pb.Validate(data=small_table)
+    .col_vals_le(columns="c", value=10)
+    .interrogate()
+)
+```
+
 ## Range validations
 
 ### Between
