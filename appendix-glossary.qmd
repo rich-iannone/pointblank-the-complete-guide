@@ -1,0 +1,6 @@
+# Appendix: Glossary {#sec-appendix-glossary}
+
+This glossary defines terms that appear throughout the book. Some are specific to Pointblank, and
+others are general data quality or domain terms. Each entry points to the chapter where the term is
+explained in more detail.
+
