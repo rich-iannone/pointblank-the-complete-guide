@@ -626,6 +626,27 @@ works on any table that follows the naming convention, however many matching col
 is a small orders table where every monetary column starts with `amt_`, along with a function that
 checks that all of them are non-negative.
 
+```{python}
+import polars as pl
+
+orders = pl.DataFrame({
+    "order_id": [101, 102, 103, 104],
+    "amt_subtotal": [50.0, 120.0, 0.0, 75.0],
+    "amt_tax": [4.0, 9.6, 0.0, 6.0],
+    "amt_total": [54.0, 129.6, 0.0, 81.0],
+    "pct_margin": [0.12, 0.08, None, 0.15],
+})
+
+def validate_amounts(data):
+    return (
+        pb.Validate(data=data, label="Amount checks")
+        .col_vals_ge(columns=pb.starts_with("amt_"), value=0)
+        .interrogate()
+    )
+
+validate_amounts(orders).all_passed()
+```
+
 ## Summary
 
 This chapter looked inside the validation workflow, following a single plan from construction
