@@ -365,6 +365,14 @@ the same result. In each case the requirement really is an exact match.
 
 ## Structure first
 
+It makes sense to put table checks at the top of a plan, ahead of the value checks. There is little
+point asking whether `item_revenue` is positive if the column is missing or the table is empty.
+Pointblank still runs every step no matter what, so putting the structural checks first does not
+skip anything. What it does is make the report easier to read, since you see any structural problem
+first. If a column is missing, a value check on that column does not fail in the usual way. It shows
+an evaluation error instead, and the failed `col_exists()` or `col_schema_match()` step above it
+explains why.
+
 
 ## Beyond structure
 
