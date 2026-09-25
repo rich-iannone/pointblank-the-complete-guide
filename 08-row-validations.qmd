@@ -51,6 +51,19 @@ across every column. The `small_table` dataset has one exact duplicate, which th
 
 ### Choosing the key
 
+Usually you want uniqueness on a key, meaning a column or combination of columns that identifies a
+record, and you want to ignore the other columns. The `columns_subset=` argument does this. The
+choice of columns decides what the check means, and the wrong choice gives a result that is correct
+but not useful. Using `session_id` alone as the key shows what that looks like.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .rows_distinct(columns_subset=["session_id"])
+    .interrogate()
+)
+```
+
 
 ## Row completeness
 
