@@ -341,6 +341,10 @@ The `col_vals_in_set()` method checks that each value belongs to a set of allowe
 )
 ```
 
+Every row passes, so there are no unexpected values in the column. Keep in mind that the matching
+is exact, so a value like `"IAP"` or `"iap "` (with a trailing space) would fail. The
+`acquisition` column has six channels, and if we list only three of them we can see failures.
+
 ### Not in set
 
 ## Null validations
