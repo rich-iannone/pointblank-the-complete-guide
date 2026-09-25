@@ -659,6 +659,10 @@ in your measurements.
 
 ## Selecting columns
 
+So far each step has checked a single named column, but often you want the same check on several
+columns. Writing a near-identical step for each one is tedious and easy to get wrong. Column
+selectors let one step cover a group of columns.
+
 ### Explicit lists and selector functions
 
 ## Tagging checks with a quality dimension
