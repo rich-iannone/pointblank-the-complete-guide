@@ -550,6 +550,24 @@ are these:
 
 If the format you need is not on this list, `col_vals_regex()` is the fallback.
 
+## String length validations
+
+Some columns are constrained by how long their text is rather than by what it says. A fixed-width
+identifier, for example, has to have exactly the right number of characters. The
+`col_vals_str_len()` method checks the number of characters in each string against a lower bound
+(`min_val=`), an upper bound (`max_val=`), or both, with one test unit per row.
+
+To require an exact length, set `min_val=` and `max_val=` to the same number. Every value in column
+`b` of `small_table` is nine characters long, so we can check for that.
+
+```{python}
+(
+    pb.Validate(data=small_table)
+    .col_vals_str_len(columns="b", min_val=9, max_val=9)
+    .interrogate()
+)
+```
+
 ## Sequence validations
 
 ### Increasing and decreasing values
