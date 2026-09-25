@@ -34,3 +34,9 @@ else, such as a revenue sum that must agree with an accounting ledger. No per-ro
 this, because no single value is right or wrong on its own. Only the sum can be compared to the
 expected figure.
 
+Aggregates are also useful for plausibility monitoring, where you know roughly what an average or a
+standard deviation should be and want to hear about it when that changes. If the average order
+value suddenly halves, that often points to an upstream problem, even when no individual row looks
+broken and every per-row check on the column still passes. Summary statistics are also cheap to
+compute, so a few aggregate checks add very little to the cost of running a plan.
+
