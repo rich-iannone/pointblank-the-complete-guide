@@ -112,6 +112,10 @@ The check fails, because `item_revenue` comes after `player_id` in the table. Se
 )
 ```
 
+Now it passes. Type matching can be relaxed as well. With `case_sensitive_dtypes=False` and
+`full_match_dtypes=False`, a type name can differ in case and can be a partial match. So declaring
+`player_id` as `"string"` matches its actual `String` type.
+
 
 ## Dimensional validation
 
