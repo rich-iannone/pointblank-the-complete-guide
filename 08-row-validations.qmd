@@ -80,6 +80,12 @@ but not useful. Using `session_id` alone as the key shows what that looks like.
 )
 ```
 
+Only 96 rows pass and 1,904 fail. That looks bad until you remember what the table holds. A session
+usually has several events, so `session_id` is supposed to repeat. The table has 618 sessions, and
+the 96 passing rows are the sessions that happen to have only one event. The check is answering
+exactly the question we asked. We just asked the wrong question, because `session_id` identifies a
+session, not a row.
+
 
 ::: {.callout-note}
 ## Choosing the right key comes up again and again
