@@ -6,3 +6,27 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
+
+## Two kinds of backend
+
+
+## In-memory DataFrames
+
+
+## Databases and query pushdown
+
+
+## Ibis table expressions
+
+
+## Validating files
+
+
+## Choosing a backend
+
+
+## Backend differences to watch
+
+
+## Summary
+
