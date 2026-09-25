@@ -379,6 +379,14 @@ forbidden set. This is useful when the list of valid values is too long or open-
 but you know a few specific values that indicate a problem, such as codes for discontinued products.
 Let's forbid the value `other_campaign` in the `acquisition` column.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_not_in_set(columns="acquisition", set=["other_campaign"])
+    .interrogate()
+)
+```
+
 ## Null validations
 
 ### Requiring values to be absent
