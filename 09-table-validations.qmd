@@ -391,6 +391,11 @@ schema = pb.Schema(columns=[
 )
 ```
 
+The first two steps confirm the structure: the expected columns exist with the right types, and the
+table is not empty. The value checks below them confirm that player IDs are present and revenue is
+positive, and they flag the 22 rows that share a session and timestamp (the same rows we looked at
+in @sec-row-validations). Reading from top to bottom, you can see that the table is structurally
+sound and that the only issue is that small set of duplicate events.
 
 ## Beyond structure
 
