@@ -6,3 +6,24 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+
+## Describing data with fields
+
+
+## Generating a dataset
+
+
+## Person profiles with profile_fields
+
+
+## Fixtures that exercise a plan
+
+
+## Profiling a real table into a schema
+
+
+## Locale, configuration, and reproducibility
+
+
+## Summary
+
