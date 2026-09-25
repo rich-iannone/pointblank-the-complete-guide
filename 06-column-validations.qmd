@@ -129,6 +129,11 @@ works the same way, so a non-negativity check on revenue should be inclusive.
 )
 ```
 
+Every row passes. As it happens, `game_revenue` has no zero-revenue rows (the smallest value is
+0.004), so the strict and inclusive forms would give the same answer on this data. Using
+`col_vals_ge()` is still the right call, since it states the actual rule and will not fail if a
+free item shows up later.
+
 ### Equality and inequality
 
 ### Comparing against another column
