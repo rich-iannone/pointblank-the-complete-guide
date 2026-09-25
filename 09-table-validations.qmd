@@ -201,6 +201,13 @@ The `row_count_match()` method checks the number of rows and produces a single t
 )
 ```
 
+The check passes. For data that changes from day to day, an exact count is usually too strict, so
+the `tol=` argument allows a range around the expected number. For example,
+`row_count_match(count=1900, tol=100)` accepts anything from 1,800 to 2,000. As with the aggregate
+checks in @sec-aggregate-validations, a `tol=` below 1 is a proportion, so `tol=0.05` allows 5
+percent either way. If you expect the count to match another table rather than a fixed number, you
+can pass that table as `count=`. Here we compare the full table against its first 1,500 rows.
+
 
 ### Column counts
 
