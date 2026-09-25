@@ -485,6 +485,11 @@ option, which the next section covers.
 
 ## Validating against known formats
 
+Some common formats are awkward to express as a regular expression, especially ones that include a
+checksum or vary by country. The `col_vals_within_spec()` method checks a column against a named
+specification and handles those details for you. Here is a short list of email addresses, some
+valid and some not.
+
 ## Sequence validations
 
 ### Increasing and decreasing values
