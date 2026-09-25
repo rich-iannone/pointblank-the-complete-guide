@@ -121,6 +121,14 @@ the two forms, ask whether the boundary value itself is valid. A stock count of 
 product is a perfectly valid value, for instance, and the strict form would wrongly flag it. Revenue
 works the same way, so a non-negativity check on revenue should be inclusive.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_ge(columns="item_revenue", value=0)
+    .interrogate()
+)
+```
+
 ### Equality and inequality
 
 ### Comparing against another column
