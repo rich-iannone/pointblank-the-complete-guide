@@ -115,6 +115,22 @@ and `c` is optional, every row passes.
 
 ## Combining distinctness and completeness
 
+The two checks work well together. With both in one plan, you can say that every record has its
+required fields and that no two records share a key. The plan below does this for `game_revenue`.
+
+```{python}
+(
+    pb.Validate(data=game_revenue, tbl_name="game_revenue", label="Row contract")
+    .rows_distinct(columns_subset=["session_id", "time"])
+    .rows_complete(columns_subset=["player_id", "session_id", "session_start"])
+    .interrogate()
+)
+```
+
+The completeness step passes for every row, while the distinctness step flags the same 22 rows we
+saw earlier. Together they say the records are complete, but a few of them share a session and
+timestamp and need a closer look. Pairing a uniqueness check on the key with a completeness check
+on the required fields is also the basis of the data contracts in @sec-data-contracts.
 
 ## Beyond distinctness and completeness
 
