@@ -71,6 +71,11 @@ spec = pb.MissingSpec(
 )
 ```
 
+This says that `-99`, `-98`, and `-97` are documented missing codes with the given meanings, and
+that "refused" and "dont_know" together form a category called `item_nonresponse`. Survey
+researchers often care about this grouping, because both reasons mean the respondent was asked but
+chose not to answer, which is different from never being asked.
+
 
 ## Measuring how much is missing
 
