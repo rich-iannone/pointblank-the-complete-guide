@@ -464,6 +464,12 @@ lowercase letters, and three digits, separated by hyphens. We can require exactl
 )
 ```
 
+All 13 rows pass, so the column is consistently formatted. In the pattern, `^` marks the start of
+the string, `\d` is a single digit, `[a-z]{3}` is three lowercase letters, `\d{3}` is three digits,
+and `$` marks the end, so any value that strays from this format fails. The method also has an `inverse=` argument that flips the check so that rows
+matching the pattern fail. That turns a pattern into a blocklist. Here we reject the value `"high"`
+in column `f`.
+
 ## Validating against known formats
 
 ## Sequence validations
