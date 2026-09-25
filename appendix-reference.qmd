@@ -9,3 +9,33 @@ changes.
 
 ## Arguments shared by most methods
 
+
+## Checking individual values
+
+
+## Checking a column as a whole
+
+
+## Checking rows and tables
+
+
+## Missing values
+
+
+## Custom rules and groups
+
+
+## Severity, responses, and automation
+
+
+## Reading results
+
+
+## Getting to know data
+
+
+## Plans outside Python code
+
+
+## Test data and clinical data
+
