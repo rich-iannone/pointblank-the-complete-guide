@@ -374,8 +374,8 @@ validation.error()
 
 For automated responses during interrogation, actions (covered earlier) are the right tool. These
 threshold accessors are most useful after interrogation, when you need to branch or assert on the
-results externally (in a CI script, a test suite, or a pipeline step that receives an already-
-interrogated object).
+results externally (in a CI script, a test suite, or a pipeline step that receives an
+already-interrogated object).
 
 ```{python}
 # raise an exception if any step hit the critical level
