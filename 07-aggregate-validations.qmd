@@ -80,3 +80,14 @@ comparison fails even though the two figures agree for all practical purposes.
 )
 ```
 
+With `tol=0` (the default) the check fails over a difference of about 0.002. Allowing a tolerance
+fixes that.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_sum_eq(columns="item_revenue", value=8687.12, tol=1)
+    .interrogate()
+)
+```
+
