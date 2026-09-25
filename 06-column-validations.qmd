@@ -440,6 +440,10 @@ archived = pl.DataFrame({"active_date": [None, None, None]}, schema={"active_dat
 )
 ```
 
+All three rows pass because every value is null, as expected. The two null methods are exact
+opposites. A column that is partly filled in and partly empty fails both of them:
+`col_vals_not_null()` fails on the empty rows and `col_vals_null()` fails on the filled ones.
+
 ## Pattern matching
 
 ## Validating against known formats
