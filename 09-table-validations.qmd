@@ -65,6 +65,22 @@ someone else maintains, since everything else depends on the columns being there
 
 ### Matching names and types
 
+Usually you care about types as well as names, and sometimes about column order too. The
+`col_schema_match()` method checks a table against a `Schema`, an object that lists the column names
+and types you expect. A schema can list every column in order, which is the strictest check. In
+practice, you often list only the columns you depend on and relax the match so that extra columns
+and a different order are allowed.
+
+```{python}
+schema = pb.Schema(columns=[("player_id", "String"), ("item_revenue", "Float64")])
+
+(
+    pb.Validate(data=game_revenue)
+    .col_schema_match(schema=schema, complete=False, in_order=False)
+    .interrogate()
+)
+```
+
 
 ### Tightening or relaxing the match
 
