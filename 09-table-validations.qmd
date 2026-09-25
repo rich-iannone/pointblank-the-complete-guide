@@ -48,6 +48,20 @@ present, and each column gets its own test unit.
 )
 ```
 
+All four columns are present, so all four steps pass. Since each column is its own step, a missing
+column shows up on its own row in the report. Let's ask for a column that does not exist.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_exists(columns=["player_id", "customer_id"])
+    .interrogate()
+)
+```
+
+The `player_id` step passes and the `customer_id` step fails, which tells you exactly which column
+is missing. This is often the first thing to check on a table you are not familiar with or that
+someone else maintains, since everything else depends on the columns being there.
 
 ### Matching names and types
 
