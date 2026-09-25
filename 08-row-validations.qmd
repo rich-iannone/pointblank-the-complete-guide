@@ -100,6 +100,18 @@ fail.
 
 ### Completeness on required fields
 
+The `columns_subset=` argument limits the check to the columns that must have values, so the
+optional columns can contain nulls. If only columns `a`, `b`, and `d` of `small_table` are required,
+and `c` is optional, every row passes.
+
+```{python}
+(
+    pb.Validate(data=small_table)
+    .rows_complete(columns_subset=["a", "b", "d"])
+    .interrogate()
+)
+```
+
 
 ## Combining distinctness and completeness
 
