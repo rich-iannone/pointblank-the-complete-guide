@@ -746,3 +746,31 @@ The report has all five checks in one place. Four of them pass for every row, co
 durations, non-negative revenue, valid item types, and no missing player IDs. The upper-bound check
 on session duration flags the same 74 long sessions we found earlier.
 
+## Summary
+
+Column value validations are how you state what good data looks like, one column at a time. The
+comparison methods `col_vals_gt()`, `col_vals_lt()`, `col_vals_ge()`, `col_vals_le()`,
+`col_vals_eq()`, and `col_vals_ne()` check values against a fixed value or, with `pb.col()`, against
+another column. The strict and inclusive versions differ only at the boundary, and `na_pass=`
+decides how nulls are treated. Two things are worth remembering: the strict comparisons fail a value
+that equals the boundary, and exact equality is the wrong tool for computed floating-point numbers.
+
+The range methods `col_vals_between()` and `col_vals_outside()` check whether values fall inside or
+outside an interval, with `inclusive=` controlling the endpoints. For categorical data,
+`col_vals_in_set()` and `col_vals_not_in_set()` check against allowed and forbidden sets, and a null
+fails an allowed-set check unless you add `None` to the set. The `col_vals_not_null()` and
+`col_vals_null()` methods require values to be present or absent. Structured text is handled by
+`col_vals_regex()`, whose `inverse=` option turns a pattern into a blocklist, and by
+`col_vals_within_spec()` for named formats such as email addresses, credit card numbers, and
+country-specific postal codes and IBANs.
+
+String length is checked with `col_vals_str_len()`, using a minimum, a maximum, or an exact length.
+Ordered data is checked with `col_vals_increasing()` and `col_vals_decreasing()`, which are strict
+by default but can allow repeats with `allow_stationary=` and small reversals with a tolerance
+argument.
+
+Column selectors let one step cover many columns, and `dimension=` ties each check to quality
+scoring.
+
+The next chapter, @sec-aggregate-validations, moves from checking individual values to checking
+column-level summaries such as sums and averages.
