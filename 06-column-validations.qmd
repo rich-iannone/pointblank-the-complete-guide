@@ -194,6 +194,14 @@ columns, such as a sale price being higher than its cost or an end date coming a
 Using `small_table`, we can check whether each value in column `a` is less than the value in column
 `c`.
 
+```{python}
+(
+    pb.Validate(data=small_table)
+    .col_vals_lt(columns="a", value=pb.col("c"), na_pass=True)
+    .interrogate()
+)
+```
+
 ### Handling nulls in comparisons
 
 ## Range validations
