@@ -742,3 +742,7 @@ column checks from different families against `game_revenue`.
 )
 ```
 
+The report has all five checks in one place. Four of them pass for every row, confirming positive
+durations, non-negative revenue, valid item types, and no missing player IDs. The upper-bound check
+on session duration flags the same 74 long sessions we found earlier.
+
