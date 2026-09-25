@@ -172,6 +172,21 @@ and `c` is optional, every row passes.
 )
 ```
 
+All 13 rows pass, because both nulls are in column `c`, which we left out. This is how you write
+down which fields a record needs and which it can do without. Running the same check on the main
+identifier columns of `game_revenue` passes for all 2,000 rows.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .rows_complete(columns_subset=["player_id", "session_id", "session_start"])
+    .interrogate()
+)
+```
+
+In fact, `game_revenue` has no nulls in any column, so the whole-row form would pass too. Listing
+the required columns is still worthwhile, since it keeps the check meaningful if optional columns
+with nulls are added to the table later.
 
 ## Combining distinctness and completeness
 
