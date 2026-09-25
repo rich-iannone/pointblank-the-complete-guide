@@ -253,6 +253,10 @@ to measure, the methods in @sec-missing-data are a better fit than toggling `na_
 
 ## Range validations
 
+You could keep values within a range using two comparisons, one for the lower bound and one for the
+upper bound. A range validation does the same job in one step, and its report is easier to read
+because both bounds appear together instead of being spread across two steps.
+
 ### Between
 
 ### Outside
