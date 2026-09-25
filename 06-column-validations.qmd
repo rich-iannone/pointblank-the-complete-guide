@@ -298,6 +298,11 @@ least 0 and less than 100 percent". As with the comparison methods, either bound
 )
 ```
 
+Here 1,915 rows fall between 5 and 40 and 85 fall outside. Of those 85, 14 are sessions shorter
+than 5 and 71 are longer than 40. Compare that with the 74 failures from `col_vals_lt(value=40)`
+earlier: three sessions last exactly 40, which the inclusive range accepts but the strict
+comparison rejected. These very short and very long sessions are the ones worth a closer look.
+
 ### Outside
 
 ## Set membership validations
