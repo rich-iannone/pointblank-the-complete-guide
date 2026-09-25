@@ -262,6 +262,14 @@ because both bounds appear together instead of being spread across two steps.
 The `col_vals_between()` method checks that values fall within a range, and both ends are inclusive
 by default. Column `a` in `small_table` runs from 1 to 8, so a check with those bounds passes.
 
+```{python}
+(
+    pb.Validate(data=small_table)
+    .col_vals_between(columns="a", left=1, right=8)
+    .interrogate()
+)
+```
+
 ### Outside
 
 ## Set membership validations
