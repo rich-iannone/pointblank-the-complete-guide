@@ -6,3 +6,30 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
+
+## Why express a plan as YAML
+
+
+## The structure of a YAML plan
+
+
+## From Python to YAML and back
+
+
+## Running a plan against data
+
+
+## Writing steps in YAML
+
+
+## Reducing repetition with anchors
+
+
+## Checking and organizing YAML files
+
+
+## Automating YAML validation
+
+
+## Summary
+
