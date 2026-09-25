@@ -37,6 +37,17 @@ as the data arrives.
 
 ### Checking that columns exist
 
+The `col_exists()` method is the simplest structural check. It confirms that the named columns are
+present, and each column gets its own test unit.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_exists(columns=["player_id", "session_id", "item_type", "item_revenue"])
+    .interrogate()
+)
+```
+
 
 ### Matching names and types
 
