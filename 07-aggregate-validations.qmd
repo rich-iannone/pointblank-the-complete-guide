@@ -59,3 +59,11 @@ about 8,687. A per-row check on the same column would have produced 2,000 test u
 reduces the column to one number, so the step passes or fails as a whole. If we flip the check and
 require the total to be under 5,000, it fails.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_sum_lt(columns="item_revenue", value=5000)
+    .interrogate()
+)
+```
+
