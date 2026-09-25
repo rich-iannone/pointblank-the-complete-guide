@@ -37,6 +37,17 @@ The `rows_distinct()` method finds duplicates, and most of the work in using it 
 
 ### Checking whole-row uniqueness
 
+With no arguments, `rows_distinct()` compares entire rows and checks that no two are identical
+across every column. The `small_table` dataset has one exact duplicate, which the check finds.
+
+```{python}
+(
+    pb.Validate(data=small_table)
+    .rows_distinct()
+    .interrogate()
+)
+```
+
 
 ### Choosing the key
 
