@@ -7,6 +7,13 @@ pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
 
+Column checks look at values and row checks look at records, but both assume you have the right
+table in front of you. Table-level checks test that assumption. They ask whether the table has the
+columns you expect, whether it holds a plausible amount of data, whether it is recent enough to
+trust, and whether it matches another table you are comparing it against. If any of these is off,
+the results of the other checks in a plan may not mean much.
+
+
 ## Schema validation
 
 
