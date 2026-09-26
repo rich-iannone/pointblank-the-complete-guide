@@ -184,7 +184,7 @@ missing within that section. Because `small_table` is short, the effect is modes
 is exactly what scales up: on a large table this view immediately distinguishes a column with
 scattered gaps from one whose missingness is concentrated in a particular stretch of rows. Reading
 the layout of missingness, rather than a single summary number, is what lets you tell an expected
-empty field from a genuine failure.
+empty field from a real problem.
 
 ### Reading missing-value patterns
 
