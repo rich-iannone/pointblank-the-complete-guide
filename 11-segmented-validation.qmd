@@ -44,6 +44,23 @@ spenders and move on, and the result says nothing about where those six rows com
 a column name to `segments=`, the same check runs once for each value of `item_type`, so once for ad
 revenue and once for in-app purchases.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_lt(columns="item_revenue", value=100, segments="item_type")
+    .interrogate()
+)
+```
+
+The one step is now two, each labeled with its segment. The `ad` segment covers all 1,553 ad rows
+and passes. The `iap` segment covers the 447 in-app purchase rows and has all six failures. That
+makes sense once you know that ad revenue in this table never goes above 1.872, while in-app
+purchases go as high as 142.99. So instead of "six unusual rows somewhere", the report tells you
+that every large transaction is an in-app purchase.
+
+Reading a segmented report is the same as reading any other report, except that each step names the
+segment it covers. A failure tells you which group the failing rows belong to, and a segment that
+passes is useful too, since it tells you the problem is not there.
 
 ## Choosing which segments to create
 
