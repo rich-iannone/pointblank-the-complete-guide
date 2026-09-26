@@ -28,6 +28,9 @@ We start with the simplest form, which splits a check by the values of one colum
 
 ## Segmenting by a column
 
+Suppose we want to flag unusually large transactions, on the idea that any single item earning 100
+or more is worth a look. Run against the whole table, the check finds only a few failures.
+
 
 ## Choosing which segments to create
 
