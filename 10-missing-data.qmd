@@ -327,3 +327,7 @@ Coded missing values are missing values that carry a reason, stored as codes lik
 asked". Validating them starts with describing the codes in a `MissingSpec`, which names each code,
 can group codes into categories, and decides whether plain nulls count as missing. You can write
 one by hand or generate one with `MissingSpec.from_cdisc()`, `from_sas()`, or `from_spss()`.
+
+The `col_pct_null()` method checks the plain null rate against an expected value, and
+`col_pct_missing()` checks the combined rate of codes and nulls, optionally for a single reason or
+category. The `col_missing_coded()` method requires every missing value to use a documented code,
