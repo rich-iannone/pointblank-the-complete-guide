@@ -34,6 +34,11 @@ or more is worth a look. Run against the whole table, the check finds only a few
 
 ## Choosing which segments to create
 
+Segmenting on a column with many distinct values creates a step for every one of them, which is not
+always what you want. If only a few groups interest you, you can pass a tuple to `segments=` with
+the column name and a list of the values you want. Here we check only the `organic` and `apple`
+acquisition channels.
+
 
 ## Combining values into one segment with `seg_group`
 
