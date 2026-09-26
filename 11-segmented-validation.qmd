@@ -20,6 +20,10 @@ It then covers segmenting on several columns at once, how thresholds work with s
 checks support segmentation. We use `game_revenue` throughout, since its `item_type` and
 `acquisition` columns give us natural groups.
 
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+```
+
 
 ## Segmenting by a column
 
