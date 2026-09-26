@@ -297,6 +297,10 @@ questions were skipped together. Respondents 2 and 7 pass, because both of their
 
 ## Bringing it together
 
+A survey quality plan usually combines several of these checks, covering both how much is missing
+and whether the codes are used correctly. The plan below puts the checks from this chapter into a
+single interrogation.
+
 
 ## Summary
 
