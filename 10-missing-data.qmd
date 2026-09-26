@@ -129,6 +129,13 @@ column has one null out of ten rows, a rate of 0.1.
 )
 ```
 
+The single test unit passes, because the null rate is exactly 0.1. Checking for a specific null
+rate might seem odd, since we usually want fewer nulls, not a particular number. For an optional
+field, though, a stable rate is often what you want to confirm. If about 10 percent of respondents
+normally skip a question and suddenly 80 percent do, something has changed in how the data is
+collected. If you want no nulls at all, use `p=0.0`. That check would fail here, since the column
+has one null.
+
 
 ### The structured missing rate with `col_pct_missing`
 
