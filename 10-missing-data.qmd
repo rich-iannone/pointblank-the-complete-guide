@@ -114,6 +114,10 @@ chapter we use our own `spec`, since the survey uses its own codes rather than a
 
 ## Measuring how much is missing
 
+The first question about a column is usually how much of it is missing. Once codes are involved,
+there are two ways to count. One is the plain null rate, which ignores codes. The other counts codes
+and nulls together. Pointblank has a method for each, and both produce a single test unit for the
+whole column.
 
 ### The null rate with `col_pct_null`
 
