@@ -78,8 +78,8 @@ pb.Validate(customers).rows_distinct(columns_subset=["customer_id"]).interrogate
 ```
 
 The check flags two rows, the duplicated `C2` pair. This is exactly the warning you want *before*
-the join, because if you joined without checking, the duplicate would silently create extra rows in
-your result.
+the join, because if you joined without checking, the duplicate would have added extra rows to your
+result.
 
 ```{python}
 joined = orders.join(customers, on="customer_id", how="left")
