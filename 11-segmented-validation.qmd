@@ -66,6 +66,18 @@ a string and a number in one group raises a `TypeError`.
 
 ## Segmenting across several columns
 
+So far we have segmented on one column at a time. You can also pass a list of column names to
+`segments=`, which segments on each column separately within the same step. This is not a
+cross-product of the columns. Each column gets its own set of segments.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_lt(columns="item_revenue", value=100, segments=["item_type", "acquisition"])
+    .interrogate()
+)
+```
+
 
 ## How segments interact with thresholds
 
