@@ -31,11 +31,10 @@ orders = pl.DataFrame({
 
 ## A check as a single line
 
-A really light use of Pointblank is through a one-line assertion that confirms an assumption. It
-should do nothing nothing visible when the assumption holds. Using a single check and then the
-sequence of `interrogate()` and then `assert_passing()` turns a interrogation plan into a quick
-check that'll remain silent on success and raise an error on failure (ideal as it's own notebook
-cell, for example).
+The lightest way to use Pointblank is a one-line assertion that confirms an assumption and does
+nothing visible when the assumption holds. Adding `interrogate()` and then `assert_passing()` to a
+single check gives you exactly that. It produces no output when the check passes and raises an error
+when it fails, which makes it a good fit for its own notebook cell.
 
 ```{python}
 pb.Validate(orders).col_vals_not_null(columns="customer_id").interrogate().assert_passing()
