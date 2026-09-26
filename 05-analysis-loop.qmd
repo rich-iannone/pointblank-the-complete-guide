@@ -103,8 +103,8 @@ joined_clean.height
 ```
 
 The join now preserves the five orders, because the key is unique on the dimension. Checking
-`rows_distinct()` on a join key is a habit worth forming, since it turns a whole class of silent
-row-multiplication bugs into an explicit, up-front check.
+`rows_distinct()` on a join key is a habit worth forming, since it catches row-multiplication bugs
+before they happen.
 
 ## Confirming a join preserved its rows
 
