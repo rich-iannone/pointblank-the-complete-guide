@@ -131,6 +131,12 @@ all of the `col_vals_*` methods accept `segments=` (the exception is `col_vals_i
 missing-value methods from @sec-missing-data, and `prompt()` from @sec-semantic-validation. All of
 these produce a result for each row, which is what makes it possible to split the rows into groups.
 
+The checks that do not accept `segments=` are mostly the ones that reduce a column or table to a
+single result. The aggregate methods of @sec-aggregate-validations compute one sum, average, or
+standard deviation for the whole column, and the table-level checks of @sec-table-validations look
+at the table as a whole, so there are no row results to divide up. The `col_pct_null()` and
+`col_pct_missing()` methods fall into this group too, as do `conjointly()` and `specially()`.
+
 
 ## Bringing it together
 
