@@ -399,6 +399,13 @@ sound and that the only issue is that small set of duplicate events.
 
 ## Beyond structure
 
+A couple of table-level checks are about how much of a column is missing rather than whether the
+column exists. The `col_pct_null()` and `col_pct_missing()` methods check that the fraction of
+missing values in a column is near an expected level, which catches a change in completeness even
+when the schema has not changed. They are covered in @sec-missing-data along with the rest of the
+missing-data tools. Most of the methods in this chapter (all except `col_exists()`) also accept the
+`pre=` argument, which transforms or filters the table before the check runs. This is occasionally
+useful when a structural expectation applies only to part of the table.
 
 ## Summary
 
