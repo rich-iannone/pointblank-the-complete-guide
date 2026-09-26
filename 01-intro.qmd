@@ -298,9 +298,10 @@ workflows. Part VI, "Data Contracts and Pipelines", shows how we can turn a vali
 shareable contract (and how it's enforced at pipeline boundaries). Part VII, "Test Data Generation",
 covers synthesizing realistic data for tests and fixtures. Part VIII, "Clinical and Regulated Data",
 applies validation to clinical-trial data under CDISC standards. Part IX, "Industry Playbooks",
-brings the techniques together in end-to-end workflows for financial, e-commerce, data-engineering,
-and healthcare settings. Two appendices close the book: a full method reference and a look at what
-is still to come.
+brings the techniques together in ten end-to-end workflows, from financial and e-commerce data to
+healthcare, insurance, official statistics, and digital analytics. Two appendices close the book: an
+index that points from common tasks to the method and chapter you need, and a glossary of the terms
+used throughout.
 
 Throughout, the emphasis is on not just how to use a feature but when and why it is the right
 choice, so that you develop judgment about validation design rather than a catalog of syntax.
