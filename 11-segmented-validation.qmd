@@ -138,6 +138,10 @@ at the table as a whole, so there are no row results to divide up. The `col_pct_
 `col_pct_missing()` methods fall into this group too, as do `conjointly()` and `specially()`.
 
 
+For the checks that do support it, segmentation fits in with the rest of a plan. Each segment is a
+full step, so it has its own threshold results and counts toward the quality scores in
+@sec-quality-scoring like any other step. A plan can mix segmented and unsegmented steps freely.
+
 ## Bringing it together
 
 
