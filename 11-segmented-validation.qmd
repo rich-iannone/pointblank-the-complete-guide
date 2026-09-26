@@ -106,6 +106,9 @@ across the whole table can be much higher within one group. Our revenue check ha
 )
 ```
 
+The step does not reach the warning level, since 0.003 is below 0.01, so this plan would not raise a
+warning. Now let's segment the same check by `item_type` with the same threshold.
+
 
 ## Where segmentation applies
 
