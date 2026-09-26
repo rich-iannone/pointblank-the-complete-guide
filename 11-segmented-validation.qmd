@@ -24,6 +24,7 @@ checks support segmentation. We use `game_revenue` throughout, since its `item_t
 game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
 ```
 
+We start with the simplest form, which splits a check by the values of one column.
 
 ## Segmenting by a column
 
