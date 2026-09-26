@@ -174,6 +174,9 @@ skipped that step.
 )
 ```
 
+Nine of the ten rows pass and one fails. The failing row is respondent 4, whose `age` is a plain
+null rather than one of the documented codes. Use this check when your rule is that every missing
+value must have a reason.
 
 ### Catching undocumented codes with `col_missing_only_coded`
 
