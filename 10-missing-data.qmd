@@ -177,6 +177,18 @@ would fail. This method can also count a single reason or category. Passing `rea
 counts only the `-98` values, a rate of 0.1, which passes with `max_pct=0.2`. Passing
 `category="item_nonresponse"` counts the refusals and don't-knows together.
 
+```{python}
+(
+    pb.Validate(data=survey)
+    .col_pct_missing(columns="age", missing=spec, category="item_nonresponse", max_pct=0.15)
+    .interrogate()
+)
+```
+
+This one fails. There is one refusal and one don't-know, so the rate is 0.2, which is above the
+0.15 limit. Raising the limit to `max_pct=0.25` would let it pass. Checking one reason or category
+at a time lets you write rules like "no more than 15 percent of answers may be refusals", which is
+more specific than a single overall missing rate.
 
 ## Validating the coding
 
