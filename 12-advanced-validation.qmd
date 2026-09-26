@@ -7,6 +7,12 @@ import polars as pl
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+The built-in methods from the previous chapters cover the checks that come up most often, but many
+real rules are too specific for any of them. For example, revenue might need to equal quantity times
+unit price, or a cancelled order might need to have an amount of zero. This chapter covers the
+methods that let you write that logic yourself while still working inside a validation plan, so the
+results appear in the same report as everything else.
+
 
 ## Native expressions with `col_vals_expr`
 
