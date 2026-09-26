@@ -161,6 +161,19 @@ end of the range at 0.15.
 
 ### Requiring coded absence with `col_missing_coded`
 
+The `col_missing_coded()` method checks that every missing value uses a documented code. A real
+value passes and a documented code passes, but a plain null fails, because a null is a missing value
+with no reason attached. If your data is supposed to code every missing value, a null means someone
+skipped that step.
+
+```{python}
+(
+    pb.Validate(data=survey)
+    .col_missing_coded(columns="age", missing=spec)
+    .interrogate()
+)
+```
+
 
 ### Catching undocumented codes with `col_missing_only_coded`
 
