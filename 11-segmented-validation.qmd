@@ -58,6 +58,11 @@ check runs once across all of them instead of once per value. Here we group the 
 )
 ```
 
+The result is one step covering 1,206 rows (1,038 organic plus 168 facebook), rather than two
+separate steps. If you pass a list of lists to `seg_group()`, you get several combined segments at
+once. For example, `pb.seg_group([["organic", "facebook"], ["google", "apple"]])` produces two
+steps, one with 1,206 rows and one with 413. All the values in a group must be the same type. Mixing
+a string and a number in one group raises a `TypeError`.
 
 ## Segmenting across several columns
 
