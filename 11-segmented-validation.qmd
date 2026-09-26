@@ -98,6 +98,14 @@ to the check as a whole. This is often the main reason to segment. A failure rat
 across the whole table can be much higher within one group. Our revenue check has 6 failures out of
 2,000 rows, a rate of 0.003, which is well under a warning threshold of 0.01.
 
+```{python}
+(
+    pb.Validate(data=game_revenue, thresholds=pb.Thresholds(warning=0.01))
+    .col_vals_lt(columns="item_revenue", value=100)
+    .interrogate()
+)
+```
+
 
 ## Where segmentation applies
 
