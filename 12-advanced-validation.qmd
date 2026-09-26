@@ -13,6 +13,12 @@ unit price, or a cancelled order might need to have an amount of zero. This chap
 methods that let you write that logic yourself while still working inside a validation plan, so the
 results appear in the same report as everything else.
 
+There are three such methods, each more flexible than the last. The `col_vals_expr()` method takes
+a single expression, `conjointly()` combines several conditions into one rule, and `specially()`
+takes any function you write. We also cover the `pre=` argument, which transforms the data before a
+check runs, and the `col_vals_in_table()` method for checking keys against another table. A small
+orders table gives each example something to check, and one of its rows is deliberately wrong.
+
 
 ## Native expressions with `col_vals_expr`
 
