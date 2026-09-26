@@ -117,6 +117,10 @@ chapter we use our own `spec`, since the survey uses its own codes rather than a
 
 ### The null rate with `col_pct_null`
 
+The `col_pct_null()` method checks the proportion of nulls against an expected value `p=`, with an
+optional `tol=` for a tolerance. It ignores the codes completely and counts only nulls. The `age`
+column has one null out of ten rows, a rate of 0.1.
+
 
 ### The structured missing rate with `col_pct_missing`
 
