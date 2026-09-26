@@ -251,6 +251,23 @@ an explicit set is a better fit. The `allowed=` argument takes a list of valid v
 `min_val=` and `max_val=`. If the score can only be 10 through 80 in steps of 10, we can list those
 values.
 
+```{python}
+(
+    pb.Validate(data=survey)
+    .col_missing_only_coded(
+        columns="score",
+        missing=spec,
+        allowed=[10, 20, 30, 40, 50, 60, 70, 80],
+    )
+    .interrogate()
+)
+```
+
+The result is the same, nine passes and one failure, and the `-95` is again the one that fails. The
+difference is that this version also rejects real values that are not on the list. A score of `35`,
+for example, would fail here but pass with the 0 to 100 range. Choosing between a range and an
+`allowed=` set is the same decision as choosing between `col_vals_between()` and `col_vals_in_set()`
+in @sec-column-validations.
 
 ### Enforcing skip patterns with `col_missing_consistent`
 
