@@ -158,6 +158,9 @@ end of the range at 0.15.
 
 ## Validating the coding
 
+Knowing how much is missing is only half the job. The other half is checking that missing values are
+recorded correctly. The three methods in this section work row by row, so each produces one test
+unit per row and shows you exactly which records break the rules.
 
 ### Requiring coded absence with `col_missing_coded`
 
