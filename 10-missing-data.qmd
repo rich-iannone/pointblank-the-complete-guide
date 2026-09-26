@@ -301,6 +301,19 @@ A survey quality plan usually combines several of these checks, covering both ho
 and whether the codes are used correctly. The plan below puts the checks from this chapter into a
 single interrogation.
 
+```{python}
+(
+    pb.Validate(data=survey, tbl_name="survey")
+    .col_pct_missing(columns="age", missing=spec, max_pct=0.5)
+    .col_missing_coded(columns="age", missing=spec)
+    .col_missing_only_coded(columns="score", missing=spec, min_val=0, max_val=100)
+    .col_missing_consistent(
+        columns=["income_source", "income_amount"], missing=spec, when_reason="not_asked"
+    )
+    .interrogate()
+)
+```
+
 
 ## Summary
 
