@@ -39,6 +39,11 @@ or more is worth a look. Run against the whole table, the check finds only a few
 )
 ```
 
+Six of the 2,000 rows fail. That is a low enough rate that you might put it down to a few big
+spenders and move on, and the result says nothing about where those six rows come from. If we pass
+a column name to `segments=`, the same check runs once for each value of `item_type`, so once for ad
+revenue and once for in-app purchases.
+
 
 ## Choosing which segments to create
 
