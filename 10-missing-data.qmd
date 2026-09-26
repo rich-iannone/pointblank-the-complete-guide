@@ -101,6 +101,16 @@ and `MissingSpec.from_sas()` and `MissingSpec.from_spss()` produce the conventio
 statistical packages. For example, if a file exported from SPSS declares certain negative numbers
 as user-missing, `from_spss()` turns that declaration into a spec.
 
+```{python}
+spss_spec = pb.MissingSpec.from_spss(missing_values=[-1, -2, -3])
+spss_spec.reasons
+```
+
+Each declared value gets a generated reason label (`"missing_1"`, `"missing_2"`, and
+`"missing_3"`). The `from_sas()` constructor works the same way for the SAS special missing values,
+mapping `.` and `._` to `"system_missing"` and `.A` through `.Z` to `"user_missing_a"` through
+`"user_missing_z"`. The CDISC version is covered in @sec-clinical-cdisc. For the rest of this
+chapter we use our own `spec`, since the survey uses its own codes rather than a package convention.
 
 ## Measuring how much is missing
 
