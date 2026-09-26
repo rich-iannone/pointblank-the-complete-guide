@@ -239,6 +239,13 @@ mistaken for real data.
 
 ### Enforcing skip patterns with `col_missing_consistent`
 
+Surveys often have skip patterns, where the answer to one question decides whether a later question
+is asked at all. If a respondent was never asked about income, then both the income source and the
+income amount should be missing for the same reason. A record where one is coded as not asked but
+the other has a value points to a data-entry or routing error. The `col_missing_consistent()` method
+checks this across a set of related columns for a given reason. A row passes only when the columns
+agree, meaning either all of them are missing for that reason or none of them are.
+
 
 ## Bringing it together
 
