@@ -183,6 +183,19 @@ value must have a reason.
 
 ### Catching undocumented codes with `col_missing_only_coded`
 
+The `col_missing_only_coded()` method checks something different. It asks whether every value is
+either a documented code or a valid real value. You define what counts as valid with an `allowed=`
+set or a `min_val=` and `max_val=` range, and anything that is neither a documented code nor a valid
+value fails. The `score` column has a `-95` that is not in the spec.
+
+```{python}
+(
+    pb.Validate(data=survey)
+    .col_missing_only_coded(columns="score", missing=spec, min_val=0, max_val=100)
+    .interrogate()
+)
+```
+
 
 ### Enforcing skip patterns with `col_missing_consistent`
 
