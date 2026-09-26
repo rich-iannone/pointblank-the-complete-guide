@@ -121,6 +121,14 @@ The `col_pct_null()` method checks the proportion of nulls against an expected v
 optional `tol=` for a tolerance. It ignores the codes completely and counts only nulls. The `age`
 column has one null out of ten rows, a rate of 0.1.
 
+```{python}
+(
+    pb.Validate(data=survey)
+    .col_pct_null(columns="age", p=0.1)
+    .interrogate()
+)
+```
+
 
 ### The structured missing rate with `col_pct_missing`
 
