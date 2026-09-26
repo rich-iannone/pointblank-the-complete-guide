@@ -416,3 +416,9 @@ checks names and types against a `Schema`, with arguments like `complete=`, `in_
 `row_count_match()` and `col_count_match()` catch tables that have too few rows or that gained or
 lost columns. Both support `inverse=True`, and `row_count_match()` also takes a `tol=`.
 
+For recency, `data_freshness()` checks that the newest timestamp in a column is within a maximum
+age. For exact agreement, `tbl_match()` compares a table against a reference and passes only if
+they match completely, which makes it the right tool for regression testing. Putting these checks
+at the top of a plan makes structural problems easy to spot in the report. The next chapter,
+@sec-missing-data, looks closely at missing values, including placeholder codes that a plain null
+check cannot see.
