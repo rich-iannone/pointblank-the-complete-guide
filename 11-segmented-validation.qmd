@@ -117,6 +117,11 @@ warning. Now let's segment the same check by `item_type` with the same threshold
 )
 ```
 
+The `ad` segment still passes. The `iap` segment has the same six failures, but now out of 447 rows
+instead of 2,000, which is a rate of about 0.013. That is above 0.01, so the segment is marked at the
+warning level. The same six rows that were an acceptable rate for the whole table now trigger a
+warning, because they are measured against the group they belong to. This is how segmented
+thresholds catch a problem that is serious within one group but rare across the table.
 
 ## Where segmentation applies
 
