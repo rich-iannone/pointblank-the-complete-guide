@@ -172,6 +172,11 @@ four out of ten values are missing.
 )
 ```
 
+The check passes, because a missing rate of 0.4 is below the 0.5 limit. A stricter `max_pct=0.3`
+would fail. This method can also count a single reason or category. Passing `reason="refused"`
+counts only the `-98` values, a rate of 0.1, which passes with `max_pct=0.2`. Passing
+`category="item_nonresponse"` counts the refusals and don't-knows together.
+
 
 ## Validating the coding
 
