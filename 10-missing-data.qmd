@@ -230,6 +230,12 @@ value fails. The `score` column has a `-95` that is not in the spec.
 )
 ```
 
+Nine rows pass and one fails. The failure is respondent 3, whose score of `-95` is neither a
+documented code nor a value between 0 and 100. The `-99` for respondent 5 passes, because it is a
+documented code. Undocumented codes like `-95` often appear when someone upstream starts using a new
+missing-value code without adding it to the codebook, and this check catches them before they are
+mistaken for real data.
+
 
 ### Enforcing skip patterns with `col_missing_consistent`
 
