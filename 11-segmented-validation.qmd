@@ -42,6 +42,22 @@ acquisition channels.
 
 ## Combining values into one segment with `seg_group`
 
+Sometimes you want to treat several values as one group, such as a set of acquisition channels that
+are all unpaid. The `seg_group()` helper combines a list of values into a single segment, so the
+check runs once across all of them instead of once per value. Here we group the `organic` and
+`facebook` channels.
+
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_gt(
+        columns="item_revenue", value=0,
+        segments=("acquisition", pb.seg_group(["organic", "facebook"])),
+    )
+    .interrogate()
+)
+```
+
 
 ## Segmenting across several columns
 
