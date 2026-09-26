@@ -40,7 +40,7 @@ when it fails, which makes it a good fit for its own notebook cell.
 pb.Validate(orders).col_vals_not_null(columns="customer_id").interrogate().assert_passing()
 ```
 
-Every order has a customer identifier, so the check passes quietly. The reason to write it this way,
+Every order has a customer identifier, so the check passes and prints nothing. The reason to write it this way,
 instead of looking at a report, is that it stops your work the moment something is wrong. You find
 out now, not three steps later when a result looks odd.
 
@@ -61,10 +61,10 @@ and great way to catch mistakes early.
 
 ## Guarding a join
 
-The single most valuable inline check guards a join, because a join is where silent, hard-to-spot
-corruption most often enters an analysis. The classic failure is a join key that is not unique on
-the table you join to. When a dimension table has a duplicate key, a join against it does not error,
-it quietly multiplies rows, and the inflated result flows into every count and sum downstream. The
+The single most valuable inline check guards a join, because joins are where hard-to-spot errors
+most often enter an analysis. The classic failure is a join key that is not unique on
+the table you join to. When a dimension table has a duplicate key, a join against it does not raise an
+error. It multiplies rows, and the inflated result flows into every count and sum downstream. The
 defense is to check the key for uniqueness before joining, not after. Consider a customer dimension
 that, through some upstream mistake, lists one customer twice.
 
