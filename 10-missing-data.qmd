@@ -314,6 +314,12 @@ single interrogation.
 )
 ```
 
+The overall missing rate for `age` is within the limit, but one age is a null that should have been
+coded, one score has an undocumented code, and one respondent's income answers break the skip
+pattern. Because these are separate steps, the report shows each problem on its own line instead of
+combining them into one count. The three row-level methods also accept the `segments=` argument, so
+you could run the same checks separately for each survey wave or region, as described in
+@sec-segmented-validation.
 
 ## Summary
 
