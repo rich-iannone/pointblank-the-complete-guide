@@ -12,6 +12,14 @@ one region and nowhere else. Those are very different situations, and you would 
 differently. Segmented validation shows you which one you have by running a check separately for
 each group in the data and reporting a result for each group.
 
+To segment a check, add the `segments=` argument to it. Most checks that look at individual values
+or rows support it. With `segments=`, one step in your plan becomes one step per segment, each with its own counts and its own
+pass or fail result. This chapter covers the different ways to define segments: a column name, a
+column with a chosen set of values, and `seg_group()` for combining several values into one segment.
+It then covers segmenting on several columns at once, how thresholds work with segments, and which
+checks support segmentation. We use `game_revenue` throughout, since its `item_type` and
+`acquisition` columns give us natural groups.
+
 
 ## Segmenting by a column
 
