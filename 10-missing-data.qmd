@@ -246,6 +246,22 @@ the other has a value points to a data-entry or routing error. The `col_missing_
 checks this across a set of related columns for a given reason. A row passes only when the columns
 agree, meaning either all of them are missing for that reason or none of them are.
 
+```{python}
+(
+    pb.Validate(data=survey)
+    .col_missing_consistent(
+        columns=["income_source", "income_amount"],
+        missing=spec,
+        when_reason="not_asked",
+    )
+    .interrogate()
+)
+```
+
+Nine rows pass and one fails. The failure is respondent 4, whose `income_source` is coded `-99`
+("not asked") while `income_amount` has a real value of 900. That cannot happen if the income
+questions were skipped together. Respondents 2 and 7 pass, because both of their income columns are
+`-99`.
 
 ## Bringing it together
 
