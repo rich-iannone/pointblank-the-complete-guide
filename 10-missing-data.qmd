@@ -159,6 +159,19 @@ end of the range at 0.15.
 
 ### The structured missing rate with `col_pct_missing`
 
+The `col_pct_missing()` method counts both codes and nulls. Given a `MissingSpec`, it counts the
+coded values and, because `null_is_missing=` is `True` by default, the nulls as well. It then checks
+that the combined rate is at or below `max_pct=`. The `age` column has three codes and one null, so
+four out of ten values are missing.
+
+```{python}
+(
+    pb.Validate(data=survey)
+    .col_pct_missing(columns="age", missing=spec, max_pct=0.5)
+    .interrogate()
+)
+```
+
 
 ## Validating the coding
 
