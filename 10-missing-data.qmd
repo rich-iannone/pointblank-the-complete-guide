@@ -323,3 +323,7 @@ you could run the same checks separately for each survey wave or region, as desc
 
 ## Summary
 
+Coded missing values are missing values that carry a reason, stored as codes like `-99` for "not
+asked". Validating them starts with describing the codes in a `MissingSpec`, which names each code,
+can group codes into categories, and decides whether plain nulls count as missing. You can write
+one by hand or generate one with `MissingSpec.from_cdisc()`, `from_sas()`, or `from_spss()`.
