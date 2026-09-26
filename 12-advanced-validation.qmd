@@ -34,6 +34,11 @@ method below catches this in its own way.
 
 ## Native expressions with `col_vals_expr`
 
+The `col_vals_expr()` method checks rows against an expression written for your data's backend,
+which for a Polars table means a Polars expression. The expression should give `True` or `False` for
+each row, and rows where it is `True` pass. This is the most direct way to check a relationship
+between columns, like the arithmetic that connects `amount` to `quantity` and `unit_price`.
+
 
 ## Multi-condition rules with `conjointly`
 
