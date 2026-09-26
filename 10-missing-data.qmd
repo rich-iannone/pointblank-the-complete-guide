@@ -89,6 +89,12 @@ spec tells the check to set the codes aside. Here is an age range check on the s
 )
 ```
 
+Without the spec, the first step has six passes and four failures: the three codes, which fall
+outside the range, and the null. With `missing=spec`, all ten rows pass. The codes are recognized
+as documented missing values, and so is the null, since `null_is_missing=` defaults to `True`. The
+range check can now focus on the real ages, and the rest of this chapter covers how to check the
+missing values themselves.
+
 
 ## Measuring how much is missing
 
