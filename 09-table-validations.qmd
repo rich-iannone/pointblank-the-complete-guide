@@ -20,7 +20,7 @@ trust, and whether it matches another table you are comparing it against. If any
 the results of the other checks in a plan may not mean much.
 
 The problems these checks catch tend to cause confusing failures further down the line. For
-example, a column that gets renamed upstream can make downstream queries fail or quietly return
+example, a column that gets renamed upstream can make downstream queries fail or return
 nulls, and a feed that stops updating keeps serving old numbers that still look perfectly valid.
 These are problems with the table itself rather than with individual values, so it helps to check
 for them directly instead of trying to work backward from a pile of value-level failures.
@@ -408,4 +408,11 @@ missing-data tools. Most of the methods in this chapter (all except `col_exists(
 useful when a structural expectation applies only to part of the table.
 
 ## Summary
+
+Table-level checks confirm that you are working with the right table before you look at what is in
+it. For structure, `col_exists()` checks that named columns are present, and `col_schema_match()`
+checks names and types against a `Schema`, with arguments like `complete=`, `in_order=`, and
+`full_match_dtypes=` to make the match as strict or as loose as you need. For size,
+`row_count_match()` and `col_count_match()` catch tables that have too few rows or that gained or
+lost columns. Both support `inverse=True`, and `row_count_match()` also takes a `tol=`.
 
