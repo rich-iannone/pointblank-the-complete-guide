@@ -31,6 +31,14 @@ We start with the simplest form, which splits a check by the values of one colum
 Suppose we want to flag unusually large transactions, on the idea that any single item earning 100
 or more is worth a look. Run against the whole table, the check finds only a few failures.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_lt(columns="item_revenue", value=100)
+    .interrogate()
+)
+```
+
 
 ## Choosing which segments to create
 
