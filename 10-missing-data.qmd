@@ -236,6 +236,11 @@ documented code. Undocumented codes like `-95` often appear when someone upstrea
 missing-value code without adding it to the codebook, and this check catches them before they are
 mistaken for real data.
 
+A range works well for a continuous measure, but when a value can only take certain specific values,
+an explicit set is a better fit. The `allowed=` argument takes a list of valid values in place of
+`min_val=` and `max_val=`. If the score can only be 10 through 80 in steps of 10, we can list those
+values.
+
 
 ### Enforcing skip patterns with `col_missing_consistent`
 
