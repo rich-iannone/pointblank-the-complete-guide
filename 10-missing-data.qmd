@@ -95,6 +95,12 @@ as documented missing values, and so is the null, since `null_is_missing=` defau
 range check can now focus on the real ages, and the rest of this chapter covers how to check the
 missing values themselves.
 
+Since some fields follow well-known standards for missing-value codes, Pointblank can also build a
+spec for you. The `MissingSpec.from_cdisc()` constructor produces the HL7 and CDISC null flavors,
+and `MissingSpec.from_sas()` and `MissingSpec.from_spss()` produce the conventions of those
+statistical packages. For example, if a file exported from SPSS declares certain negative numbers
+as user-missing, `from_spss()` turns that declaration into a spec.
+
 
 ## Measuring how much is missing
 
