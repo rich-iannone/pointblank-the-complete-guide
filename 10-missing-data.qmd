@@ -50,6 +50,16 @@ software has supported this idea for a long time. SAS, SPSS, and Stata each have
 conventions for special missing values, and clinical data standards define a detailed set of
 "null flavors".
 
+::: {.callout-note}
+## How statistical packages encode missingness
+
+SAS reserves a set of special missing values: a plain `.`, plus `._` and `.A` through `.Z`, each of
+which can stand for a different reason. SPSS lets a variable declare specific values, often negative
+numbers like -9, as user-missing, separate from its system-missing blank. Stata has `.a` through
+`.z` as extended missing values in addition to plain `.`. Clinical data goes furthest, with the
+CDISC and HL7 null flavors naming reasons such as "not asked" or "unknown". Each of these schemes
+keeps the reason a value is missing in the data, and a `MissingSpec` can represent any of them.
+:::
 
 The trouble is that these codes are usually stored as ordinary numbers. A `-99` in an age column
 will pull an average down, and a range check that expects ages from 0 to 120 will flag it as an
