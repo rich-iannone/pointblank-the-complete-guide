@@ -93,6 +93,11 @@ creates a step for it, and that step covers zero rows and shows an evaluation er
 
 ## How segments interact with thresholds
 
+Each segment is a full validation step, so thresholds apply to each segment on its own rather than
+to the check as a whole. This is often the main reason to segment. A failure rate that looks fine
+across the whole table can be much higher within one group. Our revenue check has 6 failures out of
+2,000 rows, a rate of 0.003, which is well under a warning threshold of 0.01.
+
 
 ## Where segmentation applies
 
