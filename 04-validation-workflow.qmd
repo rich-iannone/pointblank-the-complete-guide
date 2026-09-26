@@ -90,7 +90,7 @@ locale. We will see some of these values appear in the report header once we dis
 ### Global thresholds
 
 Not every failure is equally serious. A small rate of invalid formatting might be acceptable noise,
-while the same rate of missing identifiers might be a genuine problem. Thresholds let you say, in
+while the same rate of missing identifiers might be a real problem. Thresholds let you say, in
 advance, what levels of failure should raise concern. Thresholds set on the `Validate` object apply
 to every step unless a step overrides them.
 
@@ -283,7 +283,7 @@ The interrogated report now fills in the columns that were empty before. Each st
 test units, how many passed and failed, and the threshold status it reached. The object stores all
 of this, including the assertion type, the parameters, timing information, and extracts of the
 failing rows, and that single accumulation is what feeds every view of the results we look at next.
-Crucially, the results persist after interrogation ends, so you can inspect them now, save them, or
+The results also persist after interrogation ends, so you can inspect them now, save them, or
 pass the object to another function without losing anything.
 
 ## Working with results
