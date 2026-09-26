@@ -6,6 +6,12 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+A single result for the whole table can hide important detail. A check that fails on 2 percent of
+rows might be failing evenly across the table, or it might be failing on a quarter of the rows in
+one region and nowhere else. Those are very different situations, and you would respond to them
+differently. Segmented validation shows you which one you have by running a check separately for
+each group in the data and reporting a result for each group.
+
 
 ## Segmenting by a column
 
