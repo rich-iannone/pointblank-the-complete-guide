@@ -125,6 +125,12 @@ thresholds catch a problem that is serious within one group but rare across the 
 
 ## Where segmentation applies
 
+Segmentation works with checks that evaluate the data row by row, which is most of them. Nearly
+all of the `col_vals_*` methods accept `segments=` (the exception is `col_vals_in_table()`). So do
+`rows_distinct()` and `rows_complete()` from @sec-row-validations, the three row-level
+missing-value methods from @sec-missing-data, and `prompt()` from @sec-semantic-validation. All of
+these produce a result for each row, which is what makes it possible to split the rows into groups.
+
 
 ## Bringing it together
 
