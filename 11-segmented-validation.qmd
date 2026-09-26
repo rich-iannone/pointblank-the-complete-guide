@@ -78,6 +78,18 @@ cross-product of the columns. Each column gets its own set of segments.
 )
 ```
 
+The one step becomes eight: two for the `item_type` values and six for the `acquisition` channels.
+The `item_type` segments show the same result as before, with all six failures in `iap`. The
+`acquisition` segments show the same six failures spread over three channels: four in `organic`,
+one in `google`, and one in `other_campaign`. So the large purchases are not coming from one
+particular channel. If you want every combination of item type and channel, Pointblank does not
+create that for you. Instead, you can add a column that combines the two and segment on that.
+
+Because one step can turn into many, be careful about which columns you segment on. Segmenting on a
+column with thousands of distinct values, like an ID column, produces thousands of steps and a
+report nobody can read, so stick to columns with a manageable number of groups. Also check that the
+values you name actually occur in the data. If you name a value that is not there, Pointblank still
+creates a step for it, and that step covers zero rows and shows an evaluation error in the report.
 
 ## How segments interact with thresholds
 
