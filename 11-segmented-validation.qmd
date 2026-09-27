@@ -179,6 +179,15 @@ standard deviation for the whole column, and the table-level checks of @sec-tabl
 at the table as a whole, so there are no row results to divide up. The `col_pct_null()` and
 `col_pct_missing()` methods fall into this group too, as do `conjointly()` and `specially()`.
 
+::: {.callout-warning}
+## Aggregates and table checks do not segment
+
+The `segments=` argument is not available on the aggregate methods (`col_sum_*`, `col_avg_*`, and
+`col_sd_*`) or on the table-level checks. To get a result for each group, such as a sum or a
+standard deviation for each device or region, you validate each group as its own table. The IoT
+playbook in @sec-playbook-iot-sensors uses this approach to check a minimum variance for each
+sensor.
+:::
 
 For the checks that do support it, segmentation fits in with the rest of a plan. Each segment is a
 full step, so it has its own threshold results and counts toward the quality scores in
