@@ -195,6 +195,21 @@ full step, so it has its own threshold results and counts toward the quality sco
 
 ## Bringing it together
 
+The plan below combines an unsegmented completeness check with a segmented revenue check.
+
+```{python}
+(
+    pb.Validate(data=game_revenue, tbl_name="game_revenue")
+    .col_vals_not_null(columns="player_id")
+    .col_vals_lt(columns="item_revenue", value=100, segments="item_type")
+    .interrogate()
+)
+```
+
+The report starts with the completeness step, which confirms that every row has a player ID, and
+then shows the revenue check split into its two segments. All of the large-transaction failures are
+in the `iap` segment. Mixing the two kinds of steps lets you check some things across the whole
+table and others group by group.
 
 ## Summary
 
