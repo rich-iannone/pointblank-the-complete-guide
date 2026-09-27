@@ -39,6 +39,14 @@ which for a Polars table means a Polars expression. The expression should give `
 each row, and rows where it is `True` pass. This is the most direct way to check a relationship
 between columns, like the arithmetic that connects `amount` to `quantity` and `unit_price`.
 
+```{python}
+(
+    pb.Validate(data=orders)
+    .col_vals_expr(expr=pl.col("amount") == pl.col("quantity") * pl.col("unit_price"))
+    .interrogate()
+)
+```
+
 
 ## Multi-condition rules with `conjointly`
 
