@@ -56,6 +56,18 @@ rows that break the rule as a whole. The `conjointly()` method combines the cond
 passes only if every condition is true for it. Each condition is a function that returns an
 expression.
 
+```{python}
+(
+    pb.Validate(data=orders)
+    .conjointly(
+        lambda df: pl.col("amount") == pl.col("quantity") * pl.col("unit_price"),
+        lambda df: pl.col("amount") > 0,
+        lambda df: pl.col("quantity") > 0,
+    )
+    .interrogate()
+)
+```
+
 
 ## Arbitrary logic with `specially`
 
