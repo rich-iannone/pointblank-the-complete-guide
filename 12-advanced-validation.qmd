@@ -50,6 +50,12 @@ between columns, like the arithmetic that connects `amount` to `quantity` and `u
 
 ## Multi-condition rules with `conjointly`
 
+Some rules are really several conditions that must all be true at once. You could write each
+condition as its own step, but then you get a separate count for each condition and no count of the
+rows that break the rule as a whole. The `conjointly()` method combines the conditions, and a row
+passes only if every condition is true for it. Each condition is a function that returns an
+expression.
+
 
 ## Arbitrary logic with `specially`
 
