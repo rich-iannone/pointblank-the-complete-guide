@@ -69,6 +69,18 @@ always what you want. If only a few groups interest you, you can pass a tuple to
 the column name and a list of the values you want. Here we check only the `organic` and `apple`
 acquisition channels.
 
+```{python}
+(
+    pb.Validate(data=game_revenue)
+    .col_vals_gt(columns="item_revenue", value=0, segments=("acquisition", ["organic", "apple"]))
+    .interrogate()
+)
+```
+
+The report has exactly two steps, one for `organic` (1,038 rows) and one for `apple` (25 rows), and
+both pass. The other four acquisition channels do not appear because we did not ask for them. This
+form is useful when a column has many categories but you only care about a few, such as two
+channels you are investigating.
 
 ## Combining values into one segment with `seg_group`
 
