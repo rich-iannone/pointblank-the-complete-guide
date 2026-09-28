@@ -171,6 +171,19 @@ function that receives the data and returns a modified version, and the check ru
 version. The original table is not changed. A common use is checking a derived value, such as
 confirming that a column falls between 0 and 1 after it has been normalized.
 
+```{python}
+small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
+
+def normalize_d(df):
+    return df.with_columns((pl.col("d") / pl.col("d").max()).alias("d"))
+
+(
+    pb.Validate(data=small_table)
+    .col_vals_between(columns="d", left=0, right=1, pre=normalize_d)
+    .interrogate()
+)
+```
+
 
 ## Referential integrity
 
