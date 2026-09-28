@@ -93,6 +93,13 @@ expression.
 )
 ```
 
+There is one test unit per row, and four pass while order 4 fails. Order 4 breaks the first
+condition, even though it meets the other two. This matches how you would read a business rule like
+"a valid order has a correct, positive amount and a positive quantity". To decide between
+`conjointly()` and separate steps, ask whether the conditions make up one rule or several
+independent ones. If they are parts of a single definition of a valid row, use `conjointly()`. If
+they are separate concerns and you want to know which one failed, use separate steps. Most plans
+use separate steps most of the time.
 
 ## Arbitrary logic with `specially`
 
