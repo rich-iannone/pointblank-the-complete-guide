@@ -150,6 +150,12 @@ def amount_matches_within(tol):
 )
 ```
 
+With a tolerance of 0 the check is exact, and order 4 fails just as it did before. The difference is
+that the rule now takes a setting. Order 4 is off by 5, so `amount_matches_within(tol=5)` or any
+larger tolerance would let all five rows pass. One definition now covers a range of related checks,
+so you do not need several nearly identical functions that differ only in a number. The downside of
+`specially()` is that you have to write and maintain the code yourself, so it is best kept for
+rules the other methods cannot express.
 
 ## Preprocessing with `pre`
 
