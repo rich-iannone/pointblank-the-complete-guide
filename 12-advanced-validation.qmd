@@ -47,6 +47,14 @@ between columns, like the arithmetic that connects `amount` to `quantity` and `u
 )
 ```
 
+Four of the five rows pass and one fails. The failure is order 4, where the amount is not quantity
+times price. Because the expression is evaluated for each row, this works like the column checks of
+@sec-column-validations, with one test unit per row. The expression is handed directly to the
+backend, so it runs efficiently, and the method works with Pandas or a database table as long as
+you write the expression in that backend's syntax. (The exact `==` comparison is fine here because
+these prices multiply out exactly. For computed decimals, see the floating-point note in
+@sec-column-validations.)
+
 
 ## Multi-condition rules with `conjointly`
 
