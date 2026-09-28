@@ -222,3 +222,8 @@ gives you several combined segments. A list of column names segments on each col
 keep reports readable, segment on columns with a manageable number of groups and name only values
 that actually occur.
 
+Because each segment is a complete step, thresholds apply to each group on its own. A failure rate
+that stays under a threshold across the whole table can cross it within the group where the failures
+are concentrated. Segmentation is available on the checks that evaluate rows one at a time, and not
+on aggregate or table-level checks. The next chapter, @sec-advanced-validation, covers checks for
+rules that no built-in method handles, where you write the logic yourself.
