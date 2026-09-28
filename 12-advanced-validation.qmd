@@ -116,6 +116,17 @@ Four rows pass and order 4 fails, since 45 divided by 5 is 9, not the stated uni
 function can also return a single `True` or `False`, in which case the whole table is one test
 unit. That suits a check about the table as a whole.
 
+```{python}
+def table_is_not_empty(data):
+    return data.height > 0
+
+(
+    pb.Validate(data=orders)
+    .specially(expr=table_is_not_empty)
+    .interrogate()
+)
+```
+
 
 ## Preprocessing with `pre`
 
