@@ -172,6 +172,24 @@ key column must exist in another table. For example, every `customer_id` on an o
 real customer. The `col_vals_in_table()` method checks this. You give it the column to check, the
 reference table, and the column in the reference table to look in.
 
+```{python}
+customers = pl.DataFrame({"customer_id": [1, 2, 3]})
+customer_orders = pl.DataFrame({
+    "order_id": [10, 11, 12, 13],
+    "customer_id": [1, 2, 3, 99],
+})
+
+(
+    pb.Validate(data=customer_orders)
+    .col_vals_in_table(
+        columns="customer_id",
+        ref_table=customers,
+        ref_column="customer_id",
+    )
+    .interrogate()
+)
+```
+
 
 ## Summary
 
