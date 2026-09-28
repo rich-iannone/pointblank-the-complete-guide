@@ -59,6 +59,19 @@ An expression can also apply a rule only to certain rows. Say a cancelled order 
 of zero, and orders with any other status can have any amount. As an expression, that becomes: a row
 passes if it is not cancelled, or if its amount is zero.
 
+```{python}
+(
+    pb.Validate(data=orders)
+    .col_vals_expr(expr=(pl.col("status") != "cancelled") | (pl.col("amount") == 0))
+    .interrogate()
+)
+```
+
+This time order 3 is the only failure. It is cancelled but still has an amount of 15. The other four
+orders pass automatically, since the rule does not apply to them. Writing a conditional rule as "the
+condition does not apply, or the requirement holds" is a common pattern, and it lets one expression
+handle a rule that none of the built-in methods could. If a single expression can capture your rule,
+`col_vals_expr()` is usually the simplest choice.
 
 ## Multi-condition rules with `conjointly`
 
