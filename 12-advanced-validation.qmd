@@ -159,6 +159,11 @@ rules the other methods cannot express.
 
 ## Preprocessing with `pre`
 
+Sometimes the data needs to be transformed before a check makes sense. The `pre=` argument takes a
+function that receives the data and returns a modified version, and the check runs on that modified
+version. The original table is not changed. A common use is checking a derived value, such as
+confirming that a column falls between 0 and 1 after it has been normalized.
+
 
 ## Referential integrity
 
