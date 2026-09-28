@@ -228,3 +228,9 @@ result, and a few of the later playbooks use that simpler form.
 
 ## Summary
 
+When a rule does not fit the built-in methods, three methods let you write it yourself. The
+`col_vals_expr()` method checks rows against a single expression and is the simplest choice for a
+relationship between columns. The `conjointly()` method combines several conditions into one rule
+and passes a row only when all of them hold. The `specially()` method takes any function, and what
+the function returns decides the test units, from one per row to one for the whole table.
+
