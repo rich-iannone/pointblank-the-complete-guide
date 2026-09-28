@@ -127,6 +127,14 @@ def table_is_not_empty(data):
 )
 ```
 
+This gives a single test unit, which passes because the table has rows. A third option is to return
+a plain Python list of booleans, in which case each item in the list is a test unit.
+
+Since `specially()` runs any function you give it, you can use a function factory: an outer
+function that takes a setting and returns a validation function that uses it. This turns a one-off
+check into a reusable rule. The factory below takes a tolerance and returns a function that checks
+the amount against quantity times price within that tolerance.
+
 
 ## Preprocessing with `pre`
 
