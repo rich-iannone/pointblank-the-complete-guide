@@ -234,3 +234,9 @@ relationship between columns. The `conjointly()` method combines several conditi
 and passes a row only when all of them hold. The `specially()` method takes any function, and what
 the function returns decides the test units, from one per row to one for the whole table.
 
+The `pre=` argument transforms or filters the data for a single step without changing the original
+table. The `col_vals_in_table()` method checks that every key in one table exists in another. Keep
+in mind that these custom pieces do not fully survive being exported to code or YAML. This chapter
+finishes the tour of validation methods in this part of the book. The next part moves from writing
+checks to acting on their results, starting with @sec-thresholds-actions, which covers classifying
+failures by severity and responding to them automatically.
