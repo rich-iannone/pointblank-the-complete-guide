@@ -167,6 +167,11 @@ confirming that a column falls between 0 and 1 after it has been normalized.
 
 ## Referential integrity
 
+A common requirement when tables are related is referential integrity: every value in one table's
+key column must exist in another table. For example, every `customer_id` on an order should match a
+real customer. The `col_vals_in_table()` method checks this. You give it the column to check, the
+reference table, and the column in the reference table to look in.
+
 
 ## Summary
 
