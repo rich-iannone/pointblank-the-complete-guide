@@ -135,6 +135,21 @@ function that takes a setting and returns a validation function that uses it. Th
 check into a reusable rule. The factory below takes a tolerance and returns a function that checks
 the amount against quantity times price within that tolerance.
 
+```{python}
+def amount_matches_within(tol):
+    def check(data):
+        return data.select(
+            (pl.col("amount") - pl.col("quantity") * pl.col("unit_price")).abs() <= tol
+        )
+    return check
+
+(
+    pb.Validate(data=orders)
+    .specially(expr=amount_matches_within(tol=0))
+    .interrogate()
+)
+```
+
 
 ## Preprocessing with `pre`
 
