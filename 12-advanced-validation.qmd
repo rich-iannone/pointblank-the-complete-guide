@@ -101,6 +101,17 @@ receives the table and returns the result. What the function returns decides how
 counted. If it returns a table with a single boolean column, each row is a test unit. This is the
 most common form. Here we check that amount divided by quantity gives the unit price.
 
+```{python}
+def per_unit_price_holds(data):
+    return data.select((pl.col("amount") / pl.col("quantity")) == pl.col("unit_price"))
+
+(
+    pb.Validate(data=orders)
+    .specially(expr=per_unit_price_holds)
+    .interrogate()
+)
+```
+
 
 ## Preprocessing with `pre`
 
