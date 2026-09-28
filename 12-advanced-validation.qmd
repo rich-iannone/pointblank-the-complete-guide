@@ -184,6 +184,13 @@ def normalize_d(df):
 )
 ```
 
+All 13 rows pass, because dividing by the maximum scales `d` into the range 0 to 1 before the check
+sees it. The change only applies to this step, so `small_table` itself still has its original `d`
+values, which run from 108.34 to 9,999.99. A `pre=` function can also filter rows. For example,
+`pre=lambda df: df.filter(pl.col("f") == "high")` would run the check on just the six rows where `f`
+is `"high"`, and the report would show six test units instead of 13. The `pre=` argument is
+available on most column, row, and custom checks, and it is a clean way to check transformed data
+without storing the transformation.
 
 ## Referential integrity
 
