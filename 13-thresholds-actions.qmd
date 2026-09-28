@@ -6,6 +6,12 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
+The earlier chapters showed how to write checks, but knowing that 74 rows failed a check does not
+tell you what to do about it. Seventy-four failures out of 2,000 might be normal background noise,
+or it might be the first sign of a broken feed. A plain pass or fail result cannot tell those apart.
+This chapter covers the two features that can: thresholds, which classify how serious a failure is,
+and actions, which respond to it automatically.
+
 
 ## Classifying failures with thresholds
 
