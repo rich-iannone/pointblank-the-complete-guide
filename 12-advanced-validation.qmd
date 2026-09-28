@@ -96,6 +96,11 @@ expression.
 
 ## Arbitrary logic with `specially`
 
+When a rule cannot be written as an expression, the `specially()` method takes a function that
+receives the table and returns the result. What the function returns decides how the result is
+counted. If it returns a table with a single boolean column, each row is a test unit. This is the
+most common form. Here we check that amount divided by quantity gives the unit price.
+
 
 ## Preprocessing with `pre`
 
