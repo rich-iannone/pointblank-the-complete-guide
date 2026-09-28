@@ -213,3 +213,12 @@ table and others group by group.
 
 ## Summary
 
+Segmented validation splits a check into one result per group, so a problem that is concentrated in
+one part of the data shows up on its own line instead of being diluted across the whole table. You
+turn it on with the `segments=` argument. It accepts a column name, which creates a segment for
+every distinct value, or a `(column, values)` tuple, which creates segments only for the values you
+list. Inside that tuple, `seg_group()` combines several values into one segment, and a list of lists
+gives you several combined segments. A list of column names segments on each column separately. To
+keep reports readable, segment on columns with a manageable number of groups and name only values
+that actually occur.
+
