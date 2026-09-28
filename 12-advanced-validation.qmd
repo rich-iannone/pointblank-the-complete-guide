@@ -55,6 +55,10 @@ you write the expression in that backend's syntax. (The exact `==` comparison is
 these prices multiply out exactly. For computed decimals, see the floating-point note in
 @sec-column-validations.)
 
+An expression can also apply a rule only to certain rows. Say a cancelled order must have an amount
+of zero, and orders with any other status can have any amount. As an expression, that becomes: a row
+passes if it is not cancelled, or if its amount is zero.
+
 
 ## Multi-condition rules with `conjointly`
 
