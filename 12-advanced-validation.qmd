@@ -112,6 +112,10 @@ def per_unit_price_holds(data):
 )
 ```
 
+Four rows pass and order 4 fails, since 45 divided by 5 is 9, not the stated unit price of 8. The
+function can also return a single `True` or `False`, in which case the whole table is one test
+unit. That suits a check about the table as a whole.
+
 
 ## Preprocessing with `pre`
 
