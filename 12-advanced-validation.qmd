@@ -217,6 +217,14 @@ customer_orders = pl.DataFrame({
 )
 ```
 
+Three of the four orders pass and one fails. The failure is the order for customer 99, who is not
+in the customers table. An orphaned key like this would otherwise make an inner join drop the row
+without any warning. The method also handles composite keys (pass a list of columns to both `columns=` and
+`ref_column=`), and the reference table can come from a different backend than the table being
+checked, such as a Polars DataFrame checked against a DuckDB table. For a small reference table
+that is already in memory, `col_vals_in_set(set=customers["customer_id"].to_list())` gives the same
+result, and a few of the later playbooks use that simpler form.
+
 
 ## Summary
 
