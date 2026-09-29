@@ -40,6 +40,10 @@ another.
 
 ### Step-level thresholds
 
+Not every check needs the same tolerance, and a threshold set on an individual step overrides the
+global one for that step. To see this, we set a global warning of 0.05 and then give the long-session
+check its own, stricter warning of 0.02.
+
 
 ### Counts versus proportions
 
