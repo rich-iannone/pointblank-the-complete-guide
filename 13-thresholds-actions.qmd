@@ -12,6 +12,12 @@ or it might be the first sign of a broken feed. A plain pass or fail result cann
 This chapter covers the two features that can: thresholds, which classify how serious a failure is,
 and actions, which respond to it automatically.
 
+Together, thresholds and actions let validation run without someone reading every report. You set
+thresholds that decide when a failure counts as a warning, an error, or a critical problem, and you
+attach actions that respond at each level, such as logging a warning or stopping a pipeline on a
+critical failure. We use `game_revenue` throughout, with checks whose failure rates land at
+different severity levels.
+
 
 ## Classifying failures with thresholds
 
