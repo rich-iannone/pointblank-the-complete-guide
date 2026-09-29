@@ -40,6 +40,26 @@ another.
 Thresholds set on the `Validate` object apply to every step. The plan below uses a warning at 0.02,
 an error at 0.05, and a critical level at 0.10, with three checks chosen to land at different levels.
 
+```{python}
+(
+    pb.Validate(
+        data=game_revenue,
+        thresholds=pb.Thresholds(warning=0.02, error=0.05, critical=0.10),
+    )
+    .col_vals_lt(columns="session_duration", value=40)
+    .col_vals_in_set(columns="acquisition", set=["organic", "google"])
+    .col_vals_lt(columns="item_revenue", value=100)
+    .interrogate()
+)
+```
+
+The report now has status indicators showing which level each step reached. The first step, which
+flags long sessions, fails on 74 rows. That is a rate of 0.037, which is above the 0.02 warning but
+below the 0.05 error, so it shows a warning. The second step, which allows only two acquisition
+channels, fails on 574 rows (a rate of about 0.287), which is past all three levels, so it shows as
+critical. The third step, which flags very large revenue, fails on only 6 rows. That is a rate of
+0.003, below even the warning level, so it has failures but does not reach any threshold. That third
+case is worth noticing: a step can have failing test units and still be below every threshold.
 
 ### Step-level thresholds
 
