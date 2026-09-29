@@ -89,6 +89,10 @@ strict_step = (
 strict_step.warning()
 ```
 
+The step reaches the warning level. Its failure rate of 0.037 is below the global 0.05, so with the
+global threshold alone it would not have. The step's own 0.02 threshold replaced the global one.
+Step-level thresholds are how you hold your most important checks to a higher standard, such as
+allowing almost no failures on a primary key while allowing more on an optional field.
 
 ### Counts versus proportions
 
