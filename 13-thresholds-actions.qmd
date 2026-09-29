@@ -18,6 +18,11 @@ attach actions that respond at each level, such as logging a warning or stopping
 critical failure. We use `game_revenue` throughout, with checks whose failure rates land at
 different severity levels.
 
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+```
+
+We start with thresholds, since they are what give a failure its severity.
 
 ## Classifying failures with thresholds
 
