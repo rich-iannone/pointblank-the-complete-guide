@@ -35,6 +35,15 @@ but using them consistently means a warning in one plan means the same thing as 
 another.
 
 
+A threshold can be a proportion or a count. A proportion like `0.05` means 5 percent of test units,
+so it scales with the data: 5 failures in 100 rows, or 50,000 in a million. A count like `100` stays
+the same no matter how big the table is. Use a proportion when the rate of failure is what matters,
+and a count when even a few bad records are a problem. Thresholds are usually created with
+`pb.Thresholds(warning=..., error=..., critical=...)`. You do not have to set all three, and any
+level you leave out is never checked. You can also pass a tuple, like `(0.02, 0.05, 0.10)`, for the
+three levels in order, or a dictionary like `{"warning": 0.02, "error": 0.05}` to set only the levels
+you name.
+
 ### Global thresholds
 
 Thresholds set on the `Validate` object apply to every step. The plan below uses a warning at 0.02,
