@@ -225,6 +225,18 @@ checked, such as a Polars DataFrame checked against a DuckDB table. For a small 
 that is already in memory, `col_vals_in_set(set=customers["customer_id"].to_list())` gives the same
 result, and a few of the later playbooks use that simpler form.
 
+::: {.callout-warning}
+## Custom logic does not serialize
+
+The custom checks in this chapter have one limitation to know about before you rely on them in a
+plan you want to share or store as text. Their logic lives in Python functions and expressions,
+which cannot be written out as text. When you export a plan with `to_code()` or `to_yaml()`, any
+`col_vals_expr()`, `conjointly()`, or `specially()` step is written with a placeholder expression,
+any `pre=` function or step `actions=` is dropped, a callable `active=` setting is replaced with `True`, and a
+`col_vals_in_table()` step is left out entirely. Pointblank warns you when this happens. This matters for the YAML workflows of
+@sec-yaml-workflows and the AI-assisted authoring of @sec-ai-authoring, both of which use that text
+form. Plans made only of the other built-in checks export cleanly.
+:::
 
 ## Summary
 
