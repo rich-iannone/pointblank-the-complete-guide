@@ -76,6 +76,19 @@ Not every check needs the same tolerance, and a threshold set on an individual s
 global one for that step. To see this, we set a global warning of 0.05 and then give the long-session
 check its own, stricter warning of 0.02.
 
+```{python}
+strict_step = (
+    pb.Validate(data=game_revenue, thresholds=pb.Thresholds(warning=0.05))
+    .col_vals_lt(
+        columns="session_duration", value=40,
+        thresholds=pb.Thresholds(warning=0.02),
+    )
+    .interrogate()
+)
+
+strict_step.warning()
+```
+
 
 ### Counts versus proportions
 
