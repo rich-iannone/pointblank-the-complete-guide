@@ -37,6 +37,9 @@ another.
 
 ### Global thresholds
 
+Thresholds set on the `Validate` object apply to every step. The plan below uses a warning at 0.02,
+an error at 0.05, and a critical level at 0.10, with three checks chosen to land at different levels.
+
 
 ### Step-level thresholds
 
