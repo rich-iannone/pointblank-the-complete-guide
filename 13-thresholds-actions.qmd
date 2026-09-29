@@ -26,6 +26,14 @@ We start with thresholds, since they are what give a failure its severity.
 
 ## Classifying failures with thresholds
 
+Without a threshold, a check has only two outcomes: every test unit passed, or at least one failed.
+In practice some imperfection is usually expected, and the real question is how much. Pointblank has
+three severity levels. A warning is a minor problem worth looking into when you have time, an error
+is a real problem that should be fixed soon, and a critical result is serious enough that you might
+stop downstream work or alert someone right away. What each level means is up to you and your team,
+but using them consistently means a warning in one plan means the same thing as a warning in
+another.
+
 
 ### Global thresholds
 
