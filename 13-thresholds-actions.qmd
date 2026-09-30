@@ -34,6 +34,16 @@ stop downstream work or alert someone right away. What each level means is up to
 but using them consistently means a warning in one plan means the same thing as a warning in
 another.
 
+::: {.callout-note}
+## Mapping levels to responses
+
+It helps to think of each level in terms of the response it should trigger. A warning might write a
+log entry for later review, an error might alert the team that owns the data, and a critical result
+might stop the pipeline or page someone on call. The actions covered later in this chapter attach
+responses like these to each level, and the notifiers in @sec-notifications-observability can send
+them to Slack, email, or a monitoring system. Choosing the threshold value and the response together
+is what turns a severity label into a working rule.
+:::
 
 A threshold can be a proportion or a count. A proportion like `0.05` means 5 percent of test units,
 so it scales with the data: 5 failures in 100 rows, or 50,000 in a million. A count like `100` stays
