@@ -290,6 +290,12 @@ except AssertionError as e:
     print(str(e).splitlines()[0])
 ```
 
+We print only the first line of the message here. The full message goes on to list both failing
+steps, each described in words. The `assert_below_threshold()` method is more forgiving. It raises
+only when a given level was reached, not whenever anything failed, so use it when some failure is
+acceptable but a serious one is not. The `strict_step` plan from earlier reaches only the warning
+level, so asserting that it stayed below the error level passes, even though the check had failures.
+
 
 ## Automatic notifications
 
