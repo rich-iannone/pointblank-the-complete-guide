@@ -296,6 +296,11 @@ only when a given level was reached, not whenever anything failed, so use it whe
 acceptable but a serious one is not. The `strict_step` plan from earlier reaches only the warning
 level, so asserting that it stayed below the error level passes, even though the check had failures.
 
+```{python}
+strict_step.assert_below_threshold(level="error")
+print("stayed below the error level")
+```
+
 
 ## Automatic notifications
 
