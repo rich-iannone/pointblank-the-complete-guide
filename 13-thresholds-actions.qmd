@@ -240,6 +240,23 @@ finished, whether or not anything failed, which makes it the place for a summary
 overall go or no-go decision. Inside a final action, `get_validation_summary()` returns a dictionary
 describing the whole run.
 
+```{python}
+def summary_report():
+    s = pb.get_validation_summary()
+    print(f"{s['n_steps']} steps, warning={s['n_warning_steps']} critical={s['n_critical_steps']}, highest={s['highest_severity']}")
+
+_ = (
+    pb.Validate(
+        data=game_revenue,
+        thresholds=pb.Thresholds(warning=0.02, error=0.05, critical=0.10),
+        final_actions=pb.FinalActions(summary_report),
+    )
+    .col_vals_lt(columns="session_duration", value=40)
+    .col_vals_in_set(columns="acquisition", set=["organic", "google"])
+    .interrogate()
+)
+```
+
 
 ## Asserting quality in tests
 
