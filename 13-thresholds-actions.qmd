@@ -162,6 +162,9 @@ graded = (
 graded.critical()
 ```
 
+The first step did not reach critical and the second did. These methods are what you check when a
+plan controls whether a pipeline continues. For example, `if any(graded.critical().values())` lets
+you stop processing if any step reached the critical level.
 
 ## Responding with actions
 
