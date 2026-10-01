@@ -301,6 +301,9 @@ strict_step.assert_below_threshold(level="error")
 print("stayed below the error level")
 ```
 
+The assertion passes because no step reached error. Checking the `graded` plan against the critical
+level gives the opposite result, because its acquisition check reached critical.
+
 
 ## Automatic notifications
 
