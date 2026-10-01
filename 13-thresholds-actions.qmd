@@ -120,6 +120,10 @@ prop = (
 prop.warning()
 ```
 
+No warning. A count threshold asks a different question, which is whether the number of bad records
+has reached a certain size, no matter how small a share of the table they are. Setting the warning
+at a count of 5 catches the same six failures.
+
 
 ## Reading threshold results
 
