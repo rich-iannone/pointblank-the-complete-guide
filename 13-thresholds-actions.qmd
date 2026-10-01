@@ -283,6 +283,13 @@ print("all checks passed")
 Every session duration is positive, so the assertion passes without a sound and the message prints.
 On a plan with failures, it raises an error instead, and the error message lists the failing steps.
 
+```{python}
+try:
+    graded.assert_passing()
+except AssertionError as e:
+    print(str(e).splitlines()[0])
+```
+
 
 ## Automatic notifications
 
