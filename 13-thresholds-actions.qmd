@@ -257,6 +257,11 @@ _ = (
 )
 ```
 
+The final action reports that two steps ran, both reached the warning level, one reached critical,
+and the highest severity in the run was critical. The summary dictionary has much more than this,
+including the table name and dimensions, per-step counts and results, how long the validation took,
+and an overall health score. Because a final action always runs, it is a reliable place for anything
+that must happen on every run, such as writing an audit log entry.
 
 ## Asserting quality in tests
 
