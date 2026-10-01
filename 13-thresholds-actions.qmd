@@ -142,6 +142,12 @@ attention, such as duplicate primary keys or negative account balances.
 
 ## Reading threshold results
 
+After interrogation, you can see threshold results in the report and in code. The report shows each
+level as an indicator, empty if the threshold was set but not reached and filled if it was reached.
+When the levels are set in the usual increasing order, a step that reaches critical also shows error
+and warning. In code, the `warning()`, `error()`, and `critical()` methods each return a dictionary
+keyed by step number, telling you which steps reached that level.
+
 
 ## Responding with actions
 
