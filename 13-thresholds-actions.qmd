@@ -110,6 +110,16 @@ A proportion and a count can classify the same failures differently. The large-r
 on 6 rows out of 2,000. As a proportion that is 0.003, well below a warning at 0.05, so no warning
 is raised.
 
+```{python}
+prop = (
+    pb.Validate(data=game_revenue, thresholds=pb.Thresholds(warning=0.05))
+    .col_vals_lt(columns="item_revenue", value=100)
+    .interrogate()
+)
+
+prop.warning()
+```
+
 
 ## Reading threshold results
 
