@@ -194,6 +194,12 @@ _ = (
 )
 ```
 
+The action runs because the long-session check reaches the 0.02 warning, and it prints a line built
+from the metadata. The metadata includes the step number (`step`), the assertion type (`type`), the
+column (`column`), the comparison value (`value`), and the level reached (`level`). It also has a
+numeric `level_num`, a `time` stamp, a generated description in `autobrief`, and a ready-made message
+in `failure_text` that you can print as is. The failure counts are not part of the metadata. If you
+need them, read them from the validation object after interrogation with methods like `n_failed()`.
 
 ### Choosing which actions fire
 
