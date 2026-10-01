@@ -208,6 +208,25 @@ or all of them do. The `highest_only=` argument of `Actions` controls this, and 
 `True`. The check below fails on most rows, so it reaches warning, error, and critical together,
 and with the default only the critical action runs.
 
+```{python}
+actions_highest = pb.Actions(
+    warning=lambda: print("warning"),
+    error=lambda: print("error"),
+    critical=lambda: print("critical"),
+    highest_only=True,
+)
+
+_ = (
+    pb.Validate(
+        data=game_revenue,
+        thresholds=pb.Thresholds(warning=0.05, error=0.10, critical=0.20),
+        actions=actions_highest,
+    )
+    .col_vals_eq(columns="item_type", value="iap")
+    .interrogate()
+)
+```
+
 
 ## Final actions
 
