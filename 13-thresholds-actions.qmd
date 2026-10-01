@@ -269,6 +269,17 @@ Thresholds are also useful in a test suite, where you want a validation failure 
 `assert_passing()` method raises an `AssertionError` if any test unit in any step failed. On a plan
 where everything passes, it does nothing.
 
+```{python}
+clean = (
+    pb.Validate(data=game_revenue)
+    .col_vals_gt(columns="session_duration", value=0)
+    .interrogate()
+)
+
+clean.assert_passing()
+print("all checks passed")
+```
+
 
 ## Automatic notifications
 
