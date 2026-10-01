@@ -235,6 +235,11 @@ also paging someone at critical.
 
 ## Final actions
 
+Step actions respond to individual steps as they run. A final action runs once after every step has
+finished, whether or not anything failed, which makes it the place for a summary report or an
+overall go or no-go decision. Inside a final action, `get_validation_summary()` returns a dictionary
+describing the whole run.
+
 
 ## Asserting quality in tests
 
