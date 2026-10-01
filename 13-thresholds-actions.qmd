@@ -124,6 +124,16 @@ No warning. A count threshold asks a different question, which is whether the nu
 has reached a certain size, no matter how small a share of the table they are. Setting the warning
 at a count of 5 catches the same six failures.
 
+```{python}
+count = (
+    pb.Validate(data=game_revenue, thresholds=pb.Thresholds(warning=5))
+    .col_vals_lt(columns="item_revenue", value=100)
+    .interrogate()
+)
+
+count.warning()
+```
+
 
 ## Reading threshold results
 
