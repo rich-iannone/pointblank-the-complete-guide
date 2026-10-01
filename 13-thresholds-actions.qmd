@@ -304,6 +304,16 @@ print("stayed below the error level")
 The assertion passes because no step reached error. Checking the `graded` plan against the critical
 level gives the opposite result, because its acquisition check reached critical.
 
+```{python}
+try:
+    graded.assert_below_threshold(level="critical")
+except AssertionError as e:
+    print(str(e).splitlines()[0])
+```
+
+In a testing framework such as pytest, these methods let you check test data and transformation
+outputs the same way you check production data. Use `assert_passing()` when no failures are
+acceptable and `assert_below_threshold()` when some are.
 
 ## Automatic notifications
 
