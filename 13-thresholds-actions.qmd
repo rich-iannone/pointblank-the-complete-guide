@@ -168,6 +168,12 @@ you stop processing if any step reached the critical level.
 
 ## Responding with actions
 
+Thresholds classify a problem, and actions respond to it. Without actions, a plan just produces a
+report that someone has to remember to read. With actions, something happens as soon as a threshold
+is reached during interrogation. An action can be a string, which is printed, a function, which is
+called, or a list of these, which run in order. An action set on the `Validate` object applies to
+every step. An action set on an individual step replaces the global action for that step.
+
 
 ### Choosing which actions fire
 
