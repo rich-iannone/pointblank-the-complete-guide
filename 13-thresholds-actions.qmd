@@ -265,6 +265,10 @@ that must happen on every run, such as writing an audit log entry.
 
 ## Asserting quality in tests
 
+Thresholds are also useful in a test suite, where you want a validation failure to fail a test. The
+`assert_passing()` method raises an `AssertionError` if any test unit in any step failed. On a plan
+where everything passes, it does nothing.
+
 
 ## Automatic notifications
 
