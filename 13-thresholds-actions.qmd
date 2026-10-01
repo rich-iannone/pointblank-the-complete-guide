@@ -227,6 +227,11 @@ _ = (
 )
 ```
 
+Only "critical" is printed, so you get one alert for one problem instead of three. With
+`highest_only=False`, every level that was reached runs its own action, starting with the most
+severe, so the same check would print "critical", then "error", then "warning". That is useful when
+the responses build on each other, such as always logging at warning, also emailing at error, and
+also paging someone at critical.
 
 ## Final actions
 
