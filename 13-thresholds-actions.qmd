@@ -148,6 +148,20 @@ When the levels are set in the usual increasing order, a step that reaches criti
 and warning. In code, the `warning()`, `error()`, and `critical()` methods each return a dictionary
 keyed by step number, telling you which steps reached that level.
 
+```{python}
+graded = (
+    pb.Validate(
+        data=game_revenue,
+        thresholds=pb.Thresholds(warning=0.02, error=0.05, critical=0.10),
+    )
+    .col_vals_lt(columns="session_duration", value=40)
+    .col_vals_in_set(columns="acquisition", set=["organic", "google"])
+    .interrogate()
+)
+
+graded.critical()
+```
+
 
 ## Responding with actions
 
