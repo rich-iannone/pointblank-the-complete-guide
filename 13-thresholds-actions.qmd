@@ -203,6 +203,11 @@ need them, read them from the validation object after interrogation with methods
 
 ### Choosing which actions fire
 
+When a step reaches several levels at once, you can choose whether only the most severe action runs
+or all of them do. The `highest_only=` argument of `Actions` controls this, and it defaults to
+`True`. The check below fails on most rows, so it reaches warning, error, and critical together,
+and with the default only the critical action runs.
+
 
 ## Final actions
 
