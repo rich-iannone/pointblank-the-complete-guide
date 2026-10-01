@@ -106,6 +106,10 @@ allowing almost no failures on a primary key while allowing more on an optional 
 
 ### Counts versus proportions
 
+A proportion and a count can classify the same failures differently. The large-revenue check fails
+on 6 rows out of 2,000. As a proportion that is 0.003, well below a warning at 0.05, so no warning
+is raised.
+
 
 ## Reading threshold results
 
