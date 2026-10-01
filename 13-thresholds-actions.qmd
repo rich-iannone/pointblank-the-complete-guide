@@ -178,6 +178,22 @@ The most useful actions look at the failure that triggered them. Inside an actio
 `get_action_metadata()` function returns a dictionary describing the current step, which your
 function can use to build a specific message.
 
+```{python}
+def log_issue():
+    m = pb.get_action_metadata()
+    print(f"[warn] step {m['step']} ({m['type']}) on '{m['column']}' reached {m['level']}")
+
+_ = (
+    pb.Validate(
+        data=game_revenue,
+        thresholds=pb.Thresholds(warning=0.02),
+        actions=pb.Actions(warning=log_issue),
+    )
+    .col_vals_lt(columns="session_duration", value=40)
+    .interrogate()
+)
+```
+
 
 ### Choosing which actions fire
 
