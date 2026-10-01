@@ -134,6 +134,11 @@ count = (
 count.warning()
 ```
 
+Now the warning is raised, because 6 failures is more than 5. (A threshold is reached when failures
+meet it, so `warning=6` would also be raised here, but `warning=7` would not.) The same six rows
+are ignored under the proportion and flagged under the count. Use a proportion when you care about
+the rate and expect it to scale with the data. Use a count when even a few bad records need
+attention, such as duplicate primary keys or negative account balances.
 
 ## Reading threshold results
 
