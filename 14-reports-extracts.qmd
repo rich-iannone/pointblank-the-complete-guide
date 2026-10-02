@@ -17,6 +17,22 @@ We use one validation throughout: a plan on `small_table` with three checks that
 rows, so every report and extract has something to show. With these thresholds, each failing step
 reaches the warning level.
 
+```{python}
+small_table = pb.load_dataset(dataset="small_table", tbl_type="polars")
+
+validation = (
+    pb.Validate(
+        data=small_table,
+        tbl_name="small_table",
+        thresholds=pb.Thresholds(warning=0.1, error=0.25, critical=0.35),
+    )
+    .col_vals_lt(columns="a", value=7)
+    .col_vals_not_null(columns="c")
+    .rows_distinct()
+    .interrogate()
+)
+```
+
 
 ## The tabular report
 
