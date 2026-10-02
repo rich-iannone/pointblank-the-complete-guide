@@ -333,3 +333,10 @@ step, and a threshold on an individual step replaces the global one for that ste
 interrogation, the `warning()`, `error()`, and `critical()` methods tell you which steps reached
 each level.
 
+Actions run when a threshold is reached. An action can be a string, a function, or a list, and a
+function can call `get_action_metadata()` to learn about the step that triggered it. The
+`highest_only=` argument decides whether only the most severe action runs or every level's action
+does. A final action runs once after the whole plan and can use `get_validation_summary()` to see
+the entire run. The `assert_passing()` and `assert_below_threshold()` methods bring the same ideas
+into test suites. The next chapter, @sec-reports-extracts, moves from responding to results to
+presenting them, through reports and extracts of the failing rows.
