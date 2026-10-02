@@ -317,6 +317,12 @@ acceptable and `assert_below_threshold()` when some are.
 
 ## Automatic notifications
 
+Actions can do more than print, and Pointblank includes ready-made actions for sending
+notifications. The `send_slack_notification()` action posts to a Slack channel and works as either a
+step action or a final action, and the `emit_otel()` action exports results as OpenTelemetry signals
+for a monitoring system. Setting these up involves details beyond thresholds and actions, so they
+are covered in @sec-notifications-observability, along with how to build your own notifier from a
+final action.
 
 ## Summary
 
