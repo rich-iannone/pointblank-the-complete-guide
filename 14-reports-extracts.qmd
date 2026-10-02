@@ -33,6 +33,7 @@ validation = (
 )
 ```
 
+We start with the report you have already seen throughout the book.
 
 ## The tabular report
 
