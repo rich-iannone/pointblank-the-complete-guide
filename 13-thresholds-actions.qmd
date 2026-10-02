@@ -326,3 +326,10 @@ final action.
 
 ## Summary
 
+Thresholds and actions let validation classify and respond to problems without someone reading
+every report. A threshold, set with `pb.Thresholds()` as either a proportion or a count, grades a
+failure as a warning, an error, or critical. Thresholds on the `Validate` object apply to every
+step, and a threshold on an individual step replaces the global one for that step. After
+interrogation, the `warning()`, `error()`, and `critical()` methods tell you which steps reached
+each level.
+
