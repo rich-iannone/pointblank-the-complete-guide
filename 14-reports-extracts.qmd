@@ -6,6 +6,13 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
+After interrogation, the results need to be presented in a form someone can act on. A person
+reviewing the results wants a report that shows what went wrong and lets them look into the details.
+When you are debugging, you want the actual failing rows. Another system wants structured data it
+can parse. This chapter covers producing each of these. It is a different topic from reading the
+raw numbers in code, which @sec-validation-workflow covered, and from responding automatically,
+which @sec-thresholds-actions covered.
+
 
 ## The tabular report
 
