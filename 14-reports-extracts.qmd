@@ -13,6 +13,10 @@ can parse. This chapter covers producing each of these. It is a different topic 
 raw numbers in code, which @sec-validation-workflow covered, and from responding automatically,
 which @sec-thresholds-actions covered.
 
+We use one validation throughout: a plan on `small_table` with three checks that each fail on two
+rows, so every report and extract has something to show. With these thresholds, each failing step
+reaches the warning level.
+
 
 ## The tabular report
 
