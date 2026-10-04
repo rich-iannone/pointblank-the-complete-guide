@@ -61,6 +61,18 @@ If you need the report's contents as data rather than as a formatted table, the
 are building a custom dashboard, combining results from many validations, or passing the results to
 another tool.
 
+```{python}
+report_df = validation.get_dataframe_report()
+report_df.columns
+```
+
+The data frame has 18 columns. These include the step number and description, the columns and
+values checked, the number of test units, the passing and failing counts and percentages, the
+threshold results, the `brief`, and whether the step was preprocessed or segmented. Because it is an
+ordinary data frame, you can filter it, join it to other tables, or write it to a database. For
+example, keeping only the steps with a nonzero `failed_n` and a few columns gives a short list of
+what went wrong.
+
 
 ## Saving a report to share
 
