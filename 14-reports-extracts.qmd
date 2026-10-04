@@ -56,6 +56,11 @@ is a rate of about 0.15, so each one reaches the 0.1 warning level but not the 0
 
 ## The report as a data frame
 
+If you need the report's contents as data rather than as a formatted table, the
+`get_dataframe_report()` method returns a data frame with one row per step. Use this form when you
+are building a custom dashboard, combining results from many validations, or passing the results to
+another tool.
+
 
 ## Saving a report to share
 
