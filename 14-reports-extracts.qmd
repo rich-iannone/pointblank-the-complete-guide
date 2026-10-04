@@ -37,6 +37,14 @@ We start with the report you have already seen throughout the book.
 
 ## The tabular report
 
+The tabular report is the main output for people. Displaying the validation object shows it, and
+the `get_tabular_report()` method returns the same thing directly, as a Great Tables object with one
+row per step.
+
+```{python}
+validation.get_tabular_report()
+```
+
 
 ## The report as a data frame
 
