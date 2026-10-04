@@ -45,6 +45,14 @@ row per step.
 validation.get_tabular_report()
 ```
 
+The left side of the report describes what was checked and the right side shows the results. The
+step column numbers each check in the order it was added, and that is the number you use to refer to
+a step in methods like `get_step_report()`. The columns and values columns show what was checked and
+what it was compared against. The test units column gives the total number evaluated, the pass and
+fail columns give the split, and the three status columns (warning, error, and critical) show a
+filled marker when that threshold was reached. Here all three steps fail on 2 of the 13 rows, which
+is a rate of about 0.15, so each one reaches the 0.1 warning level but not the 0.25 error level.
+
 
 ## The report as a data frame
 
