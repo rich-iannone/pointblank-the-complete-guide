@@ -110,6 +110,10 @@ without the data. To include the data or the failing-row extracts, set `keep_tbl
 
 ## Step reports
 
+The tabular report gives you the overview. When a step fails and you want to understand why, the
+`get_step_report()` method shows the details of a single step. You pass it the step number from the
+tabular report, and it returns a Great Tables view of that step.
+
 
 ## Data extracts
 
