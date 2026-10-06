@@ -94,6 +94,15 @@ than one column.
 
 ## Saving a report to share
 
+You will often want to send a report to a colleague or attach it to a ticket. The Great Tables
+object can be written to an HTML file with `write_raw_html()`. The file includes its own styling and
+opens in any browser, with no need for Python or Pointblank.
+
+```{python}
+#| eval: false
+validation.get_tabular_report().write_raw_html("validation_report.html")
+```
+
 
 ## Step reports
 
