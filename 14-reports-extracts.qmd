@@ -137,6 +137,11 @@ returns the failing rows of that step as a data frame.
 
 ## Sundered data
 
+An extract gives you the failing rows of one step. Sundering splits the whole table into the rows
+that passed and the rows that failed, which is useful when a pipeline should carry on with the clean
+data and set the rest aside. The `get_sundered_data()` method returns one part at a time, chosen with
+the `type=` argument, and each part is the same kind of table as the input.
+
 
 ## JSON export and programmatic access
 
