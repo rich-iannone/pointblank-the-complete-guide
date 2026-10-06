@@ -114,6 +114,14 @@ The tabular report gives you the overview. When a step fails and you want to und
 `get_step_report()` method shows the details of a single step. You pass it the step number from the
 tabular report, and it returns a Great Tables view of that step.
 
+```{python}
+validation.get_step_report(i=1)
+```
+
+The step report shows the step's settings along with the rows that failed it, so for the first check
+it shows the two rows where column `a` is not less than 7. You see each failing value in the context
+of its full row.
+
 
 ## Data extracts
 
