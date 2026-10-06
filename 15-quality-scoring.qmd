@@ -6,6 +6,12 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+A validation report answers detailed questions: which checks failed, on how many rows, and at what
+severity. It does not directly answer the question a manager or a dashboard usually asks first,
+which is how healthy the data is overall and where it is weakest. Data quality scoring answers that.
+It combines the step results into a few scores, one for each of several quality dimensions and one
+overall, so you can describe a table's condition with a number and track it over time.
+
 
 ## The six quality dimensions
 
