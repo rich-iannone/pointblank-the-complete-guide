@@ -53,6 +53,13 @@ fail columns give the split, and the three status columns (warning, error, and c
 filled marker when that threshold was reached. Here all three steps fail on 2 of the 13 rows, which
 is a rate of about 0.15, so each one reaches the 0.1 warning level but not the 0.25 error level.
 
+![Anatomy of the validation report table. The left side describes what was validated, and the right
+side shows the results.](assets/validation-table-diagram.png){#fig-report-anatomy}
+
+The `get_tabular_report()` method takes arguments that change what appears, such as a custom
+`title=` and the `incl_header=` and `incl_footer=` flags. These are the same settings that earlier
+chapters turned off globally with `pb.config()` to keep reports compact.
+
 
 ## The report as a data frame
 
