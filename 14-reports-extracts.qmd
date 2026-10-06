@@ -122,6 +122,11 @@ The step report shows the step's settings along with the rows that failed it, so
 it shows the two rows where column `a` is not less than 7. You see each failing value in the context
 of its full row.
 
+![A step report showing detailed information about a validation failure, including the actual rows that failed.](assets/step_report.png){#fig-step-report}
+
+The method handles one step at a time, so to look at several failing steps you call it once for each
+step number, for example in a loop. The `limit=` argument sets the maximum number of failing rows to
+show. It defaults to 10, which keeps the report manageable when a step fails on many rows.
 
 ## Data extracts
 
