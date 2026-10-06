@@ -142,6 +142,19 @@ that passed and the rows that failed, which is useful when a pipeline should car
 data and set the rest aside. The `get_sundered_data()` method returns one part at a time, chosen with
 the `type=` argument, and each part is the same kind of table as the input.
 
+```{python}
+failing_rows = validation.get_sundered_data(type="fail")
+passing_rows = validation.get_sundered_data(type="pass")
+
+print("failing rows:", failing_rows.shape[0])
+print("passing rows:", passing_rows.shape[0])
+```
+
+The table splits into 4 failing rows and 9 passing rows. As explained in @sec-validation-workflow,
+sundering only considers the column value checks. So the four failing rows are the ones that failed
+the first two steps, and the duplicate rows from `rows_distinct()` are not part of the split. The
+passing rows are the clean data you can send downstream, and the failing rows can go to a quarantine
+table to be reviewed, fixed, and validated again.
 
 ## JSON export and programmatic access
 
