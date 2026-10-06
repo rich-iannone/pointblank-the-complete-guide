@@ -158,6 +158,10 @@ table to be reviewed, fixed, and validated again.
 
 ## JSON export and programmatic access
 
+For other systems, the `get_json_report()` method returns the results as a JSON string with the
+same per-step detail as the report. You can send it to a logging service, store it in a database to
+track results over time, or feed it into a dashboard.
+
 
 ## Step notes
 
