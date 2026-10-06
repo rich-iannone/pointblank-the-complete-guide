@@ -165,6 +165,12 @@ track results over time, or feed it into a dashboard.
 
 ## Step notes
 
+Pointblank sometimes attaches a note to a step to record something that happened while it was
+evaluated. For example, a step that uses `pre=` gets a note describing how the preprocessing changed
+the table, and a schema check gets a note comparing the expected and actual columns. The
+`get_notes()` method returns all the notes for a step, and `get_note()` returns a single note by its
+key. If a step has no notes, you get `None`.
+
 
 ## Customizing reports for readers
 
