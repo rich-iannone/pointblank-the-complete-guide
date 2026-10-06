@@ -130,6 +130,10 @@ show. It defaults to 10, which keeps the report manageable when a step fails on 
 
 ## Data extracts
 
+A step report shows failing rows in a formatted view, but often you want those rows as data you can
+work with. The `get_data_extracts()` method gives you that. With a step number and `frame=True`, it
+returns the failing rows of that step as a data frame.
+
 
 ## Sundered data
 
