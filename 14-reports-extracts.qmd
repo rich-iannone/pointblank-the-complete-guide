@@ -103,6 +103,10 @@ opens in any browser, with no need for Python or Pointblank.
 validation.get_tabular_report().write_raw_html("validation_report.html")
 ```
 
+That saves the report for people to read. If you instead want to save the validation object itself
+so you can load it again later, use `pb.write_file()`. By default it saves the validation results
+without the data. To include the data or the failing-row extracts, set `keep_tbl=True` or
+`keep_extracts=True`.
 
 ## Step reports
 
