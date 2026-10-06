@@ -80,6 +80,17 @@ ordinary data frame, you can filter it, join it to other tables, or write it to 
 example, keeping only the steps with a nonzero `failed_n` and a few columns gives a short list of
 what went wrong.
 
+```{python}
+import polars as pl
+
+report_df.filter(pl.col("failed_n") > 0).select(
+    ["step_number", "columns", "failed_n", "warning"]
+)
+```
+
+The result lists the three failing steps, each with its column, number of failing rows, and warning
+status. The `columns` value for step 3 is null, because `rows_distinct()` looks at whole rows rather
+than one column.
 
 ## Saving a report to share
 
