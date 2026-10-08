@@ -161,6 +161,9 @@ extracts = validation.get_data_extracts()
 {step: frame.shape[0] for step, frame in extracts.items()}
 ```
 
+Each of the three steps has two failing rows. For step 3, those are the two copies of the duplicated
+row. If a step had no failures, it would still appear in the dictionary, with an empty frame, so a
+loop over the dictionary always sees every step.
 
 ## Sundered data
 
