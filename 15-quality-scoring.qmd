@@ -19,6 +19,9 @@ the six dimensions Pointblank uses, how each check is assigned to one, and the m
 the per-dimension scores, the overall health score, a visual scorecard, and an assertion for
 enforcing minimum scores.
 
+We use `game_revenue` and a plan whose checks cover three dimensions. A couple of the checks have
+failures, so the scores are not all 100.
+
 
 ## The six quality dimensions
 
