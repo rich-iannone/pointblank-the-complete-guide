@@ -153,6 +153,14 @@ just the one that was checked, so you can look for patterns in the other columns
 `_row_num_` column giving each row's position in the original table (rows 5 and 7 here), so you can
 trace each failure back to the source.
 
+Without a step number, the method returns a dictionary of extracts keyed by step, so you get every
+failing row in the plan at once.
+
+```{python}
+extracts = validation.get_data_extracts()
+{step: frame.shape[0] for step, frame in extracts.items()}
+```
+
 
 ## Sundered data
 
