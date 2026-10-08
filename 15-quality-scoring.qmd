@@ -22,6 +22,20 @@ enforcing minimum scores.
 We use `game_revenue` and a plan whose checks cover three dimensions. A couple of the checks have
 failures, so the scores are not all 100.
 
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+
+validation = (
+    pb.Validate(data=game_revenue, tbl_name="game_revenue")
+    .col_vals_not_null(columns="player_id", dimension="completeness")
+    .col_vals_not_null(columns="session_id", dimension="completeness")
+    .col_vals_in_set(columns="item_type", set=["iap", "ad"], dimension="validity")
+    .col_vals_lt(columns="session_duration", value=40, dimension="validity")
+    .rows_distinct(columns_subset=["session_id", "time"], dimension="uniqueness")
+    .interrogate()
+)
+```
+
 
 ## The six quality dimensions
 
