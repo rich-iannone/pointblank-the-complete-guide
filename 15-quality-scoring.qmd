@@ -48,6 +48,10 @@ The `get_dimension_scores()` method returns a dictionary of scores from 0 to 100
 score is the percentage of its test units that passed, counted across every step assigned to it.
 So a step that checks more data has more influence on the score than a step that checks less.
 
+```{python}
+validation.get_dimension_scores()
+```
+
 
 ## The overall health score
 
