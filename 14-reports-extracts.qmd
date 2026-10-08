@@ -60,6 +60,16 @@ The `get_tabular_report()` method takes arguments that change what appears, such
 `title=` and the `incl_header=` and `incl_footer=` flags. These are the same settings that earlier
 chapters turned off globally with `pb.config()` to keep reports compact.
 
+::: {.callout-note}
+## Reports are Great Tables objects
+
+A validation report is a Great Tables object, made by the companion library that Pointblank uses
+for its tables. That means you can do anything with a report that you can do with a Great Tables
+table, such as restyle it, get its HTML with `as_raw_html()`, write it to an HTML file with
+`write_raw_html()`, or save it as an image with `save()`. If you publish reports with Quarto, set
+`html-table-processing: none` in your project configuration (this book does). That tells Quarto to
+leave the tables alone instead of applying its own table styling.
+:::
 
 ## The report as a data frame
 
