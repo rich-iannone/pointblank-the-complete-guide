@@ -213,6 +213,26 @@ the table, and a schema check gets a note comparing the expected and actual colu
 `get_notes()` method returns all the notes for a step, and `get_note()` returns a single note by its
 key. If a step has no notes, you get `None`.
 
+```{python}
+validation.get_notes(i=1)
+```
+
+The first step in our plan has no notes, so the result is `None`. Here is a step that does have
+one. It filters `small_table` down to the rows where `f` is `"high"` before checking column `d`.
+
+```{python}
+noted = (
+    pb.Validate(data=small_table)
+    .col_vals_gt(columns="d", value=0, pre=lambda df: df.filter(pl.col("f") == "high"))
+    .interrogate()
+)
+
+noted.get_note(i=1, key="pre_applied", format="text")
+```
+
+The note records that the preprocessing reduced the table from 13 rows to 6. Notes also appear in
+the report footer, which you can turn on or off with the `incl_footer_notes=` argument of
+`get_tabular_report()`.
 
 ## Customizing reports for readers
 
