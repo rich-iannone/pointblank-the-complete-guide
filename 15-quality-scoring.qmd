@@ -55,6 +55,12 @@ validation.get_dimension_scores()
 
 ## The overall health score
 
+The `get_health_score()` method reduces the whole plan to a single number.
+
+```{python}
+validation.get_health_score()
+```
+
 
 ## The scorecard
 
