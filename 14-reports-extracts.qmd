@@ -247,3 +247,15 @@ covered in more detail in @sec-validation-workflow.
 
 ## Summary
 
+Pointblank gives you a way to present results for each audience. The tabular report from
+`get_tabular_report()` is the Great Tables view for people, and `get_dataframe_report()` returns the
+same information as a data frame. You can share a report by writing it to an HTML file with
+`write_raw_html()`, and you can save the validation object itself with `pb.write_file()`.
+
+For looking into failures, `get_step_report()` shows one step with its failing rows, and
+`get_data_extracts()` returns those rows as data, with their original row numbers. The
+`get_sundered_data()` method splits the table into passing and failing parts. For other systems,
+`get_json_report()` returns everything as JSON. Step notes, retrieved with `get_notes()` and
+`get_note()`, hold extra information some checks record, and briefs and labels make reports easier
+for other readers to follow. The next chapter, @sec-quality-scoring, uses these results to produce
+overall quality scores.
