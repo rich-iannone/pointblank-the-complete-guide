@@ -144,6 +144,15 @@ A step report shows failing rows in a formatted view, but often you want those r
 work with. The `get_data_extracts()` method gives you that. With a step number and `frame=True`, it
 returns the failing rows of that step as a data frame.
 
+```{python}
+validation.get_data_extracts(i=1, frame=True)
+```
+
+The extract has the two rows that failed the first check, with every column of each row rather than
+just the one that was checked, so you can look for patterns in the other columns. It also has a
+`_row_num_` column giving each row's position in the original table (rows 5 and 7 here), so you can
+trace each failure back to the source.
+
 
 ## Sundered data
 
