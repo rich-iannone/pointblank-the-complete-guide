@@ -12,6 +12,13 @@ which is how healthy the data is overall and where it is weakest. Data quality s
 It combines the step results into a few scores, one for each of several quality dimensions and one
 overall, so you can describe a table's condition with a number and track it over time.
 
+The idea is that different checks measure different aspects of quality. A null check measures
+completeness, a set membership check measures validity, and a duplicate check measures uniqueness.
+Grouping checks by what they measure turns a long report into a short summary. This chapter covers
+the six dimensions Pointblank uses, how each check is assigned to one, and the methods that give you
+the per-dimension scores, the overall health score, a visual scorecard, and an assertion for
+enforcing minimum scores.
+
 
 ## The six quality dimensions
 
