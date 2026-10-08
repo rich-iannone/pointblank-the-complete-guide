@@ -192,6 +192,18 @@ For other systems, the `get_json_report()` method returns the results as a JSON 
 same per-step detail as the report. You can send it to a logging service, store it in a database to
 track results over time, or feed it into a dashboard.
 
+```{python}
+import json
+
+report_json = validation.get_json_report()
+len(json.loads(report_json))
+```
+
+The JSON is an array with one object per step, so there are three here. Each object holds that
+step's assertion type, columns, counts, fractions, threshold results, and timing (@sec-validation-workflow
+shows a full record). If you only need individual results in Python, such as to decide whether a
+pipeline continues, use the methods from @sec-validation-workflow like `all_passed()`,
+`n_failed()`, and `critical()` instead. There is no need to parse the JSON for that.
 
 ## Step notes
 
