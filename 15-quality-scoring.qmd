@@ -36,6 +36,8 @@ validation = (
 )
 ```
 
+The `dimension=` argument on each step assigns it to a quality dimension, and the scores are grouped
+by these assignments.
 
 ## The six quality dimensions
 
