@@ -23,6 +23,7 @@ Slack and one for OpenTelemetry, and you can write your own for anything else. W
 game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
 ```
 
+The most common place to send notifications is a chat channel, so we start with Slack.
 
 ## Slack notifications
 
