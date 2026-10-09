@@ -27,6 +27,11 @@ The most common place to send notifications is a chat channel, so we start with 
 
 ## Slack notifications
 
+The `send_slack_notification()` function creates an action that posts to a Slack channel through an
+incoming webhook. Before you connect it to a plan, it helps to see what the messages will look like.
+If you call it with `debug=True` and no webhook, it prints sample messages instead of sending
+anything, so you can check them without a real channel.
+
 
 ## Exporting to OpenTelemetry
 
