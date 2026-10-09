@@ -92,6 +92,10 @@ Numbers work well for a pipeline, but a person reviewing quality usually wants s
 `get_scorecard()` method returns a Great Tables object that shows the overall health score along
 with the score for each dimension.
 
+```{python}
+validation.get_scorecard()
+```
+
 
 ## Requiring minimum scores
 
