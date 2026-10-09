@@ -96,6 +96,11 @@ with the score for each dimension.
 validation.get_scorecard()
 ```
 
+The scorecard shows the same figures we computed above, in a compact format that works well on a
+dashboard or in a report for stakeholders. Because it is a Great Tables object, you can export it the
+same way as the validation report, with `write_raw_html()` for an HTML file or `save()` for an image.
+The tabular report of @sec-reports-extracts lists every check, while the scorecard gives the summary
+a non-technical reader is more likely to want.
 
 ## Requiring minimum scores
 
