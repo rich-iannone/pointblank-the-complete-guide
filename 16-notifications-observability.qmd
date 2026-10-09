@@ -6,6 +6,12 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
+A validation only helps if someone finds out about the results. When a check fails on a scheduled
+run at three in the morning, a report saved to a folder does not help anyone. When validation runs
+unattended, a person or a system needs to be told when something goes wrong. This
+chapter covers sending results out of the validation process, whether as a message in a chat
+channel, as metrics in a monitoring system, or as a custom alert for whatever tools you already use.
+
 
 ## Slack notifications
 
