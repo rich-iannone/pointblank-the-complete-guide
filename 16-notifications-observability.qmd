@@ -12,6 +12,13 @@ unattended, a person or a system needs to be told when something goes wrong. Thi
 chapter covers sending results out of the validation process, whether as a message in a chat
 channel, as metrics in a monitoring system, or as a custom alert for whatever tools you already use.
 
+These notifications are sent through the actions from @sec-thresholds-actions, so you already know
+when they run. A step action runs when an individual check reaches a threshold, which suits an
+urgent alert about one check. A final action runs once after the whole plan and sees the complete
+results, which suits a summary of the run. Pointblank includes two ready-made notifiers, one for
+Slack and one for OpenTelemetry, and you can write your own for anything else. We use
+`game_revenue` for the examples that run.
+
 
 ## Slack notifications
 
