@@ -51,6 +51,15 @@ Consistency is about related values agreeing with each other, and `conjointly()`
 about whether the data is recent, which `data_freshness()` measures. Volume is about whether the
 table is the right size, which `row_count_match()` and `col_count_match()` measure.
 
+::: {.callout-note}
+## Where the six dimensions come from
+
+These dimensions are not a Pointblank invention. Most of them (completeness, validity, uniqueness,
+consistency, and timeliness) appear in data quality frameworks such as the one published by DAMA,
+and you will see the same names in many data governance tools. Using familiar names means a
+scorecard makes sense to people who already work with these frameworks.
+:::
+
 
 ## Dimension scores
 
