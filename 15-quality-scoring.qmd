@@ -88,6 +88,10 @@ validation.get_health_score()
 
 ## The scorecard
 
+Numbers work well for a pipeline, but a person reviewing quality usually wants something visual. The
+`get_scorecard()` method returns a Great Tables object that shows the overall health score along
+with the score for each dimension.
+
 
 ## Requiring minimum scores
 
