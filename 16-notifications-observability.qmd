@@ -44,6 +44,13 @@ templates, and you can replace either one. The `summary_msg=` and `step_msg=` ar
 template strings with placeholders in braces, which are filled in when the message is sent. Here is
 a custom summary template.
 
+```{python}
+pb.send_slack_notification(
+    debug=True,
+    summary_msg="Validation of {tbl_name}: {highest_severity} ({n_failing_steps} of {n_steps} steps failed)",
+)
+```
+
 
 ## Exporting to OpenTelemetry
 
