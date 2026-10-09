@@ -32,6 +32,10 @@ incoming webhook. Before you connect it to a plan, it helps to see what the mess
 If you call it with `debug=True` and no webhook, it prints sample messages instead of sending
 anything, so you can check them without a real channel.
 
+```{python}
+pb.send_slack_notification(debug=True)
+```
+
 
 ## Exporting to OpenTelemetry
 
