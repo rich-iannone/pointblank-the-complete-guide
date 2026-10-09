@@ -57,6 +57,11 @@ pb.send_slack_notification(
 
 ## Building your own notifier
 
+Slack and OpenTelemetry are the two built-in notifiers, but you can send results anywhere with a
+final action of your own. Inside the action, `get_validation_summary()` returns a dictionary
+describing the run, and you use its values to decide what to send and where. To start, this action
+just prints a few of the summary's keys so we can see what it contains.
+
 
 ## Summary
 
