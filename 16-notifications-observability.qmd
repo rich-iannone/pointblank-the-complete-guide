@@ -36,6 +36,14 @@ anything, so you can check them without a real channel.
 pb.send_slack_notification(debug=True)
 ```
 
+The preview shows the two kinds of messages the notifier sends. The step message describes a single
+failing check, with its type, severity level, step number, column, and time. The summary message
+describes the whole run, with the highest severity, the number of steps, and how many steps failed.
+The values here are made-up samples, such as `column_name` for the column. Both messages use default
+templates, and you can replace either one. The `summary_msg=` and `step_msg=` arguments take
+template strings with placeholders in braces, which are filled in when the message is sent. Here is
+a custom summary template.
+
 
 ## Exporting to OpenTelemetry
 
