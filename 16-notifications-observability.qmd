@@ -19,6 +19,10 @@ results, which suits a summary of the run. Pointblank includes two ready-made no
 Slack and one for OpenTelemetry, and you can write your own for anything else. We use
 `game_revenue` for the examples that run.
 
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+```
+
 
 ## Slack notifications
 
