@@ -62,6 +62,11 @@ So a step that checks more data has more influence on the score than a step that
 validation.get_dimension_scores()
 ```
 
+Completeness is 100, because both null checks passed on every row. Uniqueness is 98.9, because 22
+of the 2,000 rows share a session and timestamp. Validity is 98.15, and this number shows how the
+counting works. The item type check passed on all 2,000 rows and the session duration check failed
+on 74, so validity is 3,926 passing test units out of 4,000. It is not the average of the two
+steps' pass rates, and it is not a count of how many steps passed.
 
 ## The overall health score
 
