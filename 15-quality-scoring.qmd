@@ -41,6 +41,16 @@ by these assignments.
 
 ## The six quality dimensions
 
+Pointblank uses six dimensions of data quality. Completeness is about whether required values are
+present, and null checks, `rows_complete()`, and most of the missing-value checks from
+@sec-missing-data count toward it. Validity is about whether values have an allowed form, which
+covers the comparison, range, set, pattern, and format checks, along with `col_vals_expr()` and the
+schema checks. Uniqueness is about unwanted duplicates, which `rows_distinct()` measures.
+Consistency is about related values agreeing with each other, and `conjointly()`,
+`col_missing_consistent()`, `col_vals_in_table()`, and `tbl_match()` count toward it. Timeliness is
+about whether the data is recent, which `data_freshness()` measures. Volume is about whether the
+table is the right size, which `row_count_match()` and `col_count_match()` measure.
+
 
 ## Dimension scores
 
