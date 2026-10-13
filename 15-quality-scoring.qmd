@@ -60,6 +60,10 @@ and you will see the same names in many data governance tools. Using familiar na
 scorecard makes sense to people who already work with these frameworks.
 :::
 
+You can set a step's dimension with the `dimension=` argument, as the plan above does, or leave it
+out and let Pointblank pick one based on the kind of check. For example, it assigns a null check to
+completeness and a distinctness check to uniqueness.
+
 
 ## Dimension scores
 
