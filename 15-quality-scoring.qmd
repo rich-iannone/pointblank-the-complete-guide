@@ -113,6 +113,20 @@ since a drop is an early sign that quality is slipping somewhere. If some dimens
 you than others, the `dimension_weights=` setting in `pb.config()` gives them more influence on the
 overall score.
 
+```{python}
+pb.config(dimension_weights={"completeness": 2.0, "validity": 1.0, "uniqueness": 1.0})
+weighted_health = validation.get_health_score()
+
+pb.config(report_incl_header=False, report_incl_footer=False)
+weighted_health
+```
+
+With completeness counted double, the overall score goes up to 99.31. The weight applies to test
+units, so completeness now counts as 8,000 test units instead of 4,000, and all 8,000 passed. That
+gives 13,904 passing out of 14,000. The score goes up because completeness is the strongest
+dimension here. The second `pb.config()` call puts this chapter's display settings back and clears
+the weights, since any setting you leave out goes back to its default. These settings are global,
+so it is a good idea to reset them after a one-off change like this.
 
 ## The scorecard
 
