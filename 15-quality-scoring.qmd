@@ -75,6 +75,13 @@ inferred = (
 inferred.get_dimension_scores()
 ```
 
+Without any `dimension=` arguments, the null check is scored under completeness and the distinctness
+check under uniqueness. Setting the dimension yourself is useful when you want a check counted under
+a different dimension than its default, or when you want the plan to state it explicitly. If you
+want to change the default for a kind of check across all your plans, the `dimension_map=` setting
+in `pb.config()` does that. For example, `pb.config(dimension_map={"col_vals_lt": "consistency"})`
+would score every `col_vals_lt()` step under consistency.
+
 
 ## Dimension scores
 
