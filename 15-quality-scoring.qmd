@@ -107,6 +107,12 @@ The `get_health_score()` method reduces the whole plan to a single number.
 validation.get_health_score()
 ```
 
+The score of 99.04 is the percentage of all test units that passed across every step: 9,904 out of
+10,000. Steps with more test units count for more. This is the number to track from run to run,
+since a drop is an early sign that quality is slipping somewhere. If some dimensions matter more to
+you than others, the `dimension_weights=` setting in `pb.config()` gives them more influence on the
+overall score.
+
 
 ## The scorecard
 
