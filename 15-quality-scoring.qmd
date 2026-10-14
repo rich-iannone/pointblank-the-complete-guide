@@ -191,6 +191,12 @@ except AssertionError as e:
     print(str(e).splitlines()[0])
 ```
 
+The error message names the dimension, its score, and the minimum (98.15% against 99%). In a test
+suite or pipeline, this is how you enforce a minimum quality level, failing the build or stopping
+the pipeline when a dimension drops too low, much like the assertion methods of
+@sec-thresholds-actions. You can set default minimums once with the `dimension_thresholds=` setting
+in `pb.config()`, and @sec-command-line shows how to run this kind of check from the command line.
+
 
 ## Summary
 
