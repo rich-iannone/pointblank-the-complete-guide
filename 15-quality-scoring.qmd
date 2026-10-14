@@ -101,6 +101,11 @@ scored = (
 scored.get_dimension_scores()
 ```
 
+Four dimensions now have scores. Volume is 100 because both count checks passed, and consistency and
+timeliness are still missing because no step measured them. This makes sense: if no check looked at
+a dimension, there is nothing to score, and reporting it as 100 would suggest the data had been
+checked when it had not. It also means your scores only cover what your plan checks, so a dimension
+you care about needs at least one check assigned to it.
 
 ## Dimension scores
 
