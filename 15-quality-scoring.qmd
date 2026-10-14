@@ -82,6 +82,11 @@ want to change the default for a kind of check across all your plans, the `dimen
 in `pb.config()` does that. For example, `pb.config(dimension_map={"col_vals_lt": "consistency"})`
 would score every `col_vals_lt()` step under consistency.
 
+A dimension only appears in the scores if at least one step measures it. A plan with only null and
+set checks covers completeness and validity, so the other four dimensions are missing from the
+result entirely. They are not reported as 100 or as 0. Adding volume checks, such as confirming that
+the table has 2,000 rows and 11 columns, adds volume to the scores.
+
 
 ## Dimension scores
 
