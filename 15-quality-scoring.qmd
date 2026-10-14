@@ -87,6 +87,20 @@ set checks covers completeness and validity, so the other four dimensions are mi
 result entirely. They are not reported as 100 or as 0. Adding volume checks, such as confirming that
 the table has 2,000 rows and 11 columns, adds volume to the scores.
 
+```{python}
+scored = (
+    pb.Validate(data=game_revenue)
+    .col_vals_not_null(columns="player_id", dimension="completeness")
+    .col_vals_in_set(columns="item_type", set=["iap", "ad"], dimension="validity")
+    .rows_distinct(columns_subset=["session_id", "time"], dimension="uniqueness")
+    .row_count_match(count=2000, dimension="volume")
+    .col_count_match(count=11, dimension="volume")
+    .interrogate()
+)
+
+scored.get_dimension_scores()
+```
+
 
 ## Dimension scores
 
