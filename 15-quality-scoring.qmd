@@ -170,6 +170,10 @@ a non-technical reader is more likely to want.
 
 ## Requiring minimum scores
 
+Scores are also useful in automation. The `assert_dimension_scores()` method takes a dictionary of
+minimum scores and raises an `AssertionError` if any of the named dimensions scores below its
+minimum. Otherwise it does nothing. Requiring every dimension to be at least 95 passes here.
+
 
 ## Summary
 
