@@ -181,6 +181,16 @@ validation.assert_dimension_scores(
 print("all dimensions met their minimums")
 ```
 
+Every dimension is above 95, so the assertion passes and the message prints. Raising the minimum for
+validity to 99 changes the outcome, since validity is 98.15.
+
+```{python}
+try:
+    validation.assert_dimension_scores(thresholds={"validity": 99})
+except AssertionError as e:
+    print(str(e).splitlines()[0])
+```
+
 
 ## Summary
 
