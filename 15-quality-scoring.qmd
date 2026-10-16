@@ -219,3 +219,9 @@ or automatically based on the kind of check. The `get_dimension_scores()` method
 percentage of test units that passed in each dimension. Only dimensions with at least one step
 appear, so an assertion on a dimension with no checks always passes.
 
+The `get_health_score()` method gives one overall number to track over time, and the
+`dimension_weights=` setting gives some dimensions more influence on it. The `get_scorecard()`
+method shows the overall and per-dimension scores as a table you can share, and
+`assert_dimension_scores()` raises an error when a dimension falls below a minimum. The next
+chapter, @sec-notifications-observability, covers sending results and scores to alerting and
+monitoring systems.
