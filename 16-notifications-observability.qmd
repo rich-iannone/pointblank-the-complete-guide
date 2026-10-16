@@ -73,6 +73,24 @@ To send real messages, you give the function a webhook URL, and it returns a fun
 attach as an action. The same notifier works in both roles. It sends a step message when used as a
 step action and a summary message when used as a final action.
 
+```{python}
+#| eval: false
+notify = pb.send_slack_notification(
+    webhook_url="https://hooks.slack.com/services/XXX/YYY/ZZZ"
+)
+
+validation = (
+    pb.Validate(
+        data=game_revenue,
+        thresholds=pb.Thresholds(critical=0.10),
+        actions=pb.Actions(critical=notify),
+        final_actions=pb.FinalActions(notify),
+    )
+    .col_vals_not_null(columns="player_id")
+    .interrogate()
+)
+```
+
 
 ## Exporting to OpenTelemetry
 
