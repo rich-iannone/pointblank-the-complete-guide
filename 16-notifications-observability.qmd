@@ -65,6 +65,14 @@ pb.send_slack_notification(
 )
 ```
 
+The step preview now reads "[critical] step 1: col_vals_gt failed on column_name". Using
+`debug=True` like this is a quick way to get both templates right, which is much easier than
+adjusting them after they are connected to a real channel.
+
+To send real messages, you give the function a webhook URL, and it returns a function that you
+attach as an action. The same notifier works in both roles. It sends a step message when used as a
+step action and a summary message when used as a final action.
+
 
 ## Exporting to OpenTelemetry
 
