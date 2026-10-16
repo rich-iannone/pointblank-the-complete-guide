@@ -205,6 +205,10 @@ validation.assert_dimension_scores(thresholds={"timeliness": 95})
 print("timeliness minimum passed with no timeliness checks in the plan")
 ```
 
+The assertion passes even though the plan has no timeliness check at all. A minimum score only
+protects the dimensions your plan actually checks, so a timeliness minimum means something only once
+the plan includes a freshness check. Before relying on a score assertion, make sure the plan has at
+least one check for every dimension you are asserting on.
 
 ## Summary
 
