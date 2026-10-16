@@ -51,6 +51,13 @@ pb.send_slack_notification(
 )
 ```
 
+The summary preview now reads "Validation of example_table: critical (2 of 5 steps failed)", using
+the same sample values. The step message is unchanged, since we only replaced the summary template.
+Step templates can use placeholders such as `{step}`, `{column}`, `{type}`, `{level}`, `{value}`,
+`{autobrief}`, and `{failure_text}`. Summary templates can use `{tbl_name}`, `{highest_severity}`,
+`{n_steps}`, `{n_failing_steps}`, the per-level counts like `{n_critical_steps}`, and a few more,
+such as `{tbl_row_count}` and `{validation_duration}`. A custom step template works the same way.
+
 
 ## Exporting to OpenTelemetry
 
