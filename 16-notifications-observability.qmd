@@ -58,6 +58,13 @@ Step templates can use placeholders such as `{step}`, `{column}`, `{type}`, `{le
 `{n_steps}`, `{n_failing_steps}`, the per-level counts like `{n_critical_steps}`, and a few more,
 such as `{tbl_row_count}` and `{validation_duration}`. A custom step template works the same way.
 
+```{python}
+pb.send_slack_notification(
+    debug=True,
+    step_msg="[{level}] step {step}: {type} failed on {column}",
+)
+```
+
 
 ## Exporting to OpenTelemetry
 
