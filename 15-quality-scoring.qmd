@@ -200,6 +200,11 @@ in `pb.config()`, and @sec-command-line shows how to run this kind of check from
 There is a catch here, and it comes from how dimensions are scored. A dimension that no step
 measures has no score, so a minimum set on it always passes.
 
+```{python}
+validation.assert_dimension_scores(thresholds={"timeliness": 95})
+print("timeliness minimum passed with no timeliness checks in the plan")
+```
+
 
 ## Summary
 
