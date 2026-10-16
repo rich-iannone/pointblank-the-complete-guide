@@ -212,3 +212,10 @@ least one check for every dimension you are asserting on.
 
 ## Summary
 
+Data quality scoring summarizes a validation as a few numbers by grouping checks according to what
+they measure. Pointblank uses six dimensions (completeness, validity, uniqueness, consistency,
+timeliness, and volume), and each step is assigned to one, either through its `dimension=` argument
+or automatically based on the kind of check. The `get_dimension_scores()` method gives the
+percentage of test units that passed in each dimension. Only dimensions with at least one step
+appear, so an assertion on a dimension with no checks always passes.
+
