@@ -91,6 +91,10 @@ validation = (
 )
 ```
 
+As a critical step action, the notifier posts an alert as soon as any check reaches the critical
+threshold. As a final action, it posts a summary at the end of every run. This example is not run
+here, because it would post to a real channel.
+
 
 ## Exporting to OpenTelemetry
 
