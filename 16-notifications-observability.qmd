@@ -95,6 +95,13 @@ As a critical step action, the notifier posts an alert as soon as any check reac
 threshold. As a final action, it posts a summary at the end of every run. This example is not run
 here, because it would post to a real channel.
 
+Where you attach a notifier matters as much as what its messages say. A step action runs once for
+each step that reaches its threshold, not once per failing row, so a check on a million rows still
+sends only one alert. But attaching a notifier at the warning level across a large plan can still
+produce a flood of messages on a routine run, and people soon learn to ignore a channel like that.
+A better setup is to use step notifications only for the critical level, where an immediate alert
+is justified, and to let a single final action send the summary. That way the channel gets one
+summary per run plus the occasional urgent alert.
 
 ## Exporting to OpenTelemetry
 
