@@ -110,6 +110,23 @@ results as OpenTelemetry signals, so they end up in whatever observability platf
 Used as a final action, it can send metrics, traces, and log records about the run.
 
 
+```{python}
+#| eval: false
+otel = pb.emit_otel(enable_metrics=True, enable_tracing=True)
+
+validation = (
+    pb.Validate(
+        data=game_revenue,
+        tbl_name="game_revenue",
+        final_actions=pb.FinalActions(otel),
+    )
+    .col_vals_not_null(columns="player_id")
+    .col_vals_lt(columns="session_duration", value=40)
+    .interrogate()
+)
+```
+
+
 ## Building your own notifier
 
 Slack and OpenTelemetry are the two built-in notifiers, but you can send results anywhere with a
