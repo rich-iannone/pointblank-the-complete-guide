@@ -8,6 +8,13 @@ pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
 
+Some expectations are hard to write as code. Whether a product review is a real, on-topic comment
+is a judgment about meaning, and no regular expression or set membership check can make it. The
+`prompt()` method handles cases like this. It sends each row to a language model along with a plain
+description of what a good row looks like, and turns the model's answer into an ordinary pass or
+fail test unit that appears in the report next to your other checks.
+
+
 ## How `prompt()` works
 
 
