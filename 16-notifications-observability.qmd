@@ -105,6 +105,10 @@ summary per run plus the occasional urgent alert.
 
 ## Exporting to OpenTelemetry
 
+Chat messages are for people. For monitoring systems, the `emit_otel()` function exports validation
+results as OpenTelemetry signals, so they end up in whatever observability platform you already use.
+Used as a final action, it can send metrics, traces, and log records about the run.
+
 
 ## Building your own notifier
 
