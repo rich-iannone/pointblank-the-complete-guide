@@ -14,6 +14,13 @@ is a judgment about meaning, and no regular expression or set membership check c
 description of what a good row looks like, and turns the model's answer into an ordinary pass or
 fail test unit that appears in the report next to your other checks.
 
+This comes with costs that regular checks do not have. Each check costs money, takes much longer to
+run, and may not give exactly the same answer twice. So semantic validation is something to use on
+purpose, not by default. This chapter covers how the method works, how to write prompts that give
+reliable answers, how to include reference material as attachments, how to manage the cost, and how
+the results fit into the rest of a validation plan. We use a small table of product reviews for the
+examples.
+
 
 ## How `prompt()` works
 
