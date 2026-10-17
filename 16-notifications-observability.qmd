@@ -126,6 +126,16 @@ validation = (
 )
 ```
 
+Metrics are on by default (`enable_metrics=True` is written out here for clarity). They include
+counts of steps and test units passed and failed, the pass rate, step durations, and how many steps
+reached each threshold level, all named with a `pb.validation` prefix that you can change with
+`metric_prefix=`. With `enable_tracing=True`, the run is recorded as a trace with a span for the
+whole validation and a child span for each step. The `enable_logging=True` option also sends log
+records for steps that reach a threshold, starting at the level set by `log_level=` (the default is
+`"warning"`). The `extra_attributes=` argument adds your own labels to every signal, such as an
+environment or a pipeline name, which makes the data easier to filter once it reaches your
+monitoring system. The data engineering scenario in @sec-playbook-data-engineering shows this kind
+of setup in a larger pipeline.
 
 ## Building your own notifier
 
