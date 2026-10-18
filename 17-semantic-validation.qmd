@@ -36,6 +36,9 @@ reviews = pl.DataFrame({
 pb.preview(reviews, n_head=4, n_tail=0)
 ```
 
+Reviews 1 and 3 are real comments about a product, while reviews 2 and 4 are junk. A length check
+would catch `"n/a"`, but not the keyboard mash and placeholder text in review 2, which is 34
+characters long. This is the kind of situation semantic validation is for.
 
 ## How `prompt()` works
 
