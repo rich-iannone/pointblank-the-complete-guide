@@ -21,6 +21,21 @@ reliable answers, how to include reference material as attachments, how to manag
 the results fit into the rest of a validation plan. We use a small table of product reviews for the
 examples.
 
+```{python}
+reviews = pl.DataFrame({
+    "review_id": [1, 2, 3, 4],
+    "product": ["wireless mouse", "desk lamp", "coffee mug", "usb cable"],
+    "review_text": [
+        "Works great, very responsive and comfortable to use all day.",
+        "asdkjfh lorem ipsum dolor sit amet",
+        "The lamp is bright and the base is sturdy. Very happy with it.",
+        "n/a",
+    ],
+})
+
+pb.preview(reviews, n_head=4, n_tail=0)
+```
+
 
 ## How `prompt()` works
 
