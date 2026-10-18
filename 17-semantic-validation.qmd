@@ -42,6 +42,12 @@ characters long. This is the kind of situation semantic validation is for.
 
 ## How `prompt()` works
 
+The `prompt()` method takes a plain-language description of what makes a row valid and the name of
+a model, and asks the model to judge each row against that description. Each row is a test unit that
+passes or fails, and the results show up in the report like any other check. The `columns_subset=`
+argument limits which columns are sent to the model, which keeps the model focused and avoids
+sending data it does not need.
+
 
 ## Writing prompts that yield verdicts
 
