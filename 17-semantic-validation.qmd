@@ -61,6 +61,15 @@ sending data it does not need.
 )
 ```
 
+The model name has the form `provider:model`. The supported providers are `"anthropic"`,
+`"openai"`, `"ollama"`, `"bedrock"`, and `"azure-openai"`, and the part after the colon is the
+specific model. You never pass an API key as an argument. Pointblank reads it from an environment
+variable or from a `.env` file in your project, so an `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`
+variable is picked up automatically. Ollama runs models on your own machine and needs no key. Rows
+are sent to the model in batches (1,000 rows per batch by default, set with `batch_size=`), but each
+row still gets its own result. For this table, you would expect reviews 1 and 3 to pass and reviews
+2 and 4 to fail.
+
 
 ## Writing prompts that yield verdicts
 
