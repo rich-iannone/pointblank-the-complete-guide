@@ -48,6 +48,19 @@ passes or fails, and the results show up in the report like any other check. The
 argument limits which columns are sent to the model, which keeps the model focused and avoids
 sending data it does not need.
 
+```{python}
+#| eval: false
+(
+    pb.Validate(data=reviews)
+    .prompt(
+        prompt="The review_text should be a coherent, on-topic comment about the product.",
+        columns_subset=["product", "review_text"],
+        model="openai:gpt-4o-mini",
+    )
+    .interrogate()
+)
+```
+
 
 ## Writing prompts that yield verdicts
 
