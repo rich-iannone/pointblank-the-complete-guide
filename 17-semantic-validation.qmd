@@ -76,6 +76,11 @@ row still gets its own result. For this table, you would expect reviews 1 and 3 
 
 ## Multimodal attachments
 
+Sometimes the standard depends on reference material that is hard to put into words, such as a
+brand style guide or a diagram. The `attachments=` argument accepts images (`.png`, `.jpg`,
+`.jpeg`, `.gif`, and `.webp`) and PDFs, and sends them to the model as context that applies to every
+row. Each row's own values are still sent as data.
+
 
 ## Cost, throughput, and reliability
 
