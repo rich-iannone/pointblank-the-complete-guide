@@ -208,6 +208,11 @@ be replaced with a call to an email service, a webhook, or a ticketing system, b
 the same: read the summary, check the severity, and send the message. This works for any
 destination that does not have a built-in notifier.
 
+::: {.callout-note}
+## Other destinations
+At the time of writing, Slack and OpenTelemetry are the only built-in notifiers. For email, generic
+webhooks, PagerDuty, Discord, or anything else, use a custom final action like the one above.
+:::
 
 ## Summary
 
