@@ -171,6 +171,13 @@ _ = (
 )
 ```
 
+Both steps failed, and one of them (the acquisition check) reached critical, so `highest_severity`
+is `"critical"`. The overall health score from @sec-quality-scoring is 83.8, pulled down mostly by
+the 574 rows that fail the acquisition check. The full summary has more than this, including counts
+of steps at each level, lists of passing and failing step numbers, the dimension scores, the table's
+size, and how long the run took. Once you know what is in the summary, you can make the action
+decide what to do based on `highest_severity`.
+
 
 ## Summary
 
