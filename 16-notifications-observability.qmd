@@ -202,6 +202,12 @@ _ = (
 )
 ```
 
+The action runs at the end of the interrogation. Since the acquisition check reached critical, it
+takes the first branch and prints the "PAGE" message. In a real notifier, the `print()` calls would
+be replaced with a call to an email service, a webhook, or a ticketing system, but the structure is
+the same: read the summary, check the severity, and send the message. This works for any
+destination that does not have a built-in notifier.
+
 
 ## Summary
 
