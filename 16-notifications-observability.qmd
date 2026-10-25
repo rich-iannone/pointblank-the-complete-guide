@@ -109,6 +109,12 @@ Chat messages are for people. For monitoring systems, the `emit_otel()` function
 results as OpenTelemetry signals, so they end up in whatever observability platform you already use.
 Used as a final action, it can send metrics, traces, and log records about the run.
 
+::: {.callout-note}
+## Requires the OpenTelemetry SDK and a collector
+The examples in this section are not run here, because `emit_otel()` needs the `opentelemetry`
+libraries installed and a collector or backend set up to receive the signals. To run them, install
+the SDK alongside Pointblank and configure it to send to your collector.
+:::
 
 ```{python}
 #| eval: false
