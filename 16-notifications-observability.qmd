@@ -178,6 +178,30 @@ of steps at each level, lists of passing and failing step numbers, the dimension
 size, and how long the run took. Once you know what is in the summary, you can make the action
 decide what to do based on `highest_severity`.
 
+```{python}
+def notify_on_severity():
+    s = pb.get_validation_summary()
+    if s["highest_severity"] == "critical":
+        print(f"PAGE: critical data quality failure in {s['tbl_name']} "
+              f"({s['n_failing_steps']} of {s['n_steps']} steps failed)")
+    elif s["highest_severity"] in ("error", "warning"):
+        print(f"LOG: {s['highest_severity']} in {s['tbl_name']}")
+    else:
+        print(f"OK: {s['tbl_name']} passed all checks")
+
+_ = (
+    pb.Validate(
+        data=game_revenue,
+        tbl_name="game_revenue",
+        thresholds=pb.Thresholds(warning=0.02, error=0.05, critical=0.10),
+        final_actions=pb.FinalActions(notify_on_severity),
+    )
+    .col_vals_lt(columns="session_duration", value=40)
+    .col_vals_in_set(columns="acquisition", set=["organic", "google"])
+    .interrogate()
+)
+```
+
 
 ## Summary
 
