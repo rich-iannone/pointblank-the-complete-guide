@@ -81,6 +81,25 @@ brand style guide or a diagram. The `attachments=` argument accepts images (`.pn
 `.jpeg`, `.gif`, and `.webp`) and PDFs, and sends them to the model as context that applies to every
 row. Each row's own values are still sent as data.
 
+```{python}
+#| eval: false
+(
+    pb.Validate(data=reviews)
+    .prompt(
+        prompt="The review_text should match the tone and vocabulary in the attached brand guide.",
+        columns_subset=["product", "review_text"],
+        attachments=["docs/brand_guide.pdf"],
+        model="anthropic:claude-sonnet-5",
+    )
+    .interrogate()
+)
+```
+
+With the attachment, the model can compare each review against the guide without the guide's rules
+having to be written into the prompt. Attachments do add cost, though, because an attachment is sent
+again with every batch. A table big enough to need several batches pays for the attachment several
+times. To keep this down, keep attachments small (for example, by shrinking an image or cutting a
+PDF down to the pages that matter) and fit more rows into each batch.
 
 ## Cost, throughput, and reliability
 
