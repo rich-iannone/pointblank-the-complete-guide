@@ -216,3 +216,12 @@ webhooks, PagerDuty, Discord, or anything else, use a custom final action like t
 
 ## Summary
 
+Notifications are what make unattended validation useful, since they get the results to the people
+and systems that need to act on them. They are sent through the actions from
+@sec-thresholds-actions, with step actions for urgent alerts about individual checks and final
+actions for run summaries. A step action runs once per step that reaches its threshold, not once
+per failing row, but attaching notifiers too widely still leads to too many alerts. A good default
+is to use step notifications only at the critical level and send everything else in a single
+summary. The `send_slack_notification()` function posts to Slack, and its `debug=True` mode lets you
+preview the `step_msg=` and `summary_msg=` templates before sending anything.
+
