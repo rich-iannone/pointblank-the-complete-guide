@@ -91,6 +91,13 @@ starts from an empty plan, keeps the table name, label, and any thresholds you s
 
 ## What the model sees, and what it cannot write back
 
+There are two limits to keep in mind across all of these features. The first is what the model is
+sent. It gets the `DataScan` profile described at the start of this chapter: summary statistics plus
+a five-value sample from each column. The rest of the table stays on your machine, but those sample
+values do not. If a column holds personal or confidential information, its sample values will be
+included in the request. For sensitive data, consider a local model through `"ollama"`, or write the
+plan by hand.
+
 
 ## Summary
 
