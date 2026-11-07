@@ -57,6 +57,11 @@ edit = pb.EditValidation(
 print(edit.diff())
 ```
 
+The `diff()` method shows the change as a text diff. The `changed_steps()` method lists the changes
+as structured records of added, removed, and modified steps, and `review()` shows the change as a
+table. When you are happy with it, `accept()` runs the revised code and returns a new `Validate`
+object that you can interrogate.
+
 
 ## Authoring from a prompt with `from_prompt`
 
