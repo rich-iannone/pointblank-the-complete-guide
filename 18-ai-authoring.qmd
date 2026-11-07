@@ -18,6 +18,14 @@ for it. You create it with the data and a model name, and displaying the result 
 pb.DraftValidation(data=game_revenue, model="anthropic:claude-sonnet-5")
 ```
 
+The draft comes back as Python code. A typical draft checks the schema, checks the identifier
+columns for nulls, limits the numeric columns to the ranges seen in the profile, and limits
+columns with few distinct values to the values seen in the profile. It is a starting point, not a
+finished plan. The model knows what the data looks like right now, but not what your business rules
+require, so you edit the draft to match your intent, such as replacing an observed range with a real
+limit or removing a check that does not matter. The generated code is available as the object's
+`code` attribute, and the `validate_syntax()` method checks that it parses before you run it.
+
 
 ## Editing a plan with `EditValidation`
 
