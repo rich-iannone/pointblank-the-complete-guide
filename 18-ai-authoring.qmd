@@ -29,6 +29,11 @@ limit or removing a check that does not matter. The generated code is available 
 
 ## Editing a plan with `EditValidation`
 
+Once you have a plan, `EditValidation` revises it based on a plain-language instruction. This is
+useful when you know what change you want but would rather describe it than edit the code by hand.
+You give it the plan, an instruction, and a model, and optionally the data so the model can take the
+table's actual columns and values into account. We start with a small plan written by hand.
+
 
 ## Authoring from a prompt with `from_prompt`
 
