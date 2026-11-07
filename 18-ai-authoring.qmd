@@ -42,6 +42,9 @@ base = (
 )
 ```
 
+That is an ordinary `Validate` object. Asking for a change gives you a proposal, not a modified
+plan, and you look at the proposal before accepting it.
+
 
 ## Authoring from a prompt with `from_prompt`
 
