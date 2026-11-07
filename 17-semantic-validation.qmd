@@ -110,6 +110,21 @@ Larger batches send more rows per call, and higher concurrency sends more calls 
 (the default is 3). Both make the check finish sooner, and both make it more likely you hit a
 provider's rate limits.
 
+```{python}
+#| eval: false
+(
+    pb.Validate(data=reviews)
+    .prompt(
+        prompt="The review_text should be a coherent, on-topic comment about the product.",
+        columns_subset=["product", "review_text"],
+        model="openai:gpt-4o-mini",
+        batch_size=100,
+        max_concurrent=1,
+    )
+    .interrogate()
+)
+```
+
 
 ## Privacy and provider choice
 
