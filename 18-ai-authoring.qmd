@@ -68,6 +68,9 @@ revised = edit.accept()
 revised.interrogate()
 ```
 
+Nothing changes until you call `accept()`. You can also start from a plan stored as a code string,
+a YAML string, or a file path instead of a `Validate` object, so `EditValidation` works just as
+well with plans kept in version control as with plans in a notebook.
 
 ## Authoring from a prompt with `from_prompt`
 
