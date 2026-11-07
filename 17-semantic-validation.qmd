@@ -70,6 +70,13 @@ are sent to the model in batches (1,000 rows per batch by default, set with `bat
 row still gets its own result. For this table, you would expect reviews 1 and 3 to pass and reviews
 2 and 4 to fail.
 
+::: {.callout-warning}
+## Semantic checks send your data to the model
+Unlike every other check in this book, a semantic check sends the row values it checks to a model
+provider. With a hosted provider, that data leaves your environment. List only the columns the
+check needs in `columns_subset=`, and for sensitive data use the local `"ollama"` provider or a
+regular check instead. The privacy section later in this chapter goes into more detail.
+:::
 
 ## Writing prompts that yield verdicts
 
