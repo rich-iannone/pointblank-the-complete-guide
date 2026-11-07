@@ -136,6 +136,11 @@ which should list only the columns the check needs. A check on review quality ne
 the review text, not the customer ID or email address that might be in other columns. Sending less
 data is both cheaper and safer.
 
+The second is your choice of provider. The `"ollama"` option runs a model locally, so no data leaves
+your machine. That makes it the natural choice for sensitive data, as long as a local model is good
+enough for the job. A hosted provider such as Anthropic or OpenAI is usually more capable but means
+sending the data out. For regulated data, a local model or a regular check is usually the safer
+default, and hosted models are best kept for data you are comfortable sending.
 
 ## Semantic results in the plan
 
