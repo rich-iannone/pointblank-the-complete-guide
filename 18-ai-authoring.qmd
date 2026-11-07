@@ -62,6 +62,12 @@ as structured records of added, removed, and modified steps, and `review()` show
 table. When you are happy with it, `accept()` runs the revised code and returns a new `Validate`
 object that you can interrogate.
 
+```{python}
+#| eval: false
+revised = edit.accept()
+revised.interrogate()
+```
+
 
 ## Authoring from a prompt with `from_prompt`
 
