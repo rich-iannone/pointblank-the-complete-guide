@@ -13,6 +13,11 @@ The `DraftValidation` class profiles a table and asks a model to propose a compl
 for it. You create it with the data and a model name, and displaying the result shows a
 `pb.Validate(...)` chain that you can copy into your code and edit.
 
+```{python}
+#| eval: false
+pb.DraftValidation(data=game_revenue, model="anthropic:claude-sonnet-5")
+```
+
 
 ## Editing a plan with `EditValidation`
 
