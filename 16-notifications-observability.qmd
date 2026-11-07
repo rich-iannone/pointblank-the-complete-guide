@@ -225,3 +225,8 @@ is to use step notifications only at the critical level and send everything else
 summary. The `send_slack_notification()` function posts to Slack, and its `debug=True` mode lets you
 preview the `step_msg=` and `summary_msg=` templates before sending anything.
 
+The `emit_otel()` function exports metrics, traces, and log records to an OpenTelemetry backend, so
+data quality shows up alongside the rest of your monitoring. For any other destination, write a
+final action that reads `get_validation_summary()`, checks `highest_severity`, and sends the
+message. This chapter ends the part of the book on responding to results. The next part covers
+validation that uses language models, starting with @sec-semantic-validation.
