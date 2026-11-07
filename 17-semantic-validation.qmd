@@ -103,6 +103,13 @@ PDF down to the pages that matter) and fit more rows into each batch.
 
 ## Cost, throughput, and reliability
 
+Every semantic check makes real API calls. That means it costs money for each row, runs much slower
+than a regular check, and may not return the same result on the same input every time, since models
+are not fully deterministic. The `batch_size=` and `max_concurrent=` arguments control throughput.
+Larger batches send more rows per call, and higher concurrency sends more calls at the same time
+(the default is 3). Both make the check finish sooner, and both make it more likely you hit a
+provider's rate limits.
+
 
 ## Privacy and provider choice
 
