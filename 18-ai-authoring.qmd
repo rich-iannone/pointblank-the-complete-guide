@@ -34,6 +34,14 @@ useful when you know what change you want but would rather describe it than edit
 You give it the plan, an instruction, and a model, and optionally the data so the model can take the
 table's actual columns and values into account. We start with a small plan written by hand.
 
+```{python}
+base = (
+    pb.Validate(data=game_revenue, tbl_name="game_revenue")
+    .col_vals_gt(columns="session_duration", value=0)
+    .col_vals_not_null(columns="player_id")
+)
+```
+
 
 ## Authoring from a prompt with `from_prompt`
 
