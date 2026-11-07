@@ -45,6 +45,18 @@ base = (
 That is an ordinary `Validate` object. Asking for a change gives you a proposal, not a modified
 plan, and you look at the proposal before accepting it.
 
+```{python}
+#| eval: false
+edit = pb.EditValidation(
+    validation=base,
+    instruction="Also require item_revenue to be non-negative and item_type to be one of iap or ad.",
+    model="anthropic:claude-sonnet-5",
+    data=game_revenue,
+)
+
+print(edit.diff())
+```
+
 
 ## Authoring from a prompt with `from_prompt`
 
