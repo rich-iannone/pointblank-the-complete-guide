@@ -149,6 +149,21 @@ check's, thresholds from @sec-thresholds-actions decide how many rows can fail b
 warning or an error, a `dimension=` tag includes it in the scores from @sec-quality-scoring, and
 extracts from @sec-reports-extracts let you pull out the rows the model flagged.
 
+```{python}
+#| eval: false
+(
+    pb.Validate(data=reviews, thresholds=pb.Thresholds(warning=0.25))
+    .col_vals_not_null(columns="review_text")
+    .prompt(
+        prompt="The review_text should be a coherent, on-topic comment about the product.",
+        columns_subset=["product", "review_text"],
+        model="openai:gpt-4o-mini",
+        dimension="validity",
+    )
+    .interrogate()
+)
+```
+
 
 ## Summary
 
