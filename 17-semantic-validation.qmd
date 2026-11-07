@@ -191,6 +191,11 @@ def substantial_reviews(df):
 )
 ```
 
+The filter removes the `"n/a"` review (3 characters) before the model sees it, so the model only
+judges the other three rows. Review 2 is 34 characters long, so it gets through the filter and it is
+up to the model to reject it. This is the general pattern for keeping semantic validation
+affordable: let regular checks catch the obvious problems and save the model for the rows only a
+judgment about meaning can settle.
 
 ## Summary
 
