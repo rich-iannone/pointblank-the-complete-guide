@@ -9,6 +9,10 @@ pb.config(report_incl_header=False, report_incl_footer=False)
 
 ## Drafting a plan with `DraftValidation`
 
+The `DraftValidation` class profiles a table and asks a model to propose a complete validation plan
+for it. You create it with the data and a model name, and displaying the result shows a
+`pb.Validate(...)` chain that you can copy into your code and edit.
+
 
 ## Editing a plan with `EditValidation`
 
