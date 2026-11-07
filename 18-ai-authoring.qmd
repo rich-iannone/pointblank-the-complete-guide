@@ -74,6 +74,11 @@ well with plans kept in version control as with plans in a notebook.
 
 ## Authoring from a prompt with `from_prompt`
 
+If you have no plan yet and would rather describe the checks in words than start from a generated
+draft, the `from_prompt()` method on `Validate` builds a plan from a plain-language description. It
+starts from an empty plan, keeps the table name, label, and any thresholds you set, and returns an
+`EditValidation`, so you review and accept the result the same way as an edit.
+
 
 ## Suggesting improvements
 
