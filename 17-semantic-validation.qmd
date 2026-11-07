@@ -164,6 +164,11 @@ extracts from @sec-reports-extracts let you pull out the rows the model flagged.
 )
 ```
 
+This plan combines a regular completeness check with a semantic validity check in one
+interrogation. The first step confirms that no review is missing, and the second checks whether the
+reviews that are present actually say something sensible. If the model fails reviews 2 and 4, that
+is a failure rate of 0.5, which is above the 0.25 warning threshold.
+
 
 ## Summary
 
