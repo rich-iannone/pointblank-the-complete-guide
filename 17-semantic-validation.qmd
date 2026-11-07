@@ -144,6 +144,11 @@ default, and hosted models are best kept for data you are comfortable sending.
 
 ## Semantic results in the plan
 
+A semantic check is a regular step in a plan. Its results appear in the report like any other
+check's, thresholds from @sec-thresholds-actions decide how many rows can fail before it counts as a
+warning or an error, a `dimension=` tag includes it in the scores from @sec-quality-scoring, and
+extracts from @sec-reports-extracts let you pull out the rows the model flagged.
+
 
 ## Summary
 
