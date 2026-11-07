@@ -128,6 +128,14 @@ provider's rate limits.
 
 ## Privacy and provider choice
 
+A semantic check sends the data it checks to the model provider you choose. With a hosted provider,
+the row values leave your environment. For public data like product reviews that is usually fine,
+but for records with personal, financial, or health information, you need to think about it before
+using the method at all. There are two ways to reduce the risk. The first is `columns_subset=`,
+which should list only the columns the check needs. A check on review quality needs the product and
+the review text, not the customer ID or email address that might be in other columns. Sending less
+data is both cheaper and safer.
+
 
 ## Semantic results in the plan
 
