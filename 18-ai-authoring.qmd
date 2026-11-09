@@ -25,6 +25,7 @@ sensitive. We use `game_revenue` for the examples.
 game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
 ```
 
+The most common starting point is asking the model to draft a plan.
 
 ## Drafting a plan with `DraftValidation`
 
