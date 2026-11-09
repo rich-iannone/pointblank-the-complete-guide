@@ -112,6 +112,10 @@ proposal = (
 plan = proposal.accept()
 ```
 
+The difference from `DraftValidation` is where you start. A draft starts from the data and proposes
+whatever looks worth checking. The `from_prompt()` method starts from what you say you want and turns
+it into steps, so it suits the case where you already know what to check and just want it written
+as code.
 
 ## Suggesting improvements
 
