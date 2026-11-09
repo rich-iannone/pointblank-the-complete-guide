@@ -99,6 +99,19 @@ draft, the `from_prompt()` method on `Validate` builds a plan from a plain-langu
 starts from an empty plan, keeps the table name, label, and any thresholds you set, and returns an
 `EditValidation`, so you review and accept the result the same way as an edit.
 
+```{python}
+#| eval: false
+proposal = (
+    pb.Validate(data=game_revenue, tbl_name="game_revenue")
+    .from_prompt(
+        prompt="Ensure player_id and session_id are never null and item_revenue is never negative.",
+        model="anthropic:claude-sonnet-5",
+    )
+)
+
+plan = proposal.accept()
+```
+
 
 ## Suggesting improvements
 
