@@ -119,6 +119,10 @@ as code.
 
 ## Suggesting improvements
 
+The `suggest_improvements()` method starts from a plan you already have and proposes what it is
+missing. It profiles the table, looks for gaps, such as columns that no step checks or steps that
+could use thresholds, and returns an `EditValidation` with the proposed additions for you to review.
+
 
 ## The interactive assistant
 
