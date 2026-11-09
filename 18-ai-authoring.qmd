@@ -14,6 +14,17 @@ pass at this for you. It can draft a plan from scratch, revise an existing plan 
 instruction, or suggest what a plan is missing. In every case you review the proposal before
 anything is accepted.
 
+It helps to know up front what the model is sent. It does not get the full table. Instead, Pointblank
+sends a `DataScan` profile, the same kind of summary described in @sec-inspecting-data. The profile
+includes the row count, the column names and types, summary statistics for each column (such as the
+number of missing values, the minimum, and the maximum), and a short sample of five values from each
+column. So a small amount of real data does leave your machine, which matters if some columns are
+sensitive. We use `game_revenue` for the examples.
+
+```{python}
+game_revenue = pb.load_dataset(dataset="game_revenue", tbl_type="polars")
+```
+
 
 ## Drafting a plan with `DraftValidation`
 
