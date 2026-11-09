@@ -7,6 +7,14 @@ pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
 
+The previous chapter used a language model to judge data. This chapter uses one to help write the
+validation plan. When you are faced with an unfamiliar table with dozens of columns, the hardest part
+is often getting started and deciding which checks are worth writing. Pointblank can take a first
+pass at this for you. It can draft a plan from scratch, revise an existing plan based on an
+instruction, or suggest what a plan is missing. In every case you review the proposal before
+anything is accepted.
+
+
 ## Drafting a plan with `DraftValidation`
 
 The `DraftValidation` class profiles a table and asks a model to propose a complete validation plan
