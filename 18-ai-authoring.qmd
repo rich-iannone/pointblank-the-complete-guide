@@ -129,6 +129,13 @@ could use thresholds, and returns an `EditValidation` with the proposed addition
 
 ## Choosing and combining the tools
 
+Which tool to use depends on where you are starting. If you have an unfamiliar table and no plan,
+`DraftValidation` is the fastest way to get a draft, and `assistant()` suits the same situation if
+you would rather work through it in a conversation. If you know what you want to check but have no
+plan yet, `from_prompt()` turns your description into steps. If you already have a plan and want a
+specific change, `EditValidation` makes it from an instruction. And if you want to know what a
+working plan is missing, `suggest_improvements()` proposes additions.
+
 
 ## What the model sees, and what it cannot write back
 
