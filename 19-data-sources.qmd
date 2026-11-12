@@ -6,6 +6,13 @@ import pointblank as pb
 pb.config(report_incl_footer=False)
 ```
 
+Data rarely stays in one place. It might start in a transactional database, get copied into a data
+lake, pass through a processing pipeline, and end up in a warehouse, with CSV exports and Parquet
+files along the way. If a validation tool only understood one of these, you would have to move data
+just to check it. Pointblank works with data where it already is, and the same validation methods
+work whether the data is a Polars DataFrame in memory, a table in PostgreSQL, or a set of Parquet
+files.
+
 
 ## Two kinds of backend
 
