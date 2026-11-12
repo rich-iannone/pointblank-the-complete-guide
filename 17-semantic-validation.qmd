@@ -88,6 +88,11 @@ regular check instead. The privacy section later in this chapter goes into more 
 
 ## Writing prompts that yield verdicts
 
+Each row has to end up as a pass or a fail, so the prompt needs to describe a standard that a row
+either meets or does not. A prompt like "the review_text should be a coherent, on-topic comment
+about the product" gives the model a clear yes-or-no question. A prompt like "how would you improve
+this review?" does not, because the answer is a suggestion, not a pass or fail.
+
 
 ## Multimodal attachments
 
