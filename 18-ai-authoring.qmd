@@ -199,6 +199,13 @@ values do not. If a column holds personal or confidential information, its sampl
 included in the request. For sensitive data, consider a local model through `"ollama"`, or write the
 plan by hand.
 
+The second limit comes from how the edit tools work, which is by converting the plan to `to_code()`
+text and back. As described in @sec-advanced-validation, that text form cannot represent everything.
+When a plan goes through the AI tools, the expressions in `col_vals_expr()`, `conjointly()`, and
+`specially()` become placeholders, `pre=` functions and step `actions=` are dropped, a callable
+`active=` becomes `True`, and `col_vals_in_table()` steps are left out. Pointblank warns you when
+this happens. Plans built from the other built-in checks come through unchanged, but plans that rely
+on custom Python logic need that logic added back by hand after an edit.
 
 ## Summary
 
