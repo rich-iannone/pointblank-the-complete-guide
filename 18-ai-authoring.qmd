@@ -168,6 +168,8 @@ single instruction.
 pb.assistant(model="anthropic:claude-sonnet-5", data=game_revenue, tbl_name="game_revenue")
 ```
 
+The assistant is most useful when you are first getting to know a dataset and are still working out
+what to check. It works alongside the exploration tools of @sec-inspecting-data.
 
 ## Choosing and combining the tools
 
