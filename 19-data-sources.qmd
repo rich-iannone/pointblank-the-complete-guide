@@ -22,6 +22,12 @@ code that you would adapt to your own systems.
 
 ## Two kinds of backend
 
+Pointblank can validate two kinds of data sources. The first is DataFrames from Polars and Pandas,
+which hold data in memory. The second is database tables reached through Ibis, a Python library that
+can talk to DuckDB, PostgreSQL, MySQL, SQLite, and cloud warehouses like Snowflake and BigQuery,
+without pulling the data out of the database. In general, if Ibis can connect to a backend,
+Pointblank can validate it.
+
 
 ## In-memory DataFrames
 
