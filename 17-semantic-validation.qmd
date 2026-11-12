@@ -229,3 +229,10 @@ judgment about meaning can settle.
 
 ## Summary
 
+Semantic validation lets Pointblank check things that are hard to express in code, such as whether
+text makes sense. The `prompt()` method sends each row to a language model, named as
+`provider:model`, with the API key read from the environment. It turns the model's answer into an
+ordinary pass or fail test unit. The prompt needs to describe a standard that can be answered yes or
+no, and the more specific it is, the more consistent the results. The `attachments=` argument sends
+reference images or PDFs along with each batch.
+
