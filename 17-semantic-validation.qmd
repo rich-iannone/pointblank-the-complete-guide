@@ -93,6 +93,10 @@ either meets or does not. A prompt like "the review_text should be a coherent, o
 about the product" gives the model a clear yes-or-no question. A prompt like "how would you improve
 this review?" does not, because the answer is a suggestion, not a pass or fail.
 
+The more specific the prompt, the more consistent the results. If you name the properties that make
+a row valid, and where it helps the ones that make it invalid, the model has less room to interpret
+the standard differently from one run to the next. It is worth writing a prompt as carefully as you
+would write the equivalent check in code.
 
 ## Multimodal attachments
 
