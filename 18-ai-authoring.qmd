@@ -53,6 +53,14 @@ require, so you edit the draft to match your intent, such as replacing an observ
 limit or removing a check that does not matter. The generated code is available as the object's
 `code` attribute, and the `validate_syntax()` method checks that it parses before you run it.
 
+When reviewing a draft, pay the most attention to the ranges and sets. A drafted check describes
+what the data currently is, not what it should be. The largest `item_revenue` in `game_revenue` is
+142.99, so a draft might propose that the column stays below 150. That describes the current data,
+but it will fail the first time a legitimate larger purchase comes in. Treat each drafted range as
+a question: is this a real limit, or just the range the model happened to see? Where the two differ,
+replace the observed number with the one you actually intend. The model cannot make this call for
+you, which is why a draft is only a first pass.
+
 
 ## Editing a plan with `EditValidation`
 
