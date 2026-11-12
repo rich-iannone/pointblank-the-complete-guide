@@ -7,6 +7,14 @@ import polars as pl
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+::: {.callout-important}
+## These examples call a language model
+The `prompt()` method needs the generation extras, installed with
+`pip install "pointblank[generate]"`, and an API key for a model provider. A book render cannot
+reach a provider, so the `prompt()` calls in this chapter are marked `#| eval: false` and are not
+run. The sample data is real and does run, but the model calls are shown for their form rather than
+their output.
+:::
 
 Some expectations are hard to write as code. Whether a product review is a real, on-topic comment
 is a judgment about meaning, and no regular expression or set membership check can make it. The
