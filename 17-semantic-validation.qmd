@@ -149,6 +149,12 @@ provider's rate limits.
 )
 ```
 
+A reasonable approach is to start small, with a small batch size while you work on the prompt and
+low concurrency if you run into rate limits, and then increase both once the prompt is settled. More
+important is deciding whether to use the method at all. If a rule can be written as a regular check,
+as most can, that version is faster, cheaper, and gives the same answer every time, so use it. A
+semantic check is worth the cost when the alternative is not a cheaper check but no check at all, as
+with the review coherence rule here.
 
 ## Privacy and provider choice
 
