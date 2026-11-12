@@ -6,6 +6,13 @@ import pointblank as pb
 pb.config(report_incl_header=False, report_incl_footer=False)
 ```
 
+::: {.callout-important}
+## These examples call a language model
+The features in this chapter need the generation extras, installed with
+`pip install "pointblank[generate]"`, and an API key for a model provider. A book render cannot
+reach a provider, so the calls below are marked `#| eval: false` and are not run. `DraftValidation`
+and `EditValidation` are also marked experimental in the library, so their interfaces may change.
+:::
 
 The previous chapter used a language model to judge data. This chapter uses one to help write the
 validation plan. When you are faced with an unfamiliar table with dozens of columns, the hardest part
