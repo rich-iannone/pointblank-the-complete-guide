@@ -153,6 +153,9 @@ print(proposal.diff())
 improved = proposal.accept()
 ```
 
+Use this to fill out a plan that works but may not be thorough. It is easy to miss gaps when you
+write checks one at a time. As with the other tools here, the additions only take effect once you
+accept them.
 
 ## The interactive assistant
 
