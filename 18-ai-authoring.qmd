@@ -61,6 +61,13 @@ a question: is this a real limit, or just the range the model happened to see? W
 replace the observed number with the one you actually intend. The model cannot make this call for
 you, which is why a draft is only a first pass.
 
+::: {.callout-warning}
+## A draft describes the data, not your intent
+A drafted check reflects what the data happens to contain, not what your business rules require.
+Check every generated range and set, and replace observed values with intended ones before
+accepting it. Otherwise a check that only describes today's data will fail on tomorrow's normal
+data.
+:::
 
 ## Editing a plan with `EditValidation`
 
