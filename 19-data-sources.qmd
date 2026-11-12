@@ -13,6 +13,12 @@ just to check it. Pointblank works with data where it already is, and the same v
 work whether the data is a Polars DataFrame in memory, a table in PostgreSQL, or a set of Parquet
 files.
 
+This works because what you write is separate from how it runs. You write
+`col_vals_gt(columns="amount", value=0)` once, and Pointblank turns that into whatever each backend
+needs, running Polars operations for a DataFrame or generating SQL for a database. This chapter goes
+through the backends Pointblank supports and what to keep in mind for each. The in-memory and DuckDB
+examples use the built-in datasets and run as written. The remote database examples show connection
+code that you would adapt to your own systems.
 
 ## Two kinds of backend
 
