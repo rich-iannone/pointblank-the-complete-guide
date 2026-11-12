@@ -159,6 +159,15 @@ accept them.
 
 ## The interactive assistant
 
+For exploratory work, the `assistant()` function opens a chat session about a table. You can ask
+what checks make sense, ask for a plan, or refine one over several messages rather than with a
+single instruction.
+
+```{python}
+#| eval: false
+pb.assistant(model="anthropic:claude-sonnet-5", data=game_revenue, tbl_name="game_revenue")
+```
+
 
 ## Choosing and combining the tools
 
