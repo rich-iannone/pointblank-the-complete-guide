@@ -180,6 +180,15 @@ plan yet, `from_prompt()` turns your description into steps. If you already have
 specific change, `EditValidation` makes it from an instruction. And if you want to know what a
 working plan is missing, `suggest_improvements()` proposes additions.
 
+The tools also work well in sequence. For example, you might draft a plan with `DraftValidation`,
+refine it with one or two `EditValidation` instructions, fill gaps with `suggest_improvements()`,
+and, after reviewing and accepting each proposal, export the finished plan with `to_yaml()` so it can
+be kept in version control (see @sec-yaml-workflows). Since the edit tools accept a YAML string or
+file path, you can pick that stored plan up and revise it later the same way. The model speeds up
+each step, but the plan that ends up in the repository is one a person reviewed and accepted. Keep in
+mind that `DraftValidation` and `EditValidation` are experimental, and model output is not
+deterministic, so two drafts of the same table can differ. That is one more reason to review
+everything.
 
 ## What the model sees, and what it cannot write back
 
