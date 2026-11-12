@@ -145,6 +145,14 @@ The `suggest_improvements()` method starts from a plan you already have and prop
 missing. It profiles the table, looks for gaps, such as columns that no step checks or steps that
 could use thresholds, and returns an `EditValidation` with the proposed additions for you to review.
 
+```{python}
+#| eval: false
+proposal = base.suggest_improvements(model="anthropic:claude-sonnet-5")
+
+print(proposal.diff())
+improved = proposal.accept()
+```
+
 
 ## The interactive assistant
 
